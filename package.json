@@ -5,7 +5,9 @@
     "preinstall": "run-s mustpnpm huskyinit",
     "mustpnpm": "node scripts/preinstall",
     "huskyinit": "husky install",
-    "compiler:icons": "ts-node scripts/build-icons.ts"
+    "gen:iconsjson": "ts-node scripts/build-icons.ts",
+    "lint:fix": "eslint './**/*.{js,ts,tsx,json}' --fix && pretty-quick",
+    "lint": "eslint './**/*.{js,ts,tsx,json}' && pretty-quick"
   },
   "engines": {
     "node": ">= 16.0.0"

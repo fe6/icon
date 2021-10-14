@@ -1,10 +1,7 @@
 {
   "name": "@fe6/icon-vue",
   "version": "0.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "高质量图标集合",
   "keywords": [
     "vue",
     "vue icon",
@@ -23,15 +20,18 @@
     "fe6 icon"
   ],
   "license": "MIT",
-  "description": "高质量图标集合",
-  "homepage": "https://github.com/fe6/icon#readme",
-  "author": "iq9891 <649076408@qq.com>",
-  "bugs": {
-    "url": "https://github.com/fe6/icon/issues"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fe6/icon.git"
+  },
+  "author": "iq9891 <649076408@qq.com>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://github.com/fe6/icon#readme",
+  "bugs": {
+    "url": "https://github.com/fe6/icon/issues"
   },
   "engines": {
     "node": ">= 16.0.0"

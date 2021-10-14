@@ -6,3 +6,4 @@ types/
 !/rollup.config.js
 !/.cz-configrc.js
 *.d.ts
+*.yaml
