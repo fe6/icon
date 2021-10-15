@@ -5,7 +5,8 @@
     "preinstall": "run-s mustpnpm huskyinit",
     "mustpnpm": "node scripts/preinstall",
     "huskyinit": "husky install",
-    "gen:iconsjson": "ts-node scripts/build-icons.ts",
+    "gen:json": "ts-node scripts/build-icons.ts",
+    "gen:code": "ts-node scripts/build-code.ts",
     "lint:fix": "eslint './**/*.{js,ts,tsx,json}' --fix && pretty-quick",
     "lint": "eslint './**/*.{js,ts,tsx,json}' && pretty-quick"
   },
@@ -27,13 +28,20 @@
   "devDependencies": {
     "@antfu/ni": "^0.10.0",
     "@fe6/norm": "^3.4.3",
+    "@types/css-tree": "^1.0.6",
+    "@types/mkdirp": "^1.0.2",
+    "@types/tinycolor2": "^1.4.3",
     "chalk": "^4.1.2",
+    "css-tree": "^1.1.3",
     "csv-parse": "^4.16.3",
     "csv-stringify": "^5.6.5",
     "cz-customizable": "^6.3.0",
     "husky": "^7.0.2",
+    "mkdirp": "^1.0.4",
     "npm-run-all": "^4.1.5",
     "pretty-quick": "^3.1.1",
-    "ts-node": "^10.3.0"
+    "tinycolor2": "^1.4.2",
+    "ts-node": "^10.3.0",
+    "xml-js": "^1.6.11"
   }
 }
