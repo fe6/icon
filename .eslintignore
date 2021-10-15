@@ -2,8 +2,7 @@ dist/
 node_modules
 node_modules/
 types/
-!/.eslintrc.js
-!/rollup.config.js
-!/.cz-configrc.js
 *.d.ts
 *.yaml
+compiler/types.ts
+.eslintrc.js
