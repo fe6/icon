@@ -49,6 +49,7 @@ export class LessGenerator extends Generator {
     this.writeLine('-webkit-font-smoothing: antialiased;');
     this.writeLine('-moz-osx-font-smoothing: grayscale;');
     this.writeLine();
+
     this.writeLine('&-spin svg {');
     this.indent(1);
     this.writeLine(
@@ -58,6 +59,14 @@ export class LessGenerator extends Generator {
     );
     this.indent(-1);
     this.writeLine('}');
+    this.writeLine();
+
+    this.writeLine('&-rtl {');
+    this.indent(1);
+    this.writeLine('transform: scaleX(-1);');
+    this.indent(-1);
+    this.writeLine('}');
+
     this.indent(-1);
     this.writeLine('}');
     this.writeLine();

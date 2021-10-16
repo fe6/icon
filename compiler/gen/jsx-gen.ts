@@ -20,7 +20,7 @@ const defOpts = {
   rtl: true,
   propName: 'props',
   style: false,
-  helperName: 'h',
+  // helperName: 'h',
   stylePropName: 'props',
   wrapperNeedName: false,
   wrapperNeedRTL: false,
@@ -29,7 +29,6 @@ const defOpts = {
 export interface IJSXGeneratorOptions extends IGeneratorOptions {
   useDefault?: boolean;
   useType?: boolean;
-  useHelper?: boolean;
   wrapperNeedName?: boolean;
   wrapperNeedRTL?: boolean;
   style?: boolean;
@@ -63,11 +62,9 @@ export class JSXGenerator extends IconGenerator {
 
     const {
       extraImport,
-      useHelper,
       useType,
       useDefault,
       wrapperNeedName,
-      helperName,
       propName,
       style,
       stylePropName,
@@ -93,10 +90,6 @@ export class JSXGenerator extends IconGenerator {
 
     if (useType) {
       imports.push(typeName);
-
-      if (useHelper) {
-        imports.push(this.getTypeName('helper'));
-      }
     }
     imports.push(wrapperName);
     this.write(imports.join(', '));
@@ -143,20 +136,6 @@ export class JSXGenerator extends IconGenerator {
     } // 处理函数参数：(props: IIconProps)
 
     this.write('(');
-
-    if (useHelper) {
-      if (helperName) {
-        this.write(helperName);
-      }
-
-      if (useType) {
-        this.write(': ');
-        this.write(this.getTypeName('helper'));
-      }
-
-      this.write(',');
-      this.space();
-    }
 
     if (propName) {
       this.write(propName);

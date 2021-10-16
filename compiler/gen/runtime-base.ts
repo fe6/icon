@@ -119,6 +119,10 @@ export class RuntimeGenerator extends Generator {
 
     runOptions.processPlatformCode(); // 生成Wrapper代码
 
+    this.processContext(); // 生成上下文
+
+    this.processProvider(); // 图标配置Provider
+
     this.processWrapper(runOptions);
 
     return this.getResult();
@@ -173,8 +177,6 @@ export class RuntimeGenerator extends Generator {
       this.writeLine('l: number;');
       this.indent(-1);
       this.writeLine('}');
-      this.writeLine();
-    } else {
       this.writeLine();
     }
   }
@@ -797,7 +799,49 @@ export class RuntimeGenerator extends Generator {
     this.indent(-1);
     this.writeLine('};');
     this.indent(-1);
+    this.writeLine(
+      '} // 属性转换函数 '.concat(pascalCase(this.prefix), 'Converter end'),
+    );
+    this.writeLine();
+  }
+
+  processContext() {
+    this.writeLine(
+      'const '.concat(
+        this.getTypeName('context'),
+        ` = Symbol(${this.getClassName('context')}`,
+        ');',
+      ),
+    );
+    this.writeLine();
+  }
+
+  processProvider() {
+    this.writeLine('// 图标配置Provider');
+    this.write('export const '.concat(this.getTypeName('provider'), ' = ('));
+
+    if (this.useType) {
+      this.write('config: '.concat(this.getInterfaceName('Config')));
+    } else {
+      this.write('config, ');
+    }
+
+    if (this.useType) {
+      this.writeLine(`): void => {`);
+    } else {
+      this.writeLine(') {');
+    }
+
+    this.indent(1);
+
+    this.writeLine(
+      'provide('.concat(this.getTypeName('context'), ', config);'),
+    );
+
+    this.indent(-1);
+
     this.writeLine('}');
+
     this.writeLine();
   }
 
@@ -846,6 +890,7 @@ export class RuntimeGenerator extends Generator {
     this.indent(1); // 生成平台Wrapper代码
 
     runOptions.processPlatformWrapper();
+
     this.indent(-1);
     this.writeLine('}');
   }

@@ -41,6 +41,7 @@
   },
   "packageManager": "pnpm",
   "peerDependencies": {
+    "@vue/runtime-dom": "3.x",
     "vue": "3.x"
   }
 }

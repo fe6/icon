@@ -76,7 +76,6 @@ class IconCompiler {
       nameDisplayType: 'pascal',
       useDefault: true,
       useType: this.$opts.useType,
-      useHelper: true,
       wrapperNeedName: true,
       wrapperNeedRTL: true,
       style: this.$opts.style || false,
