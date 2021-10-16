@@ -6,7 +6,7 @@
     "gen:json": "ts-node scripts/build-icons.ts",
     "gen:code": "ts-node scripts/build-code.ts",
     "gen:clean": "rm -rf packages/*/src/runtime packages/*/src/index.ts packages/*/src/icons",
-    "gen": "pnpm gen:clean && pnpm gen:icons && pnpm gen:code && pnpm gen:git",
+    "gen": "pnpm gen:clean && pnpm gen:json && pnpm gen:code",
     "lint:fix": "eslint './**/*.{js,ts,tsx,json}' --fix && pretty-quick",
     "lint": "eslint './**/*.{js,ts,tsx,json}' && pretty-quick"
   },

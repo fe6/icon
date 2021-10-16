@@ -116,6 +116,9 @@ Object.keys(ALL_ICON_MAP).forEach((key) => {
   }
 });
 
+// eslint-disable-next-line no-console
+console.log('总图标数', count);
+
 fs.writeFileSync(
   path.resolve(__dirname, '../source/icons.json'),
   JSON.stringify(data, null, 4),
