@@ -8,5 +8,5 @@
 
 - 拷贝原始 svg 到 `/source` ， 编辑好分组
 - 每个 icon 自己有个文件夹，并在 icon 文件夹中编辑好信息命名为： **_info.json_**
-- 运行 `pnpm gen:json` 生成 **_icon.json_**
-- 运行 `pnpm gen:code` 生成 `packages/vue` 的 **icon 组件包**
+- 运行 `pnpm gen:gen` 生成 **_icon.json_**, `packages/vue` 的 **icon 组件包**
+- 然后[发版](https://pnpm.io/zh/workspaces#%E5%8F%91%E5%B8%83%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%E5%8C%85)
