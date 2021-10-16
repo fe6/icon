@@ -3,7 +3,7 @@
  * @file compiler 编译函数
  */
 
-import { JSXGenerator } from './gen/jsx-gen';
+import { JSXGenerator } from './generator/jsx-gen';
 import { Parser } from './parser';
 
 interface ICompilerOptions {

@@ -1,10 +1,13 @@
 /** @format */
 
-import { JSXGenerator } from './gen/jsx-gen';
-import { LessGenerator } from './gen/less-gen';
-import { IndexGenerator } from './gen/index-gen';
-import { VueRuntimeGenerator } from './gen/runtime-vue';
-import { IRuntimeGeneratorOptions, IRuntimeOptions } from './gen/runtime-base';
+import { JSXGenerator } from './generator/jsx-gen';
+import { LessGenerator } from './generator/less-gen';
+import { IndexGenerator } from './generator/index-gen';
+import { VueRuntimeGenerator } from './generator/runtime-vue';
+import {
+  IRuntimeGeneratorOptions,
+  IRuntimeOptions,
+} from './generator/runtime-base';
 import { compiler } from './compiler';
 import { pascalCase } from './util';
 

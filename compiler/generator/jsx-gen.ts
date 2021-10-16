@@ -1,7 +1,7 @@
 /** @format */
 
 import { IGeneratorOptions } from './base';
-import { IconGenerator } from '../gen/icon-gen';
+import { IconGenerator } from './icon-gen';
 import { pascalCase } from '../util';
 import {
   ISvgElementInfo,
