@@ -2,23 +2,24 @@
   "name": "@fe6/icon-monorepo",
   "private": true,
   "scripts": {
-    "preinstall": "run-s mustpnpm huskyinit",
-    "mustpnpm": "node scripts/preinstall",
-    "huskyinit": "husky install",
+    "preinstall": "node scripts/preinstall && husky install",
     "gen:json": "ts-node scripts/build-icons.ts",
     "gen:code": "ts-node scripts/build-code.ts",
+    "gen:clean": "rm -rf packages/*/src/runtime packages/*/src/index.ts packages/*/src/icons",
+    "gen": "pnpm gen:clean && pnpm gen:icons && pnpm gen:code && pnpm gen:git",
     "lint:fix": "eslint './**/*.{js,ts,tsx,json}' --fix && pretty-quick",
     "lint": "eslint './**/*.{js,ts,tsx,json}' && pretty-quick"
   },
   "engines": {
-    "node": ">= 16.0.0"
+    "node": ">= 16.0.0",
+    "pnpm": ">=6"
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-customizable"
+      "path": "node_modules/cz-customizable"
     },
     "cz-customizable": {
-      "config": "./node_modules/@fe6/norm/src/.cz-configrc.js"
+      "config": "node_modules/@fe6/norm/src/.cz-configrc.js"
     }
   },
   "packageManager": "pnpm",
@@ -38,10 +39,14 @@
     "cz-customizable": "^6.3.0",
     "husky": "^7.0.2",
     "mkdirp": "^1.0.4",
-    "npm-run-all": "^4.1.5",
     "pretty-quick": "^3.1.1",
     "tinycolor2": "^1.4.2",
     "ts-node": "^10.3.0",
     "xml-js": "^1.6.11"
+  },
+  "pnpm": {
+    "overrides": {
+      "@fe6/icon-vue": "workspace:^"
+    }
   }
 }
