@@ -21,6 +21,7 @@ export class IndexGenerator extends Generator {
     // 写头部的注释
     this.processHeaderComment();
     this.writeLine("export * from './map'");
+    this.writeLine("export * from './all'");
     this.writeLine(
       'export { '.concat(
         this.getTypeName('provider'),
