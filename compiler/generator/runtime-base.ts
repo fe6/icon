@@ -155,7 +155,12 @@ export class RuntimeGenerator extends Generator {
       this.writeLine(
         'export type Theme = '.concat(
           theme
-            .map((item: IIconThemeInfo) => "'".concat(item.name, "'"))
+            .map((item: IIconThemeInfo) =>
+              (item.name.includes('-')
+                ? `'${camelCase(item.name)}' | '${pascalCase(item.name)}' | '`
+                : "'"
+              ).concat(item.name, "'"),
+            )
             .join(' | '),
           ';',
         ),
@@ -319,6 +324,10 @@ export class RuntimeGenerator extends Generator {
       this.writeLine('// 填充色');
       this.writeLine('fill?: '.concat(list.join(' | '), ';'));
     }
+
+    this.writeLine();
+    this.writeLine('// 换肤的颜色数组');
+    this.writeLine('colors: string[];');
 
     this.indent(-1);
     this.writeLine('}');
@@ -580,6 +589,11 @@ export class RuntimeGenerator extends Generator {
       this.theme.forEach((theme: IIconThemeInfo) => {
         this.writeLine("case '".concat(theme.name, "':"));
 
+        if (theme.name.includes('-')) {
+          this.writeLine("case '".concat(camelCase(theme.name), "':"));
+          this.writeLine("case '".concat(pascalCase(theme.name), "':"));
+        }
+
         this.indent(1);
 
         this.colors.forEach((color, i) => {
@@ -787,7 +801,7 @@ export class RuntimeGenerator extends Generator {
     }
 
     if (this.replaceList.length) {
-      this.writeLine('colors,');
+      this.writeLine('colors: icon.colors || colors,');
     }
 
     if (this.hueList.length) {
@@ -929,6 +943,8 @@ export class RuntimeGenerator extends Generator {
     if (hueList.length || replaceList.length) {
       arr.push('fill');
     }
+
+    arr.push('colors');
 
     return arr;
   }

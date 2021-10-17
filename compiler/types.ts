@@ -11,6 +11,15 @@ export enum SvgStyleType {
   Keyframes = 'Keyframes',
   Rule = 'Rule',
 }
+export type TTransfromInnerOptionsBase =
+  | ISvgAttr
+  | ISvgInlineStyleAttr
+  | ISvgStyleAttr;
+export type TTransfromInnerBase =
+  | ISvgAttr
+  | ISvgInlineStyleAttr
+  | ISvgStyleAttr
+  | null;
 export enum SvgStyleSelectorType {
   ID = 'ID',
   CLASS = 'CLASS',

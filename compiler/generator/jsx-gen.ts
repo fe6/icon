@@ -57,9 +57,7 @@ export class JSXGenerator extends IconGenerator {
   }
 
   process(info: IInfo) {
-    this.writeLine('/* tslint:disable: max-line-length */');
-    this.writeLine('/* eslint-disable max-len */');
-
+    // 生成每个 icon 的组件(tsx)
     const {
       extraImport,
       useType,
@@ -82,7 +80,7 @@ export class JSXGenerator extends IconGenerator {
 
     this.write('import');
     this.space();
-    this.write('{');
+    this.write('{ ');
 
     const imports: string[] = [];
     const typeName = this.getInterfaceName('props', true);
@@ -93,7 +91,7 @@ export class JSXGenerator extends IconGenerator {
     }
     imports.push(wrapperName);
     this.write(imports.join(', '));
-    this.write('}');
+    this.write(' }');
     this.space();
     this.write('from');
     this.space();

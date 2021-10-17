@@ -145,13 +145,6 @@ export class VueRuntimeGenerator extends RuntimeGenerator {
       ),
     ); // 处理数据
 
-    // this.writeLine('data() {');
-    // this.indent(1);
-    // this.writeLine('return {id: guid()};');
-    // this.indent(-1);
-    // this.writeLine('},'); // 继承属性
-
-    // this.writeLine('inheritAttrs: false,'); // 渲染函数
     this.writeLine('setup: (props) => {');
     this.indent(1);
     this.writeLine('const id = guid();');

@@ -7,6 +7,8 @@ module.exports = {
     '@typescript-eslint/indent': 'off',
     'operator-linebreak': 'off',
     'quotes': 'off',
+    'quote-props': 'off',
+    'arrow-parens': 'off',
     'brace-style': ['error', '1tbs'],
   },
 };
