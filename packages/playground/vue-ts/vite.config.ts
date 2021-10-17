@@ -13,6 +13,13 @@ export default defineConfig({
         find: '@fe6/icon-vue',
         replacement: path.resolve(__dirname, '../../vue/src/index.ts'),
       },
+      {
+        find: 'icon.less',
+        replacement: path.resolve(
+          __dirname,
+          '../../vue/src/runtime/index.less',
+        ),
+      },
     ],
   },
   plugins: [
