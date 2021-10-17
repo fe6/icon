@@ -1,14 +1,14 @@
 <!-- @format -->
 
 <template>
-  <Video :size="100" />
+  <Video />
   <br />
-  <Video :size="100" :colors="['#f00', '#f0f', '#00f', '#0f0']" />
+  <Video :colors="['#f00', '#f0f', '#00f', '#0f0']" />
   <br />
-  <Video :size="100" theme="filled" />
-  <Video :size="100" theme="outline" />
-  <Video :size="100" theme="twoTone" />
-  <Video :size="100" theme="multiColor" />
+  <Video theme="filled" />
+  <Video theme="outline" />
+  <Video theme="twoTone" />
+  <Video theme="multiColor" />
 
   <br />
   <icon-video :size="100" />
@@ -24,7 +24,9 @@
 <script setup lang="ts">
   // 单文件组件(SFC) <script setup>
   // Check out https://v3.cn.vuejs.org/api/sfc-script-setup.html
-  import { Video } from '@fe6/icon-vue';
+  import { Video, DEFAULT_ICON_CONFIGS, IconProvider } from '@fe6/icon-vue';
+
+  IconProvider({ ...DEFAULT_ICON_CONFIGS, prefix: 'icon', size: '3em' });
 </script>
 
 <style>
