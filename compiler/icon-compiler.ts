@@ -3,6 +3,8 @@
 import { JSXGenerator } from './generator/jsx-gen';
 import { LessGenerator } from './generator/less-gen';
 import { IndexGenerator } from './generator/index-gen';
+import { MapGenerator } from './generator/map-gen';
+import { AllGenerator } from './generator/all-gen';
 import { VueRuntimeGenerator } from './generator/runtime-vue';
 import {
   IRuntimeGeneratorOptions,
@@ -286,8 +288,6 @@ class IconCompiler {
       author: this.$opts.author,
       nameDisplayType: 'camel',
       description: '引用出口',
-      useType: this.$opts.useType,
-      icons: Object.keys(this.compilerMap),
     });
     return generator.process();
   }
@@ -297,6 +297,51 @@ class IconCompiler {
       mime: 'text/javascript',
       path: `index.${this.$opts.useType ? 'ts' : 'js'}`,
       content: this.getIndexCode(),
+    };
+  }
+
+  private getMapCode() {
+    const generator = new MapGenerator({
+      name: 'map',
+      author: this.$opts.author,
+      nameDisplayType: 'camel',
+      description: '组件集合',
+      icons: Object.keys(this.compilerMap),
+    });
+    return generator.process();
+  }
+
+  private getMapFile() {
+    return {
+      mime: 'text/javascript',
+      path: `map.${this.$opts.useType ? 'ts' : 'js'}`,
+      content: this.getMapCode(),
+    };
+  }
+
+  private getAllCode() {
+    const generator = new AllGenerator({
+      name: 'map',
+      author: this.$opts.author,
+      fixedSize: this.$opts.fixedSize || false,
+      stroke: this.$opts.stroke || 0,
+      strokeLinecap: this.$opts.strokeLinecap,
+      strokeLinejoin: this.$opts.strokeLinejoin,
+      wrapperNeedName: true,
+      wrapperNeedRTL: true,
+      theme: this.$opts.theme || [],
+      colors: this.$opts.colors || [],
+      nameDisplayType: 'camel',
+      description: '所有组件出口',
+    });
+    return generator.process();
+  }
+
+  private getAllFile() {
+    return {
+      mime: 'text/javascript',
+      path: `all.${this.$opts.useType ? 'ts' : 'js'}`,
+      content: this.getAllCode(),
     };
   }
 
@@ -324,7 +369,12 @@ class IconCompiler {
     const list = Object.keys(this.compilerMap).map((key: string) =>
       this.getIconFile(key),
     );
-    list.push(this.getRuntimeFile(), this.getIndexFile());
+    list.push(
+      this.getRuntimeFile(),
+      this.getIndexFile(),
+      this.getMapFile(),
+      this.getAllFile(),
+    );
 
     if (this.$opts.type !== 'svg') {
       list.push(this.getLessFile());

@@ -1,42 +1,37 @@
 /** @format */
 
 import { Generator, IGeneratorOptions } from './base';
-import { pascalCase } from '../util';
 
 const defOpts = {
   author: 'fe6',
   name: '',
-  useType: false,
-  icons: [],
 };
 
-export interface IIndexGeneratorOptions extends IGeneratorOptions {
-  useType?: boolean;
-  icons: string[];
-}
-
 export class IndexGenerator extends Generator {
-  useType = false;
-  icons: string[] = [];
+  prefix: string;
 
-  constructor(options: IIndexGeneratorOptions = defOpts) {
+  constructor(options: IGeneratorOptions = defOpts) {
     super(options);
 
     this.$opts = Object.assign(defOpts, options);
-    this.useType = options.useType || false;
-    this.icons = options.icons;
+    this.prefix = options.prefix || 'icon';
   }
 
   process() {
     // 写头部的注释
     this.processHeaderComment();
-    this.icons.forEach((name: string) => {
-      this.writeLine(
-        'export {default as '
-          .concat(pascalCase(name), "} from './icons/")
-          .concat(name, "';"),
-      );
-    });
+    this.writeLine("export * from './map'");
+    this.writeLine("export * from './all'");
+    this.writeLine(
+      'export { '.concat(
+        this.getTypeName('provider'),
+        ', DEFAULT_'.concat(
+          this.prefix.toUpperCase(),
+          "_CONFIGS } from './runtime';",
+        ),
+      ),
+    );
+
     return this.getResult();
   }
 }

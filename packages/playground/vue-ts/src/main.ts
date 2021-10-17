@@ -4,4 +4,10 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 
-createApp(App).mount('#app');
+import { waterIconInstall } from '@fe6/icon-vue';
+
+const app = createApp(App);
+
+waterIconInstall(app);
+
+app.mount('#app');

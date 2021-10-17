@@ -135,14 +135,9 @@ export class VueRuntimeGenerator extends RuntimeGenerator {
     ); // 处理属性
 
     this.writeLine(
-      'props: ['.concat(
-        this.getPropKeys()
-          .map((item) => {
-            return "'".concat(item, "'");
-          })
-          .join(', '),
-        ", 'spin'],",
-      ),
+      `props: [${this.getPropKeys()
+        .map((item) => `'${item}'`)
+        .join(', ')}, 'spin'],`,
     ); // 处理数据
 
     this.writeLine('setup: (props) => {');
