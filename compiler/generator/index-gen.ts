@@ -34,7 +34,7 @@ export class IndexGenerator extends Generator {
       this.writeLine(
         'export {default as '
           .concat(pascalCase(name), "} from './icons/")
-          .concat(pascalCase(name), "';"),
+          .concat(name, "';"),
       );
     });
     return this.getResult();

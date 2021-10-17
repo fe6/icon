@@ -7,7 +7,14 @@
 </script>
 
 <template>
-  <Video />
+  <Video :size="100" />
+  <br />
+  <Video :size="100" :colors="['#f00', '#f0f', '#00f', '#0f0']" />
+  <br />
+  <Video :size="100" theme="filled" />
+  <Video :size="100" theme="outline" />
+  <Video :size="100" theme="twoTone" />
+  <Video :size="100" theme="multiColor" />
 </template>
 
 <style>

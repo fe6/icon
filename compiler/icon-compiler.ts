@@ -9,7 +9,23 @@ import {
   IRuntimeOptions,
 } from './generator/runtime-base';
 import { compiler } from './compiler';
-import { pascalCase } from './util';
+import { IIconColorHueInfo, IIconColorReplaceInfo } from './types';
+
+import { ITransformPlugin } from './transformer/base';
+import { dynamicColorTransformer } from './transformer/dynamic-color';
+import { removeConditionTransformer } from './transformer/remove-condition';
+import { removeTagsTransformer } from './transformer/remove-tags';
+import { removePropsTransformer } from './transformer/remove-props';
+import { removeDataAttrTransformer } from './transformer/remove-data-attr';
+import { dynamicSizeTransformer } from './transformer/dynamic-size';
+import { dynamicStrokeTransformer } from './transformer/dynamic-stroke';
+import { uniqueIdTransformer } from './transformer/unique-id';
+import { uniqueKeyframesIdTransformer } from './transformer/unique-keyframes-id';
+import { removeCSSPrefixTransformer } from './transformer/remove-css-prefix';
+import { camelTransformer } from './transformer/camel';
+import { dynamicHueTransformer } from './transformer/dynamic-hue';
+import { syncGroupProps } from './transformer/sync-group-props';
+import { fixMaskTypeTransformer } from './transformer/fix-mask-type';
 
 // interface IOption {
 //   type: 'vue' | 'svg' // TODO 未来多种支持
@@ -56,16 +72,154 @@ class IconCompiler {
   }
 
   private createCompiler() {
+    const { type, strokeLinecap, strokeLinejoin } = this.$opts;
+    const colors = this.$opts.colors || [];
+    const stroke = this.$opts.stroke || 0;
+    const fixedSize = this.$opts.fixedSize || false;
+    const style = this.$opts.style || false;
+
+    const hueList: IIconColorHueInfo[] = [];
+    const replaceList: IIconColorReplaceInfo[] = [];
+    colors.forEach((item) => {
+      if (item.type === 'hue') {
+        hueList.push(item);
+      } else {
+        replaceList.push(item);
+      }
+    });
+    const isSvg = type === 'svg';
     return (ref: IRef) => {
       const { name, content } = ref;
       const description = ref?.description || name;
       const rtl = ref?.rtl || false;
+      const plugins: ITransformPlugin[] = []; // 删除无用的标签
+
+      plugins.push(
+        removeTagsTransformer({
+          tags: ['title', 'desc', 'a', 'metadata'],
+        }),
+      ); // 删除掉无用的属性（当生成目标是react时，xmlns无效）
+
+      plugins.push(
+        removePropsTransformer({
+          props: ['version', 'xmlns:xlink'].concat(isSvg ? [] : ['xmlns']),
+        }),
+      ); // 修复mask-type属性的错误
+
+      plugins.push(fixMaskTypeTransformer()); // data开头的属性无用
+
+      plugins.push(removeDataAttrTransformer()); // 增加动态颜色替换，一定要在Hue替换之前
+
+      if (replaceList.length) {
+        plugins.push(
+          dynamicColorTransformer({
+            prefix: true,
+            array: true,
+            colors: replaceList.map((item) => {
+              return item.color;
+            }),
+            ignore: function ignore(info) {
+              return info.attrs.some((item) => {
+                return (
+                  item.name === 'fill-opacity' && item.expression === '0.01'
+                );
+              });
+            },
+          }),
+        );
+      } // 增加动态颜色替换
+
+      if (hueList.length) {
+        plugins.push(
+          dynamicHueTransformer({
+            prefix: true,
+            hueList: hueList.map((item) => {
+              return item.hue;
+            }),
+            forceReplaceColor: false,
+          }),
+        );
+      } // 删除多余的ID
+
+      plugins.push(
+        uniqueIdTransformer({
+          prefix: true,
+          removeUnusedIds: true,
+        }),
+      ); // 处理CSS动画
+
+      if (style) {
+        plugins.push(
+          uniqueKeyframesIdTransformer({
+            prefix: true,
+          }),
+        );
+        plugins.push(removeCSSPrefixTransformer());
+      } // size处理
+
+      plugins.push(
+        dynamicSizeTransformer({
+          prefix: true,
+          widthName: fixedSize ? 'size' : 'width',
+          heightName: fixedSize ? 'size' : 'height',
+        }),
+      ); // 处理描边
+
+      plugins.push(
+        dynamicStrokeTransformer({
+          prefix: true,
+          disableStroke: !stroke,
+          disableStrokeLinejoin: !strokeLinejoin,
+          disableStrokeLinecap: !strokeLinecap,
+        }),
+      ); // 处理额外增加的Rect
+
+      if (!isSvg) {
+        plugins.push(
+          removeConditionTransformer({
+            tag: 'rect',
+            condition: function condition(info) {
+              return info.attrs.some((item) => {
+                return (
+                  item.name === 'fill-opacity' && item.expression === '0.01'
+                );
+              });
+            },
+          }),
+        );
+      }
+
+      if (isSvg) {
+        plugins.push(
+          syncGroupProps({
+            attrNames: [
+              'stroke-linecap',
+              'stroke-linejoin',
+              'stroke-width',
+              'stroke',
+              'fill',
+              'fill-rule',
+            ],
+          }),
+        );
+      } // React需要进行变量名升级
+
+      if (!isSvg) {
+        plugins.push(
+          camelTransformer({
+            namespace: true,
+            namespaceOnly: type === 'vue',
+          }),
+        );
+      }
+
       // TODO 未来多种支持
       const generator = this.createVueGenerator(name, description, rtl);
       return compiler({
         name,
         content,
         generator,
+        plugins,
       });
     };
   }
@@ -89,7 +243,6 @@ class IconCompiler {
 
   appendIcon(aIconInfo: IAIconInfo) {
     this.compilerMap[aIconInfo.name] = this.compiler(aIconInfo);
-    // console.log(this.compilerMap, 'this.compilerMap');
   }
 
   private getIconCode(name: string) {
@@ -108,7 +261,7 @@ class IconCompiler {
     return {
       mime: 'image/svg+xml',
       path: 'icons/'
-        .concat(pascalCase(name), '.')
+        .concat(name, '.')
         .concat(this.$opts.useType ? 'ts' : 'js')
         .concat(isSvg ? '' : 'x'),
       content: svg,
