@@ -3,7 +3,7 @@
  * @file AllGenerator 生成 all 代码
  */
 
-import { pascalCase } from '..';
+import { pascalCase } from '../util';
 import { RuntimeGenerator, IRuntimeGeneratorOptions } from './runtime-base';
 
 const defOpts = {

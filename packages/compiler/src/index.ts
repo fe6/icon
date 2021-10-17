@@ -1,4 +1,7 @@
-/** @format */
+/**
+ * @format
+ * @file index 图标编译工具
+ */
 
 export * from './types';
 

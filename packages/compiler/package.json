@@ -1,0 +1,40 @@
+{
+  "name": "@fe6/icon-compiler",
+  "version": "1.0.0",
+  "description": "图标编译工具",
+  "main": "index.ts",
+  "keywords": [
+    "vue",
+    "vue icon",
+    "vue3",
+    "vue3 icon",
+    "icon",
+    "icon pack",
+    "icon park",
+    "IconPark",
+    "svg",
+    "system icons",
+    "component",
+    "components",
+    "design",
+    "fe6",
+    "fe6 icon"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fe6/icon.git"
+  },
+  "author": "iq9891 <649076408@qq.com>",
+  "homepage": "https://github.com/fe6/icon#readme",
+  "bugs": {
+    "url": "https://github.com/fe6/icon/issues"
+  },
+  "engines": {
+    "node": ">= 16.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm"
+}

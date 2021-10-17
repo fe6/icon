@@ -4,5 +4,5 @@ node_modules/
 types/
 *.d.ts
 *.yaml
-compiler/types.ts
+packages/compiler/src/types.ts
 .eslintrc.js
