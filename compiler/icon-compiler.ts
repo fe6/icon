@@ -3,6 +3,7 @@
 import { JSXGenerator } from './generator/jsx-gen';
 import { LessGenerator } from './generator/less-gen';
 import { IndexGenerator } from './generator/index-gen';
+import { MapGenerator } from './generator/map-gen';
 import { VueRuntimeGenerator } from './generator/runtime-vue';
 import {
   IRuntimeGeneratorOptions,
@@ -280,14 +281,23 @@ class IconCompiler {
     };
   }
 
+  private getMapCode() {
+    const generator = new MapGenerator({
+      name: 'map',
+      author: this.$opts.author,
+      nameDisplayType: 'camel',
+      description: '引用出口',
+      icons: Object.keys(this.compilerMap),
+    });
+    return generator.process();
+  }
+
   private getIndexCode() {
     const generator = new IndexGenerator({
       name: 'index',
       author: this.$opts.author,
       nameDisplayType: 'camel',
       description: '引用出口',
-      useType: this.$opts.useType,
-      icons: Object.keys(this.compilerMap),
     });
     return generator.process();
   }
@@ -297,6 +307,14 @@ class IconCompiler {
       mime: 'text/javascript',
       path: `index.${this.$opts.useType ? 'ts' : 'js'}`,
       content: this.getIndexCode(),
+    };
+  }
+
+  private getMapFile() {
+    return {
+      mime: 'text/javascript',
+      path: `map.${this.$opts.useType ? 'ts' : 'js'}`,
+      content: this.getMapCode(),
     };
   }
 
@@ -324,7 +342,7 @@ class IconCompiler {
     const list = Object.keys(this.compilerMap).map((key: string) =>
       this.getIconFile(key),
     );
-    list.push(this.getRuntimeFile(), this.getIndexFile());
+    list.push(this.getRuntimeFile(), this.getIndexFile(), this.getMapFile());
 
     if (this.$opts.type !== 'svg') {
       list.push(this.getLessFile());
