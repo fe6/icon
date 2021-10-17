@@ -1,6 +1,6 @@
 /** @format */
 
-import { IIconToolsOptions } from '../compiler/icon-compiler';
+import { IIconToolsOptions } from '../packages/compiler/src/icon-compiler';
 
 export const BUILD_CODE_CONFIG: Omit<IIconToolsOptions, 'type'> = {
   author: 'fe6',
