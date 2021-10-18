@@ -4,7 +4,7 @@ import fs from 'fs';
 import p from 'path';
 import mkdirp from 'mkdirp';
 
-import { iconCompiler } from '../compiler';
+import { iconCompiler } from '../packages/compiler/src/index';
 import icons from '../source/icons.json';
 
 import { BUILD_CODE_CONFIG } from './code-conf';

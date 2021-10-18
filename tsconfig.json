@@ -17,8 +17,8 @@
     "resolveJsonModule": true,
     "removeComments": true,
     "experimentalDecorators": true,
-    "noImplicitAny": false, // 是否在表达式和声明上有隐含的any类型时报错
-    "typeRoots": ["./node_modules/@types"]
+    "noImplicitAny": false,
+    "typeRoots": ["./node_modules/@types", "./types"]
   },
   "exclude": ["node_modules", "dist", "**/*.js"]
 }
