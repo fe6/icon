@@ -19,6 +19,7 @@ const TS_CONFIG_DEF = {
   allowSyntheticDefaultImports: true,
   esModuleInterop: true,
   removeComments: true,
+  declaration: true, // 生成 .d.ts 文件
 };
 
 const TS_CONFIG_MAP = {
