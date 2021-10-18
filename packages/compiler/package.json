@@ -25,7 +25,9 @@
     "url": "git+https://github.com/fe6/icon.git"
   },
   "author": "iq9891 <649076408@qq.com>",
-  "main": "index.ts",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "typings": "lib/index.d.ts",
   "homepage": "https://github.com/fe6/icon#readme",
   "bugs": {
     "url": "https://github.com/fe6/icon/issues"
