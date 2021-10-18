@@ -1,4 +1,7 @@
 dist/
+es/
+lib/
+styles/
 node_modules
 node_modules/
 types/
