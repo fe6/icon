@@ -22,9 +22,7 @@ export const removeIdTransformer = (
   const removeAll = options.removeAll || false;
   const map: IRemoveIdMap = {};
 
-  ids.forEach(
-    (id) => (map[''.concat(propName, " + '").concat(id, "'")] = true),
-  );
+  ids.forEach((id) => (map[`${propName} + '${id}'`] = true));
 
   return {
     '*': {

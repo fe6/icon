@@ -89,7 +89,7 @@ const runescape = new RegExp(
 );
 
 // 用于匹配分组选择器的正则表达式
-function unescapeCSS(str: string) {
+const unescapeCSS = (str: string): string => {
   return str.replace(runescape, (_, escaped, escapedWhitespace) => {
     const high = Number(`0x${escaped}`) - 0x10000; // NaN表示不转义
 
@@ -104,7 +104,7 @@ function unescapeCSS(str: string) {
     // eslint-disable-next-line unicorn/number-literal-case
     return String.fromCharCode((high >> 10) | 0xd800, (high & 0x3ff) | 0xdc00);
   });
-}
+};
 
 /**
  * 匹配结果预处理
@@ -192,6 +192,7 @@ const process = {
       selectorType: SvgStyleSelectorType.NOT,
       type: SvgShapeAttr.CONST,
       expression: 'not',
+      // eslint-disable-next-line no-use-before-define
       children: tokenize(match[2])[0],
     };
   },
@@ -203,7 +204,7 @@ const process = {
  * @return {Array|null} 如果为空表示解析失败
  */
 
-export function tokenize(selector: string): ISvgStyleSelector[][] {
+export const tokenize = (selector: string): ISvgStyleSelector[][] => {
   const groups: ISvgStyleSelector[][] = [];
   let tokens: ISvgStyleSelector[] = [];
   let matched;
@@ -260,4 +261,4 @@ export function tokenize(selector: string): ISvgStyleSelector[][] {
   }
 
   return groups;
-}
+};

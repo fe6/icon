@@ -35,8 +35,9 @@ export class LessGenerator extends Generator {
 
     const prefix = this.prefix;
     const cssPrefix = this.cssPrefix;
+    const cssClassName = `${cssPrefix}-${prefix}`;
 
-    this.writeLine('.'.concat(cssPrefix, '-').concat(prefix, ' {'));
+    this.writeLine(`.${cssClassName} {`);
     this.indent(1);
     this.writeLine('display: inline-block;');
     this.writeLine('color: inherit;');
@@ -52,11 +53,7 @@ export class LessGenerator extends Generator {
 
     this.writeLine('&-spin svg {');
     this.indent(1);
-    this.writeLine(
-      'animation: '
-        .concat(cssPrefix, '-')
-        .concat(prefix, '-spin 1s infinite linear;'),
-    );
+    this.writeLine(`animation: ${cssClassName}-spin 1s infinite linear;`);
     this.indent(-1);
     this.writeLine('}');
     this.writeLine();
@@ -70,9 +67,7 @@ export class LessGenerator extends Generator {
     this.indent(-1);
     this.writeLine('}');
     this.writeLine();
-    this.writeLine(
-      '@keyframes '.concat(cssPrefix, '-').concat(prefix, '-spin {'),
-    );
+    this.writeLine(`@keyframes ${cssClassName}-spin {`);
     this.indent(1);
     this.writeLine('100% {');
     this.indent(1);
@@ -83,9 +78,7 @@ export class LessGenerator extends Generator {
     this.indent(-1);
     this.writeLine('}');
     this.writeLine();
-    this.writeLine(
-      '@-webkit-keyframes '.concat(cssPrefix, '-').concat(prefix, '-spin {'),
-    );
+    this.writeLine(`@-webkit-keyframes ${cssClassName}-spin {`);
     this.indent(1);
     this.writeLine('100% {');
     this.indent(1);

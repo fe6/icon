@@ -14,7 +14,7 @@ import csstree, { AtrulePrelude } from 'css-tree';
  * @param color2
  */
 
-export function isColorEqual(color1: string, color2: string): boolean {
+export const isColorEqual = (color1: string, color2: string): boolean => {
   if (color1 === color2) {
     return true;
   }
@@ -24,7 +24,7 @@ export function isColorEqual(color1: string, color2: string): boolean {
   }
 
   return tinycolor.equals(color1, color2);
-}
+};
 
 export const color2Hsl = (str: string): tinycolor.ColorFormats.HSLA | null => {
   const color = tinycolor(str);
@@ -45,7 +45,7 @@ export const camelCase = (str: string, prefix = '-'): string => {
 
 export const pascalCase = (str: string, prefix = '-'): string => {
   str = camelCase(str, prefix);
-  return ''.concat(str[0].toUpperCase()).concat(str.slice(1));
+  return `${str[0].toUpperCase()}${str.slice(1)}`;
 };
 
 export const getKeys = <T>(obj: T): string[] => {
@@ -53,7 +53,7 @@ export const getKeys = <T>(obj: T): string[] => {
 };
 
 // keyframes 相关 start
-export function replaceAnimation(str: string) {
+export const replaceAnimation = (str: string): string | null => {
   const tokens = csstree.parse(str, {
     parseValue: true,
     context: 'value',
@@ -125,9 +125,9 @@ export function replaceAnimation(str: string) {
   }
 
   return null;
-}
+};
 
-export function splitAnimation(str: string) {
+export const splitAnimation = (str: string): string[] => {
   const result: string[] = [];
   let inFunction = 0;
   let current = '';
@@ -152,7 +152,7 @@ export function splitAnimation(str: string) {
 
   result.push(current);
   return result;
-}
+};
 // keyframes 相关 end
 
 // uuid start

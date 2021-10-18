@@ -20,7 +20,7 @@ export class AllGenerator extends RuntimeGenerator {
 
     this.$opts = Object.assign(defOpts, options);
     this.prefix = options.prefix || 'icon';
-    this.useType = options.useType || true;
+    this.useType = options.useType || false;
   }
 
   process() {
@@ -34,19 +34,25 @@ export class AllGenerator extends RuntimeGenerator {
     const allIcon = `All${pascalCase(this.prefix)}`;
 
     this.writeLine(
-      "import { createVNode, App, DefineComponent, ComponentOptions } from '@vue/runtime-dom';",
+      `import { createVNode${
+        this.useType ? ', App, DefineComponent, ComponentOptions' : ''
+      } } from '@vue/runtime-dom';`,
     );
     this.writeLine(`import * as ${iconMap} from './map';`);
-    this.writeLine(`import { ${iconProps} } from './runtime';`);
-    this.writeLine();
+    if (this.useType) {
+      this.writeLine(`import { ${iconProps} } from './runtime';`);
+      this.writeLine();
+    }
 
     if (this.useType) {
       const allProps = this.getInterfaceName('AllProps');
       this.writeLine(`export type ${iconType} = keyof typeof ${iconMap};`);
       this.writeLine();
-      this.writeLine(`export interface ${allProps} extends ${iconProps} {
-  type: ${iconType} | string;
-}`);
+      this.writeLine(`export interface ${allProps} extends ${iconProps} {`);
+      this.indent(1);
+      this.writeLine(`type: ${iconType} | string;`);
+      this.indent(-1);
+      this.writeLine(`}`);
       this.writeLine();
       this.writeLine(
         `export type ${allOptions} = ComponentOptions<${allProps}>;`,
@@ -58,9 +64,9 @@ export class AllGenerator extends RuntimeGenerator {
 
     this.writeLine();
     this.writeLine(
-      `function toPascalCase(val${this.useType ? ': string' : ''})${
+      `const toPascalCase = (val${this.useType ? ': string' : ''})${
         this.useType ? ': string' : ''
-      } {`,
+      } => {`,
     );
     this.indent(1);
     this.writeLine(
@@ -68,9 +74,12 @@ export class AllGenerator extends RuntimeGenerator {
     );
     this.indent(-1);
     this.writeLine('};');
+    this.writeLine();
 
-    const parkOptions = this.getInterfaceName('parkOptions');
-    this.writeLine(`const ${parkOptions}: ${allOptions} = {`);
+    const parkOptions = this.getInterfaceName('waterOptions');
+    this.writeLine(
+      `const ${parkOptions}${this.useType ? `: ${allOptions}` : ''} = {`,
+    );
     this.indent(1); // 处理name
 
     this.writeLine(`name: 'water-icon',`);
@@ -121,7 +130,7 @@ export class AllGenerator extends RuntimeGenerator {
     this.writeLine();
 
     this.writeLine(
-      `export const ${this.getTypeName('Park')}${
+      `export const ${this.getTypeName('Water')}${
         this.useType ? `: ${allIcon}` : ''
       } = ${parkOptions}${this.useType ? ` as ${allIcon}` : ''};`,
     );
