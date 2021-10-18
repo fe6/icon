@@ -24,10 +24,10 @@ export interface IDynamicStrokeTransformerOptions {
   strokeLinejoinName?: string;
 }
 
-function baseDynamicStroke(
+const baseDynamicStroke = (
   attr: TTransfromInnerOptionsBase,
   options: IDynamicStrokeTransformerOptions,
-): TTransfromInnerBase {
+): TTransfromInnerBase => {
   const prefix = options.prefix || false;
   const propName = options.propName || 'props';
   const disableStroke = options.disableStroke || false;
@@ -75,7 +75,7 @@ function baseDynamicStroke(
   }
 
   return attr;
-}
+};
 
 export const dynamicStrokeTransformer = (
   options: IDynamicStrokeTransformerOptions,

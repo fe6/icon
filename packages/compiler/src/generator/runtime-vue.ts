@@ -25,13 +25,8 @@ export class VueRuntimeGenerator extends RuntimeGenerator {
   private processPlatformImports() {
     if (this.useType) {
       this.writeLine(
-        // "import Vue, {ComponentOptions, CreateElement, VNode, VueConstructor} from 'vue';",
         "import {ComponentOptions, DefineComponent, inject, provide} from '@vue/runtime-dom'",
       );
-      // this.writeLine(
-      //   'import {ArrayPropsDefinition, DefaultComputed, DefaultData, DefaultMethods} ' +
-      //     "from 'vue/types/options';",
-      // );
     } else {
       this.writeLine(
         "import React, {createContext, useContext, useMemo} from 'react';",
@@ -44,9 +39,9 @@ export class VueRuntimeGenerator extends RuntimeGenerator {
   private processPlatformTypes() {
     this.writeLine('// 包裹后的图标属性');
     this.writeLine(
-      'export interface '
-        .concat(this.getInterfaceName('props'), ' extends ')
-        .concat(this.getInterfaceName('base'), ' {'),
+      `export interface ${this.getInterfaceName(
+        'props',
+      )} extends ${this.getInterfaceName('base')} {`,
     );
     this.indent(1);
     this.writeLine('spin?: boolean;');
@@ -55,63 +50,23 @@ export class VueRuntimeGenerator extends RuntimeGenerator {
     this.writeLine();
     this.writeLine('// 包裹后的图标属性');
     this.writeLine(
-      'export type '
-        .concat(this.getTypeName('options'), ' = ComponentOptions<')
-        .concat(this.getInterfaceName('props'), '>;'),
+      `export type ${this.getTypeName(
+        'options',
+      )} = ComponentOptions<${this.getInterfaceName('props')}>;`,
     );
-    // this.writeLine();
-    // const instance = this.getInterfaceName('instance');
-    // this.writeLine();
-    // this.writeLine('// 包裹前的图标实例');
-    // this.writeLine(
-    //   'export interface '
-    //     .concat(instance, ' extends Vue, ')
-    //     .concat(this.getInterfaceName('props'), ' {'),
-    // );
-    // this.indent(1);
-    // this.writeLine('id: string;');
-    // this.writeLine(
-    //   ''
-    //     .concat(this.prefix.toUpperCase(), '_CONFIGS?: ')
-    //     .concat(this.getInterfaceName('config'), ';'),
-    // );
-    // this.indent(-1);
-    // this.writeLine('}');
-    // this.writeLine();
-    // this.writeLine('// 包裹后的图标属性');
-    // this.writeLine('// eslint-disable-next-line max-len');
-    // this.writeLine(
-    //   'export type '.concat(this.getTypeName('options'), ' = ') +
-    //     'ComponentOptions<'.concat(
-    //       instance,
-    //       ', DefaultData<{id: string}>, DefaultMethods<never>, ',
-    //     ) +
-    //     'DefaultComputed, ArrayPropsDefinition<'.concat(
-    //       this.getInterfaceName('props'),
-    //       '>, ',
-    //     ) +
-    //     ''.concat(this.getInterfaceName('props'), '>;'),
-    // );
     this.writeLine();
     this.writeLine('// 包裹前的图标渲染器');
-    // this.writeLine(
-    //   'export type '.concat(this.getTypeName('Render'), ' = ') +
-    //     '(h: '
-    //       .concat(this.getTypeName('helper'), ', props: ')
-    //       .concat(this.getInterfaceName('props', true), ') => VNode;'),
-    // );
     this.writeLine(
-      'export type '.concat(this.getTypeName('Render'), ' = ') +
-        '('
-          .concat('props: ')
-          .concat(this.getInterfaceName('props', true), ') => JSX.Element;'),
+      `export type ${this.getTypeName(
+        'Render',
+      )} = (props: ${this.getInterfaceName('props', true)}) => JSX.Element;`,
     );
     this.writeLine();
     this.writeLine('// 包裹后的图标');
     this.writeLine(
-      'export type '
-        .concat(this.getTypeName(''), ' = DefineComponent<')
-        .concat(this.getInterfaceName('props', true), '>;'),
+      `export type ${this.getTypeName(
+        '',
+      )} = DefineComponent<${this.getInterfaceName('props', true)}>;`,
     );
     this.writeLine();
   }
@@ -127,11 +82,9 @@ export class VueRuntimeGenerator extends RuntimeGenerator {
     this.writeLine(`const options${this.useType ? `: ${optionType}` : ''} = {`);
     this.indent(1); // 处理name
 
-    this.writeLine("name: '".concat(prefix, "-' + name,")); // 处理inject
+    this.writeLine(`name: '${prefix}-' + name,`); // 处理inject
 
-    this.writeLine(
-      "inject: ['".concat(this.prefix.toUpperCase(), "_CONFIGS'],"),
-    ); // 处理属性
+    this.writeLine(`inject: ['${this.prefix.toUpperCase()}_CONFIGS'],`); // 处理属性
 
     this.writeLine(
       `props: [${this.getPropKeys()
@@ -143,10 +96,9 @@ export class VueRuntimeGenerator extends RuntimeGenerator {
     this.indent(1);
     this.writeLine('const id = guid();');
     this.writeLine(
-      'const '
-        .concat(this.prefix.toUpperCase(), '_CONFIGS = inject(')
-        .concat(this.getTypeName('context'), ', DEFAULT_')
-        .concat(this.prefix.toUpperCase(), '_CONFIGS);'),
+      `const ${this.prefix.toUpperCase()}_CONFIGS = inject(${this.getTypeName(
+        'context',
+      )}, DEFAULT_${this.prefix.toUpperCase()}_CONFIGS);`,
     );
     this.writeLine();
     this.writeLine('return () => {');
@@ -160,9 +112,7 @@ export class VueRuntimeGenerator extends RuntimeGenerator {
     this.indent(-1);
     this.writeLine('} = props;'); // 生成渲染属性
 
-    this.writeLine(
-      'const svgProps = '.concat(this.getTypeName('converter'), '(id, {'),
-    );
+    this.writeLine(`const svgProps = ${this.getTypeName('converter')}(id, {`);
     this.indent(1);
     this.getPropKeys().forEach((key: string, index: number, _ref: string[]) => {
       const length = _ref.length;
@@ -170,41 +120,33 @@ export class VueRuntimeGenerator extends RuntimeGenerator {
     });
 
     this.indent(-1);
-    this.writeLine('}, '.concat(this.prefix.toUpperCase(), '_CONFIGS);'));
+    this.writeLine(`}, ${this.prefix.toUpperCase()}_CONFIGS);`);
 
-    if (this.useType) {
-      this.writeLine(
-        'const cls: string[] = ['
-          .concat(this.prefix.toUpperCase(), '_CONFIGS.prefix + ')
-          .concat(`'-${this.prefix}'];`),
-      );
-    } else {
-      this.writeLine(
-        'const cls = ['
-          .concat(this.prefix.toUpperCase(), '_CONFIGS.prefix + ')
-          .concat(`'-${this.prefix}'];`),
-      );
-    }
+    this.writeLine(
+      `const cls${
+        this.useType ? ': string[]' : ''
+      } = [\`\${${this.prefix.toUpperCase()}_CONFIGS.prefix\}-${
+        this.prefix
+      }\`];`,
+    );
 
     if (wrapperNeedName) {
       this.writeLine();
       this.writeLine(
-        'cls.push('
-          .concat(this.prefix.toUpperCase(), '_CONFIGS.prefix + ')
-          .concat(`'-${this.prefix}' + '-' + name);`),
+        `cls.push(\`\${${this.prefix.toUpperCase()}_CONFIGS.prefix}-${
+          this.prefix
+        }-\${name}\`);`,
       );
     }
 
     if (wrapperNeedRTL) {
       this.writeLine();
-      this.writeLine(
-        'if (rtl && '.concat(this.prefix.toUpperCase(), '_CONFIGS.rtl) {'),
-      );
+      this.writeLine(`if (rtl && ${this.prefix.toUpperCase()}_CONFIGS.rtl) {`);
       this.indent(1);
       this.writeLine(
-        'cls.push('
-          .concat(this.prefix.toUpperCase(), '_CONFIGS.prefix + ')
-          .concat(`'-${this.prefix}-rtl');`),
+        `cls.push(\`\${${this.prefix.toUpperCase()}_CONFIGS.prefix}-${
+          this.prefix
+        }-rtl\`);`,
       );
       this.indent(-1);
       this.writeLine('}');
@@ -214,9 +156,9 @@ export class VueRuntimeGenerator extends RuntimeGenerator {
     this.writeLine('if (spin) {');
     this.indent(1);
     this.writeLine(
-      'cls.push('
-        .concat(this.prefix.toUpperCase(), '_CONFIGS.prefix + ')
-        .concat(`'-${this.prefix}-spin');`),
+      `cls.push(\`\${${this.prefix.toUpperCase()}_CONFIGS.prefix}-${
+        this.prefix
+      }-spin\`);`,
     );
     this.indent(-1);
     this.writeLine('}');

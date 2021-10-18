@@ -23,13 +23,9 @@ export class IndexGenerator extends Generator {
     this.writeLine("export * from './map'");
     this.writeLine("export * from './all'");
     this.writeLine(
-      'export { '.concat(
-        this.getTypeName('provider'),
-        ', DEFAULT_'.concat(
-          this.prefix.toUpperCase(),
-          "_CONFIGS } from './runtime';",
-        ),
-      ),
+      `export { ${this.getTypeName(
+        'provider',
+      )}, DEFAULT_${this.prefix.toUpperCase()}_CONFIGS } from './runtime';`,
     );
 
     return this.getResult();

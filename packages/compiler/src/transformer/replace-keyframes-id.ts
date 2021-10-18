@@ -11,7 +11,7 @@ import { replaceAnimation, splitAnimation } from '../util';
 import { ITransformPlugin } from './base';
 import { replaceSelectorIdTransformer } from './replace-id';
 
-function replaceStr(str: string, sp: string, replace: string) {
+const replaceStr = (str: string, sp: string, replace: string): string => {
   const list = str.split(sp);
   const result: string[] = [];
   list.forEach((item, i) => {
@@ -26,7 +26,7 @@ function replaceStr(str: string, sp: string, replace: string) {
     }
   });
   return result.join('');
-}
+};
 
 const replaceKeyframesId = (
   attr: ISvgStyleAttr | ISvgInlineStyleAttr,
@@ -45,9 +45,7 @@ const replaceKeyframesId = (
         return item.trim();
       })
       .map((item) => {
-        return ''
-          .concat(map[item].propName, " + '")
-          .concat(map[item].newId, "'");
+        return `${map[item].propName} + '${map[item].newId}'`;
       });
     return {
       ...attr,
@@ -75,7 +73,7 @@ const replaceKeyframesId = (
         `'${replaceStr(
           key,
           r,
-          "' + ".concat(map[r].propName, " + '").concat(map[r].newId, "' + '"),
+          `' + ${map[r].propName} + '${map[r].newId}' + '`,
         )}'`,
       );
     });

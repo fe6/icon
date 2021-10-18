@@ -95,7 +95,7 @@ class IconCompiler {
 
       plugins.push(
         removePropsTransformer({
-          props: ['version', 'xmlns:xlink'].concat(isSvg ? [] : ['xmlns']),
+          props: ['version', 'xmlns:xlink', ...(isSvg ? [] : ['xmlns'])],
         }),
       ); // 修复mask-type属性的错误
 
@@ -111,13 +111,12 @@ class IconCompiler {
             colors: replaceList.map((item) => {
               return item.color;
             }),
-            ignore: function ignore(info) {
-              return info.attrs.some((item) => {
+            ignore: (info) =>
+              info.attrs.some((item) => {
                 return (
                   item.name === 'fill-opacity' && item.expression === '0.01'
                 );
-              });
-            },
+              }),
           }),
         );
       } // 增加动态颜色替换
@@ -171,13 +170,12 @@ class IconCompiler {
         plugins.push(
           removeConditionTransformer({
             tag: 'rect',
-            condition: function condition(info) {
-              return info.attrs.some((item) => {
+            condition: (info) =>
+              info.attrs.some((item) => {
                 return (
                   item.name === 'fill-opacity' && item.expression === '0.01'
                 );
-              });
-            },
+              }),
           }),
         );
       }
@@ -253,10 +251,9 @@ class IconCompiler {
     const isSvg = this.$opts.type === 'svg';
     return {
       mime: 'image/svg+xml',
-      path: 'icons/'
-        .concat(name, '.')
-        .concat(this.$opts.useType ? 'ts' : 'js')
-        .concat(isSvg ? '' : 'x'),
+      path: `icons/${name}.${this.$opts.useType ? 't' : 'j'}s${
+        isSvg ? '' : 'x'
+      }`,
       content: svg,
     };
   }
@@ -268,7 +265,7 @@ class IconCompiler {
   private getRuntimeFile() {
     return {
       mime: 'text/javascript',
-      path: 'runtime/index.'.concat(this.$opts.useType ? 'ts' : 'js', 'x'),
+      path: `runtime/index.${this.$opts.useType ? 't' : 'j'}sx`,
       content: this.getRuntimeCode(),
     };
   }
@@ -286,7 +283,7 @@ class IconCompiler {
   private getIndexFile() {
     return {
       mime: 'text/javascript',
-      path: `index.${this.$opts.useType ? 'ts' : 'js'}`,
+      path: `index.${this.$opts.useType ? 't' : 'j'}s`,
       content: this.getIndexCode(),
     };
   }
@@ -319,6 +316,7 @@ class IconCompiler {
       strokeLinecap: this.$opts.strokeLinecap,
       strokeLinejoin: this.$opts.strokeLinejoin,
       wrapperNeedName: true,
+      useType: this.$opts.useType,
       wrapperNeedRTL: true,
       theme: this.$opts.theme || [],
       colors: this.$opts.colors || [],
@@ -331,7 +329,7 @@ class IconCompiler {
   private getAllFile() {
     return {
       mime: 'text/javascript',
-      path: `all.${this.$opts.useType ? 'ts' : 'js'}`,
+      path: `all.${this.$opts.useType ? 't' : 'j'}s`,
       content: this.getAllCode(),
     };
   }

@@ -56,14 +56,11 @@ export class IconGenerator extends Generator {
     const selector = rule.selector;
     const rules = rule.rules;
     this.writeLine(
-      '@'
-        .concat(name, ' ')
-        .concat(
-          selector.type === SvgShapeAttr.CONST
-            ? selector.expression
-            : `\${${selector.expression}}`,
-          ' {',
-        ),
+      `@${name} ${
+        selector.type === SvgShapeAttr.CONST
+          ? selector.expression
+          : `\${${selector.expression}\}`
+      } {`,
     );
     this.indent(1);
     rules.forEach((item: ISvgStyleRuleInfo) => this.processStyleRule(item));
@@ -74,7 +71,7 @@ export class IconGenerator extends Generator {
   processStyleRule(rule: ISvgStyleRuleInfo) {
     const selector = rule.selector;
     const attrs = rule.attrs;
-    this.writeLine(''.concat(this.calcStyleSelectorGroup(selector), ' {'));
+    this.writeLine(`${this.calcStyleSelectorGroup(selector)} {`);
     this.indent(1);
     attrs.forEach((attr: ISvgStyleAttr) => this.processStyleAttr(attr));
     this.indent(-1);
@@ -106,7 +103,7 @@ export class IconGenerator extends Generator {
       return expression;
     }
 
-    return '${'.concat(expression, '}');
+    return `\$\{${expression}}`;
   }
 
   processStyleAttr(attr: ISvgStyleAttr) {
@@ -115,10 +112,10 @@ export class IconGenerator extends Generator {
     const name = attr.name;
 
     if (type === SvgShapeAttr.CONST) {
-      this.writeLine(''.concat(name, ': ').concat(expression, ';'));
+      this.writeLine(`${name}: ${expression};`);
       return;
     }
 
-    this.writeLine(''.concat(name, ': ${').concat(expression, '};'));
+    this.writeLine(`${name}: \$\{${expression}};`);
   }
 }

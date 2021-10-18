@@ -65,18 +65,13 @@ const baseConverter = (
         return attr;
       }
 
-      const hueStr = String(index >= 0 ? index : 0);
+      const hueStr = index >= 0 ? index : 0;
 
       return {
         ...attr,
         name,
         type: SvgShapeAttr.DYNAMIC,
-        expression: ''
-          .concat(prefixStr)
-          .concat(formatter, '(')
-          .concat(hueStr, ', ')
-          .concat(String(saturation), ', ')
-          .concat(String(lightness), ')'),
+        expression: `${prefixStr}${formatter}(${hueStr}, ${saturation}, ${lightness})`,
       };
     }
   }

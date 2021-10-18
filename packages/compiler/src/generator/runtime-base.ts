@@ -152,19 +152,16 @@ export class RuntimeGenerator extends Generator {
 
     if (theme.length) {
       this.writeLine('// 主题');
-      this.writeLine(
-        'export type Theme = '.concat(
-          theme
-            .map((item: IIconThemeInfo) =>
-              (item.name.includes('-')
-                ? `'${camelCase(item.name)}' | '${pascalCase(item.name)}' | '`
-                : "'"
-              ).concat(item.name, "'"),
-            )
-            .join(' | '),
-          ';',
-        ),
-      );
+      const themeString = theme
+        .map((item: IIconThemeInfo) => {
+          return `${
+            item.name.includes('-')
+              ? `'${camelCase(item.name)}' | '${pascalCase(item.name)}' | '`
+              : "'"
+          }${item.name}'`;
+        })
+        .join(' | ');
+      this.writeLine(`export type Theme = ${themeString};`);
       this.writeLine();
     } // 渐变色处理
 
@@ -191,7 +188,7 @@ export class RuntimeGenerator extends Generator {
     const hueList = this.hueList;
     this.writeLine('// 包裹前的图标属性');
     this.writeLine(
-      'export interface '.concat(this.getInterfaceName('props', true), ' {'),
+      `export interface ${this.getInterfaceName('props', true)} {`,
     );
     this.indent(1);
     this.writeLine();
@@ -218,9 +215,7 @@ export class RuntimeGenerator extends Generator {
 
   processConfigType() {
     this.writeLine('// 图标配置属性');
-    this.writeLine(
-      'export interface '.concat(this.getInterfaceName('config'), ' {'),
-    );
+    this.writeLine(`export interface ${this.getInterfaceName('config')} {`);
     this.indent(1);
     this.processSvgCommonType();
     this.writeLine();
@@ -254,7 +249,7 @@ export class RuntimeGenerator extends Generator {
 
           this.writeLine();
 
-          this.writeLine(''.concat(camelCase(item.name), ': {'));
+          this.writeLine(`${camelCase(item.name)}: {`);
 
           this.indent(1);
 
@@ -264,9 +259,9 @@ export class RuntimeGenerator extends Generator {
             }
 
             this.writeLine(
-              ''
-                .concat(camelCase(fItem.name), ': ')
-                .concat(fItem.type === 'hue' ? 'HSL' : 'string', ';'),
+              `${camelCase(fItem.name)}: ${
+                fItem.type === 'hue' ? 'HSL' : 'string'
+              };`,
             );
           });
 
@@ -292,9 +287,9 @@ export class RuntimeGenerator extends Generator {
       this.writeLine('// 默认颜色');
 
       if (list.length === 1) {
-        this.writeLine('colors: '.concat(list.join(' | '), '[];'));
+        this.writeLine(`colors: ${list.join(' | ')}[];`);
       } else {
-        this.writeLine('colors: Array<'.concat(list.join(' | '), '>;'));
+        this.writeLine(`colors: Array<${list.join(' | ')}>;`);
       }
     }
 
@@ -305,9 +300,7 @@ export class RuntimeGenerator extends Generator {
 
   processPropsType() {
     this.writeLine('// 图标基础属性');
-    this.writeLine(
-      'export interface '.concat(this.getInterfaceName('base'), ' {'),
-    );
+    this.writeLine(`export interface ${this.getInterfaceName('base')} {`);
     this.indent(1);
     this.processSvgCommonType(true);
 
@@ -322,7 +315,7 @@ export class RuntimeGenerator extends Generator {
     if (list.length > 0) {
       this.writeLine();
       this.writeLine('// 填充色');
-      this.writeLine('fill?: '.concat(list.join(' | '), ';'));
+      this.writeLine(`fill?: ${list.join(' | ')};`);
     }
 
     this.writeLine();
@@ -339,40 +332,35 @@ export class RuntimeGenerator extends Generator {
     const stroke = this.stroke;
     const strokeLinecap = this.strokeLinecap;
     const strokeLinejoin = this.strokeLinejoin;
+    const isOptional = optional ? '?' : '';
 
     if (fixedSize) {
       this.writeLine();
       this.writeLine('// 图标尺寸大小，默认1em');
-      this.writeLine('size'.concat(optional ? '?' : '', ': number | string;'));
+      this.writeLine(`size${isOptional}: number | string;`);
     } else {
       this.writeLine();
       this.writeLine('// 图标尺寸大小不固定，长宽默认为1em');
-      this.writeLine('width'.concat(optional ? '?' : '', ': number | string;'));
-      this.writeLine(
-        'height'.concat(optional ? '?' : '', ': number | string;'),
-      );
+      this.writeLine(`width${isOptional}: number | string;`);
+      this.writeLine(`height${isOptional}: number | string;`);
     }
 
     if (stroke) {
       this.writeLine();
       this.writeLine('// 描边宽度');
-      this.writeLine('strokeWidth'.concat(optional ? '?' : '', ': number;'));
+      this.writeLine(`strokeWidth${isOptional}: number;`);
     }
 
     if (strokeLinecap) {
       this.writeLine();
       this.writeLine('// 描边端点类型');
-      this.writeLine(
-        'strokeLinecap'.concat(optional ? '?' : '', ': StrokeLinecap;'),
-      );
+      this.writeLine(`strokeLinecap${isOptional}: StrokeLinecap;`);
     }
 
     if (strokeLinejoin) {
       this.writeLine();
       this.writeLine('// 描边连接线类型');
-      this.writeLine(
-        'strokeLinejoin'.concat(optional ? '?' : '', ': StrokeLinejoin;'),
-      );
+      this.writeLine(`strokeLinejoin${isOptional}: StrokeLinejoin;`);
     }
   }
 
@@ -387,10 +375,9 @@ export class RuntimeGenerator extends Generator {
 
     this.writeLine('// 默认属性');
     this.writeLine(
-      `${
-        'export const DEFAULT_'.concat(this.prefix.toUpperCase(), '_CONFIGS') +
-        (useType ? ': '.concat(this.getInterfaceName('config')) : '')
-      } = {`,
+      `export const DEFAULT_${this.prefix.toUpperCase()}_CONFIGS${
+        useType ? `: ${this.getInterfaceName('config')}` : ''
+      } =  {`,
     );
     this.indent(1);
 
@@ -404,15 +391,15 @@ export class RuntimeGenerator extends Generator {
     }
 
     if (stroke) {
-      this.writeLine('strokeWidth: '.concat(String(stroke), ','));
+      this.writeLine(`strokeWidth: ${stroke},`);
     }
 
     if (strokeLinecap) {
-      this.writeLine("strokeLinecap: '".concat(strokeLinecap, "',"));
+      this.writeLine(`strokeLinecap: '${strokeLinecap}',`);
     }
 
     if (strokeLinejoin) {
-      this.writeLine("strokeLinejoin: '".concat(strokeLinejoin, "',"));
+      this.writeLine(`strokeLinejoin: '${strokeLinejoin}',`);
     }
 
     if (this.wrapperNeedRTL) {
@@ -420,7 +407,7 @@ export class RuntimeGenerator extends Generator {
     }
 
     if (theme.length) {
-      this.writeLine("theme: '".concat(theme[0].name, "',"));
+      this.writeLine(`theme: '${theme[0].name}',`);
 
       if (this.hasDefaultTheme) {
         this.writeLine('colors: {');
@@ -433,7 +420,7 @@ export class RuntimeGenerator extends Generator {
             });
           })
           .forEach((item: IIconThemeInfo, i: number, arr: IIconThemeInfo[]) => {
-            this.writeLine(''.concat(camelCase(item.name), ': {'));
+            this.writeLine(`${camelCase(item.name)}: {`);
 
             this.indent(1);
 
@@ -449,30 +436,31 @@ export class RuntimeGenerator extends Generator {
                 }
 
                 if (f.type === 'hue') {
-                  this.writeLine(''.concat(camelCase(name), ': {'));
+                  this.writeLine(`${camelCase(name)}: {`);
 
                   this.indent(1);
 
-                  this.writeLine('h: '.concat(String(f.hue), ','));
+                  this.writeLine(`h: ${f.hue},`);
 
-                  this.writeLine('s: '.concat(String(f.saturation), ','));
+                  this.writeLine(`s: ${f.saturation},`);
 
-                  this.writeLine('l: '.concat(String(f.light)));
+                  this.writeLine(`l: ${f.light},`);
 
                   this.indent(-1);
 
                   this.writeLine(`}${i !== arr.length - 1 ? ',' : ''}`);
                 } else {
                   this.writeLine(
-                    ''.concat(camelCase(name), ": '").concat(f.color, "'") +
-                      (i !== arr.length - 1 ? ',' : ''),
+                    `${camelCase(name)}: '${f.color}'${
+                      i !== arr.length - 1 ? ',' : ''
+                    }`,
                   );
                 }
               });
 
             this.indent(-1);
 
-            this.writeLine('}'.concat(i !== arr.length - 1 ? ',' : ''));
+            this.writeLine(`}${i !== arr.length - 1 ? ',' : ''}`);
           });
         this.indent(-1);
         this.writeLine('},');
@@ -487,19 +475,17 @@ export class RuntimeGenerator extends Generator {
 
             this.indent(1);
 
-            this.writeLine('h: '.concat(String(f.hue), ','));
+            this.writeLine(`h: ${f.hue},`);
 
-            this.writeLine('s: '.concat(String(f.saturation), ','));
+            this.writeLine(`s: ${f.saturation},`);
 
-            this.writeLine('l: '.concat(String(f.light)));
+            this.writeLine(`l: ${f.light},`);
 
             this.indent(-1);
 
             this.writeLine(`}${i !== arr.length - 1 ? ',' : ''}`);
           } else {
-            this.writeLine(
-              "'".concat(f.color, "'") + (i !== arr.length - 1 ? ',' : ''),
-            );
+            this.writeLine(`'${f.color}'${i !== arr.length - 1 ? ',' : ''}`);
           }
         },
       );
@@ -507,22 +493,17 @@ export class RuntimeGenerator extends Generator {
       this.writeLine('],');
     }
 
-    this.writeLine("prefix: '".concat(cssPrefix, "'"));
+    this.writeLine(`prefix: '${cssPrefix}'`);
     this.indent(-1);
     this.writeLine('};');
     this.writeLine();
   }
 
   processUtil() {
-    this.writeLine(
-      'function guid()'.concat(this.useType ? ': string' : '', ' {'),
-    );
+    this.writeLine(`const guid = ()${this.useType ? ': string' : ''} => {`);
     this.indent(1);
     this.writeLine(
-      "return '".concat(
-        this.prefix,
-        "-' + (((1 + Math.random()) * 0x100000000) | 0).toString(16).substring(1);",
-      ),
+      `return '${this.prefix}-' + (((1 + Math.random()) * 0x100000000) | 0).toString(16).substring(1);`,
     );
     this.indent(-1);
     this.writeLine('}');
@@ -531,21 +512,19 @@ export class RuntimeGenerator extends Generator {
 
   processConverter() {
     this.writeLine('// 属性转换函数');
+    const casePrefix = pascalCase(this.prefix);
 
     if (this.useType) {
       this.writeLine(
-        'export function '.concat(pascalCase(this.prefix), 'Converter') +
-          '(id: string, icon: '
-            .concat(this.getInterfaceName('base'), ', config: ')
-            .concat(this.getInterfaceName('config'), ')') +
-          ': '.concat(this.getInterfaceName('props', true), ' {'),
+        `export const ${casePrefix}Converter = (id: string, icon: ${this.getInterfaceName(
+          'base',
+        )}, config: ${this.getInterfaceName(
+          'config',
+        )}): ${this.getInterfaceName('props', true)} => {`,
       );
     } else {
       this.writeLine(
-        'export function '.concat(
-          pascalCase(this.prefix),
-          'Converter (id, icon, config) {',
-        ),
+        `export const ${casePrefix}Converter = (id, icon, config) => {`,
       );
     }
 
@@ -587,11 +566,11 @@ export class RuntimeGenerator extends Generator {
       this.writeLine('switch (theme) {');
       this.indent(1);
       this.theme.forEach((theme: IIconThemeInfo) => {
-        this.writeLine("case '".concat(theme.name, "':"));
+        this.writeLine(`case '${theme.name}':`);
 
         if (theme.name.includes('-')) {
-          this.writeLine("case '".concat(camelCase(theme.name), "':"));
-          this.writeLine("case '".concat(pascalCase(theme.name), "':"));
+          this.writeLine(`case '${camelCase(theme.name)}':`);
+          this.writeLine(`case '${pascalCase(theme.name)}':`);
         }
 
         this.indent(1);
@@ -608,21 +587,19 @@ export class RuntimeGenerator extends Generator {
             this.write('colors.push('); // 固定颜色
 
             if (fill.fixed) {
-              this.write("'".concat(fill.color, "'"));
+              this.write(`'${fill.color}'`);
             } else {
               this.write(
-                'typeof fill['
-                  .concat(String(order), "] === 'string' ? fill[")
-                  .concat(String(order), '] : '),
+                `typeof fill[${order}] === 'string' ? fill[${order}] : `,
               );
 
               if (fill.currentColor) {
                 this.write("'currentColor'");
               } else {
                 this.write(
-                  'config.colors.'
-                    .concat(camelCase(theme.name), '.')
-                    .concat(camelCase(fill.name)),
+                  `config.colors.${camelCase(theme.name)}.${camelCase(
+                    fill.name,
+                  )}`,
                 );
               }
             }
@@ -637,22 +614,16 @@ export class RuntimeGenerator extends Generator {
 
             if (fill.fixed) {
               this.write(
-                '{h: '
-                  .concat(String(fill.hue), ', s: ')
-                  .concat(String(fill.saturation), ', l: ')
-                  .concat(String(fill.light)),
+                `{h: ${fill.hue}, s: ${fill.saturation}, l: ${fill.light}`,
               );
             } else {
               this.write(
-                'typeof fill['
-                  .concat(String(order), "] === 'object' ? fill[")
-                  .concat(String(order), '] : '),
+                `typeof fill[${order}] === 'object' ? fill[${order}] : `,
               );
-
               this.write(
-                'config.colors.'
-                  .concat(camelCase(theme.name), '.')
-                  .concat(camelCase(fill.name)),
+                `config.colors.${camelCase(theme.name)}.${camelCase(
+                  fill.name,
+                )}`,
               );
             }
 
@@ -671,13 +642,11 @@ export class RuntimeGenerator extends Generator {
         if (fill.type === 'color') {
           this.writeLine();
 
-          this.writeLine(
-            'if (typeof fill['.concat(String(order), "] === 'string') {"),
-          );
+          this.writeLine(`if (typeof fill[${order}] === 'string') {`);
 
           this.indent(1);
 
-          this.writeLine('colors.push(fill['.concat(String(order), ']);'));
+          this.writeLine(`colors.push(fill[${order}]);`);
 
           this.indent(-1);
 
@@ -689,20 +658,12 @@ export class RuntimeGenerator extends Generator {
 
           this.writeLine();
 
-          this.writeLine(
-            'if (typeof config.colors['.concat(
-              String(order),
-              "] !== 'string') {",
-            ),
-          );
+          this.writeLine(`if (typeof config.colors[${order}]] !== 'string') {`);
 
           this.indent(1);
 
           this.writeLine(
-            "throw new Error('config.colors[".concat(
-              String(order),
-              "] expect string to be HSL');",
-            ),
+            `throw new Error('config.colors[${order}] expect string to be HSL');`,
           );
 
           this.indent(-1);
@@ -711,9 +672,7 @@ export class RuntimeGenerator extends Generator {
 
           this.writeLine();
 
-          this.writeLine(
-            'colors.push(config.colors['.concat(String(order), ']);'),
-          );
+          this.writeLine(`colors.push(config.colors[${order}]);`);
 
           this.indent(-1);
 
@@ -721,12 +680,11 @@ export class RuntimeGenerator extends Generator {
         } else {
           this.writeLine();
 
-          // eslint-disable-next-line no-template-curly-in-string
-          this.writeLine("if (typeof fill[`${order}`] === 'string') {");
+          this.writeLine(`if (typeof fill[\`\${order}\`] === 'string') {`);
 
           this.indent(1);
 
-          this.writeLine('hsl.push(fill['.concat(String(order), ']);'));
+          this.writeLine(`hsl.push(fill[${order}]);`);
 
           this.indent(-1);
 
@@ -738,20 +696,12 @@ export class RuntimeGenerator extends Generator {
 
           this.writeLine();
 
-          this.writeLine(
-            'if (typeof config.colors['.concat(
-              String(order),
-              "] !== 'object') {",
-            ),
-          );
+          this.writeLine(`if (typeof config.colors[${order}] !== 'object') {`);
 
           this.indent(1);
 
           this.writeLine(
-            "throw new Error('config.colors[".concat(
-              String(order),
-              "] expect HSL to be string');",
-            ),
+            `throw new Error('config.colors[${order}] expect HSL to be string');`,
           );
 
           this.indent(-1);
@@ -760,9 +710,7 @@ export class RuntimeGenerator extends Generator {
 
           this.writeLine();
 
-          this.writeLine(
-            'hsl.push(config.colors['.concat(String(order), ']);'),
-          );
+          this.writeLine(`hsl.push(config.colors[${order}]);`);
 
           this.indent(-1);
 
@@ -813,44 +761,34 @@ export class RuntimeGenerator extends Generator {
     this.indent(-1);
     this.writeLine('};');
     this.indent(-1);
-    this.writeLine(
-      '} // 属性转换函数 '.concat(pascalCase(this.prefix), 'Converter end'),
-    );
+    this.writeLine(`} // 属性转换函数 ${pascalCase(this.prefix)}Converter end`);
     this.writeLine();
   }
 
   processContext() {
     this.writeLine(
-      'const '.concat(
-        this.getTypeName('context'),
-        ` = Symbol(${this.getClassName('context')}`,
-        ');',
-      ),
+      `const ${this.getTypeName('context')} = Symbol(${this.getClassName(
+        'context',
+      )});`,
     );
     this.writeLine();
   }
 
   processProvider() {
     this.writeLine('// 图标配置Provider');
-    this.write('export const '.concat(this.getTypeName('provider'), ' = ('));
+    this.write(`export const ${this.getTypeName('provider')} = (`);
 
     if (this.useType) {
-      this.write('config: '.concat(this.getInterfaceName('Config')));
-    } else {
-      this.write('config, ');
-    }
-
-    if (this.useType) {
+      this.write(`config: ${this.getInterfaceName('Config')}`);
       this.writeLine(`): void => {`);
     } else {
-      this.writeLine(') {');
+      this.write('config, ');
+      this.writeLine(') => {');
     }
 
     this.indent(1);
 
-    this.writeLine(
-      'provide('.concat(this.getTypeName('context'), ', config);'),
-    );
+    this.writeLine(`provide(${this.getTypeName('context')}, config);`);
 
     this.indent(-1);
 
@@ -882,7 +820,7 @@ export class RuntimeGenerator extends Generator {
     }
 
     if (this.useType) {
-      this.write('render: '.concat(this.getTypeName('Render')));
+      this.write(`render: ${this.getTypeName('Render')}`);
     } else {
       this.write('render');
     }
@@ -951,10 +889,7 @@ export class RuntimeGenerator extends Generator {
   getClassName(key?: string) {
     const cssPrefix = this.cssPrefix;
     const prefix = this.prefix;
-    return "'"
-      .concat(cssPrefix, '-')
-      .concat(prefix)
-      .concat(key ? `-${key}` : '', "'");
+    return `'${cssPrefix}-${prefix}${key ? `-${key}` : ''}'`;
   }
 
   getColorTypes() {
@@ -972,7 +907,7 @@ export class RuntimeGenerator extends Generator {
     if (list.length === 1) {
       list.push(`${list[0]}[]`);
     } else if (list.length > 1) {
-      list.push('Array<'.concat(list.join(' | '), '>'));
+      list.push(`Array<${list.join(' | ')}>`);
     }
 
     return list;

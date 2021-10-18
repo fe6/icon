@@ -84,10 +84,9 @@ export class Generator {
 
   getTypeName(type: string, isSvg?: boolean) {
     const myPrefix = this.$opts.prefix || prefix;
-    return ''
-      .concat(isSvg ? 'Svg' : '')
-      .concat(pascalCase(myPrefix))
-      .concat(type ? pascalCase(type) : '');
+    return `${isSvg ? 'Svg' : ''}${pascalCase(myPrefix)}${
+      type ? pascalCase(type) : ''
+    }`;
   }
 
   getResult() {

@@ -21,7 +21,7 @@ export const getKeyframesIdTransformer = (map: {
         const { selectorType, expression } = attr;
         if (excludeSelectorMap[expression as TExpression]) {
           // TODO 错误处理统一化
-          throw new Error('Keyframe name could not be '.concat(expression));
+          throw new Error(`Keyframe name could not be ${expression}`);
         }
 
         if (selectorType === SvgStyleSelectorType.IDENTIFIER) {

@@ -28,9 +28,7 @@ export class MapGenerator extends Generator {
     this.processHeaderComment();
     this.icons.forEach((name: string) => {
       this.writeLine(
-        'export {default as '
-          .concat(pascalCase(name), "} from './icons/")
-          .concat(name, "';"),
+        `export { default as ${pascalCase(name)} } from './icons/${name}';`,
       );
     });
 
