@@ -39,7 +39,6 @@ const files = compiler.getIconFiles();
 
 // 生成真实组件
 files.forEach(({ path, content }) => {
-  // TODO 测试一下
   const fp = p.join(__dirname, '../packages', 'vue', 'src', path);
   mkdirp.sync(p.dirname(fp));
   fs.writeFileSync(fp, content, 'utf8');

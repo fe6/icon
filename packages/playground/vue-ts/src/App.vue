@@ -15,10 +15,26 @@
   <br />
   <icon-video :size="100" :colors="['#f00', '#f0f', '#00f', '#0f0']" />
   <br />
-  <icon-video :size="100" theme="filled" />
-  <icon-video :size="100" theme="outline" />
-  <icon-video :size="100" theme="twoTone" />
-  <icon-video :size="100" theme="multiColor" />
+  <icon-video
+    :size="100"
+    theme="filled"
+    :fill="['#f00', '#f0f', '#00f', '#0f0']"
+  />
+  <icon-video
+    :size="100"
+    theme="outline"
+    :fill="['#f00', '#f0f', '#00f', '#0f0']"
+  />
+  <icon-video
+    :size="100"
+    theme="twoTone"
+    :fill="['#f00', '#f0f', '#00f', '#0f0']"
+  />
+  <icon-video
+    :size="100"
+    theme="multiColor"
+    :fill="['#f00', '#f0f', '#00f', '#0f0']"
+  />
 </template>
 
 <script setup lang="ts">

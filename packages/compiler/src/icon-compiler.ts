@@ -29,18 +29,9 @@ import { dynamicHueTransformer } from './transformer/dynamic-hue';
 import { syncGroupProps } from './transformer/sync-group-props';
 import { fixMaskTypeTransformer } from './transformer/fix-mask-type';
 
-// interface IOption {
-//   type: 'vue' | 'svg' // TODO 未来多种支持
-//   useType?: boolean;
-//   prefix?: string;
-//   style?: boolean;
-//   cssPrefix?: string;
-//   author: string;
-// }
-
 export interface IIconToolsOptions extends IRuntimeOptions {
   author: string;
-  type: 'react' | 'vue' | 'svg';
+  type: 'react' | 'vue' | 'svg'; // TODO 未来多种支持
 }
 
 interface IRef {
