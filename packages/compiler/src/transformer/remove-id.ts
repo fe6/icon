@@ -11,12 +11,16 @@ export interface IRemoveIdTransformerOptions {
   removeAll?: boolean;
 }
 
+export interface IRemoveIdMap {
+  [key: string]: boolean;
+}
+
 export const removeIdTransformer = (
   options: IRemoveIdTransformerOptions,
 ): ITransformPlugin => {
   const { propName, ids } = options;
   const removeAll = options.removeAll || false;
-  const map = {};
+  const map: IRemoveIdMap = {};
 
   ids.forEach(
     (id) => (map[''.concat(propName, " + '").concat(id, "'")] = true),

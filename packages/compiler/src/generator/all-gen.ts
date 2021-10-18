@@ -138,9 +138,13 @@ export class AllGenerator extends RuntimeGenerator {
     this.indent(1);
     this.writeLine(`Object.values(${iconMap}).forEach((icon) => {`);
     this.indent(1);
+    this.writeLine('if (icon.name) {');
+    this.indent(1);
     this.writeLine(
       `Vue.component(prefix ? prefix + '-' + icon.name.slice(5) : icon.name, icon);`,
     );
+    this.indent(-1);
+    this.writeLine('};');
     this.indent(-1);
     this.writeLine('});');
     this.indent(-1);

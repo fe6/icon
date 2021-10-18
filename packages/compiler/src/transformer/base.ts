@@ -60,9 +60,6 @@ export interface ITransformOptions {
 }
 
 export interface ICache {
-  // program: ITransformProgramPluginItem[];
-  // keyframes: IKeyframesTransformPluginItem[];
-  // rules: IRuleTransformPluginItem[];
   [tag: string]:
     | ITransformPluginItem[]
     | ITransformProgramPluginItem[]
@@ -133,7 +130,7 @@ export class BaseTransformer {
     return info;
   } // 处理一个元素
 
-  processElement(info): ISvgElementInfo | null {
+  processElement(info: ISvgElementInfo): ISvgElementInfo | null {
     const plugins = this.processTagPlugin(info.type); // 正序执行进入
 
     for (const plugin of plugins) {
@@ -144,7 +141,7 @@ export class BaseTransformer {
       info = result;
     }
 
-    const newAttrs: IRuleTransformPluginItem[] = [];
+    const newAttrs: ISvgAttr[] = [];
     info.attrs.forEach((oldAttr) => {
       let attr = oldAttr;
       for (const plugin of plugins) {
@@ -205,7 +202,9 @@ export class BaseTransformer {
     return info;
   }
 
-  processStyleKeyframe(oldKeyframe): ISvgStyleKeyframesInfo | null {
+  processStyleKeyframe(
+    oldKeyframe: ISvgStyleKeyframesInfo,
+  ): ISvgStyleKeyframesInfo | null {
     let keyframe: ISvgStyleKeyframesInfo = oldKeyframe;
     const plugins = this.processStyleKeyframePlugin(); // 正序执行进入
 
@@ -307,7 +306,7 @@ export class BaseTransformer {
     return rule;
   }
 
-  processTagPlugin(tag): ITransformPluginItem[] {
+  processTagPlugin(tag: SvgTags): ITransformPluginItem[] {
     if (this.cache[tag]) {
       return this.cache[tag] as ITransformPluginItem[];
     }
@@ -397,9 +396,9 @@ export class BaseTransformer {
   }
 
   processStyleRuleSelector(
-    selector,
-    rule,
-    plugins,
+    selector: ISvgStyleSelector[][],
+    rule: ISvgStyleRuleInfo,
+    plugins: IRuleTransformPluginItem[],
   ): ISvgStyleSelector[][] | null {
     const list: ISvgStyleSelector[][] = [];
     selector.forEach((item) => {
@@ -416,9 +415,9 @@ export class BaseTransformer {
   }
 
   processStyleRuleSelectorList(
-    selector,
-    rule,
-    plugins,
+    selector: ISvgStyleSelector[],
+    rule: ISvgStyleRuleInfo,
+    plugins: IRuleTransformPluginItem[],
   ): ISvgStyleSelector[] | null {
     const list: ISvgStyleSelector[] = [];
     selector.forEach((item) => {
@@ -436,9 +435,9 @@ export class BaseTransformer {
   }
 
   processStyleRuleSelectorItem(
-    oldSelector,
-    rule,
-    plugins,
+    oldSelector: ISvgStyleSelector,
+    rule: ISvgStyleRuleInfo,
+    plugins: IRuleTransformPluginItem[],
   ): ISvgStyleSelector | null {
     let selector = oldSelector;
     // 执行属性变换

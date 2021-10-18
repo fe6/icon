@@ -860,8 +860,10 @@ export class RuntimeGenerator extends Generator {
   }
 
   processWrapper(runOptions: IRunOptions) {
+    const wrapperFunc = this.getTypeName('wrapper');
+
     this.writeLine('// 图标Wrapper');
-    this.write('export function '.concat(this.getTypeName('wrapper'), '('));
+    this.write(`export const ${wrapperFunc} = (`);
 
     if (this.wrapperNeedName) {
       if (this.useType) {
@@ -887,26 +889,23 @@ export class RuntimeGenerator extends Generator {
 
     if (this.style) {
       this.write(', ');
-
-      if (this.useType) {
-        this.write('cssRender?: '.concat(this.getInterfaceName('props', true)));
-      } else {
-        this.write('cssRender');
-      }
+      this.write(
+        `cssRender${
+          this.useType ? `?: ${this.getInterfaceName('props', true)}` : ''
+        }`,
+      );
     }
 
-    if (this.useType) {
-      this.writeLine(`): ${this.getTypeName('')} {`);
-    } else {
-      this.writeLine(') {');
-    }
+    this.writeLine(
+      `)${this.useType ? `: ${this.getTypeName('options')}` : ''} => {`,
+    );
 
     this.indent(1); // 生成平台Wrapper代码
 
     runOptions.processPlatformWrapper();
 
     this.indent(-1);
-    this.writeLine('}');
+    this.writeLine(`}; // end ${wrapperFunc}`);
   }
 
   getPropKeys() {

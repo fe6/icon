@@ -14,7 +14,7 @@ import csstree, { AtrulePrelude } from 'css-tree';
  * @param color2
  */
 
-export function isColorEqual(color1, color2): boolean {
+export function isColorEqual(color1: string, color2: string): boolean {
   if (color1 === color2) {
     return true;
   }
@@ -53,7 +53,7 @@ export const getKeys = <T>(obj: T): string[] => {
 };
 
 // keyframes 相关 start
-export function replaceAnimation(str) {
+export function replaceAnimation(str: string) {
   const tokens = csstree.parse(str, {
     parseValue: true,
     context: 'value',
@@ -127,7 +127,7 @@ export function replaceAnimation(str) {
   return null;
 }
 
-export function splitAnimation(str) {
+export function splitAnimation(str: string) {
   const result: string[] = [];
   let inFunction = 0;
   let current = '';
