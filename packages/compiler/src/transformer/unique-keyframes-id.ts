@@ -5,10 +5,22 @@
 
 import { transform, ITransformPlugin } from './base';
 import { guid } from '../util';
+import {
+  IReplaceIdTransformerOptions,
+  IReplaceIdTransformerIdMap,
+} from '../types';
 import { getKeyframesIdTransformer } from './get-keyframes-id';
 import { replaceKeyframesIdTransformer } from './replace-keyframes-id';
 
-export const uniqueKeyframesIdTransformer = (options): ITransformPlugin => {
+export interface IUniqueKeyframesIdTransformerOptions {
+  prefix?: boolean;
+  propName?: string;
+  idName?: string;
+}
+
+export const uniqueKeyframesIdTransformer = (
+  options: IUniqueKeyframesIdTransformerOptions,
+): ITransformPlugin => {
   const prefix = options.prefix || false;
   const propName = options.propName || 'props';
   const idName = options.idName || 'id';
@@ -18,12 +30,12 @@ export const uniqueKeyframesIdTransformer = (options): ITransformPlugin => {
     enter: (oldInfo) => {
       let info = oldInfo;
       // 清空映射表
-      const map = {};
-      const IdMap = {}; // 获取所有的Id
+      const map: IReplaceIdTransformerOptions = {};
+      const idMap: IReplaceIdTransformerIdMap = {}; // 获取所有的Id
 
-      info = transform(info, [getKeyframesIdTransformer(IdMap)]); // 生成Id映射（8位就够了，不用那么多）
+      info = transform(info, [getKeyframesIdTransformer(idMap)]); // 生成Id映射（8位就够了，不用那么多）
 
-      Object.keys(IdMap).forEach((key) => {
+      Object.keys(idMap).forEach((key) => {
         return (map[key] = {
           newId: guid().slice(0, 8),
           propName: (prefix ? `${propName}.` : '') + idName,

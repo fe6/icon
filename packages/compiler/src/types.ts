@@ -148,6 +148,9 @@ export interface IReplaceIdTransformerOptions {
     used: boolean;
   };
 }
+export interface IReplaceIdTransformerIdMap {
+  [key: string]: boolean;
+}
 
 // runtime start
 export interface IIconColorHueInfo {

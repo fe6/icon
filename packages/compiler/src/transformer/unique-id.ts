@@ -4,6 +4,10 @@
  */
 
 import { transform, ITransformPlugin } from './base';
+import {
+  IReplaceIdTransformerOptions,
+  IReplaceIdTransformerIdMap,
+} from '../types';
 import { guid } from '../util';
 import { getIdTransformer } from './get-id';
 import { removeIdTransformer } from './remove-id';
@@ -29,12 +33,12 @@ export const uniqueIdTransformer = (
     enter: (oldInfo) => {
       let info = oldInfo;
       // 清空映射表
-      const map = {};
-      const IdMap = {}; // 获取所有的Id
+      const map: IReplaceIdTransformerOptions = {};
+      const idMap: IReplaceIdTransformerIdMap = {}; // 获取所有的Id
 
-      info = transform(info, [getIdTransformer(IdMap)]); // 生成Id映射（8位就够了，不用那么多）
+      info = transform(info, [getIdTransformer(idMap)]); // 生成Id映射（8位就够了，不用那么多）
 
-      Object.keys(IdMap).forEach((key) => {
+      Object.keys(idMap).forEach((key) => {
         map[key] = {
           newId: guid().slice(0, 8),
           propName: (prefix ? `${propName}.` : '') + idName,

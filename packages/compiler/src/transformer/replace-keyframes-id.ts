@@ -11,7 +11,7 @@ import { replaceAnimation, splitAnimation } from '../util';
 import { ITransformPlugin } from './base';
 import { replaceSelectorIdTransformer } from './replace-id';
 
-function replaceStr(str: string, sp, replace) {
+function replaceStr(str: string, sp: string, replace: string) {
   const list = str.split(sp);
   const result: string[] = [];
   list.forEach((item, i) => {
@@ -28,7 +28,10 @@ function replaceStr(str: string, sp, replace) {
   return result.join('');
 }
 
-const replaceKeyframesId = (attr: ISvgStyleAttr | ISvgInlineStyleAttr, map) => {
+const replaceKeyframesId = (
+  attr: ISvgStyleAttr | ISvgInlineStyleAttr,
+  map: IReplaceIdTransformerOptions,
+) => {
   const { type, name, expression } = attr;
 
   if (type === SvgShapeAttr.DYNAMIC) {

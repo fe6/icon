@@ -2,7 +2,6 @@
   "name": "@fe6/icon-compiler",
   "version": "1.0.0",
   "description": "图标编译工具",
-  "main": "index.ts",
   "keywords": [
     "vue",
     "vue icon",
@@ -26,6 +25,7 @@
     "url": "git+https://github.com/fe6/icon.git"
   },
   "author": "iq9891 <649076408@qq.com>",
+  "main": "index.ts",
   "homepage": "https://github.com/fe6/icon#readme",
   "bugs": {
     "url": "https://github.com/fe6/icon/issues"

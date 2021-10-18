@@ -122,10 +122,9 @@ export class VueRuntimeGenerator extends RuntimeGenerator {
     const prefix = this.prefix;
     const wrapperNeedName = this.wrapperNeedName;
     const wrapperNeedRTL = this.wrapperNeedRTL;
+    const optionType = this.getTypeName('options');
     this.writeLine();
-    this.writeLine(
-      'const options: '.concat(this.getTypeName('options'), ' = {'),
-    );
+    this.writeLine(`const options${this.useType ? `: ${optionType}` : ''} = {`);
     this.indent(1); // 处理name
 
     this.writeLine("name: '".concat(prefix, "-' + name,")); // 处理inject
@@ -242,6 +241,6 @@ export class VueRuntimeGenerator extends RuntimeGenerator {
     this.indent(-1);
     this.writeLine('};');
     this.writeLine();
-    this.writeLine('return options as '.concat(this.getTypeName(''), ';'));
+    this.writeLine('return options;');
   }
 }

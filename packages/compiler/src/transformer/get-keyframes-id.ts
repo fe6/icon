@@ -10,6 +10,8 @@ const excludeSelectorMap = {
   none: true,
 };
 
+export type TExpression = 'unset' | 'initial' | 'inherit' | 'none';
+
 export const getKeyframesIdTransformer = (map: {
   [key: string]: boolean;
 }): ITransformPlugin => {
@@ -17,7 +19,7 @@ export const getKeyframesIdTransformer = (map: {
     keyframes: {
       selector: (attr) => {
         const { selectorType, expression } = attr;
-        if (excludeSelectorMap[expression]) {
+        if (excludeSelectorMap[expression as TExpression]) {
           // TODO 错误处理统一化
           throw new Error('Keyframe name could not be '.concat(expression));
         }
