@@ -26,6 +26,9 @@ export class IndexGenerator extends Generator {
     this.processHeaderComment();
     this.writeLine("export * from './map';");
     this.writeLine("export * as waterMap from './map';");
+    if (this.type === 'img' || this.type === 'svg') {
+      this.writeLine("export * from './svg';");
+    }
     this.writeLine("export * from './all';");
 
     let configName = '';

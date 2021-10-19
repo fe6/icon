@@ -52,10 +52,9 @@ export class ImgRuntimeGenerator extends RuntimeGenerator {
     this.writeLine();
     this.writeLine('// 包裹后的图标');
     this.writeLine(
-      `export type ${this.getTypeName('')} = (props: ${this.getInterfaceName(
-        'props',
-        true,
-      )}) => JSX.Element;`,
+      `export type ${this.getTypeName(
+        'Return',
+      )} = (props: ${this.getInterfaceName('props', true)}) => string;`,
     );
     this.writeLine();
   }
@@ -263,7 +262,11 @@ export class ImgRuntimeGenerator extends RuntimeGenerator {
     }
 
     this.writeLine();
-    this.writeLine('if (props.spin) {');
+    this.writeLine(
+      `if (${this.useType ? '' : 'props && '}props${
+        this.useType ? '?' : ''
+      }.spin) {`,
+    );
     this.indent(1);
     this.writeLine(`cls.push(\`\${config.prefix}-${this.prefix}-spin\`);`);
     this.indent(-1);
@@ -277,11 +280,13 @@ export class ImgRuntimeGenerator extends RuntimeGenerator {
 
     this.writeLine('return (');
     this.indent(1);
-    this.writeLine("<span class={cls.join(' ')}>");
+    this.writeLine(`\`<span class=\"\${cls.join(' ')}\">`);
     this.indent(1);
-    this.writeLine(`<img src={\`data:image/svg+xml;base64,\${src}\`} />`);
+    this.writeLine(
+      `<img class"\${config.prefix}-${this.prefix}-img" src="data:image/svg+xml;base64,\${src}" />`,
+    );
     this.indent(-1);
-    this.writeLine('</span>');
+    this.writeLine('</span>`');
     this.indent(-1);
     this.writeLine(');');
     this.indent(-1);

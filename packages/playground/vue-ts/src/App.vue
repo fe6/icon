@@ -2,29 +2,24 @@
 
 <template>
   <h1>img 版</h1>
-  <Video :size="100" strokeLinejoin="bevel" strokeLinecap="square" />
+  <h4>定制属性</h4>
+  <span v-html="vIconDef" />
+  <h4>定制属性</h4>
+  <span v-html="vIconProps" />
   <h4>默认主题</h4>
-  <Video :size="100" theme="filled" />
-  <Video :size="100" theme="outline" />
-  <Video :size="100" theme="twoTone" />
-  <Video :size="100" theme="multiColor" />
+  <span v-html="vIconFilled" />
+  <span v-html="vIconOutline" />
+  <span v-html="vIconTwoTone" />
+  <span v-html="vIconMultiColor" />
   <h4>主题定制颜色</h4>
-  <Video :size="100" theme="filled" :fill="['#f00', '#f0f', '#00f', '#0f0']" />
-  <Video :size="100" theme="outline" :fill="['#f00', '#f0f', '#00f', '#0f0']" />
-  <Video :size="100" theme="twoTone" :fill="['#f00', '#f0f', '#00f', '#0f0']" />
-  <Video
-    :size="100"
-    theme="multiColor"
-    :fill="['#f00', '#f0f', '#00f', '#0f0']"
-  />
+  <span v-html="vIconThemeFilled" />
+  <span v-html="vIconThemeOutline" />
+  <span v-html="vIconThemeTwoTone" />
+  <span v-html="vIconThemeMultiColor" />
   <br />
   <h1>全局注册 img 版</h1>
   <br />
-  <water-video
-    :size="100"
-    theme="filled"
-    :fill="['#f00', '#f0f', '#00f', '#0f0']"
-  />
+  <p>暂不支持</p>
   <br />
   <h1>vue 版</h1>
   <vue-video />
@@ -60,44 +55,82 @@
 
   <h1>全局注册 vue 版</h1>
   <br />
-  <icon-video :size="100" />
+  <i-video :size="100" />
   <h4>颜色</h4>
-  <icon-video :size="100" :colors="['#f00', '#f0f', '#00f', '#0f0']" />
-  <icon-video
-    :size="100"
-    theme="filled"
-    :fill="['#f00', '#f0f', '#00f', '#0f0']"
-  />
-  <icon-video
-    :size="100"
-    theme="outline"
-    :fill="['#f00', '#f0f', '#00f', '#0f0']"
-  />
-  <icon-video
-    :size="100"
-    theme="twoTone"
-    :fill="['#f00', '#f0f', '#00f', '#0f0']"
-  />
-  <icon-video
-    :size="100"
-    theme="multiColor"
-    :fill="['#f00', '#f0f', '#00f', '#0f0']"
-  />
+  <i-video :size="100" :colors="myColors" />
+  <i-video :size="100" theme="filled" :fill="myColors" />
+  <i-video :size="100" theme="outline" :fill="myColors" />
+  <i-video :size="100" theme="twoTone" :fill="myColors" />
+  <i-video :size="100" theme="multiColor" :fill="myColors" />
 </template>
 
 <script setup lang="ts">
   // 单文件组件(SFC) <script setup>
   // Check out https://v3.cn.vuejs.org/api/sfc-script-setup.html
   import {
-    Video as VueVideo,
+    IconVideo as VueVideo,
     DEFAULT_ICON_CONFIGS,
     IconProvider,
   } from '@fe6/icon-vue';
   import {
-    Video,
+    IconVideo,
     setConfig,
     DEFAULT_ICON_CONFIGS as imgConfig,
   } from '@fe6/icon-img';
+
+  const myColors = ['#f00', '#f0f', '#00f', '#0f0'];
+
+  const vIconDef = IconVideo();
+
+  const vIconProps = IconVideo({
+    size: 100,
+    strokeLinejoin: 'bevel',
+    strokeLinecap: 'square',
+  });
+
+  const vIconFilled = IconVideo({
+    size: 100,
+    theme: 'filled',
+  });
+
+  const vIconOutline = IconVideo({
+    size: 100,
+    theme: 'outline',
+  });
+
+  const vIconTwoTone = IconVideo({
+    size: 100,
+    theme: 'twoTone',
+  });
+
+  const vIconMultiColor = IconVideo({
+    size: 100,
+    theme: 'multiColor',
+  });
+
+  const vIconThemeFilled = IconVideo({
+    size: 100,
+    fill: myColors,
+    theme: 'filled',
+  });
+
+  const vIconThemeOutline = IconVideo({
+    size: 100,
+    fill: myColors,
+    theme: 'outline',
+  });
+
+  const vIconThemeTwoTone = IconVideo({
+    size: 100,
+    fill: myColors,
+    theme: 'twoTone',
+  });
+
+  const vIconThemeMultiColor = IconVideo({
+    size: 100,
+    fill: myColors,
+    theme: 'multiColor',
+  });
 
   IconProvider({ ...DEFAULT_ICON_CONFIGS, prefix: 'icon', size: '3em' });
   setConfig({ ...imgConfig, prefix: 'icon', size: '13em' });

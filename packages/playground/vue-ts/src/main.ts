@@ -12,13 +12,13 @@ import { waterMap } from '@fe6/icon-img';
 
 const app = createApp(App);
 
-// waterIconInstall(app, 'i');
+waterIconInstall(app, 'i');
 // 全局注册 vue icon
-waterIconInstall(app);
+// waterIconInstall(app); // 默认是 icon 前缀
 
-// 全局注册 img icon
-Object.keys(waterMap).forEach((iconName) => {
-  app.component(`Water${iconName}`, waterMap[iconName]);
-});
+// 全局注册 img icon 暂不支持
+// Object.keys(waterMap).forEach((iconName) => {
+//   app.component(`Water${iconName}`, waterMap[iconName]);
+// });
 
 app.mount('#app');
