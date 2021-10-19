@@ -5,6 +5,7 @@ import { createApp } from 'vue';
 import App from './App.vue';
 
 import { waterIconInstall } from '@fe6/icon-vue';
+import { waterMap } from '@fe6/icon-img';
 
 // icon 的样式
 // import 'icon.less';
@@ -12,6 +13,12 @@ import { waterIconInstall } from '@fe6/icon-vue';
 const app = createApp(App);
 
 // waterIconInstall(app, 'i');
+// 全局注册 vue icon
 waterIconInstall(app);
+
+// 全局注册 img icon
+Object.keys(waterMap).forEach((iconName) => {
+  app.component(`Water${iconName}`, waterMap[iconName]);
+});
 
 app.mount('#app');

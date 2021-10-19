@@ -5,10 +5,11 @@
 
 import { BaseTransformer, ITransformPlugin } from './transformer/base';
 import { JSXGenerator } from './generator/jsx-gen';
+import { ImgGenerator } from './generator/img-gen';
 import { Parser } from './parser';
 
 interface ICompilerOptions {
-  generator: JSXGenerator;
+  generator: JSXGenerator | ImgGenerator;
   content: string;
   name: string;
   plugins: ITransformPlugin[];

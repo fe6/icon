@@ -4,42 +4,46 @@ import fs from 'fs';
 import p from 'path';
 import mkdirp from 'mkdirp';
 
-import { iconCompiler } from '../packages/compiler/src/index';
+import { iconCompiler, TGenType } from '../packages/compiler/src/index';
 import icons from '../source/icons.json';
 
 import { BUILD_CODE_CONFIG } from './code-conf';
 
-const compiler = iconCompiler({
-  type: 'vue',
-  ...BUILD_CODE_CONFIG,
-});
+const compilerType: TGenType[] = ['vue', 'img'];
 
-interface IIconItem {
-  id: string;
-  title: string;
-  name: string;
-  category: string;
-  categoryCN: string;
-  author: string;
-  tag: string[];
-  rtl: boolean;
-  svg: string;
-}
+compilerType.forEach((type) => {
+  const compiler = iconCompiler({
+    type,
+    ...BUILD_CODE_CONFIG,
+  });
 
-icons.forEach((item: IIconItem) =>
-  compiler.appendIcon({
-    name: item.name,
-    description: item.title,
-    content: item.svg,
-    rtl: item.rtl,
-  }),
-);
+  interface IIconItem {
+    id: string;
+    title: string;
+    name: string;
+    category: string;
+    categoryCN: string;
+    author: string;
+    tag: string[];
+    rtl: boolean;
+    svg: string;
+  }
 
-const files = compiler.getIconFiles();
+  icons.forEach((item: IIconItem) =>
+    compiler.appendIcon({
+      name: item.name,
+      description: item.title,
+      content: item.svg,
+      rtl: item.rtl,
+    }),
+  );
 
-// 生成真实组件
-files.forEach(({ path, content }) => {
-  const fp = p.join(__dirname, '../packages', 'vue', 'src', path);
-  mkdirp.sync(p.dirname(fp));
-  fs.writeFileSync(fp, content, 'utf8');
+  const files = compiler.getIconFiles();
+
+  // 生成真实组件
+  files.forEach(({ path, content }) => {
+    const fp = p.join(__dirname, '../packages', type, 'src', path);
+    mkdirp.sync(p.dirname(fp));
+    fs.writeFileSync(fp, content, 'utf8');
+  });
 });

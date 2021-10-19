@@ -42,6 +42,19 @@ export const camelCase = (str: string, prefix = '-'): string => {
     letter.toUpperCase(),
   );
 };
+// 驼峰转字母横线的正则
+export const reHyphenate = /\B([A-Z])/g;
+// hyphenate('WaterIsVeryGood', '+') -> 'water+is+very+good'
+export const hyphenate = (word: unknown = '', separator = '-') => {
+  if (typeof word !== 'string') {
+    return '';
+  }
+  const newWord = word as string;
+  if (!reHyphenate.test(newWord)) {
+    return newWord;
+  }
+  return newWord.replace(reHyphenate, `${separator}$1`).toLowerCase();
+};
 
 export const pascalCase = (str: string, prefix = '-'): string => {
   str = camelCase(str, prefix);

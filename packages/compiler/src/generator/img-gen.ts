@@ -1,6 +1,6 @@
 /** @format */
 
-import { pascalCase } from '../util';
+import { pascalCase, hyphenate } from '../util';
 import {
   ISvgElementInfo,
   ISvgStyleInfo,
@@ -15,7 +15,7 @@ import { IconGenerator } from './icon-gen';
 const defOpts = {
   author: '',
   name: '',
-  type: 'vue' as TGenType,
+  type: 'img' as TGenType,
   prefix: 'icon',
   extraImport: [],
   importPath: '../runtime',
@@ -28,18 +28,14 @@ const defOpts = {
   wrapperNeedRTL: false,
 };
 
-export interface IJSXGeneratorOptions extends IGeneratorOptions {
+export interface IImgGeneratorOptions extends IGeneratorOptions {
   useDefault?: boolean;
   useType?: boolean;
+  style?: boolean;
   wrapperNeedName?: boolean;
   wrapperNeedRTL?: boolean;
-  style?: boolean;
   rtl?: boolean;
-  helperName?: string;
-  propName?: string;
-  stylePropName?: string;
   importPath?: string;
-  extraImport?: string[];
 }
 
 interface IInfo {
@@ -48,42 +44,40 @@ interface IInfo {
   style: ISvgStyleInfo;
 }
 
-export class JSXGenerator extends IconGenerator {
-  result = '';
-  isNewLine = false;
-  indentSize = 0;
-  constructor(options: IJSXGeneratorOptions = defOpts) {
+export class ImgGenerator extends IconGenerator {
+  useDefault: boolean;
+  useType: boolean;
+  style: boolean;
+  wrapperNeedName: boolean;
+  wrapperNeedRTL: boolean;
+  rtl: boolean;
+  importPath: string;
+
+  constructor(options: IImgGeneratorOptions = defOpts) {
     super(options);
 
-    this.$opts = Object.assign(defOpts, options);
+    const curOpts = (this.$opts = Object.assign(defOpts, options));
+    this.useDefault = curOpts.useDefault || false;
+    this.useType = curOpts.useType || false;
+    this.style = curOpts.style || false;
+    this.wrapperNeedName = curOpts.wrapperNeedName || false;
+    this.importPath = curOpts.importPath || '../runtime';
+    this.rtl = curOpts.rtl || false;
+    this.wrapperNeedRTL = curOpts.wrapperNeedRTL || false;
   }
 
   process(info: IInfo) {
-    // 生成每个 icon 的组件(tsx)
-    const {
-      extraImport,
-      useType,
-      useDefault,
-      wrapperNeedName,
-      propName,
-      style,
-      stylePropName,
-      wrapperNeedRTL,
-      rtl,
-      importPath,
-    } = this.$opts as IJSXGeneratorOptions;
-
-    // 处理顶部引用import {IIconType, IconWrapper} from '../components/icon'
-    if (extraImport && extraImport.length) {
-      extraImport.forEach((item: string) => {
-        return this.writeLine(item);
-      });
-    }
+    const useDefault = this.useDefault;
+    const useType = this.useType;
+    const wrapperNeedName = this.wrapperNeedName;
+    const wrapperNeedRTL = this.wrapperNeedRTL;
+    const rtl = this.rtl;
+    const importPath = this.importPath;
+    this.processHeaderComment();
 
     this.write('import');
     this.space();
-    this.write('{ ');
-
+    this.write('{');
     const imports: string[] = [];
     const typeName = this.getInterfaceName('props', true);
     const wrapperName = this.getTypeName('wrapper');
@@ -91,14 +85,15 @@ export class JSXGenerator extends IconGenerator {
     if (useType) {
       imports.push(typeName);
     }
+
     imports.push(wrapperName);
     this.write(imports.join(', '));
-    this.write(' }');
+    this.write('}');
     this.space();
     this.write('from');
     this.space();
     this.write("'");
-    this.write(importPath as string);
+    this.write(importPath);
     this.writeLine("';");
     this.writeLine(); // 处理顶部导出
 
@@ -120,26 +115,22 @@ export class JSXGenerator extends IconGenerator {
     }
 
     this.write(wrapperName);
-    this.writeLine('(');
-    this.indent(1);
+    this.write('(');
 
     if (wrapperNeedName) {
       this.write("'");
       this.write(info.name);
       this.write("'");
-      this.writeLine(',');
+      this.write(', ');
     }
 
     if (wrapperNeedRTL) {
       this.write(String(rtl));
-      this.writeLine(',');
+      this.write(', ');
     } // 处理函数参数：(props: IIconProps)
 
     this.write('(');
-
-    if (propName) {
-      this.write(propName);
-    }
+    this.write('props');
 
     if (useType) {
       this.write(':');
@@ -154,97 +145,79 @@ export class JSXGenerator extends IconGenerator {
     this.space();
     this.writeLine('(');
     this.indent(1);
-    this.processTag(info.element);
+    this.writeLine('\'<?xml version="1.0" encoding="UTF-8"?>\'');
+    this.processTag(info.element, info.style);
     this.indent(-1);
     this.write(')');
-
-    if (style) {
-      this.writeLine(',');
-      this.write('(');
-      if (stylePropName) {
-        this.write(stylePropName);
-      }
-
-      if (useType) {
-        this.write(': ');
-        this.write(typeName);
-      }
-
-      this.write(')');
-      this.write(' => ');
-      this.processStyle(info.style);
-      this.writeLine();
-    } else {
-      this.writeLine();
-    }
-
-    this.indent(-1);
     this.writeLine(');');
     return this.getResult();
   }
 
-  processTag(info: ISvgElementInfo) {
+  processTag(info: ISvgElementInfo, css: ISvgStyleInfo) {
     const type = info.type;
     const attrs = info.attrs;
     const style = info.style;
     const children = info.children;
 
+    this.write("+ '");
     this.write('<');
     this.write(type);
 
-    attrs.forEach((item: ISvgAttr) => {
-      return this.processAttr(item);
+    if (type === 'svg') {
+      this.write(` xmlns="http://www.w3.org/2000/svg"`);
+    }
+
+    attrs.forEach((item) => {
+      this.processAttr(item);
     });
 
     if (style.length) {
       this.processInlineStyle(style);
     }
 
-    if (attrs.length) {
-      this.writeLine();
-    }
-
-    if (children.length) {
-      this.writeLine('>');
+    if (type === 'svg' && (this.style || children.length)) {
+      this.writeLine(">'");
       this.indent(1);
-      children.forEach((item: ISvgElementInfo) => {
-        return this.processTag(item);
+
+      if (type === 'svg' && this.style) {
+        this.writeLine("+ '<style>' + ");
+        this.processStyle(css);
+        this.writeLine(" + '</style>'");
+      }
+
+      children.forEach((item) => {
+        this.processTag(item, css);
       });
       this.indent(-1);
-      this.writeLine(`</${info.type}>`);
-    } else {
-      this.writeLine('/>');
+      this.writeLine(`+ '</${type}>'`);
+
+      return;
     }
+
+    this.writeLine("/>'");
   }
 
   processAttr(attr: ISvgAttr) {
     const name = attr.name;
     const type = attr.type;
     const expression = attr.expression;
-    this.writeLine('');
-    this.indent(1);
-    this.write(name);
-    this.write('=');
+    this.write(' ');
+    this.write(name === 'viewBox' ? name : hyphenate(name));
+    this.write('="');
 
     if (type === SvgShapeAttr.DYNAMIC) {
-      this.write('{');
-      this.write(expression);
-      this.write('}');
+      this.write(`' + ${expression} + '`);
     } else {
-      this.write('"');
       this.write(expression);
-      this.write('"');
     }
 
-    this.indent(-1);
+    this.write('"');
   }
 
   processInlineStyle(exp: ISvgInlineStyleAttr[]) {
-    this.write(' style={{');
-    exp.forEach((_ref: ISvgInlineStyleAttr, index: number) => {
-      const name = _ref.name;
-      const expression = _ref.expression;
-      const type = _ref.type;
+    this.write(' style="');
+    exp.forEach((_ref, index) => {
+      const { name, expression, type } = _ref;
 
       this.write(name);
 
@@ -253,19 +226,9 @@ export class JSXGenerator extends IconGenerator {
       this.space();
 
       if (type === SvgShapeAttr.DYNAMIC) {
-        this.write(expression);
+        this.write(`' + ${expression} + '`);
       } else {
-        const nv = +expression;
-
-        if (Number.isNaN(nv)) {
-          this.write("'");
-
-          this.write(expression.replace(/'/g, "\\'"));
-
-          this.write("'");
-        } else {
-          this.write(expression);
-        }
+        this.write(expression);
       }
 
       if (index !== exp.length - 1) {
@@ -274,6 +237,6 @@ export class JSXGenerator extends IconGenerator {
         this.space();
       }
     });
-    this.write('}}');
+    this.write('"');
   }
 }

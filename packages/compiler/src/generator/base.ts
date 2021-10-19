@@ -1,5 +1,6 @@
 /** @format */
 
+import { TGenType } from '../types';
 import { camelCase, pascalCase } from '../util';
 
 export interface IGeneratorOptions {
@@ -8,6 +9,7 @@ export interface IGeneratorOptions {
   nameDisplayType?: 'origin' | 'camel' | 'pascal';
   description?: string;
   prefix?: string;
+  type: TGenType;
 }
 
 const prefix = 'icon';
@@ -16,6 +18,7 @@ const baseIndent = 2; // 默认缩进
 const defOpts = {
   author: 'fe6',
   name: '',
+  type: 'vue' as TGenType,
   prefix,
 };
 

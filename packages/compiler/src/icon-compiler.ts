@@ -1,17 +1,21 @@
 /** @format */
 
+import { TGenType, IIconColorHueInfo, IIconColorReplaceInfo } from './types';
+
 import { JSXGenerator } from './generator/jsx-gen';
+import { ImgGenerator } from './generator/img-gen';
+
 import { LessGenerator } from './generator/less-gen';
 import { IndexGenerator } from './generator/index-gen';
 import { MapGenerator } from './generator/map-gen';
 import { AllGenerator } from './generator/all-gen';
 import { VueRuntimeGenerator } from './generator/runtime-vue';
+import { ImgRuntimeGenerator } from './generator/runtime-img';
 import {
   IRuntimeGeneratorOptions,
   IRuntimeOptions,
 } from './generator/runtime-base';
 import { compiler } from './compiler';
-import { IIconColorHueInfo, IIconColorReplaceInfo } from './types';
 
 import { ITransformPlugin } from './transformer/base';
 import { dynamicColorTransformer } from './transformer/dynamic-color';
@@ -31,7 +35,7 @@ import { fixMaskTypeTransformer } from './transformer/fix-mask-type';
 
 export interface IIconToolsOptions extends IRuntimeOptions {
   author: string;
-  type: 'react' | 'vue' | 'svg'; // TODO 未来多种支持
+  type: TGenType; // TODO 未来多种支持
 }
 
 interface IRef {
@@ -205,7 +209,13 @@ class IconCompiler {
       }
 
       // TODO 未来多种支持
-      const generator = this.createVueGenerator(name, description, rtl);
+      let generator: ImgGenerator | JSXGenerator;
+
+      if (type === 'img') {
+        generator = this.createImgGenerator(name, description, rtl);
+      } else {
+        generator = this.createVueGenerator(name, description, rtl);
+      }
       return compiler({
         name,
         content,
@@ -220,6 +230,25 @@ class IconCompiler {
       name,
       author: this.$opts.author,
       rtl,
+      type: this.$opts.type,
+      prefix: this.$opts.prefix || 'icon',
+      nameDisplayType: 'pascal',
+      useDefault: true,
+      useType: this.$opts.useType,
+      wrapperNeedName: true,
+      wrapperNeedRTL: true,
+      style: this.$opts.style || false,
+      description,
+      importPath: '../runtime',
+    });
+  }
+
+  private createImgGenerator(name: string, description: string, rtl: boolean) {
+    return new ImgGenerator({
+      name,
+      author: this.$opts.author,
+      rtl,
+      type: this.$opts.type,
       prefix: this.$opts.prefix || 'icon',
       nameDisplayType: 'pascal',
       useDefault: true,
@@ -273,6 +302,7 @@ class IconCompiler {
   private getIndexCode() {
     const generator = new IndexGenerator({
       name: 'index',
+      type: this.$opts.type,
       author: this.$opts.author,
       nameDisplayType: 'camel',
       description: '引用出口',
@@ -291,6 +321,7 @@ class IconCompiler {
   private getMapCode() {
     const generator = new MapGenerator({
       name: 'map',
+      type: '',
       author: this.$opts.author,
       nameDisplayType: 'camel',
       description: '组件集合',
@@ -310,6 +341,7 @@ class IconCompiler {
   private getAllCode() {
     const generator = new AllGenerator({
       name: 'map',
+      type: this.$opts.type,
       author: this.$opts.author,
       fixedSize: this.$opts.fixedSize || false,
       stroke: this.$opts.stroke || 0,
@@ -337,6 +369,7 @@ class IconCompiler {
   private getLessCode() {
     const generator = new LessGenerator({
       name: 'index',
+      type: '',
       author: this.$opts.author,
       nameDisplayType: 'camel',
       description: '样式文件',
@@ -375,6 +408,7 @@ class IconCompiler {
   private createRuntimeCode() {
     const baseOptions: IRuntimeGeneratorOptions = {
       name: 'runtime',
+      type: this.$opts.type,
       author: this.$opts.author,
       nameDisplayType: 'camel',
       description: '运行时',
@@ -392,13 +426,34 @@ class IconCompiler {
       wrapperNeedRTL: true,
     };
     // TODO 未来多种支持
-    const vueRuntime = new VueRuntimeGenerator(baseOptions);
-    const generator =
-      this.$opts.type === 'vue'
-        ? vueRuntime
-        : {
-            process: () => '',
-          };
+    const vueRuntime = new VueRuntimeGenerator(
+      Object.assign(baseOptions, {
+        type: 'vue' as TGenType,
+      }),
+    );
+    const imgRuntime = new ImgRuntimeGenerator(
+      Object.assign(baseOptions, {
+        type: 'img' as TGenType,
+      }),
+    );
+    let generator:
+      | VueRuntimeGenerator
+      | ImgRuntimeGenerator
+      | { process: () => string };
+    switch (this.$opts.type) {
+      case 'vue':
+        generator = vueRuntime;
+        break;
+      case 'img':
+        generator = imgRuntime;
+        break;
+
+      default:
+        generator = {
+          process: () => '',
+        };
+        break;
+    }
     return generator.process();
   }
 }

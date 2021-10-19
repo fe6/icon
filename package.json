@@ -69,7 +69,8 @@
   },
   "pnpm": {
     "overrides": {
-      "@fe6/icon-vue": "workspace:^"
+      "@fe6/icon-vue": "workspace:^",
+      "@fe6/icon-img": "workspace:^"
     }
   }
 }

@@ -7,6 +7,7 @@ import {
   StrokeLinecap,
   IIconThemeInfo,
   IThemeColor,
+  TGenType,
 } from '../types';
 import { camelCase, pascalCase } from '../util';
 
@@ -57,11 +58,13 @@ export class RuntimeGenerator extends Generator {
   wrapperNeedName = false;
   wrapperNeedRTL = false;
   hasDefaultTheme = false;
+  type: TGenType = '';
 
   constructor(options: IRuntimeGeneratorOptions) {
     super(options);
 
     this.$opts = options;
+    this.type = options.type;
     this.prefix = options.prefix || '';
     this.hueList = [];
     this.replaceList = [];
@@ -119,9 +122,11 @@ export class RuntimeGenerator extends Generator {
 
     runOptions.processPlatformCode(); // 生成Wrapper代码
 
-    this.processContext(); // 生成上下文
+    if (this.type === 'vue') {
+      this.processContext(); // 生成上下文
 
-    this.processProvider(); // 图标配置Provider
+      this.processProvider(); // 图标配置Provider
+    }
 
     this.processWrapper(runOptions);
 
@@ -529,7 +534,6 @@ export class RuntimeGenerator extends Generator {
     }
 
     this.indent(1);
-    this.writeLine();
 
     if (this.colors.length) {
       this.writeLine(
@@ -835,7 +839,15 @@ export class RuntimeGenerator extends Generator {
     }
 
     this.writeLine(
-      `)${this.useType ? `: ${this.getTypeName('options')}` : ''} => {`,
+      `)${
+        this.useType
+          ? `: ${
+              this.type === 'img'
+                ? this.getTypeName('')
+                : this.getTypeName('options')
+            }`
+          : ''
+      } => {`,
     );
 
     this.indent(1); // 生成平台Wrapper代码

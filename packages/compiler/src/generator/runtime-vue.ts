@@ -25,13 +25,11 @@ export class VueRuntimeGenerator extends RuntimeGenerator {
   private processPlatformImports() {
     if (this.useType) {
       this.writeLine(
-        "import {ComponentOptions, DefineComponent, inject, provide} from '@vue/runtime-dom'",
-      );
-    } else {
-      this.writeLine(
-        "import React, {createContext, useContext, useMemo} from 'react';",
+        "import type { ComponentOptions, DefineComponent } from '@vue/runtime-dom'",
       );
     }
+
+    this.writeLine("import { inject, provide } from '@vue/runtime-dom'");
 
     this.writeLine();
   }
@@ -79,6 +77,7 @@ export class VueRuntimeGenerator extends RuntimeGenerator {
     const wrapperNeedRTL = this.wrapperNeedRTL;
     const optionType = this.getTypeName('options');
     this.writeLine();
+
     this.writeLine(`const options${this.useType ? `: ${optionType}` : ''} = {`);
     this.indent(1); // 处理name
 
