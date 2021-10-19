@@ -33,6 +33,7 @@ importers:
       csv-stringify: ^5.6.5
       cz-customizable: ^6.3.0
       del: ^6.0.0
+      execa: ^5.1.1
       gulp: ^4.0.2
       gulp-babel: ^8.0.0
       gulp-clean-css: ^4.3.0
@@ -73,6 +74,7 @@ importers:
       csv-stringify: registry.npmmirror.com/csv-stringify/5.6.5
       cz-customizable: registry.npmmirror.com/cz-customizable/6.3.0
       del: registry.nlark.com/del/6.0.0
+      execa: registry.nlark.com/execa/5.1.1
       gulp: registry.npmmirror.com/gulp/4.0.2
       gulp-babel: registry.npmmirror.com/gulp-babel/8.0.0_@babel+core@7.15.8
       gulp-clean-css: registry.npmmirror.com/gulp-clean-css/4.3.0
@@ -4445,6 +4447,23 @@ packages:
       strip-final-newline: registry.nlark.com/strip-final-newline/2.0.0
     dev: true
 
+  registry.nlark.com/execa/5.1.1:
+    resolution: {integrity: sha1-+ArZy/Qpj3vR1MlVXCHpN0HEEd0=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/execa/download/execa-5.1.1.tgz}
+    name: execa
+    version: 5.1.1
+    engines: {node: '>=10'}
+    dependencies:
+      cross-spawn: registry.nlark.com/cross-spawn/7.0.3
+      get-stream: registry.nlark.com/get-stream/6.0.1
+      human-signals: registry.nlark.com/human-signals/2.1.0
+      is-stream: registry.nlark.com/is-stream/2.0.1
+      merge-stream: registry.nlark.com/merge-stream/2.0.0
+      npm-run-path: registry.npmmirror.com/npm-run-path/4.0.1
+      onetime: registry.nlark.com/onetime/5.1.2
+      signal-exit: registry.npmmirror.com/signal-exit/3.0.5
+      strip-final-newline: registry.nlark.com/strip-final-newline/2.0.0
+    dev: true
+
   registry.nlark.com/execall/2.0.0:
     resolution: {integrity: sha1-FqBrX+UJnffQC+XZwG7s3tFmO0U=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/execall/download/execall-2.0.0.tgz}
     name: execall
@@ -4962,6 +4981,13 @@ packages:
       pump: registry.nlark.com/pump/3.0.0
     dev: true
 
+  registry.nlark.com/get-stream/6.0.1:
+    resolution: {integrity: sha1-omLY7vZ6ztV8KFKtYWdSakPL97c=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/get-stream/download/get-stream-6.0.1.tgz}
+    name: get-stream
+    version: 6.0.1
+    engines: {node: '>=10'}
+    dev: true
+
   registry.nlark.com/get-symbol-description/1.0.0:
     resolution: {integrity: sha1-f9uByQAQH71WTdXxowr1qtweWNY=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/get-symbol-description/download/get-symbol-description-1.0.0.tgz}
     name: get-symbol-description
@@ -5394,6 +5420,13 @@ packages:
     name: human-signals
     version: 1.1.1
     engines: {node: '>=8.12.0'}
+    dev: true
+
+  registry.nlark.com/human-signals/2.1.0:
+    resolution: {integrity: sha1-3JH8ukLk0G5Kuu0zs+ejwC9RTqA=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/human-signals/download/human-signals-2.1.0.tgz}
+    name: human-signals
+    version: 2.1.0
+    engines: {node: '>=10.17.0'}
     dev: true
 
   registry.nlark.com/husky/7.0.2:

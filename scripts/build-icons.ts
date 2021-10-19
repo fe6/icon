@@ -7,6 +7,8 @@
 import fs from 'fs';
 import path from 'path';
 
+import { errorLog, log } from '../packages/compiler/src/index';
+
 interface IIconProps {
   id: number;
   title: string;
@@ -23,8 +25,8 @@ let count = 0;
 
 const errors: { [key: string]: boolean } = {};
 const printErrorMsg = (msg: string, data?: string) => {
-  // eslint-disable-next-line no-console
-  console.log('[water icon ci]:', msg, data || '');
+  errorLog(`${msg}, ${data || ''}`);
+
   if (data) {
     errors[data] = true;
   }
@@ -116,8 +118,7 @@ Object.keys(ALL_ICON_MAP).forEach((key) => {
   }
 });
 
-// eslint-disable-next-line no-console
-console.log('总图标数', count);
+log(`总图标数, ${count}`);
 
 fs.writeFileSync(
   path.resolve(__dirname, '../source/icons.json'),
