@@ -12,15 +12,15 @@ const defOpts = {
   prefix: 'icon',
 };
 
-export interface IMapGeneratorOptions extends IGeneratorOptions {
+export interface ISvgGeneratorOptions extends IGeneratorOptions {
   icons: string[];
 }
 
-export class MapGenerator extends Generator {
+export class SvgGenerator extends Generator {
   icons: string[] = [];
   prefix: string;
 
-  constructor(options: IMapGeneratorOptions = defOpts) {
+  constructor(options: ISvgGeneratorOptions = defOpts) {
     super(options);
 
     this.$opts = Object.assign(defOpts, options);
@@ -33,9 +33,9 @@ export class MapGenerator extends Generator {
     this.processHeaderComment();
     this.icons.forEach((name: string) => {
       this.writeLine(
-        `export { default as ${pascalCase(this.prefix)}${pascalCase(
+        `export { get${pascalCase(this.prefix)}${pascalCase(
           name,
-        )} } from './icons/${name}';`,
+        )}SvgHtml } from './icons/${name}';`,
       );
     });
 

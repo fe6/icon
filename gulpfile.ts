@@ -10,6 +10,11 @@ import ts from 'gulp-typescript';
 import merge from 'merge2';
 import less from 'gulp-less';
 import minifyCss from 'gulp-clean-css';
+import del from 'del';
+
+type TBuildType = 'vue' | 'img' | 'compiler';
+const cleanFolderType: TBuildType[] = ['vue', 'img'];
+const buildType: TBuildType[] = [...cleanFolderType, 'compiler'];
 
 const TS_CONFIG_DEF = {
   strict: true, // 启用 --noImplicitAny, --noImplicitThis, --alwaysStrict， --strictNullChecks和 --strictFunctionTypes和--strictPropertyInitialization
@@ -22,68 +27,79 @@ const TS_CONFIG_DEF = {
   declaration: true, // 生成 .d.ts 文件
 };
 
-const TS_CONFIG_MAP = {
-  vue: {
-    jsx: 'preserve',
-    ...TS_CONFIG_DEF,
-  },
-  compiler: {
-    target: 'ES5',
-    ...TS_CONFIG_DEF,
-  },
+const babelTs = {
+  presets: [
+    [
+      '@babel/preset-env',
+      {
+        modules: false,
+        targets: {
+          browsers: ['> 1%', 'last 2 versions', 'not ie <= 8'],
+        },
+      },
+    ],
+  ],
+  plugins: [
+    [
+      '@babel/plugin-proposal-class-properties',
+      {
+        loose: false,
+      },
+    ],
+    '@vue/babel-plugin-jsx',
+  ],
 };
 
-const BABEL_CONFIG_MAP = {
-  vue: {
-    presets: [
-      [
-        '@babel/preset-env',
-        {
-          modules: false,
-          targets: {
-            browsers: ['> 1%', 'last 2 versions', 'not ie <= 8'],
-          },
+const babelCmd = {
+  presets: [
+    [
+      '@babel/preset-env',
+      {
+        modules: false,
+        targets: {
+          browsers: ['> 1%', 'last 2 versions', 'not ie <= 8'],
         },
-      ],
+      },
     ],
-    plugins: [
-      [
-        '@babel/plugin-proposal-class-properties',
-        {
-          loose: false,
-        },
-      ],
-      '@vue/babel-plugin-jsx',
+  ],
+  plugins: [
+    [
+      '@babel/plugin-proposal-class-properties',
+      {
+        loose: false,
+      },
     ],
-  },
-  compiler: {
-    presets: [
-      [
-        '@babel/preset-env',
-        {
-          modules: false,
-          targets: {
-            browsers: ['> 1%', 'last 2 versions', 'not ie <= 8'],
-          },
-        },
-      ],
-    ],
-    plugins: [
-      [
-        '@babel/plugin-proposal-class-properties',
-        {
-          loose: false,
-        },
-      ],
-    ],
-  },
+  ],
 };
+
+const TS_CONFIG_MAP = {};
+const BABEL_CONFIG_MAP = {};
+
+buildType.forEach((buildKey: string) => {
+  const gulpConfig: ts.Settings = {
+    ...TS_CONFIG_DEF,
+  };
+  let babelConfig = {};
+  if (buildKey === 'compiler') {
+    gulpConfig.target = 'ES5';
+    babelConfig = {
+      ...babelCmd,
+    };
+  } else {
+    gulpConfig.jsx = 'preserve';
+    babelConfig = {
+      ...babelTs,
+    };
+  }
+  TS_CONFIG_MAP[buildKey] = gulpConfig;
+  BABEL_CONFIG_MAP[buildKey] = babelConfig;
+});
 
 function resolve(...arg: string[]): string {
   return path.resolve(process.cwd(), ...arg);
 }
 
-function createBuildTask(name: 'vue' | 'compiler'): string {
+function createBuildTask(name: TBuildType): string {
   const cwd = resolve('packages/', name);
 
   gulp.task(`build-script-${name}`, () => {
@@ -132,7 +148,29 @@ function createBuildTask(name: 'vue' | 'compiler'): string {
   return `build-${name}`;
 }
 
+export const cleanCode = (done: () => void) => {
+  cleanFolderType.forEach((iconItem: TBuildType) => {
+    const cwd = resolve('packages/', iconItem);
+    del([`${cwd}/**`, `!${cwd}/package.json`, `!${cwd}/README.md`]);
+  });
+  done();
+};
+
+export const cleanDist = (done: () => void) => {
+  buildType.forEach((iconItem: TBuildType) => {
+    const cwd = resolve('packages/', iconItem);
+    del([`${cwd}/es`, `${cwd}/styles`, `${cwd}/lib`]);
+  });
+  done();
+};
+
 gulp.task(
   'default',
-  gulp.series([createBuildTask('vue'), createBuildTask('compiler')]),
+  gulp.series([
+    cleanDist,
+    ...cleanFolderType.map((iconItem: TBuildType) => createBuildTask(iconItem)),
+    createBuildTask('compiler'),
+  ]),
 );
+
+gulp.task('cleanCode', gulp.series([cleanCode]));

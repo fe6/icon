@@ -65,7 +65,7 @@ export class RuntimeGenerator extends Generator {
 
     this.$opts = options;
     this.type = options.type;
-    this.prefix = options.prefix || '';
+    this.prefix = options.prefix || 'icon';
     this.hueList = [];
     this.replaceList = [];
     this.useType = options.useType || false;
@@ -516,6 +516,8 @@ export class RuntimeGenerator extends Generator {
   }
 
   processConverter() {
+    const typeMay = this.useType ? '?' : '';
+
     this.writeLine('// 属性转换函数');
     const casePrefix = pascalCase(this.prefix);
 
@@ -537,7 +539,11 @@ export class RuntimeGenerator extends Generator {
 
     if (this.colors.length) {
       this.writeLine(
-        "const fill = typeof icon.fill === 'string' ? [icon.fill] : icon.fill || [];",
+        `const fill = ${
+          this.useType ? '' : 'icon && ('
+        }typeof icon${typeMay}.fill === 'string' ? [icon${typeMay}.fill] : icon${typeMay}.fill${
+          this.useType ? '' : ')'
+        } || [];`,
       );
     }
 
@@ -561,9 +567,11 @@ export class RuntimeGenerator extends Generator {
       this.writeLine();
 
       if (this.useType) {
-        this.writeLine('const theme: Theme = icon.theme || config.theme;');
+        this.writeLine('const theme: Theme = icon?.theme || config.theme;');
       } else {
-        this.writeLine('const theme = icon.theme || config.theme;');
+        this.writeLine(
+          'const theme = icon && icon.theme ? icon.theme : config.theme;',
+        );
       }
 
       this.writeLine();
@@ -727,33 +735,40 @@ export class RuntimeGenerator extends Generator {
     this.writeLine('return {');
     this.indent(1);
 
+    const mayBeText = (diyKey: string) =>
+      this.useType
+        ? `icon${typeMay}.${diyKey} || `
+        : `icon & icon.${diyKey} ? icon.${diyKey} : `;
+
     if (this.fixedSize) {
-      this.writeLine('size: icon.size || config.size,');
+      this.writeLine(`size: ${mayBeText('size')}config.size,`);
     } else {
       this.writeLine();
       this.writeLine('// 图标尺寸大小不固定，长宽默认为1em');
-      this.writeLine('width: icon.width || config.width,');
-      this.writeLine('height: icon.height || config.height,');
+      this.writeLine(`width: ${mayBeText('width')}config.width,`);
+      this.writeLine(`height: ${mayBeText('height')}config.height,`);
     }
 
     if (this.stroke) {
-      this.writeLine('strokeWidth: icon.strokeWidth || config.strokeWidth,');
+      this.writeLine(
+        `strokeWidth: ${mayBeText('strokeWidth')}config.strokeWidth,`,
+      );
     }
 
     if (this.strokeLinecap) {
       this.writeLine(
-        'strokeLinecap: icon.strokeLinecap || config.strokeLinecap,',
+        `strokeLinecap: ${mayBeText('strokeLinecap')}config.strokeLinecap,`,
       );
     }
 
     if (this.strokeLinejoin) {
       this.writeLine(
-        'strokeLinejoin: icon.strokeLinejoin || config.strokeLinejoin,',
+        `strokeLinejoin: ${mayBeText('strokeLinejoin')}config.strokeLinejoin,`,
       );
     }
 
     if (this.replaceList.length) {
-      this.writeLine('colors: icon.colors || colors,');
+      this.writeLine(`colors: ${mayBeText('colors')}colors,`);
     }
 
     if (this.hueList.length) {
@@ -841,11 +856,7 @@ export class RuntimeGenerator extends Generator {
     this.writeLine(
       `)${
         this.useType
-          ? `: ${
-              this.type === 'img'
-                ? this.getTypeName('')
-                : this.getTypeName('options')
-            }`
+          ? `: ${this.getTypeName(this.type === 'img' ? 'Return' : 'options')}`
           : ''
       } => {`,
     );

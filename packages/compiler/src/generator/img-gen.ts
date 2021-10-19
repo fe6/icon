@@ -66,6 +66,17 @@ export class ImgGenerator extends IconGenerator {
     this.wrapperNeedRTL = curOpts.wrapperNeedRTL || false;
   }
 
+  renderGetSvgCode(info: IInfo) {
+    const useType = this.useType;
+    const typeName = this.getInterfaceName('props', true);
+
+    this.write(`(props${useType ? `: ${typeName}` : ''}) => `);
+    this.writeLine();
+    this.writeLine('`<?xml version="1.0" encoding="UTF-8"?>');
+    this.processTag(info.element, info.style);
+    this.writeLine();
+  }
+
   process(info: IInfo) {
     const useDefault = this.useDefault;
     const useType = this.useType;
@@ -97,6 +108,15 @@ export class ImgGenerator extends IconGenerator {
     this.writeLine("';");
     this.writeLine(); // 处理顶部导出
 
+    this.writeLine('// 获取 SVG 的 HTML 字符串');
+    this.write(
+      `export const get${pascalCase(this.prefix)}${pascalCase(
+        info.name,
+      )}SvgHtml = `,
+    );
+    this.renderGetSvgCode(info);
+
+    this.writeLine('// 默认导出组件');
     this.write('export');
     this.space();
 
@@ -129,26 +149,8 @@ export class ImgGenerator extends IconGenerator {
       this.write(', ');
     } // 处理函数参数：(props: IIconProps)
 
-    this.write('(');
-    this.write('props');
+    this.write(`get${pascalCase(this.prefix)}${pascalCase(info.name)}SvgHtml`);
 
-    if (useType) {
-      this.write(':');
-      this.space();
-      this.write(typeName);
-    }
-
-    this.write(')');
-    this.space(); // wrapper用箭头函数
-
-    this.write('=>');
-    this.space();
-    this.writeLine('(');
-    this.indent(1);
-    this.writeLine('\'<?xml version="1.0" encoding="UTF-8"?>\'');
-    this.processTag(info.element, info.style);
-    this.indent(-1);
-    this.write(')');
     this.writeLine(');');
     return this.getResult();
   }
@@ -159,13 +161,9 @@ export class ImgGenerator extends IconGenerator {
     const style = info.style;
     const children = info.children;
 
-    this.write("+ '");
+    this.write('');
     this.write('<');
     this.write(type);
-
-    if (type === 'svg') {
-      this.write(` xmlns="http://www.w3.org/2000/svg"`);
-    }
 
     attrs.forEach((item) => {
       this.processAttr(item);
@@ -176,25 +174,25 @@ export class ImgGenerator extends IconGenerator {
     }
 
     if (type === 'svg' && (this.style || children.length)) {
-      this.writeLine(">'");
+      this.writeLine('>');
       this.indent(1);
 
       if (type === 'svg' && this.style) {
-        this.writeLine("+ '<style>' + ");
+        this.writeLine('<style>');
         this.processStyle(css);
-        this.writeLine(" + '</style>'");
+        this.writeLine('</style>');
       }
 
       children.forEach((item) => {
         this.processTag(item, css);
       });
       this.indent(-1);
-      this.writeLine(`+ '</${type}>'`);
+      this.writeLine(`</${type}>\`;`);
 
       return;
     }
 
-    this.writeLine("/>'");
+    this.writeLine('/>');
   }
 
   processAttr(attr: ISvgAttr) {
@@ -206,7 +204,7 @@ export class ImgGenerator extends IconGenerator {
     this.write('="');
 
     if (type === SvgShapeAttr.DYNAMIC) {
-      this.write(`' + ${expression} + '`);
+      this.write(`\$\{${expression}\}`);
     } else {
       this.write(expression);
     }

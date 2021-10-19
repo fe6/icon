@@ -8,6 +8,7 @@ import { ImgGenerator } from './generator/img-gen';
 import { LessGenerator } from './generator/less-gen';
 import { IndexGenerator } from './generator/index-gen';
 import { MapGenerator } from './generator/map-gen';
+import { SvgGenerator } from './generator/svg-gen';
 import { AllGenerator } from './generator/all-gen';
 import { VueRuntimeGenerator } from './generator/runtime-vue';
 import { ImgRuntimeGenerator } from './generator/runtime-img';
@@ -61,11 +62,15 @@ class IconCompiler {
   private compiler: any;
   private runtimeCode: string;
   private readonly compilerMap: ICompilerMap = {};
-
+  private readonly isImg: boolean;
+  private prefix = 'icon';
   constructor(options: IIconToolsOptions) {
     this.$opts = options;
     this.compiler = this.createCompiler();
     this.runtimeCode = this.createRuntimeCode();
+    const { type } = this.$opts;
+    this.isImg = type === 'svg' || type === 'img';
+    this.prefix = this.$opts.prefix || 'icon';
   }
 
   private createCompiler() {
@@ -84,7 +89,7 @@ class IconCompiler {
         replaceList.push(item);
       }
     });
-    const isSvg = type === 'svg';
+    // const isSvg = type === 'svg' || type === 'img';
     return (ref: IRef) => {
       const { name, content } = ref;
       const description = ref?.description || name;
@@ -99,7 +104,7 @@ class IconCompiler {
 
       plugins.push(
         removePropsTransformer({
-          props: ['version', 'xmlns:xlink', ...(isSvg ? [] : ['xmlns'])],
+          props: ['version', 'xmlns:xlink', ...(this.isImg ? [] : ['xmlns'])],
         }),
       ); // 修复mask-type属性的错误
 
@@ -170,7 +175,7 @@ class IconCompiler {
         }),
       ); // 处理额外增加的Rect
 
-      if (!isSvg) {
+      if (!this.isImg) {
         plugins.push(
           removeConditionTransformer({
             tag: 'rect',
@@ -184,7 +189,7 @@ class IconCompiler {
         );
       }
 
-      if (isSvg) {
+      if (this.isImg) {
         plugins.push(
           syncGroupProps({
             attrNames: [
@@ -199,7 +204,7 @@ class IconCompiler {
         );
       } // React需要进行变量名升级
 
-      if (!isSvg) {
+      if (!this.isImg) {
         plugins.push(
           camelTransformer({
             namespace: true,
@@ -231,7 +236,7 @@ class IconCompiler {
       author: this.$opts.author,
       rtl,
       type: this.$opts.type,
-      prefix: this.$opts.prefix || 'icon',
+      prefix: this.prefix,
       nameDisplayType: 'pascal',
       useDefault: true,
       useType: this.$opts.useType,
@@ -249,7 +254,7 @@ class IconCompiler {
       author: this.$opts.author,
       rtl,
       type: this.$opts.type,
-      prefix: this.$opts.prefix || 'icon',
+      prefix: this.prefix,
       nameDisplayType: 'pascal',
       useDefault: true,
       useType: this.$opts.useType,
@@ -277,11 +282,10 @@ class IconCompiler {
 
   private getIconFile(name: string) {
     const svg = this.getIconCode(name);
-    const isSvg = this.$opts.type === 'svg';
     return {
       mime: 'image/svg+xml',
       path: `icons/${name}.${this.$opts.useType ? 't' : 'j'}s${
-        isSvg ? '' : 'x'
+        this.isImg ? '' : 'x'
       }`,
       content: svg,
     };
@@ -294,7 +298,9 @@ class IconCompiler {
   private getRuntimeFile() {
     return {
       mime: 'text/javascript',
-      path: `runtime/index.${this.$opts.useType ? 't' : 'j'}sx`,
+      path: `runtime/index.${this.$opts.useType ? 't' : 'j'}s${
+        this.isImg ? '' : 'x'
+      }`,
       content: this.getRuntimeCode(),
     };
   }
@@ -320,6 +326,7 @@ class IconCompiler {
 
   private getMapCode() {
     const generator = new MapGenerator({
+      prefix: this.prefix,
       name: 'map',
       type: '',
       author: this.$opts.author,
@@ -338,10 +345,32 @@ class IconCompiler {
     };
   }
 
+  private getSvgCode() {
+    const generator = new SvgGenerator({
+      prefix: this.prefix,
+      name: 'map',
+      type: '',
+      author: this.$opts.author,
+      nameDisplayType: 'camel',
+      description: '组件集合',
+      icons: Object.keys(this.compilerMap),
+    });
+    return generator.process();
+  }
+
+  private getSvgFile() {
+    return {
+      mime: 'text/javascript',
+      path: `svg.${this.$opts.useType ? 'ts' : 'js'}`,
+      content: this.getSvgCode(),
+    };
+  }
+
   private getAllCode() {
     const generator = new AllGenerator({
       name: 'map',
       type: this.$opts.type,
+      prefix: this.prefix,
       author: this.$opts.author,
       fixedSize: this.$opts.fixedSize || false,
       stroke: this.$opts.stroke || 0,
@@ -373,7 +402,7 @@ class IconCompiler {
       author: this.$opts.author,
       nameDisplayType: 'camel',
       description: '样式文件',
-      prefix: this.$opts.prefix || 'icon',
+      prefix: this.prefix,
       cssPrefix: this.$opts.cssPrefix || 'sit',
     });
     return generator.process();
@@ -402,11 +431,16 @@ class IconCompiler {
       list.push(this.getLessFile());
     }
 
+    if (this.isImg) {
+      list.push(this.getSvgFile());
+    }
+
     return list;
   }
 
   private createRuntimeCode() {
     const baseOptions: IRuntimeGeneratorOptions = {
+      prefix: this.prefix,
       name: 'runtime',
       type: this.$opts.type,
       author: this.$opts.author,
@@ -414,7 +448,6 @@ class IconCompiler {
       description: '运行时',
       useType: this.$opts.useType || false,
       colors: this.$opts.colors || [],
-      prefix: this.$opts.prefix || 'icon',
       cssPrefix: this.$opts.cssPrefix || 'sit',
       stroke: this.$opts.stroke || 0,
       theme: this.$opts.theme || [],
