@@ -47,3 +47,5 @@ export * from './transformer/unique-keyframes-id';
 export * from './transformer/fix-mask-type';
 
 export * from './icon-compiler';
+
+export * from './logger';
