@@ -1,12 +1,14 @@
 /** @format */
 
-import { Generator, IGeneratorOptions } from './base';
 import { pascalCase } from '../util';
+import { TGenType } from '../types';
+import { Generator, IGeneratorOptions } from './base';
 
 const defOpts = {
   author: 'fe6',
   name: '',
   icons: [],
+  type: '' as TGenType,
 };
 
 export interface IMapGeneratorOptions extends IGeneratorOptions {

@@ -1,0 +1,48 @@
+{
+  "name": "@fe6/icon-img",
+  "version": "0.0.0",
+  "description": "Water Icon 的纯 HTML 图标",
+  "keywords": [
+    "vue",
+    "img icon",
+    "icon img",
+    "icon",
+    "icon pack",
+    "icon park",
+    "IconPark",
+    "svg",
+    "system icons",
+    "component",
+    "components",
+    "design",
+    "fe6",
+    "fe6 icon"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fe6/icon.git"
+  },
+  "author": "iq9891 <649076408@qq.com>",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://github.com/fe6/icon#readme",
+  "bugs": {
+    "url": "https://github.com/fe6/icon/issues"
+  },
+  "engines": {
+    "node": ">= 16.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm",
+  "peerDependencies": {
+    "@vue/runtime-dom": "3.x",
+    "vue": "3.x"
+  }
+}

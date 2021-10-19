@@ -1,10 +1,12 @@
 /** @format */
 
+import { TGenType } from '../types';
 import { Generator, IGeneratorOptions } from './base';
 
 const defOpts = {
   author: '',
   name: '',
+  type: '' as TGenType,
   prefix: 'icon',
   style: false,
   stylePropName: 'props',

@@ -2,6 +2,7 @@ lockfileVersion: 5.3
 
 overrides:
   '@fe6/icon-vue': workspace:^
+  '@fe6/icon-img': workspace:^
 
 importers:
 
@@ -93,6 +94,7 @@ importers:
 
   packages/playground/vue-ts:
     specifiers:
+      '@fe6/icon-img': workspace:^0.0.0
       '@fe6/icon-vue': workspace:^
       '@vitejs/plugin-vue': ^1.9.3
       '@vitejs/plugin-vue-jsx': ^1.2.0
@@ -101,6 +103,7 @@ importers:
       vue: ^3.2.16
       vue-tsc: ^0.3.0
     dependencies:
+      '@fe6/icon-img': link:../../img
       '@fe6/icon-vue': link:../../vue
       vue: registry.npmmirror.com/vue/3.2.20
     devDependencies:
@@ -5418,6 +5421,16 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
+  registry.nlark.com/image-size/0.5.5:
+    resolution: {integrity: sha1-Cd/Uq50g4p6xw+gLiZA3jfnjy5w=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/image-size/download/image-size-0.5.5.tgz}
+    name: image-size
+    version: 0.5.5
+    engines: {node: '>=0.10.0'}
+    hasBin: true
+    requiresBuild: true
+    dev: true
+    optional: true
+
   registry.nlark.com/import-fresh/3.3.0:
     resolution: {integrity: sha1-NxYsJfy566oublPVtNiM4X2eDCs=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/import-fresh/download/import-fresh-3.3.0.tgz}
     name: import-fresh
@@ -10157,7 +10170,7 @@ packages:
     dev: true
 
   registry.nlark.com/yaml/1.10.2:
-    resolution: {integrity: sha1-IwHF/78StGfejaIzOkWeKeeSDks=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/yaml/download/yaml-1.10.2.tgz}
+    resolution: {integrity: sha1-IwHF/78StGfejaIzOkWeKeeSDks=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/yaml/download/yaml-1.10.2.tgz?cache=0&sync_timestamp=1631600320423&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fyaml%2Fdownload%2Fyaml-1.10.2.tgz}
     name: yaml
     version: 1.10.2
     engines: {node: '>= 6'}
@@ -10646,7 +10659,7 @@ packages:
     dev: true
 
   registry.npmmirror.com/@commitlint/load/13.2.1:
-    resolution: {integrity: sha1-1dkm29BQIcAoN8Q4/xBXAlsot0U=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@commitlint/load/download/@commitlint/load-13.2.1.tgz?cache=0&sync_timestamp=1633770983885&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40commitlint%2Fload%2Fdownload%2F%40commitlint%2Fload-13.2.1.tgz}
+    resolution: {integrity: sha1-1dkm29BQIcAoN8Q4/xBXAlsot0U=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@commitlint/load/download/@commitlint/load-13.2.1.tgz}
     name: '@commitlint/load'
     version: 13.2.1
     engines: {node: '>=v12'}
@@ -12875,16 +12888,6 @@ packages:
       parse-passwd: registry.npmmirror.com/parse-passwd/1.0.0
     dev: true
 
-  registry.npmmirror.com/image-size/0.5.5:
-    resolution: {integrity: sha1-Cd/Uq50g4p6xw+gLiZA3jfnjy5w=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/image-size/download/image-size-0.5.5.tgz}
-    name: image-size
-    version: 0.5.5
-    engines: {node: '>=0.10.0'}
-    hasBin: true
-    requiresBuild: true
-    dev: true
-    optional: true
-
   registry.npmmirror.com/inquirer/6.5.2:
     resolution: {integrity: sha1-rVCUI3XQNtMn/1KMCL1fqwiZKMo=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/inquirer/download/inquirer-6.5.2.tgz}
     name: inquirer
@@ -13138,7 +13141,7 @@ packages:
     optionalDependencies:
       errno: registry.nlark.com/errno/0.1.8
       graceful-fs: registry.nlark.com/graceful-fs/4.2.8
-      image-size: registry.npmmirror.com/image-size/0.5.5
+      image-size: registry.nlark.com/image-size/0.5.5
       make-dir: registry.nlark.com/make-dir/2.1.0
       mime: registry.nlark.com/mime/1.6.0
       needle: registry.nlark.com/needle/2.9.1

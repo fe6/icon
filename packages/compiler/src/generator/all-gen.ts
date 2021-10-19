@@ -3,12 +3,14 @@
  * @file AllGenerator 生成 all 代码
  */
 
+import { TGenType } from '../types';
 import { pascalCase } from '../util';
 import { RuntimeGenerator, IRuntimeGeneratorOptions } from './runtime-base';
 
 const defOpts = {
   author: 'fe6',
   name: '',
+  type: '' as TGenType,
 };
 
 export class AllGenerator extends RuntimeGenerator {
@@ -24,20 +26,71 @@ export class AllGenerator extends RuntimeGenerator {
   }
 
   process() {
+    if (this.type === 'vue') {
+      this.renderVue();
+    } else {
+      this.renderImg();
+    }
+    return this.getResult();
+  }
+
+  renderImg() {
+    // 写头部的注释
+    this.processHeaderComment();
+
+    const iconMap = this.getTypeName('map');
+    const iconProps = this.getInterfaceName('props', true);
+    const iconType = this.getTypeName('type');
+    const allProps = this.getInterfaceName('AllProps');
+
+    this.writeLine(`import * as ${iconMap} from './map';`);
+    if (this.useType) {
+      this.writeLine(`import { ${iconProps} } from './runtime';`);
+      this.writeLine();
+
+      this.writeLine(`export type ${iconType} = keyof typeof ${iconMap};`);
+      this.writeLine();
+      this.writeLine(`export interface ${allProps} extends ${iconProps} {`);
+      this.indent(1);
+      this.writeLine(`type: ${iconType} | string;`);
+      this.indent(-1);
+      this.writeLine(`}`);
+      this.writeLine();
+    }
+
+    this.writeLine(
+      `export const water${this.getTypeName('')} = (props${
+        this.useType ? `: ${allProps}` : ''
+      }) => {`,
+    );
+    this.indent(1);
+    this.writeLine(
+      `return ${iconMap}[props.type${
+        this.useType ? ` as ${iconType}` : ''
+      }](props)`,
+    );
+    this.indent(-1);
+    this.writeLine('};');
+  }
+
+  renderVue() {
     // 写头部的注释
     this.processHeaderComment();
 
     const iconProps = this.getInterfaceName('props');
-    const iconMap = this.getTypeName('map');
+    const myPrefix = pascalCase(this.prefix);
+    const iconMap = `map${myPrefix}`;
     const iconType = this.getTypeName('type');
     const allOptions = this.getInterfaceName('allOptions');
-    const allIcon = `All${pascalCase(this.prefix)}`;
+    const allIcon = `TAll${myPrefix}`;
 
-    this.writeLine(
-      `import { createVNode${
-        this.useType ? ', App, DefineComponent, ComponentOptions' : ''
-      } } from '@vue/runtime-dom';`,
-    );
+    if (this.useType) {
+      this.writeLine(
+        `import type { App, DefineComponent, ComponentOptions } from '@vue/runtime-dom';`,
+      );
+    }
+
+    this.writeLine(`import { createVNode } from '@vue/runtime-dom';`);
     this.writeLine(`import * as ${iconMap} from './map';`);
     if (this.useType) {
       this.writeLine(`import { ${iconProps} } from './runtime';`);
@@ -130,7 +183,7 @@ export class AllGenerator extends RuntimeGenerator {
     this.writeLine();
 
     this.writeLine(
-      `export const ${this.getTypeName('Water')}${
+      `export const water${this.getTypeName('')}${
         this.useType ? `: ${allIcon}` : ''
       } = ${parkOptions}${this.useType ? ` as ${allIcon}` : ''};`,
     );
@@ -159,7 +212,5 @@ export class AllGenerator extends RuntimeGenerator {
     this.indent(-1);
     this.writeLine('};');
     this.writeLine();
-
-    return this.getResult();
   }
 }

@@ -9,10 +9,12 @@ import {
   ISvgStyleSelector,
   ISvgStyleAttr,
   ISvgStyleKeyframesInfo,
+  TGenType,
 } from '../types';
 
 const defOpts = {
   author: '',
+  type: '' as TGenType,
   name: '',
   prefix: 'icon',
   style: false,

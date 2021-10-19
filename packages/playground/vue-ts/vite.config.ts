@@ -20,6 +20,17 @@ export default defineConfig({
           '../../vue/src/runtime/index.less',
         ),
       },
+      {
+        find: '@fe6/icon-img',
+        replacement: path.resolve(__dirname, '../../img/src/index.ts'),
+      },
+      {
+        find: 'img-icon.less',
+        replacement: path.resolve(
+          __dirname,
+          '../../img/src/runtime/index.less',
+        ),
+      },
     ],
   },
   plugins: [
