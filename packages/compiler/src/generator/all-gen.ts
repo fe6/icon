@@ -183,7 +183,7 @@ export class AllGenerator extends RuntimeGenerator {
     this.writeLine();
 
     this.writeLine(
-      `export const water${this.getTypeName('')}${
+      `export const Water${this.getTypeName('')}${
         this.useType ? `: ${allIcon}` : ''
       } = ${parkOptions}${this.useType ? ` as ${allIcon}` : ''};`,
     );

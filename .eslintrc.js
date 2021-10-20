@@ -7,6 +7,7 @@ module.exports = {
     '@typescript-eslint/indent': 'off',
     'react/prop-types': 'off',
     'operator-linebreak': 'off',
+    'unicorn/number-literal-case': 'off',
     'quotes': 'off',
     'quote-props': 'off',
     'arrow-parens': 'off',
