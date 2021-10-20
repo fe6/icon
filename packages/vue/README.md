@@ -1,8 +1,8 @@
 <!-- @format -->
 
-# water icon 图标
+# Water Icon 图标
 
-> water 图标体系
+> Water 图标体系
 
 ## 介绍
 
@@ -29,14 +29,14 @@ npm install @fe6/icon-vue --save
 
 ```vue
 <template>
-  <Video theme="filled" />
+  <icon-video theme="filled" />
 </template>
 <script>
-  import { Video } from '@fe6/icon-vue';
+  import { IconVideo } from '@fe6/icon-vue';
 
   export default {
     components: {
-      Video,
+      IconVideo,
     },
   };
 </script>
@@ -66,26 +66,25 @@ import '@fe6/icon-vue/styles/index.css';
 
 ### 全局
 
-你可以使用 `@fe6/icon-vue/es/runtime` 中的 `IconProvider`来设置全局配置。
+你可以使用 `@fe6/icon-vue` 中的 `IconProvider`来设置全局配置。
 
 ```html
 <template>
   <div>
-    <video />
+    <icon-video theme="filled" />
   </div>
 </template>
 
-<script lang="ts">
-  import { DEFAULT_ICON_CONFIGS, IconProvider } from '@fe6/icon-vue/es/runtime';
-  import { Video } from '@fe6/icon-vue';
+<script>
+  import { DEFAULT_ICON_CONFIGS, IconProvider } from '@fe6/icon-vue';
+  import { IconVideo } from '@fe6/icon-vue';
 
   export default {
-    name: 'App',
-    setup() {
-      IconProvider({ ...DEFAULT_ICON_CONFIGS, prefix: 'icon' });
-    },
     components: {
-      Video,
+      IconVideo,
+    },
+    setup() {
+      IconProvider({ ...DEFAULT_ICON_CONFIGS, prefix: 'i' });
     },
   };
 </script>
@@ -121,15 +120,14 @@ import '@fe6/icon-vue/styles/index.css';
 
 ```vue
 <template>
-  <icon-park type="AddText" theme="filled" />
-  <icon-park type="add-text" theme="filled" />
+  <water-icon type="IconVideo" theme="filled" />
 </template>
 <script>
-  import { IconPark } from '@fe6/icon-vue/es/all';
+  import { WaterIcon } from '@fe6/icon-vue';
 
   export default {
     components: {
-      IconPark,
+      WaterIcon,
     },
   };
 </script>

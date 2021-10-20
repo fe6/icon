@@ -52,6 +52,8 @@
     strokeLinecap="square"
     theme="multiColor"
   />
+  <h4>使用 Icon 组件</h4>
+  <water-icon type="IconVideo" theme="twoTone" />
 
   <h1>全局注册 vue 版</h1>
   <br />
@@ -71,7 +73,9 @@
     IconVideo as VueVideo,
     DEFAULT_ICON_CONFIGS,
     IconProvider,
+    WaterIcon,
   } from '@fe6/icon-vue';
+
   import {
     IconVideo,
     setConfig,

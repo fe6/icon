@@ -1,14 +1,13 @@
 <!-- @format -->
 
-# water icon 图标
+# Water Icon 图标
 
-> water 图标体系
+> Water 图标体系
 
 ## 介绍
 
 ### 新特性
 
-- 现仅仅支持 **_vue3_**
 - 支持 4 种主题:
   - 线性
   - 填充
@@ -20,75 +19,41 @@
 ### 安装
 
 ```
-npm install @fe6/icon-vue --save
+npm install @fe6/icon-img --save
 ```
 
 ### 引用图标
 
-在组件的上方引用`@fe6/icon-vue`，并在组件的模板函数中使用:
+引用`@fe6/icon-img`，并渲染函数对应的图标:
 
-```vue
-<template>
-  <Video theme="filled" />
-</template>
-<script>
-  import { Video } from '@fe6/icon-vue';
-
-  export default {
-    components: {
-      Video,
-    },
-  };
-</script>
 ```
+import { IconVideo } from '@fe6/icon-img';
 
-如果你不想引用，那么你可以全局安装图标
+// examples
 
-```typescript
-import { waterIconInstall } from '@fe6/icon-vue';
-import { createApp } from 'vue';
+const svg = IconVideo();
 
-const app = createApp({});
-
-// Install
-waterIconInstall(app); // 默认前缀是 'icon', 例如: 对于`People`这个icon, 组件名字是`icon-video`.
-waterIconInstall(app, 'i'); // 使用自定义前缀'i', 例如: 对于`People`这个icon，组件名字是`i-video`.
-app.mount('#app');
-```
-
-### Style Sheet
-
-引用预设样式
-
-```typescript
-import '@fe6/icon-vue/styles/index.css';
+console.log(svg); // svg 的 html 字符串
 ```
 
 ### 全局
 
-你可以使用 `@fe6/icon-vue/es/runtime` 中的 `IconProvider`来设置全局配置。
+你可以使用 `@fe6/icon-img` 中的 `setConfig`方法来设置全局配置。
 
-```html
-<template>
-  <div>
-    <video />
-  </div>
-</template>
+```typescript
+import { setConfig } from '@fe6/icon-img';
 
-<script lang="ts">
-  import { DEFAULT_ICON_CONFIGS, IconProvider } from '@fe6/icon-vue/es/runtime';
-  import { Video } from '@fe6/icon-vue';
-
-  export default {
-    name: 'App',
-    setup() {
-      IconProvider({ ...DEFAULT_ICON_CONFIGS, prefix: 'icon' });
-    },
-    components: {
-      Video,
-    },
-  };
-</script>
+setConfig({
+  theme: 'outline',
+  size: '1em',
+  strokeWidth: 4,
+  strokeLinecap: 'round',
+  strokeLinejoin: 'round',
+  outStrokeColor: '#000',
+  outFillColor: '#2F88FF',
+  innerStrokeColor: '#FFF',
+  innerFillColor: '#43CCF8',
+});
 ```
 
 ### 按需加载
@@ -103,7 +68,7 @@ import '@fe6/icon-vue/styles/index.css';
     [
       "import",
       {
-        "libraryName": "@fe6/icon-vue",
+        "libraryName": "@fe6/icon-img",
         "libraryDirectory": "es/icons",
         "camel2DashComponentName": false
       }
@@ -112,30 +77,7 @@ import '@fe6/icon-vue/styles/index.css';
 }
 ```
 
-### 使用 Icon 组件
-
-我们更推荐使用按需加载的方式来加载图标，因为这样可以大幅度缩减编译后代码体积，
-但是在有些类似远程加载的菜单的场景下，直接引用全部图标可以缩减开发成本。
-
-使用方式：
-
-```vue
-<template>
-  <icon-park type="AddText" theme="filled" />
-  <icon-park type="add-text" theme="filled" />
-</template>
-<script>
-  import { IconPark } from '@fe6/icon-vue/es/all';
-
-  export default {
-    components: {
-      IconPark,
-    },
-  };
-</script>
-```
-
-### 将 IconPark 嵌入到你的项目中
+### 将 WaterIcon 嵌入到你的项目中
 
 如果你的项目中需要使用到图标名称，作者，分类，标签以及创建时间等额外的信息，你可以使用位于每个 NPM 根目录的`icons.json`文件。
 

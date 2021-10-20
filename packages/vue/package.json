@@ -28,9 +28,6 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "typings": "lib/index.d.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "homepage": "https://github.com/fe6/icon#readme",
   "bugs": {
     "url": "https://github.com/fe6/icon/issues"
