@@ -27,6 +27,9 @@
   "author": "iq9891 <649076408@qq.com>",
   "main": "lib/index.js",
   "module": "es/index.js",
+  "scripts": {
+    "release": "ts-node ../../scripts/release.ts"
+  },
   "typings": "lib/index.d.ts",
   "homepage": "https://github.com/fe6/icon#readme",
   "bugs": {
@@ -42,5 +45,11 @@
   "peerDependencies": {
     "@vue/runtime-dom": "3.x",
     "vue": "3.x"
+  },
+  "release-it": {
+    "git": {
+      "tag": false,
+      "commitMessage": "release($bump): ${version}"
+    }
   }
 }

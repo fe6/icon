@@ -7,7 +7,7 @@
 import fs from 'fs';
 import path from 'path';
 
-import { errorLog, log } from '../packages/compiler/src/index';
+import { errorLog, log } from '../packages/compiler/src';
 
 interface IIconProps {
   id: number;

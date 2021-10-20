@@ -5,7 +5,8 @@ import p from 'path';
 import mkdirp from 'mkdirp';
 import execa from 'execa';
 
-import { iconCompiler, TGenType, log } from '../packages/compiler/src/index';
+import { iconCompiler, log } from '../packages/compiler/src';
+import { COMPILER_TYPE } from './config';
 
 import icons from '../source/icons.json';
 
@@ -14,9 +15,7 @@ import { BUILD_CODE_CONFIG } from './code-conf';
 (async () => {
   log('generator start');
 
-  const compilerType: TGenType[] = ['vue', 'img'];
-
-  compilerType.forEach((type) => {
+  COMPILER_TYPE.forEach((type) => {
     const compiler = iconCompiler({
       type,
       ...BUILD_CODE_CONFIG,

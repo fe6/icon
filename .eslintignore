@@ -9,3 +9,5 @@ types/
 *.yaml
 packages/compiler/src/types.ts
 .eslintrc.js
+*.hbs
+*.yml
