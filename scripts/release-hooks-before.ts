@@ -24,8 +24,7 @@ export const beforeRelease = async () => {
     // await changelog();
     log('开始发布');
   } catch (err) {
-    errorLog('打包失败');
-    process.exit(1);
+    errorLog('打包失败', true);
   }
 };
 
