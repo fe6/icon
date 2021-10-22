@@ -21,12 +21,15 @@ export async function release() {
     const pkgPath = resolve(pkgDir, 'package.json');
     const pkg = require(pkgPath);
     const currentVersion = pkg.version;
-    const inc = (i: string) => semver.inc(currentVersion, i, 'beta');
+    const inc = (i: semver.ReleaseType) =>
+      semver.inc(currentVersion, i, 'beta');
     const { release } = await prompts({
       type: 'select',
       name: 'release',
       message: 'Select release type',
-      choices: VERSION_INCREMENTS.map((i) => `${i} (${inc(i)})`)
+      choices: VERSION_INCREMENTS.map(
+        (i: semver.ReleaseType) => `${i}: (${inc(i)})`,
+      )
         .concat(['custom'])
         .map((i) => ({ value: i, title: i })),
     });
