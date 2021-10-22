@@ -14,6 +14,10 @@ const pnpmRun = async (name: string) => {
 };
 
 class ReleasePlugin extends releaseIt.Plugin {
+  constructor() {
+    super();
+  }
+
   async beforeRelease() {
     try {
       log('准备发布');
