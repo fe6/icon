@@ -5,17 +5,24 @@ import prompts from 'prompts';
 import semver from 'semver';
 import { resolve } from 'path';
 
-import { errorLog } from '../packages/compiler/src';
+import { errorLog, TGenType } from '../packages/compiler/src';
 
-import { VERSION_INCREMENTS } from './config';
+import { VERSION_INCREMENTS, COMPILER_TYPE } from './config';
 
 const args = require('minimist')(process.argv.slice(2));
 
-export async function release() {
-  let targetVersion = args._[0];
+const testVersion = (tVersion: string) => {
+  if (!semver.valid(tVersion)) {
+    errorLog(`无效的目标版本 -> ${tVersion}`, true);
+  }
+};
+
+export async function goRelease(targetPackageName: TGenType, version: string) {
+  let targetVersion = version;
 
   if (!targetVersion) {
-    const pkgDir = process.cwd();
+    const root = process.cwd();
+    const pkgDir = `${root}/${targetPackageName}`;
     const pkgPath = resolve(pkgDir, 'package.json');
     const pkg = require(pkgPath);
     const currentVersion = pkg.version;
@@ -48,9 +55,7 @@ export async function release() {
     }
   }
 
-  if (!semver.valid(targetVersion)) {
-    errorLog(`无效的目标版本 -> ${targetVersion}`);
-  }
+  testVersion(targetVersion);
 
   const tag = `v${targetVersion}`;
 
@@ -91,8 +96,8 @@ export async function release() {
       tag,
     },
     hooks: {
-      'before:release': 'ts-node ./release-hooks-before.ts',
-      'after:release': 'ts-node ./release-hooks-after.ts',
+      'before:release': `ts-node ./release-hooks-before.ts`,
+      'after:release': `ts-node ./release-hooks-after.ts`,
     },
     git: {
       // eslint-disable-next-line no-template-curly-in-string
@@ -104,5 +109,17 @@ export async function release() {
 }
 
 (async () => {
-  await release();
+  // pnpm release vue
+  // pnpm release cube-vue 1.0.0
+  const argLength = args._.length;
+  if (argLength) {
+    const targetVersion = args._[argLength > 1 ? 1 : 0];
+    const targetPackageName = args._[0];
+    testVersion(targetVersion);
+    if (COMPILER_TYPE.includes(targetPackageName)) {
+      await goRelease(targetPackageName, targetVersion);
+    }
+  } else {
+    errorLog('请加上发布的包名~', true);
+  }
 })();
