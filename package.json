@@ -10,6 +10,8 @@
     "lint:fix": "eslint './**/*.{js,ts,tsx,json}' --fix && pretty-quick",
     "lint": "eslint './**/*.{js,ts,tsx,json}' && pretty-quick",
     "release": "ts-node ./scripts/release.ts",
+    "release:before": "ts-node ./scripts/release-hooks-before",
+    "release:after": "ts-node ./scripts/release-hooks-after",
     "build:code": "gulp"
   },
   "engines": {
