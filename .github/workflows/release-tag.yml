@@ -3,7 +3,7 @@ name: Create Release Tag
 on:
   push:
     tags:
-      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+      - 'icon*' # Push events to matching icon*, i.e. icon-vue@1.0, icon-vue@20.15.10
 
 jobs:
   build:

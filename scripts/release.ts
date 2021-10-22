@@ -103,7 +103,7 @@ export async function goRelease(targetPackageName: TGenType, version: string) {
 
   testVersion(targetVersion);
 
-  const tag = `v${pkgName}@${targetVersion}`;
+  const tag = `${pkgName}@${targetVersion}`;
 
   const { yes } = await prompts({
     type: 'confirm',
