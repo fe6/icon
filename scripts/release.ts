@@ -3,15 +3,13 @@
 import releaseIt from 'release-it';
 import prompts from 'prompts';
 import semver from 'semver';
-import { resolve, join } from 'path';
+import { resolve } from 'path';
 
 import { errorLog } from '../packages/compiler/src';
 
 import { VERSION_INCREMENTS } from './config';
 
 const args = require('minimist')(process.argv.slice(2));
-
-const PLUGIN_PATH = join(__dirname, './release-plugin.ts');
 
 export async function release() {
   let targetVersion = args._[0];
@@ -71,10 +69,30 @@ export async function release() {
 
   await releaseIt({
     plugins: {
-      [PLUGIN_PATH]: {},
+      '@release-it/conventional-changelog': {
+        infile: 'changelog.md',
+        preset: {
+          name: 'angular',
+          types: [
+            {
+              type: 'feat',
+              section: 'Features',
+            },
+            {
+              type: 'fix',
+              section: 'Bug Fixes',
+            },
+            {},
+          ],
+        },
+      },
     },
     npm: {
       tag,
+    },
+    hooks: {
+      'before:release': 'ts-node ./release-hooks-before.ts',
+      'after:release': 'ts-node ./release-hooks-after.ts',
     },
     git: {
       // eslint-disable-next-line no-template-curly-in-string
