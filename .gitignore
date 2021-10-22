@@ -5,6 +5,7 @@ node_modules
 
 .idea
 /.vscode/
+.npmrc
 
 dist
 dist-ssr
