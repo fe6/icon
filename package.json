@@ -1,6 +1,5 @@
 {
   "name": "@fe6/icon-monorepo",
-  "private": true,
   "scripts": {
     "preinstall": "node scripts/preinstall && husky install",
     "gen:json": "ts-node scripts/gen-json.ts",

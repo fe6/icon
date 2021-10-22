@@ -30,6 +30,9 @@
   "unpkg": "lib/index.js",
   "jsdelivr": "lib/index.js",
   "typings": "lib/index.d.ts",
+  "scripts": {
+    "changelog": "conventional-changelog -p angular -i changelog.md -s --commit-path . --lerna-package img"
+  },
   "homepage": "https://github.com/fe6/icon#readme",
   "bugs": {
     "url": "https://github.com/fe6/icon/issues"
