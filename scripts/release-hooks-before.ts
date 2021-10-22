@@ -12,15 +12,23 @@ const pnpmRun = async (name: string) => {
 
 export const beforeRelease = async () => {
   try {
+    log('');
     log('准备发布');
+    log('');
     await pnpmRun('gen:clean');
+    log('');
     log('生成 ICON');
+    log('');
     await pnpmRun('gen:json');
+    log('');
     log('生成 CODE');
     await pnpmRun('gen:code');
+    log('');
     log('打包 CODE');
     await pnpmRun('build:code');
+    log('');
     log('开始发布');
+    log('');
   } catch (err) {
     errorLog('打包失败', true);
   }
