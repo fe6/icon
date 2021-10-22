@@ -10,8 +10,11 @@ import execa from 'execa';
 import semver from 'semver';
 import { resolve } from 'path';
 
-import { errorLog, log, TGenType } from '../packages/compiler/src';
+import { errorLog, log } from '../packages/compiler/src';
+import { beforeRelease } from './release-hooks-before';
+
 import { VERSION_INCREMENTS, COMPILER_TYPE } from './config';
+
 const args = require('minimist')(process.argv.slice(2));
 
 const testVersion = (tVersion: string) => {
@@ -52,7 +55,7 @@ async function publishPackage(
   ];
   try {
     await run('yarn', publicArgs, {
-      cwd: pkgDir,
+      stdio: 'pipe',
     });
     log('');
     log(`发布成功 ${pkgName}@${version}`);
@@ -68,10 +71,9 @@ async function publishPackage(
   }
 }
 
-export async function goRelease(targetPackageName: TGenType, version: string) {
+export async function goRelease(version: string) {
   let targetVersion = version;
-  const root = process.cwd();
-  const pkgDir = `${root}/packages/${targetPackageName}`;
+  const pkgDir = process.cwd();
   const pkgPath = resolve(pkgDir, 'package.json');
   const pkg = require(pkgPath);
   const pkgName = pkg.name.replace(/^@fe6\//, '');
@@ -132,7 +134,7 @@ export async function goRelease(targetPackageName: TGenType, version: string) {
   log('');
 
   if (!skipBuild && !isDryRun) {
-    await run('pnpm', ['run', 'release:before']);
+    await beforeRelease();
   } else {
     log(`(skipped)`);
   }
@@ -148,12 +150,10 @@ export async function goRelease(targetPackageName: TGenType, version: string) {
   }
 
   log('');
-  log('生成 changelog...');
+  log('生成 CHANGELONG...');
   log('');
 
-  await run('pnpm', ['run', 'changelog'], {
-    cwd: pkgDir,
-  });
+  await run('pnpm', ['run', 'changelog']);
 
   const confirmGitPush = await prompts({
     type: 'confirm',
@@ -214,7 +214,7 @@ export async function goRelease(targetPackageName: TGenType, version: string) {
       testVersion(targetVersion);
     }
     if (COMPILER_TYPE.includes(targetPackageName)) {
-      await goRelease(targetPackageName, targetVersion);
+      await goRelease(targetVersion);
     }
   } else {
     errorLog('请加上发布的包名~', true);
