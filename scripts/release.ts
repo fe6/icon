@@ -40,6 +40,7 @@ function updateVersion(pkgFile: string, version: string) {
 async function publishPackage(pkgName: string, version: string) {
   const publicArgs = [
     'publish',
+    '--new-version',
     version,
     '--no-git-tag-version',
     '--access',
