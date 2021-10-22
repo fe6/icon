@@ -40,11 +40,7 @@ function updateVersion(pkgFile: string, version: string) {
   fs.writeFileSync(pkgFile, `${JSON.stringify(pkg, null, 2)}\n`);
 }
 
-async function publishPackage(
-  pkgName: string,
-  pkgDir: string,
-  version: string,
-) {
+async function publishPackage(pkgName: string, version: string) {
   const publicArgs = [
     'publish',
     '--new-version',
@@ -191,7 +187,7 @@ export async function goRelease(version: string) {
   log(`${pkg.name} 发布中...`);
   log('');
 
-  await publishPackage(pkgName, pkgDir, targetVersion);
+  await publishPackage(pkgName, targetVersion);
 
   log('');
   log('提交到 GitHub...');
