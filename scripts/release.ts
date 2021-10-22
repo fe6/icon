@@ -37,21 +37,17 @@ function updateVersion(pkgFile: string, version: string) {
   fs.writeFileSync(pkgFile, `${JSON.stringify(pkg, null, 2)}\n`);
 }
 
-async function publishPackage(
-  pkgName: string,
-  version: string,
-  runIfNotDry: Function,
-) {
+async function publishPackage(pkgName: string, version: string) {
   const publicArgs = [
     'publish',
-    '--no-git-tag-version',
     '--new-version',
     version,
+    '--no-git-tag-version',
     '--access',
     'public',
   ];
   try {
-    await runIfNotDry('yarn', publicArgs);
+    await run('yarn', publicArgs);
     log(`发布成功 ${pkgName}@${version}`);
   } catch (e: any) {
     if (e.stderr.match(/previously published/)) {
@@ -128,7 +124,7 @@ export async function goRelease(targetPackageName: TGenType, version: string) {
   const confirmChangelog = await prompts({
     type: 'confirm',
     name: 'yes',
-    message: `确定生成 changelog 吗?`,
+    message: `确定生成 CHANGELONG 吗?`,
   });
 
   if (!confirmChangelog.yes) {
@@ -152,7 +148,7 @@ export async function goRelease(targetPackageName: TGenType, version: string) {
 
   const { stdout } = await run('git', ['diff'], { stdio: 'pipe' });
   if (stdout) {
-    log('\nCommitting changes...');
+    log('\n提交 GIT ...');
     await runIfNotDry('git', ['add', '-A']);
     await runIfNotDry('git', ['commit', '-m', `release($bump): ${tag}`]);
   } else {
@@ -162,7 +158,7 @@ export async function goRelease(targetPackageName: TGenType, version: string) {
   const confirmRelease = await prompts({
     type: 'confirm',
     name: 'yes',
-    message: `确定发布吗?`,
+    message: `确定发布 ${pkgName} 的 ${targetVersion} 版本吗?`,
   });
 
   if (!confirmRelease.yes) {
@@ -170,13 +166,12 @@ export async function goRelease(targetPackageName: TGenType, version: string) {
   }
 
   log(`\n ${pkg.name} 发布中...`);
-  await publishPackage(pkgName, targetVersion, runIfNotDry);
+  await publishPackage(pkgName, targetVersion);
 
   log('\n 提交到 GitHub...');
 
   await runIfNotDry('git', ['tag', tag]);
-  await runIfNotDry('git', ['push', 'origin', `refs/tags/${tag}`]);
-  await runIfNotDry('git', ['push']);
+  await runIfNotDry('git', ['push', 'origin', 'master', tag]);
 
   if (isDryRun) {
     log(`\nDry run finished - run git diff to see package changes.`);
