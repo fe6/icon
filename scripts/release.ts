@@ -64,8 +64,7 @@ async function publishPackage(pkgName: string, version: string) {
 
 export async function goRelease(targetPackageName: TGenType, version: string) {
   let targetVersion = version;
-  const root = process.cwd();
-  const pkgDir = `${root}/packages/${targetPackageName}`;
+  const pkgDir = process.cwd();
 
   await run('cd', [pkgDir]);
 
