@@ -20,8 +20,6 @@ export const beforeRelease = async () => {
     await pnpmRun('gen:code');
     log('打包 CODE');
     await pnpmRun('build:code');
-    // log('生成日志');
-    // await changelog();
     log('开始发布');
   } catch (err) {
     errorLog('打包失败', true);
