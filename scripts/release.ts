@@ -115,7 +115,9 @@ export async function goRelease(targetPackageName: TGenType, version: string) {
   if (argLength) {
     const targetVersion = args._[argLength > 1 ? 1 : 0];
     const targetPackageName = args._[0];
-    testVersion(targetVersion);
+    if (targetVersion) {
+      testVersion(targetVersion);
+    }
     if (COMPILER_TYPE.includes(targetPackageName)) {
       await goRelease(targetPackageName, targetVersion);
     }
