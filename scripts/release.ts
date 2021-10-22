@@ -40,9 +40,8 @@ function updateVersion(pkgFile: string, version: string) {
 async function publishPackage(pkgName: string, version: string) {
   const publicArgs = [
     'publish',
-    '--no-git-tag-version',
-    '--new-version',
     version,
+    '--no-git-tag-version',
     '--access',
     'public',
   ];
@@ -171,8 +170,7 @@ export async function goRelease(targetPackageName: TGenType, version: string) {
   log('\n 提交到 GitHub...');
 
   await runIfNotDry('git', ['tag', tag]);
-  await runIfNotDry('git', ['push', 'origin', `refs/tags/${tag}`]);
-  await runIfNotDry('git', ['push']);
+  await runIfNotDry('git', ['push', 'origin', 'master', tag]);
 
   if (isDryRun) {
     log(`\nDry run finished - run git diff to see package changes.`);
