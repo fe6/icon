@@ -66,6 +66,9 @@ export async function goRelease(targetPackageName: TGenType, version: string) {
   let targetVersion = version;
   const root = process.cwd();
   const pkgDir = `${root}/packages/${targetPackageName}`;
+
+  await run('cd', [pkgDir]);
+
   const pkgPath = resolve(pkgDir, 'package.json');
   const pkg = require(pkgPath);
   const pkgName = pkg.name.replace(/^@fe6\//, '');
