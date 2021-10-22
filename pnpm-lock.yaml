@@ -116,12 +116,15 @@ importers:
   packages/cube-vue:
     specifiers: {}
 
+  packages/img:
+    specifiers: {}
+
   packages/playground:
     specifiers: {}
 
   packages/playground/vue-ts:
     specifiers:
-      '@fe6/icon-cube-vue': workspace:^0.0.0
+      '@fe6/icon-cube-vue': workspace:^
       '@fe6/icon-img': workspace:^
       '@fe6/icon-vue': workspace:^
       '@vitejs/plugin-vue': ^1.9.3
@@ -5575,7 +5578,7 @@ packages:
       source-map: registry.nlark.com/source-map/0.6.1
       wordwrap: registry.nlark.com/wordwrap/1.0.0
     optionalDependencies:
-      uglify-js: registry.npmmirror.com/uglify-js/3.14.2
+      uglify-js: registry.nlark.com/uglify-js/3.14.2
     dev: true
 
   registry.nlark.com/har-schema/2.0.0:
@@ -5884,6 +5887,16 @@ packages:
     version: 5.1.8
     engines: {node: '>= 4'}
     dev: true
+
+  registry.nlark.com/image-size/0.5.5:
+    resolution: {integrity: sha1-Cd/Uq50g4p6xw+gLiZA3jfnjy5w=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/image-size/download/image-size-0.5.5.tgz}
+    name: image-size
+    version: 0.5.5
+    engines: {node: '>=0.10.0'}
+    hasBin: true
+    requiresBuild: true
+    dev: true
+    optional: true
 
   registry.nlark.com/import-cwd/3.0.0:
     resolution: {integrity: sha1-IIRVR3GAFRJuqbNna3WS+4vUz5I=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/import-cwd/download/import-cwd-3.0.0.tgz}
@@ -7189,6 +7202,16 @@ packages:
     name: mdn-data
     version: 2.0.14
     dev: true
+
+  registry.nlark.com/memfs/3.3.0:
+    resolution: {integrity: sha1-TaLR/ECgSxcKVmIscWTGvixMvvI=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/memfs/download/memfs-3.3.0.tgz}
+    name: memfs
+    version: 3.3.0
+    engines: {node: '>= 4.0.0'}
+    dependencies:
+      fs-monkey: registry.nlark.com/fs-monkey/1.0.3
+    dev: true
+    optional: true
 
   registry.nlark.com/memory-fs/0.4.1:
     resolution: {integrity: sha1-OpoguEYlI+RHz7x+i7gO1me/xVI=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/memory-fs/download/memory-fs-0.4.1.tgz}
@@ -10431,6 +10454,16 @@ packages:
     version: 0.0.6
     dev: true
 
+  registry.nlark.com/uglify-js/3.14.2:
+    resolution: {integrity: sha1-191qRspXIU9UotCkPK0PNduCrJk=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/uglify-js/download/uglify-js-3.14.2.tgz}
+    name: uglify-js
+    version: 3.14.2
+    engines: {node: '>=0.8.0'}
+    hasBin: true
+    requiresBuild: true
+    dev: true
+    optional: true
+
   registry.nlark.com/unbox-primitive/1.0.1:
     resolution: {integrity: sha1-CF4hViXsMWJXTciFmr7nilmxRHE=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/unbox-primitive/download/unbox-primitive-1.0.1.tgz}
     name: unbox-primitive
@@ -11582,7 +11615,7 @@ packages:
     dev: true
 
   registry.npmmirror.com/@commitlint/load/13.2.1:
-    resolution: {integrity: sha1-1dkm29BQIcAoN8Q4/xBXAlsot0U=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@commitlint/load/download/@commitlint/load-13.2.1.tgz?cache=0&sync_timestamp=1633770983885&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40commitlint%2Fload%2Fdownload%2F%40commitlint%2Fload-13.2.1.tgz}
+    resolution: {integrity: sha1-1dkm29BQIcAoN8Q4/xBXAlsot0U=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@commitlint/load/download/@commitlint/load-13.2.1.tgz}
     name: '@commitlint/load'
     version: 13.2.1
     engines: {node: '>=v12'}
@@ -13887,7 +13920,7 @@ packages:
     dev: true
 
   registry.npmmirror.com/fork-ts-checker-webpack-plugin/5.2.1:
-    resolution: {integrity: sha1-eTJthpeXkG+osk4qvPlCH8gFRQ0=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/fork-ts-checker-webpack-plugin/download/fork-ts-checker-webpack-plugin-5.2.1.tgz}
+    resolution: {integrity: sha1-eTJthpeXkG+osk4qvPlCH8gFRQ0=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/fork-ts-checker-webpack-plugin/download/fork-ts-checker-webpack-plugin-5.2.1.tgz?cache=0&sync_timestamp=1634784705617&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Ffork-ts-checker-webpack-plugin%2Fdownload%2Ffork-ts-checker-webpack-plugin-5.2.1.tgz}
     name: fork-ts-checker-webpack-plugin
     version: 5.2.1
     engines: {node: '>=10', yarn: '>=1.0.0'}
@@ -13899,7 +13932,7 @@ packages:
       cosmiconfig: registry.nlark.com/cosmiconfig/6.0.0
       deepmerge: registry.nlark.com/deepmerge/4.2.2
       fs-extra: registry.nlark.com/fs-extra/9.1.0
-      memfs: registry.npmmirror.com/memfs/3.3.0
+      memfs: registry.nlark.com/memfs/3.3.0
       minimatch: registry.nlark.com/minimatch/3.0.4
       schema-utils: registry.nlark.com/schema-utils/2.7.0
       semver: registry.nlark.com/semver/7.3.5
@@ -14175,16 +14208,6 @@ packages:
       quick-lru: registry.nlark.com/quick-lru/5.1.1
       resolve-alpn: registry.npmmirror.com/resolve-alpn/1.2.1
     dev: true
-
-  registry.npmmirror.com/image-size/0.5.5:
-    resolution: {integrity: sha1-Cd/Uq50g4p6xw+gLiZA3jfnjy5w=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/image-size/download/image-size-0.5.5.tgz}
-    name: image-size
-    version: 0.5.5
-    engines: {node: '>=0.10.0'}
-    hasBin: true
-    requiresBuild: true
-    dev: true
-    optional: true
 
   registry.npmmirror.com/indent-string/4.0.0:
     resolution: {integrity: sha1-Yk+PRJfWGbLZdoUx1Y9BIoVNclE=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/indent-string/download/indent-string-4.0.0.tgz}
@@ -14476,7 +14499,7 @@ packages:
     optionalDependencies:
       errno: registry.nlark.com/errno/0.1.8
       graceful-fs: registry.nlark.com/graceful-fs/4.2.8
-      image-size: registry.npmmirror.com/image-size/0.5.5
+      image-size: registry.nlark.com/image-size/0.5.5
       make-dir: registry.nlark.com/make-dir/2.1.0
       mime: registry.nlark.com/mime/1.6.0
       needle: registry.nlark.com/needle/2.9.1
@@ -14568,16 +14591,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
-
-  registry.npmmirror.com/memfs/3.3.0:
-    resolution: {integrity: sha1-TaLR/ECgSxcKVmIscWTGvixMvvI=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/memfs/download/memfs-3.3.0.tgz}
-    name: memfs
-    version: 3.3.0
-    engines: {node: '>= 4.0.0'}
-    dependencies:
-      fs-monkey: registry.nlark.com/fs-monkey/1.0.3
-    dev: true
-    optional: true
 
   registry.npmmirror.com/micromark/2.11.4:
     resolution: {integrity: sha1-0TQ2E47qgmOD6CJEnJpcUO5EZlo=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/micromark/download/micromark-2.11.4.tgz}
@@ -15546,16 +15559,6 @@ packages:
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
-
-  registry.npmmirror.com/uglify-js/3.14.2:
-    resolution: {integrity: sha1-191qRspXIU9UotCkPK0PNduCrJk=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/uglify-js/download/uglify-js-3.14.2.tgz}
-    name: uglify-js
-    version: 3.14.2
-    engines: {node: '>=0.8.0'}
-    hasBin: true
-    requiresBuild: true
-    dev: true
-    optional: true
 
   registry.npmmirror.com/unc-path-regex/0.1.2:
     resolution: {integrity: sha1-5z3T17DXxe2G+6xrCufYxqadUPo=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/unc-path-regex/download/unc-path-regex-0.1.2.tgz}

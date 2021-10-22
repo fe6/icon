@@ -66,7 +66,7 @@ export async function changelog(): Promise<void> {
         transform,
       },
     )
-      .pipe(createWriteStream(pkgDir))
+      .pipe(createWriteStream(join(pkgDir, './changelog.md')))
       .on('close', () => {
         resolve();
       });
