@@ -98,8 +98,8 @@ export async function goRelease(targetPackageName: TGenType, version: string) {
       tag,
     },
     hooks: {
-      'before:release': beforeRelease,
-      'after:release': afterRelease,
+      'before:release': `ts-node ${beforeRelease}`,
+      'after:release': `ts-node ${afterRelease}`,
     },
     git: {
       // eslint-disable-next-line no-template-curly-in-string
