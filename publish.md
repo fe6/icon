@@ -2,6 +2,5 @@
 
 # 发布
 
-- 根目录
-- `pnpm release:before`
-- `pnpm release vue` or `pnpm release cube-vue 1.0.0`
+- 进入项目， 如 `cd packages/vue`
+- `pnpm release`

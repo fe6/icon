@@ -10,7 +10,7 @@ import execa from 'execa';
 import semver from 'semver';
 import { resolve } from 'path';
 
-import { errorLog, log, TGenType } from '../packages/compiler/src';
+import { errorLog, log } from '../packages/compiler/src';
 import { VERSION_INCREMENTS, COMPILER_TYPE } from './config';
 const args = require('minimist')(process.argv.slice(2));
 
@@ -199,9 +199,6 @@ export async function goRelease(version: string) {
 }
 
 (async () => {
-  // 在根目录
-  // pnpm release vue
-  // pnpm release cube-vue 1.0.0
   const argLength = args._.length;
   if (argLength) {
     const targetVersion = args._[1];
