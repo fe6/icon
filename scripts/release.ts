@@ -3,7 +3,7 @@
 import releaseIt from 'release-it';
 import prompts from 'prompts';
 import semver from 'semver';
-import { resolve, join } from 'path';
+import { resolve } from 'path';
 
 import { errorLog, TGenType } from '../packages/compiler/src';
 
@@ -71,8 +71,6 @@ export async function goRelease(targetPackageName: TGenType, version: string) {
   if (!yes) {
     return;
   }
-  const beforeRelease = join(root, './script/release-hooks-before.ts');
-  const afterRelease = join(root, './script/release-hooks-after.ts');
 
   await releaseIt({
     plugins: {
@@ -98,8 +96,8 @@ export async function goRelease(targetPackageName: TGenType, version: string) {
       tag,
     },
     hooks: {
-      'before:release': `ts-node ${beforeRelease}`,
-      'after:release': `ts-node ${afterRelease}`,
+      'before:release': 'pnpm release:before',
+      'after:release': 'pnpm release:after',
     },
     git: {
       // eslint-disable-next-line no-template-curly-in-string
