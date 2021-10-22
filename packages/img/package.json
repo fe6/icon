@@ -45,11 +45,5 @@
   "peerDependencies": {
     "@vue/runtime-dom": "3.x",
     "vue": "3.x"
-  },
-  "release-it": {
-    "git": {
-      "tag": false,
-      "commitMessage": "release($bump): ${version}"
-    }
   }
 }
