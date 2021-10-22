@@ -22,7 +22,7 @@ export async function goRelease(targetPackageName: TGenType, version: string) {
 
   if (!targetVersion) {
     const root = process.cwd();
-    const pkgDir = `${root}/${targetPackageName}`;
+    const pkgDir = `${root}/packages/${targetPackageName}`;
     const pkgPath = resolve(pkgDir, 'package.json');
     const pkg = require(pkgPath);
     const currentVersion = pkg.version;
@@ -113,7 +113,7 @@ export async function goRelease(targetPackageName: TGenType, version: string) {
   // pnpm release cube-vue 1.0.0
   const argLength = args._.length;
   if (argLength) {
-    const targetVersion = args._[argLength > 1 ? 1 : 0];
+    const targetVersion = args._[1];
     const targetPackageName = args._[0];
     if (targetVersion) {
       testVersion(targetVersion);
