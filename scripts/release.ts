@@ -62,12 +62,9 @@ async function publishPackage(pkgName: string, version: string) {
   }
 }
 
-export async function goRelease(targetPackageName: TGenType, version: string) {
+export async function goRelease(version: string) {
   let targetVersion = version;
   const pkgDir = process.cwd();
-
-  await run('cd', [pkgDir]);
-
   const pkgPath = resolve(pkgDir, 'package.json');
   const pkg = require(pkgPath);
   const pkgName = pkg.name.replace(/^@fe6\//, '');
@@ -213,7 +210,7 @@ export async function goRelease(targetPackageName: TGenType, version: string) {
       testVersion(targetVersion);
     }
     if (COMPILER_TYPE.includes(targetPackageName)) {
-      await goRelease(targetPackageName, targetVersion);
+      await goRelease(targetVersion);
     }
   } else {
     errorLog('请加上发布的包名~', true);
