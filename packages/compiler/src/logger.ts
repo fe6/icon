@@ -14,5 +14,7 @@ export const errorLog = (msg: string, end?: boolean) => {
 
 export const log = (msg: string) => {
   // eslint-disable-next-line no-console
-  console.log(chalk.blue.bold(`💦 [Water Icon CI]: `), chalk.red(msg));
+  console.log(
+    msg ? (chalk.blue.bold(`💦 [Water Icon CI]: `), chalk.red(msg)) : '',
+  );
 };
