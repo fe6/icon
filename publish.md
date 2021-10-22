@@ -2,5 +2,5 @@
 
 # 发布
 
-- 进入项目， 如 `cd packages/vue`
-- `pnpm release`
+- 根目录
+- `pnpm release vue`
