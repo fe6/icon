@@ -130,7 +130,15 @@ export async function goRelease(version: string) {
   log('');
 
   if (!skipBuild && !isDryRun) {
-    await beforeRelease();
+    const confirmRunBeforeRelease = await prompts({
+      type: 'confirm',
+      name: 'yes',
+      message: `运行 pnpm release:before 命令了吗?`,
+    });
+
+    if (!confirmRunBeforeRelease.yes) {
+      return;
+    }
   } else {
     log(`(skipped)`);
   }
