@@ -13,7 +13,9 @@ import icons from '../source/icons.json';
 import { BUILD_CODE_CONFIG } from './code-conf';
 
 (async () => {
-  log('generator start');
+  log('');
+  log('开始生成 ICON');
+  log('');
 
   COMPILER_TYPE.forEach((type) => {
     const compiler = iconCompiler({
@@ -52,11 +54,10 @@ import { BUILD_CODE_CONFIG } from './code-conf';
     });
   });
 
-  log('lint start');
+  log('');
+  log('语法检测开始');
+  log('');
   await execa('pnpm', ['lint:fix'], {
     stdio: 'inherit',
   });
-  log('lint end');
-
-  log('generator end');
 })();

@@ -48,10 +48,14 @@ async function publishPackage(pkgName: string, version: string) {
   ];
   try {
     await run('yarn', publicArgs);
+    log('');
     log(`发布成功 ${pkgName}@${version}`);
+    log('');
   } catch (e: any) {
     if (e.stderr.match(/previously published/)) {
+      log('');
       log(`跳过已发布的: ${pkgName}`);
+      log('');
     } else {
       throw e;
     }
@@ -111,10 +115,16 @@ export async function goRelease(targetPackageName: TGenType, version: string) {
     return;
   }
 
-  log('\n更新包的版本...');
+  log('');
+  log('更新包的版本...');
+  log('');
+
   updateVersion(pkgPath, targetVersion);
 
-  log(`\n打包 ${pkgName} ...`);
+  log('');
+  log(`打包 ${pkgName} ...`);
+  log('');
+
   if (!skipBuild && !isDryRun) {
     await run('pnpm', ['run', 'release:before']);
   } else {
@@ -131,7 +141,10 @@ export async function goRelease(targetPackageName: TGenType, version: string) {
     return;
   }
 
-  log('\n 生成 changelog...');
+  log('');
+  log('生成 changelog...');
+  log('');
+
   await run('pnpm', ['run', 'changelog'], {
     cwd: pkgDir,
   });
@@ -148,7 +161,10 @@ export async function goRelease(targetPackageName: TGenType, version: string) {
 
   const { stdout } = await run('git', ['diff'], { stdio: 'pipe' });
   if (stdout) {
-    log('\n提交 GIT ...');
+    log('');
+    log('提交 GIT ...');
+    log('');
+
     await runIfNotDry('git', ['add', '-A']);
     await runIfNotDry('git', ['commit', '-m', `release($bump): ${tag}`]);
   } else {
@@ -165,10 +181,15 @@ export async function goRelease(targetPackageName: TGenType, version: string) {
     return;
   }
 
-  log(`\n ${pkg.name} 发布中...`);
+  log('');
+  log(`${pkg.name} 发布中...`);
+  log('');
+
   await publishPackage(pkgName, targetVersion);
 
-  log('\n 提交到 GitHub...');
+  log('');
+  log('提交到 GitHub...');
+  log('');
 
   await runIfNotDry('git', ['tag', tag]);
   await runIfNotDry('git', ['push', 'origin', 'master', tag]);
