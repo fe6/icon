@@ -10,7 +10,7 @@ import execa from 'execa';
 import semver from 'semver';
 import { resolve } from 'path';
 
-import { errorLog, log } from '../packages/compiler/src';
+import { errorLog, log, TGenType } from '../packages/compiler/src';
 import { VERSION_INCREMENTS, COMPILER_TYPE } from './config';
 const args = require('minimist')(process.argv.slice(2));
 
@@ -37,7 +37,11 @@ function updateVersion(pkgFile: string, version: string) {
   fs.writeFileSync(pkgFile, `${JSON.stringify(pkg, null, 2)}\n`);
 }
 
-async function publishPackage(pkgName: string, version: string) {
+async function publishPackage(
+  pkgName: string,
+  pkgDir: string,
+  version: string,
+) {
   const publicArgs = [
     'publish',
     '--new-version',
@@ -47,7 +51,9 @@ async function publishPackage(pkgName: string, version: string) {
     'public',
   ];
   try {
-    await run('yarn', publicArgs);
+    await run('yarn', publicArgs, {
+      cwd: pkgDir,
+    });
     log('');
     log(`发布成功 ${pkgName}@${version}`);
     log('');
@@ -62,9 +68,10 @@ async function publishPackage(pkgName: string, version: string) {
   }
 }
 
-export async function goRelease(version: string) {
+export async function goRelease(targetPackageName: TGenType, version: string) {
   let targetVersion = version;
-  const pkgDir = process.cwd();
+  const root = process.cwd();
+  const pkgDir = `${root}/packages/${targetPackageName}`;
   const pkgPath = resolve(pkgDir, 'package.json');
   const pkg = require(pkgPath);
   const pkgName = pkg.name.replace(/^@fe6\//, '');
@@ -184,7 +191,7 @@ export async function goRelease(version: string) {
   log(`${pkg.name} 发布中...`);
   log('');
 
-  await publishPackage(pkgName, targetVersion);
+  await publishPackage(pkgName, pkgDir, targetVersion);
 
   log('');
   log('提交到 GitHub...');
@@ -207,7 +214,7 @@ export async function goRelease(version: string) {
       testVersion(targetVersion);
     }
     if (COMPILER_TYPE.includes(targetPackageName)) {
-      await goRelease(targetVersion);
+      await goRelease(targetPackageName, targetVersion);
     }
   } else {
     errorLog('请加上发布的包名~', true);
