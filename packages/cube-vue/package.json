@@ -22,15 +22,14 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fe6/icon.git"
+    "url": "git+https://github.com/fe6/icon.git",
+    "directory": "packages/cube-vue"
   },
   "author": "iq9891 <649076408@qq.com>",
   "main": "lib/index.js",
   "module": "es/index.js",
-  "scripts": {
-    "release": "ts-node ../../scripts/release.ts",
-    "changelog": "conventional-changelog -p angular -i changelog.md -s --commit-path . --lerna-package cube-vue"
-  },
+  "unpkg": "lib/index.js",
+  "jsdelivr": "lib/index.js",
   "typings": "lib/index.d.ts",
   "homepage": "https://github.com/fe6/icon#readme",
   "bugs": {
@@ -38,10 +37,6 @@
   },
   "engines": {
     "node": ">= 16.0.0"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
   },
   "packageManager": "pnpm",
   "peerDependencies": {
