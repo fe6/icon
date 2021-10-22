@@ -1,14 +1,17 @@
-/** @format */
+/**
+ * modified from https://github.com/vuejs/vue-next/blob/master/scripts/release.js
+ *
+ * @format
+ */
 
-import releaseIt from 'release-it';
+import fs from 'fs';
 import prompts from 'prompts';
+import execa from 'execa';
 import semver from 'semver';
 import { resolve } from 'path';
 
-import { errorLog, TGenType } from '../packages/compiler/src';
-
+import { errorLog, log, TGenType } from '../packages/compiler/src';
 import { VERSION_INCREMENTS, COMPILER_TYPE } from './config';
-
 const args = require('minimist')(process.argv.slice(2));
 
 const testVersion = (tVersion: string) => {
@@ -17,21 +20,64 @@ const testVersion = (tVersion: string) => {
   }
 };
 
+const isDryRun = args.dry;
+const skipBuild: boolean = args.skipBuild;
+
+const run = (bin: string, args: string[], opts: object = {}) =>
+  execa(bin, args, { stdio: 'inherit', ...opts });
+
+const dryRun = (bin: string, args: string[]) =>
+  log(`[dryrun] ${bin} ${args.join(' ')}`);
+
+const runIfNotDry = isDryRun ? dryRun : run;
+
+function updateVersion(pkgFile: string, version: string) {
+  const pkg = JSON.parse(fs.readFileSync(pkgFile, 'utf-8'));
+  pkg.version = version;
+  fs.writeFileSync(pkgFile, `${JSON.stringify(pkg, null, 2)}\n`);
+}
+
+async function publishPackage(
+  pkgName: string,
+  version: string,
+  runIfNotDry: Function,
+) {
+  const publicArgs = [
+    'publish',
+    '--no-git-tag-version',
+    '--new-version',
+    version,
+    '--access',
+    'public',
+  ];
+  try {
+    await runIfNotDry('yarn', publicArgs);
+    log(`发布成功 ${pkgName}@${version}`);
+  } catch (e: any) {
+    if (e.stderr.match(/previously published/)) {
+      log(`跳过已发布的: ${pkgName}`);
+    } else {
+      throw e;
+    }
+  }
+}
+
 export async function goRelease(targetPackageName: TGenType, version: string) {
   let targetVersion = version;
   const root = process.cwd();
+  const pkgDir = `${root}/packages/${targetPackageName}`;
+  const pkgPath = resolve(pkgDir, 'package.json');
+  const pkg = require(pkgPath);
+  const pkgName = pkg.name.replace(/^@fe6\//, '');
 
   if (!targetVersion) {
-    const pkgDir = `${root}/packages/${targetPackageName}`;
-    const pkgPath = resolve(pkgDir, 'package.json');
-    const pkg = require(pkgPath);
     const currentVersion = pkg.version;
     const inc = (i: semver.ReleaseType) =>
       semver.inc(currentVersion, i, 'beta');
     const { release } = await prompts({
       type: 'select',
       name: 'release',
-      message: 'Select release type',
+      message: '选择发布版本',
       choices: VERSION_INCREMENTS.map(
         (i: semver.ReleaseType) => `${i}: (${inc(i)})`,
       )
@@ -57,58 +103,88 @@ export async function goRelease(targetPackageName: TGenType, version: string) {
 
   testVersion(targetVersion);
 
-  const tag = `v${targetVersion}`;
+  const tag = `v${pkgName}@${targetVersion}`;
 
-  /**
-   * @type {{ yes: boolean }}
-   */
   const { yes } = await prompts({
     type: 'confirm',
     name: 'yes',
-    message: `确定发布 ${tag}. 吗?`,
+    message: `TAG 是 ${tag} 吗?`,
   });
 
   if (!yes) {
     return;
   }
 
-  await releaseIt({
-    plugins: {
-      '@release-it/conventional-changelog': {
-        infile: 'changelog.md',
-        preset: {
-          name: 'angular',
-          types: [
-            {
-              type: 'feat',
-              section: 'Features',
-            },
-            {
-              type: 'fix',
-              section: 'Bug Fixes',
-            },
-            {},
-          ],
-        },
-      },
-    },
-    npm: {
-      tag,
-    },
-    hooks: {
-      'before:release': 'pnpm release:before',
-      'after:release': 'pnpm release:after',
-    },
-    git: {
-      // eslint-disable-next-line no-template-curly-in-string
-      tagName: 'v${version}',
-      // eslint-disable-next-line no-template-curly-in-string
-      commitMessage: 'release($bump): ${version}',
-    },
+  log('\n更新包的版本...');
+  updateVersion(pkgPath, targetVersion);
+
+  log(`\n打包 ${pkgName} ...`);
+  if (!skipBuild && !isDryRun) {
+    await run('pnpm', ['run', 'release:before']);
+  } else {
+    log(`(skipped)`);
+  }
+
+  const confirmChangelog = await prompts({
+    type: 'confirm',
+    name: 'yes',
+    message: `确定生成 changelog 吗?`,
   });
+
+  if (!confirmChangelog.yes) {
+    return;
+  }
+
+  log('\n 生成 changelog...');
+  await run('pnpm', ['run', 'changelog'], {
+    cwd: pkgDir,
+  });
+
+  const confirmGitPush = await prompts({
+    type: 'confirm',
+    name: 'yes',
+    message: `确定将改变提交到 GitHub 吗?`,
+  });
+
+  if (!confirmGitPush.yes) {
+    return;
+  }
+
+  const { stdout } = await run('git', ['diff'], { stdio: 'pipe' });
+  if (stdout) {
+    log('\nCommitting changes...');
+    await runIfNotDry('git', ['add', '-A']);
+    await runIfNotDry('git', ['commit', '-m', `release($bump): ${tag}`]);
+  } else {
+    log('这个仓库没有改变');
+  }
+
+  const confirmRelease = await prompts({
+    type: 'confirm',
+    name: 'yes',
+    message: `确定发布吗?`,
+  });
+
+  if (!confirmRelease.yes) {
+    return;
+  }
+
+  log(`\n ${pkg.name} 发布中...`);
+  await publishPackage(pkgName, targetVersion, runIfNotDry);
+
+  log('\n 提交到 GitHub...');
+
+  await runIfNotDry('git', ['tag', tag]);
+  await runIfNotDry('git', ['push', 'origin', `refs/tags/${tag}`]);
+  await runIfNotDry('git', ['push']);
+
+  if (isDryRun) {
+    log(`\nDry run finished - run git diff to see package changes.`);
+  }
 }
 
 (async () => {
+  // 在根目录
   // pnpm release vue
   // pnpm release cube-vue 1.0.0
   const argLength = args._.length;
