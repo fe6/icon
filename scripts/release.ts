@@ -11,7 +11,6 @@ import semver from 'semver';
 import { resolve } from 'path';
 
 import { errorLog, log } from '../packages/compiler/src';
-import { beforeRelease } from './release-hooks-before';
 
 import { VERSION_INCREMENTS, COMPILER_TYPE } from './config';
 
