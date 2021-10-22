@@ -1,6 +1,6 @@
 /**
  * @format
- * @file map 所有组件出口
+ * @file all 所有组件出口
  * @author 由 fe6 自动生成
  */
 

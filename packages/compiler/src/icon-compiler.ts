@@ -4,14 +4,19 @@ import { TGenType, IIconColorHueInfo, IIconColorReplaceInfo } from './types';
 
 import { JSXGenerator } from './generator/jsx-gen';
 import { ImgGenerator } from './generator/img-gen';
+import { CubeVueGenerator } from './generator/cube-vue-gen';
 
 import { LessGenerator } from './generator/less-gen';
 import { IndexGenerator } from './generator/index-gen';
 import { MapGenerator } from './generator/map-gen';
 import { SvgGenerator } from './generator/svg-gen';
 import { AllGenerator } from './generator/all-gen';
+import { CubeGenerator } from './generator/cube-gen';
+
 import { VueRuntimeGenerator } from './generator/runtime-vue';
 import { ImgRuntimeGenerator } from './generator/runtime-img';
+import { CubeVueRuntimeGenerator } from './generator/runtime-cube-vue';
+
 import {
   IRuntimeGeneratorOptions,
   IRuntimeOptions,
@@ -208,7 +213,7 @@ class IconCompiler {
         plugins.push(
           camelTransformer({
             namespace: true,
-            namespaceOnly: type === 'vue',
+            namespaceOnly: true,
           }),
         );
       }
@@ -218,6 +223,8 @@ class IconCompiler {
 
       if (type === 'img') {
         generator = this.createImgGenerator(name, description, rtl);
+      } else if (type === 'cube-vue') {
+        generator = this.createCubeVueGenerator(name, description, rtl);
       } else {
         generator = this.createVueGenerator(name, description, rtl);
       }
@@ -250,6 +257,28 @@ class IconCompiler {
 
   private createImgGenerator(name: string, description: string, rtl: boolean) {
     return new ImgGenerator({
+      name,
+      author: this.$opts.author,
+      rtl,
+      type: this.$opts.type,
+      prefix: this.prefix,
+      nameDisplayType: 'pascal',
+      useDefault: true,
+      useType: this.$opts.useType,
+      wrapperNeedName: true,
+      wrapperNeedRTL: true,
+      style: this.$opts.style || false,
+      description,
+      importPath: '../runtime',
+    });
+  }
+
+  private createCubeVueGenerator(
+    name: string,
+    description: string,
+    rtl: boolean,
+  ) {
+    return new CubeVueGenerator({
       name,
       author: this.$opts.author,
       rtl,
@@ -348,7 +377,7 @@ class IconCompiler {
   private getSvgCode() {
     const generator = new SvgGenerator({
       prefix: this.prefix,
-      name: 'map',
+      name: 'svg',
       type: '',
       author: this.$opts.author,
       nameDisplayType: 'camel',
@@ -368,7 +397,7 @@ class IconCompiler {
 
   private getAllCode() {
     const generator = new AllGenerator({
-      name: 'map',
+      name: 'all',
       type: this.$opts.type,
       prefix: this.prefix,
       author: this.$opts.author,
@@ -395,10 +424,39 @@ class IconCompiler {
     };
   }
 
-  private getLessCode() {
+  private getCubeCode() {
+    const generator = new CubeGenerator({
+      name: 'cube',
+      type: this.$opts.type,
+      prefix: this.prefix,
+      author: this.$opts.author,
+      fixedSize: this.$opts.fixedSize || false,
+      stroke: this.$opts.stroke || 0,
+      strokeLinecap: this.$opts.strokeLinecap,
+      strokeLinejoin: this.$opts.strokeLinejoin,
+      wrapperNeedName: true,
+      useType: this.$opts.useType,
+      wrapperNeedRTL: true,
+      theme: this.$opts.theme || [],
+      colors: this.$opts.colors || [],
+      nameDisplayType: 'camel',
+      description: '自定义组件出口',
+    });
+    return generator.process();
+  }
+
+  private getCubeFile() {
+    return {
+      mime: 'text/javascript',
+      path: `cube.${this.$opts.useType ? 't' : 'j'}sx`,
+      content: this.getCubeCode(),
+    };
+  }
+
+  private getLessCode(type: TGenType) {
     const generator = new LessGenerator({
       name: 'index',
-      type: '',
+      type,
       author: this.$opts.author,
       nameDisplayType: 'camel',
       description: '样式文件',
@@ -412,7 +470,15 @@ class IconCompiler {
     return {
       mime: 'text/css',
       path: 'runtime/index.less',
-      content: this.getLessCode(),
+      content: this.getLessCode('less'),
+    };
+  }
+
+  private getLessJsFile() {
+    return {
+      mime: 'text/javascript',
+      path: `cube-style.${this.$opts.useType ? 't' : 'j'}s`,
+      content: this.getLessCode('cube-vue'),
     };
   }
 
@@ -429,6 +495,11 @@ class IconCompiler {
 
     if (this.$opts.type !== 'svg') {
       list.push(this.getLessFile());
+    }
+
+    if (this.$opts.type === 'cube-vue') {
+      list.push(this.getLessJsFile());
+      list.push(this.getCubeFile());
     }
 
     if (this.isImg) {
@@ -464,6 +535,11 @@ class IconCompiler {
         type: 'vue' as TGenType,
       }),
     );
+    const cubeVueRuntime = new CubeVueRuntimeGenerator(
+      Object.assign(baseOptions, {
+        type: 'cube-vue' as TGenType,
+      }),
+    );
     const imgRuntime = new ImgRuntimeGenerator(
       Object.assign(baseOptions, {
         type: 'img' as TGenType,
@@ -472,6 +548,7 @@ class IconCompiler {
     let generator:
       | VueRuntimeGenerator
       | ImgRuntimeGenerator
+      | CubeVueRuntimeGenerator
       | { process: () => string };
     switch (this.$opts.type) {
       case 'vue':
@@ -479,6 +556,9 @@ class IconCompiler {
         break;
       case 'img':
         generator = imgRuntime;
+        break;
+      case 'cube-vue':
+        generator = cubeVueRuntime;
         break;
 
       default:

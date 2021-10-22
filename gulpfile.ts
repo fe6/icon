@@ -12,8 +12,8 @@ import less from 'gulp-less';
 import minifyCss from 'gulp-clean-css';
 import del from 'del';
 
-type TBuildType = 'vue' | 'img' | 'compiler';
-const cleanFolderType: TBuildType[] = ['vue', 'img'];
+type TBuildType = 'vue' | 'img' | 'cube-vue' | 'compiler';
+const cleanFolderType: TBuildType[] = ['vue', 'img', 'cube-vue'];
 const buildType: TBuildType[] = [...cleanFolderType, 'compiler'];
 
 const TS_CONFIG_DEF = {
@@ -159,7 +159,7 @@ export const cleanCode = (done: () => void) => {
 export const cleanDist = (done: () => void) => {
   buildType.forEach((iconItem: TBuildType) => {
     const cwd = resolve('packages/', iconItem);
-    del([`${cwd}/es`, `${cwd}/styles`, `${cwd}/lib`]);
+    del([`${cwd}/es`, `${cwd}/styles/**`, `${cwd}/lib`]);
   });
   done();
 };

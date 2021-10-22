@@ -116,13 +116,24 @@ export class RuntimeGenerator extends Generator {
 
     this.processConfigData(); // 生成工具函数
 
-    this.processUtil(); // 生成转换函数代码
+    if (this.type === 'cube-vue') {
+      this.processCubeUtils();
+      this.getTSvgAttr();
+      this.processGetSvgProp();
+      this.processGetColor();
+    } else {
+      this.processUtil(); // 生成转换函数代码
+    }
 
-    this.processConverter(); // 平台业务代码
+    if (this.type === 'cube-vue') {
+      this.processCubeVueConverter(); // 转换函数
+    } else {
+      this.processConverter(); // 转换函数
+    }
 
-    runOptions.processPlatformCode(); // 生成Wrapper代码
+    runOptions.processPlatformCode(); // 平台业务代码
 
-    if (this.type === 'vue') {
+    if (this.type === 'vue' || this.type === 'cube-vue') {
       this.processContext(); // 生成上下文
 
       this.processProvider(); // 图标配置Provider
@@ -213,6 +224,10 @@ export class RuntimeGenerator extends Generator {
       this.writeLine('format: HueReplaceFormatter;');
     }
 
+    this.writeLine();
+    this.writeLine('// 是否旋转');
+    this.writeLine('spin?: boolean;');
+
     this.indent(-1);
     this.writeLine('}');
     this.writeLine();
@@ -226,6 +241,10 @@ export class RuntimeGenerator extends Generator {
     this.writeLine();
     this.writeLine('// CSS前缀');
     this.writeLine('prefix: string;');
+
+    this.writeLine();
+    this.writeLine('// 旋转');
+    this.writeLine('spin: boolean;');
 
     if (this.wrapperNeedRTL) {
       this.writeLine();
@@ -395,6 +414,8 @@ export class RuntimeGenerator extends Generator {
       this.writeLine("height: '1em',");
     }
 
+    this.writeLine('spin: false,');
+
     if (stroke) {
       this.writeLine(`strokeWidth: ${stroke},`);
     }
@@ -512,6 +533,298 @@ export class RuntimeGenerator extends Generator {
     );
     this.indent(-1);
     this.writeLine('}');
+    this.writeLine();
+  }
+
+  processCubeVueConverter() {
+    const typeMay = this.useType ? '?' : '';
+
+    this.writeLine('// 属性转换函数');
+    const casePrefix = pascalCase(this.prefix);
+
+    if (this.useType) {
+      this.writeLine(
+        `export const ${casePrefix}Converter = (id: string, icon: ${this.getInterfaceName(
+          'props',
+        )}, config: ${this.getInterfaceName(
+          'config',
+        )}): ${this.getInterfaceName('props', true)} => {`,
+      );
+    } else {
+      this.writeLine(
+        `export const ${casePrefix}Converter = (id, icon, config) => {`,
+      );
+    }
+
+    this.indent(1);
+
+    if (this.colors.length) {
+      this.writeLine(
+        `const fill = ${
+          this.useType ? '' : 'icon && ('
+        }typeof icon${typeMay}.fill === 'string' ? [icon${typeMay}.fill] : icon${typeMay}.fill${
+          this.useType ? '' : ')'
+        } || [];`,
+      );
+    }
+
+    if (this.replaceList.length) {
+      if (this.useType) {
+        this.writeLine('const oldColors: string[] = [];');
+      } else {
+        this.writeLine('const oldColors = [];');
+      }
+    }
+
+    if (this.hueList.length) {
+      if (this.useType) {
+        this.writeLine('const hsl: HSL[] = [];');
+      } else {
+        this.writeLine('const hsl = [];');
+      }
+    }
+
+    const typeSvg = this.useType
+      ? `: ${this.getInterfaceName('cubeItemData')} | null`
+      : '';
+    this.writeLine(`const svgItem${typeSvg} = getSvgItem(id);`);
+    this.writeLine(
+      "const canSet = getSvgProp(svgItem, 'canSet', 'Boolean', false, true);",
+    );
+
+    if (this.hasDefaultTheme) {
+      this.writeLine();
+      this.writeLine(
+        "const theme = getSvgProp(svgItem, 'theme', 'String', canSet, icon?.theme || config.theme);",
+      );
+
+      this.writeLine();
+      this.writeLine('switch (theme) {');
+      this.indent(1);
+      this.theme.forEach((theme: IIconThemeInfo) => {
+        this.writeLine(`case '${theme.name}':`);
+
+        if (theme.name.includes('-')) {
+          this.writeLine(`case '${camelCase(theme.name)}':`);
+          this.writeLine(`case '${pascalCase(theme.name)}':`);
+        }
+
+        this.indent(1);
+
+        this.colors.forEach((color, i) => {
+          const order = theme.order[i];
+          const fill = theme.fill[order];
+
+          if (color.type === 'color') {
+            if (fill.type !== 'color') {
+              throw new Error('theme type and color type are different');
+            }
+
+            this.write('oldColors.push('); // 固定颜色
+
+            if (fill.fixed) {
+              this.write(`'${fill.color}'`);
+            } else {
+              this.write(
+                `typeof fill[${order}] === 'string' ? fill[${order}] : `,
+              );
+
+              if (fill.currentColor) {
+                this.write("'currentColor'");
+              } else {
+                this.write(
+                  `config.colors.${camelCase(theme.name)}.${camelCase(
+                    fill.name,
+                  )}`,
+                );
+              }
+            }
+
+            this.writeLine(');');
+          } else {
+            if (fill.type !== 'hue') {
+              throw new Error('theme type and color type are different');
+            }
+
+            this.write('hsl.push('); // 固定颜色
+
+            if (fill.fixed) {
+              this.write(
+                `{h: ${fill.hue}, s: ${fill.saturation}, l: ${fill.light}`,
+              );
+            } else {
+              this.write(
+                `typeof fill[${order}] === 'object' ? fill[${order}] : `,
+              );
+              this.write(
+                `config.colors.${camelCase(theme.name)}.${camelCase(
+                  fill.name,
+                )}`,
+              );
+            }
+
+            this.writeLine(');');
+          }
+        });
+
+        this.writeLine('break;');
+
+        this.indent(-1);
+      });
+      this.indent(-1);
+      this.writeLine('}');
+    } else if (this.colors.length) {
+      this.colors.forEach((fill: IIconColorInfo, order: number) => {
+        if (fill.type === 'color') {
+          this.writeLine();
+
+          this.writeLine(`if (typeof fill[${order}] === 'string') {`);
+
+          this.indent(1);
+
+          this.writeLine(`oldColors.push(fill[${order}]);`);
+
+          this.indent(-1);
+
+          this.writeLine();
+
+          this.writeLine('} else {');
+
+          this.indent(1);
+
+          this.writeLine();
+
+          this.writeLine(`if (typeof config.colors[${order}]] !== 'string') {`);
+
+          this.indent(1);
+
+          this.writeLine(
+            `throw new Error('config.colors[${order}] expect string to be HSL');`,
+          );
+
+          this.indent(-1);
+
+          this.writeLine('}');
+
+          this.writeLine();
+
+          this.writeLine(`oldColors.push(config.colors[${order}]);`);
+
+          this.indent(-1);
+
+          this.writeLine('}');
+        } else {
+          this.writeLine();
+
+          this.writeLine(`if (typeof fill[\`\${order}\`] === 'string') {`);
+
+          this.indent(1);
+
+          this.writeLine(`hsl.push(fill[${order}]);`);
+
+          this.indent(-1);
+
+          this.writeLine();
+
+          this.writeLine('} else {');
+
+          this.indent(1);
+
+          this.writeLine();
+
+          this.writeLine(`if (typeof config.colors[${order}] !== 'object') {`);
+
+          this.indent(1);
+
+          this.writeLine(
+            `throw new Error('config.colors[${order}] expect HSL to be string');`,
+          );
+
+          this.indent(-1);
+
+          this.writeLine('}');
+
+          this.writeLine();
+
+          this.writeLine(`hsl.push(config.colors[${order}]);`);
+
+          this.indent(-1);
+
+          this.writeLine('}');
+        }
+      });
+    }
+
+    const mayBeText = (diyKey: string) =>
+      this.useType
+        ? `icon${typeMay}.${diyKey} || `
+        : `icon & icon.${diyKey} ? icon.${diyKey} : `;
+
+    this.writeLine(
+      `const size = getSvgProp(svgItem, 'size', 'String', canSet, String(${mayBeText(
+        'size',
+      )}config.size));`,
+    );
+    this.writeLine(
+      `const strokeLinejoin = getSvgProp(svgItem, 'strokeLinejoin', 'String', canSet, ${mayBeText(
+        'strokeLinejoin',
+      )}config.strokeLinejoin);`,
+    );
+    this.writeLine(
+      `const strokeLinecap = getSvgProp(svgItem, 'strokeLinecap', 'String', canSet, ${mayBeText(
+        'strokeLinecap',
+      )}config.strokeLinecap);`,
+    );
+    this.writeLine(
+      `const strokeWidth = getSvgProp(svgItem, 'strokeWidth', 'String', canSet, ${mayBeText(
+        'strokeWidth',
+      )}config.strokeWidth);`,
+    );
+    this.writeLine(
+      `const spin = getSvgProp(svgItem, 'spin', 'String', canSet, ${mayBeText(
+        'spin',
+      )}config.spin);`,
+    );
+    this.writeLine(
+      `let colors = getSvgProp(svgItem, 'colors', 'Array', canSet, ${mayBeText(
+        'colors',
+      )}oldColors).slice();`,
+    );
+    this.writeLine('colors = getColors(theme, colors);');
+    this.writeLine();
+
+    this.writeLine('return {');
+    this.indent(1);
+
+    this.writeLine(`size,`);
+
+    if (this.stroke) {
+      this.writeLine(`strokeWidth,`);
+    }
+
+    if (this.strokeLinecap) {
+      this.writeLine(`strokeLinecap,`);
+    }
+
+    if (this.strokeLinejoin) {
+      this.writeLine(`strokeLinejoin,`);
+    }
+
+    if (this.replaceList.length) {
+      this.writeLine(`colors,`);
+    }
+
+    if (this.hueList.length) {
+      this.writeLine('format: (idx, s , l) => {');
+      this.writeLine('},');
+    }
+
+    this.writeLine('spin,');
+    this.writeLine('id,');
+    this.indent(-1);
+    this.writeLine('};');
+    this.indent(-1);
+    this.writeLine(`} // 属性转换函数 ${pascalCase(this.prefix)}Converter end`);
     this.writeLine();
   }
 
@@ -790,6 +1103,143 @@ export class RuntimeGenerator extends Generator {
         'context',
       )});`,
     );
+    this.writeLine();
+  }
+
+  processCubeUtils() {
+    this.writeLine('// 获取 SVG 配置数据');
+    const typeString = this.useType ? ': string' : '';
+    const typeSvg = this.useType
+      ? `: ${this.getInterfaceName('cubeData')} | null`
+      : '';
+    const typeItemSvg = this.useType
+      ? `: ${this.getInterfaceName('cubeItemData')} | null`
+      : '';
+    this.writeLine(
+      `export const getSvgItem = (svgId${typeString})${typeItemSvg} => {`,
+    );
+    this.writeLine(
+      `const iconCube${typeSvg} = (window${
+        this.useType ? ' as any' : ''
+      }).__iconCube__;`,
+    );
+    this.indent(1);
+    this.writeLine('return svgId && iconCube ? iconCube[svgId] : null;');
+    this.indent(-1);
+    this.writeLine('};');
+    this.writeLine();
+
+    this.writeLine('const hasOwnProperty = Object.prototype.hasOwnProperty;');
+    this.writeLine(
+      `const hasOwn = (val${
+        this.useType ? ': Object' : ''
+      }, key${typeString}) => hasOwnProperty.call(val, key);`,
+    );
+    this.writeLine('const objectToString = Object.prototype.toString;');
+    this.writeLine(
+      `const toTypeString = (value${
+        this.useType ? ': any' : ''
+      }) => objectToString.call(value);`,
+    );
+    this.writeLine();
+  }
+
+  getTSvgAttr() {
+    this.writeLine();
+    this.writeLine(
+      `type TSvgAttr = 'canSet' | 'theme' | 'size' | 'strokeWidth' | 'strokeLinecap' | 'strokeLinejoin' | 'theme' | 'fill' | 'colors' | 'spin' | 'content' | 'viewBox';`,
+    );
+    this.writeLine();
+  }
+
+  processGetSvgProp() {
+    this.writeLine('// 获取 SVG 设置属性数据');
+    const typeSvg = this.useType
+      ? `: ${this.getInterfaceName('cubeItemData')} | null`
+      : '';
+    const typeString = this.useType ? ': string' : '';
+    this.writeLine(
+      `export const getSvgProp = (svgItem${typeSvg}, attr${
+        this.useType ? ': TSvgAttr' : ''
+      }, type${typeString}, canSet${this.useType ? ': boolean' : ''}, defValue${
+        this.useType ? ': any' : ''
+      }) => {`,
+    );
+    this.indent(1);
+    this.writeLine('if (!svgItem || !hasOwn(svgItem, attr)) {');
+    this.indent(1);
+    this.writeLine('return defValue;');
+    this.indent(-1);
+    this.writeLine('};');
+    this.writeLine();
+    this.writeLine(
+      `const propConfig = toTypeString(svgItem[attr]) === \`[object \${type}]\` ? svgItem[attr] : defValue;`,
+    );
+    this.writeLine();
+    this.writeLine("if (attr ==='content' || attr === 'canSet') {");
+    this.indent(1);
+    this.writeLine('return propConfig;');
+    this.indent(-1);
+    this.writeLine('}');
+    this.writeLine('return canSet ? propConfig : defValue;');
+    this.indent(-1);
+    this.writeLine('};');
+    this.writeLine();
+  }
+
+  processGetColor() {
+    this.writeLine('// 获取颜色');
+    this.writeLine(
+      `const getColors = (theme${this.useType ? ': Theme' : ''}, oldColor${
+        this.useType ? ': string[]' : ''
+      }) => {`,
+    );
+    this.indent(1);
+    this.writeLine('const newColors: string[] = [];');
+    this.writeLine();
+    this.writeLine('switch (theme) {');
+    this.indent(1);
+    this.writeLine("case 'outline':");
+    this.indent(1);
+    this.writeLine('newColors.push(oldColor[0]);');
+    this.writeLine("newColors.push('transparent');");
+    this.writeLine('newColors.push(oldColor[0]);');
+    this.writeLine("newColors.push('transparent');");
+    this.writeLine('break;');
+    this.indent(-1);
+    this.writeLine("case 'filled':");
+    this.indent(1);
+    this.writeLine('newColors.push(oldColor[0]);');
+    this.writeLine('newColors.push(oldColor[0]);');
+    this.writeLine('newColors.push(oldColor[2]);');
+    this.writeLine('newColors.push(oldColor[2]);');
+    this.writeLine('break;');
+    this.indent(-1);
+    this.writeLine("case 'two-tone':");
+    this.writeLine("case 'twoTone':");
+    this.writeLine("case 'TwoTone':");
+    this.indent(1);
+    this.writeLine('newColors.push(oldColor[0]);');
+    this.writeLine('newColors.push(oldColor[1]);');
+    this.writeLine('newColors.push(oldColor[0]);');
+    this.writeLine('newColors.push(oldColor[1]);');
+    this.writeLine('break;');
+    this.indent(-1);
+    this.writeLine("case 'multi-color':");
+    this.writeLine("case 'multiColor':");
+    this.writeLine("case 'MultiColor':");
+    this.indent(1);
+    this.writeLine('newColors.push(oldColor[0]);');
+    this.writeLine('newColors.push(oldColor[1]);');
+    this.writeLine('newColors.push(oldColor[2]);');
+    this.writeLine('newColors.push(oldColor[3]);');
+    this.writeLine('break;');
+    this.indent(-1);
+    this.indent(-1);
+    this.writeLine('}');
+    this.writeLine('return newColors;');
+    this.indent(-1);
+    this.writeLine('};');
     this.writeLine();
   }
 

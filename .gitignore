@@ -15,6 +15,7 @@ explorations
 *.local
 *.cpuprofile
 *.iml
+.history
 
 # lock
 package-lock.json

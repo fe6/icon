@@ -3,8 +3,8 @@
   "private": true,
   "scripts": {
     "preinstall": "node scripts/preinstall && husky install",
-    "gen:json": "ts-node scripts/build-icons.ts",
-    "gen:code": "ts-node scripts/build-code.ts",
+    "gen:json": "ts-node scripts/gen-json.ts",
+    "gen:code": "ts-node scripts/gen-code.ts",
     "gen:clean": "gulp cleanCode",
     "gen": "pnpm gen:clean && pnpm gen:json && pnpm gen:code",
     "lint:fix": "eslint './**/*.{js,ts,tsx,json}' --fix && pretty-quick",
@@ -80,6 +80,8 @@
   },
   "pnpm": {
     "overrides": {
+      "@fe6/icon-compiler": "workspace:^",
+      "@fe6/icon-cube-vue": "workspace:^",
       "@fe6/icon-vue": "workspace:^",
       "@fe6/icon-img": "workspace:^"
     }

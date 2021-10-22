@@ -3,7 +3,7 @@
  * @file types 类型定义
  */
 
-export type TGenType = 'img' | 'vue' | 'svg' | '';
+export type TGenType = 'img' | 'vue' | 'svg' | 'cube-vue' | 'less' | '';
 
 export enum SvgShapeAttr {
   CONST = 'const',

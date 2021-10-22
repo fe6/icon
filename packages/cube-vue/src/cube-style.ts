@@ -4,6 +4,7 @@
  * @author 由 fe6 自动生成
  */
 
+export default `
 .i-icon {
   display: inline-block;
   color: inherit;
@@ -28,13 +29,15 @@
 @keyframes i-icon-spin {
   100% {
     -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+    transform: rotate(360deg)
   }
 }
 
 @-webkit-keyframes i-icon-spin {
   100% {
     -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+    transform: rotate(360deg)
   }
 }
+
+`;

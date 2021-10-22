@@ -1,16 +1,19 @@
 <!-- @format -->
 
 <template>
+  <h1>定制款</h1>
+  <icon-cube :id="94479" :size="200" />
+  <CubeVideo />
   <h1>img 版</h1>
   <h4>定制属性</h4>
   <span v-html="vIconDef" />
   <h4>定制属性</h4>
   <span v-html="vIconProps" />
   <h4>默认主题</h4>
-  <span v-html="vIconFilled" />
-  <span v-html="vIconOutline" />
-  <span v-html="vIconTwoTone" />
-  <span v-html="vIconMultiColor" />
+  Filled<span v-html="vIconFilled" /> Outline<span v-html="vIconOutline" />
+  TwoTone<span v-html="vIconTwoTone" /> MultiColor<span
+    v-html="vIconMultiColor"
+  />
   <h4>主题定制颜色</h4>
   <span v-html="vIconThemeFilled" />
   <span v-html="vIconThemeOutline" />
@@ -69,6 +72,7 @@
 <script setup lang="ts">
   // 单文件组件(SFC) <script setup>
   // Check out https://v3.cn.vuejs.org/api/sfc-script-setup.html
+  import './custom-config';
   import {
     IconVideo as VueVideo,
     DEFAULT_ICON_CONFIGS,
@@ -81,6 +85,7 @@
     setConfig,
     DEFAULT_ICON_CONFIGS as imgConfig,
   } from '@fe6/icon-img';
+  import { IconVideo as CubeVideo } from '@fe6/icon-cube-vue';
 
   const myColors = ['#f00', '#f0f', '#00f', '#0f0'];
 

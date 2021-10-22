@@ -40,6 +40,9 @@ export interface ISvgIconProps {
 
   // 换肤的颜色数组
   colors: string[];
+
+  // 是否旋转
+  spin?: boolean;
 }
 
 // 图标配置属性
@@ -58,6 +61,9 @@ export interface IIconConfig {
 
   // CSS前缀
   prefix: string;
+
+  // 旋转
+  spin: boolean;
 
   // RTL是否开启
   rtl: boolean;
@@ -132,6 +138,7 @@ export type IconReturn = (props: ISvgIconProps) => string;
 // 默认属性
 export const DEFAULT_ICON_CONFIGS: IIconConfig = {
   size: '1em',
+  spin: false,
   strokeWidth: 4,
   strokeLinecap: 'round',
   strokeLinejoin: 'round',

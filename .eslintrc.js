@@ -12,6 +12,7 @@ module.exports = {
     'quote-props': 'off',
     'arrow-parens': 'off',
     'space-before-function-paren': 'off',
+    'multiline-ternary': 'off',
     'brace-style': ['error', '1tbs'],
   },
 };

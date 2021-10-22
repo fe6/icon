@@ -1,0 +1,55 @@
+{
+  "name": "@fe6/icon-cube-vue",
+  "version": "0.0.0",
+  "description": "高质量图标集合",
+  "keywords": [
+    "cube",
+    "cube icon",
+    "cube",
+    "cube icon",
+    "icon",
+    "icon pack",
+    "icon park",
+    "IconPark",
+    "svg",
+    "custom icons",
+    "component",
+    "components",
+    "design",
+    "fe6",
+    "fe6 icon"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fe6/icon.git"
+  },
+  "author": "iq9891 <649076408@qq.com>",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "scripts": {
+    "release": "ts-node ../../scripts/release.ts"
+  },
+  "typings": "lib/index.d.ts",
+  "homepage": "https://github.com/fe6/icon#readme",
+  "bugs": {
+    "url": "https://github.com/fe6/icon/issues"
+  },
+  "engines": {
+    "node": ">= 16.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm",
+  "peerDependencies": {
+    "@vue/runtime-dom": "3.x",
+    "vue": "3.x"
+  },
+  "release-it": {
+    "git": {
+      "tag": false,
+      "commitMessage": "release($bump): ${version}"
+    }
+  }
+}

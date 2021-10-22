@@ -1,6 +1,6 @@
 /**
  * @format
- * @file map 组件集合
+ * @file svg 组件集合
  * @author 由 fe6 自动生成
  */
 

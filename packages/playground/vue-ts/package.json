@@ -7,6 +7,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@fe6/icon-cube-vue": "workspace:^0.0.0",
     "@fe6/icon-img": "workspace:^0.0.0",
     "@fe6/icon-vue": "workspace:^",
     "vue": "^3.2.16"
