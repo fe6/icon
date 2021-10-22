@@ -20,40 +20,26 @@
 ### 安装
 
 ```
-npm install @fe6/icon-vue --save
+npm install @fe6/icon-cube-vue --save
 ```
 
 ### 引用图标
 
-在组件的上方引用`@fe6/icon-vue`，并在组件的模板函数中使用:
+在组件的上方引用`@fe6/icon-cube-vue`，并在组件的模板函数中使用:
 
 ```vue
 <template>
-  <icon-video theme="filled" />
+  <CubeVideo />
 </template>
 <script>
-  import { IconVideo } from '@fe6/icon-vue';
+  import { CubeVideo } from '@fe6/icon-cube-vue';
 
   export default {
     components: {
-      IconVideo,
+      CubeVideo,
     },
   };
 </script>
-```
-
-如果你不想引用，那么你可以全局安装图标
-
-```typescript
-import { waterIconInstall } from '@fe6/icon-vue';
-import { createApp } from 'vue';
-
-const app = createApp({});
-
-// Install
-waterIconInstall(app); // 默认前缀是 'icon', 例如: 对于`People`这个icon, 组件名字是`icon-video`.
-waterIconInstall(app, 'i'); // 使用自定义前缀'i', 例如: 对于`People`这个icon，组件名字是`i-video`.
-app.mount('#app');
 ```
 
 ### Style Sheet
@@ -61,33 +47,7 @@ app.mount('#app');
 引用预设样式
 
 ```typescript
-import '@fe6/icon-vue/styles/index.css';
-```
-
-### 全局
-
-你可以使用 `@fe6/icon-vue` 中的 `IconProvider`来设置全局配置。
-
-```html
-<template>
-  <div>
-    <icon-video theme="filled" />
-  </div>
-</template>
-
-<script>
-  import { DEFAULT_ICON_CONFIGS, IconProvider } from '@fe6/icon-vue';
-  import { IconVideo } from '@fe6/icon-vue';
-
-  export default {
-    components: {
-      IconVideo,
-    },
-    setup() {
-      IconProvider({ ...DEFAULT_ICON_CONFIGS, prefix: 'i' });
-    },
-  };
-</script>
+import '@fe6/icon-cube-vue/styles/index.css';
 ```
 
 ### 按需加载
@@ -102,7 +62,7 @@ import '@fe6/icon-vue/styles/index.css';
     [
       "import",
       {
-        "libraryName": "@fe6/icon-vue",
+        "libraryName": "@fe6/icon-cube-vue",
         "libraryDirectory": "es/icons",
         "camel2DashComponentName": false
       }
@@ -110,32 +70,6 @@ import '@fe6/icon-vue/styles/index.css';
   ]
 }
 ```
-
-### 使用 Icon 组件
-
-我们更推荐使用按需加载的方式来加载图标，因为这样可以大幅度缩减编译后代码体积，
-但是在有些类似远程加载的菜单的场景下，直接引用全部图标可以缩减开发成本。
-
-使用方式：
-
-```vue
-<template>
-  <water-icon type="IconVideo" theme="filled" />
-</template>
-<script>
-  import { WaterIcon } from '@fe6/icon-vue';
-
-  export default {
-    components: {
-      WaterIcon,
-    },
-  };
-</script>
-```
-
-### 将 WaterIcon 嵌入到你的项目中
-
-如果你的项目中需要使用到图标名称，作者，分类，标签以及创建时间等额外的信息，你可以使用位于每个 NPM 根目录的`icons.json`文件。
 
 ## 属性
 

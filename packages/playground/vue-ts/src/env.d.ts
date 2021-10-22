@@ -11,3 +11,4 @@ declare module '*.vue' {
 
 declare module '@fe6/icon-vue';
 declare module '@fe6/icon-img';
+declare module '@fe6/icon-cube-vue';

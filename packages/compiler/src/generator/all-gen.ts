@@ -26,7 +26,7 @@ export class AllGenerator extends RuntimeGenerator {
   }
 
   process() {
-    if (this.type === 'vue') {
+    if (this.type === 'vue' || this.type === 'cube-vue') {
       this.renderVue();
     } else {
       this.renderImg();

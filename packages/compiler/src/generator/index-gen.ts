@@ -30,6 +30,9 @@ export class IndexGenerator extends Generator {
       this.writeLine("export * from './svg';");
     }
     this.writeLine("export * from './all';");
+    if (this.type === 'cube-vue') {
+      this.writeLine("export * from './cube';");
+    }
 
     let configName = '';
 
