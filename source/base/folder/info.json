@@ -1,0 +1,10 @@
+{
+  "id": "base-17",
+  "title": "文件夹",
+  "name": "folder",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["文件夹"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "base-43",
+  "title": "打印",
+  "name": "printer",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["打印"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "base-45",
+  "title": "二维码",
+  "name": "qrcode",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["二维码"],
+  "rtl": false
+}

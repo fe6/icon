@@ -1,0 +1,10 @@
+{
+  "id": "base-49",
+  "title": "搜索",
+  "name": "search",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["搜索"],
+  "rtl": false
+}

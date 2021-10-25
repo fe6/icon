@@ -1,0 +1,10 @@
+{
+  "id": "base-22",
+  "title": "线图表",
+  "name": "line-chart",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["线图表"],
+  "rtl": false
+}

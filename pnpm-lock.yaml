@@ -44,6 +44,7 @@ importers:
       gulp: ^4.0.2
       gulp-babel: ^8.0.0
       gulp-clean-css: ^4.3.0
+      gulp-copy: ^4.0.1
       gulp-less: ^5.0.0
       gulp-typescript: ^6.0.0-alpha.1
       husky: ^7.0.2
@@ -93,6 +94,7 @@ importers:
       gulp: registry.npmmirror.com/gulp/4.0.2
       gulp-babel: registry.npmmirror.com/gulp-babel/8.0.0_@babel+core@7.15.8
       gulp-clean-css: registry.npmmirror.com/gulp-clean-css/4.3.0
+      gulp-copy: registry.npmmirror.com/gulp-copy/4.0.1
       gulp-less: registry.npmmirror.com/gulp-less/5.0.0
       gulp-typescript: registry.npmmirror.com/gulp-typescript/6.0.0-alpha.1_typescript@4.4.4
       husky: registry.nlark.com/husky/7.0.2
@@ -2286,6 +2288,16 @@ packages:
       sprintf-js: registry.nlark.com/sprintf-js/1.0.3
     dev: true
 
+  registry.nlark.com/arr-diff/1.1.0:
+    resolution: {integrity: sha1-aHwydYFjWI/vfeezb6vklesaOZo=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/arr-diff/download/arr-diff-1.1.0.tgz}
+    name: arr-diff
+    version: 1.1.0
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      arr-flatten: registry.nlark.com/arr-flatten/1.1.0
+      array-slice: registry.npmmirror.com/array-slice/0.2.3
+    dev: true
+
   registry.nlark.com/arr-diff/4.0.0:
     resolution: {integrity: sha1-1kYQdP6/7HHn4VI1dhoyml3HxSA=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/arr-diff/download/arr-diff-4.0.0.tgz}
     name: arr-diff
@@ -2297,6 +2309,13 @@ packages:
     resolution: {integrity: sha1-NgSLv/TntH4TZkQxbJlmnqWukfE=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/arr-flatten/download/arr-flatten-1.1.0.tgz}
     name: arr-flatten
     version: 1.1.0
+    engines: {node: '>=0.10.0'}
+    dev: true
+
+  registry.nlark.com/arr-union/2.1.0:
+    resolution: {integrity: sha1-IPnqtexw9cfSFbEHexw5Fh0pLH0=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/arr-union/download/arr-union-2.1.0.tgz}
+    name: arr-union
+    version: 2.1.0
     engines: {node: '>=0.10.0'}
     dev: true
 
@@ -4581,6 +4600,15 @@ packages:
       homedir-polyfill: registry.nlark.com/homedir-polyfill/1.0.3
     dev: true
 
+  registry.nlark.com/extend-shallow/1.1.4:
+    resolution: {integrity: sha1-Gda/lN/AnXa6cR85uHLSH/TdkHE=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/extend-shallow/download/extend-shallow-1.1.4.tgz}
+    name: extend-shallow
+    version: 1.1.4
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      kind-of: registry.nlark.com/kind-of/1.1.0
+    dev: true
+
   registry.nlark.com/extend-shallow/2.0.1:
     resolution: {integrity: sha1-Ua99YUrZqfYQ6huvu5idaxxWiQ8=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/extend-shallow/download/extend-shallow-2.0.1.tgz}
     name: extend-shallow
@@ -6420,6 +6448,13 @@ packages:
       object.assign: registry.nlark.com/object.assign/4.1.2
     dev: true
 
+  registry.nlark.com/kind-of/1.1.0:
+    resolution: {integrity: sha1-FAo9LUGjbS78+pN3tiwk+ElaXEQ=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/kind-of/download/kind-of-1.1.0.tgz}
+    name: kind-of
+    version: 1.1.0
+    engines: {node: '>=0.10.0'}
+    dev: true
+
   registry.nlark.com/kind-of/3.2.2:
     resolution: {integrity: sha1-MeohpzS6ubuw8yRm2JOupR5KPGQ=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/kind-of/download/kind-of-3.2.2.tgz}
     name: kind-of
@@ -6815,6 +6850,16 @@ packages:
     name: mdn-data
     version: 2.0.14
     dev: true
+
+  registry.nlark.com/memfs/3.3.0:
+    resolution: {integrity: sha1-TaLR/ECgSxcKVmIscWTGvixMvvI=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/memfs/download/memfs-3.3.0.tgz}
+    name: memfs
+    version: 3.3.0
+    engines: {node: '>= 4.0.0'}
+    dependencies:
+      fs-monkey: registry.nlark.com/fs-monkey/1.0.3
+    dev: true
+    optional: true
 
   registry.nlark.com/memory-fs/0.4.1:
     resolution: {integrity: sha1-OpoguEYlI+RHz7x+i7gO1me/xVI=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/memory-fs/download/memory-fs-0.4.1.tgz}
@@ -9541,7 +9586,7 @@ packages:
     dev: true
 
   registry.nlark.com/through2/2.0.5:
-    resolution: {integrity: sha1-AcHjnrMdB8t9A6lqcIIyYLIxMs0=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/through2/download/through2-2.0.5.tgz?cache=0&sync_timestamp=1631600285146&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fthrough2%2Fdownload%2Fthrough2-2.0.5.tgz}
+    resolution: {integrity: sha1-AcHjnrMdB8t9A6lqcIIyYLIxMs0=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/through2/download/through2-2.0.5.tgz}
     name: through2
     version: 2.0.5
     dependencies:
@@ -10451,7 +10496,7 @@ packages:
     dev: true
 
   registry.nlark.com/yaml/1.10.2:
-    resolution: {integrity: sha1-IwHF/78StGfejaIzOkWeKeeSDks=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/yaml/download/yaml-1.10.2.tgz?cache=0&sync_timestamp=1631600320423&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fyaml%2Fdownload%2Fyaml-1.10.2.tgz}
+    resolution: {integrity: sha1-IwHF/78StGfejaIzOkWeKeeSDks=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/yaml/download/yaml-1.10.2.tgz}
     name: yaml
     version: 1.10.2
     engines: {node: '>= 6'}
@@ -11808,9 +11853,27 @@ packages:
       indent-string: registry.npmmirror.com/indent-string/4.0.0
     dev: true
 
+  registry.npmmirror.com/ansi-cyan/0.1.1:
+    resolution: {integrity: sha1-U4rlKK+JgvKK4w2G8vF0VtJgmHM=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ansi-cyan/download/ansi-cyan-0.1.1.tgz}
+    name: ansi-cyan
+    version: 0.1.1
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      ansi-wrap: registry.npmmirror.com/ansi-wrap/0.1.0
+    dev: true
+
   registry.npmmirror.com/ansi-gray/0.1.1:
     resolution: {integrity: sha1-KWLPVOyXksSFEKPetSRDaGHvclE=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ansi-gray/download/ansi-gray-0.1.1.tgz}
     name: ansi-gray
+    version: 0.1.1
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      ansi-wrap: registry.npmmirror.com/ansi-wrap/0.1.0
+    dev: true
+
+  registry.npmmirror.com/ansi-red/0.1.1:
+    resolution: {integrity: sha1-jGOPnRCAgAo1PJwoyKgcpHBdlGw=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ansi-red/download/ansi-red-0.1.1.tgz}
+    name: ansi-red
     version: 0.1.1
     engines: {node: '>=0.10.0'}
     dependencies:
@@ -11904,6 +11967,13 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       is-number: registry.nlark.com/is-number/4.0.0
+    dev: true
+
+  registry.npmmirror.com/array-slice/0.2.3:
+    resolution: {integrity: sha1-3Tz7gO15c6dRF82sabC5nshhhvU=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/array-slice/download/array-slice-0.2.3.tgz}
+    name: array-slice
+    version: 0.2.3
+    engines: {node: '>=0.10.0'}
     dev: true
 
   registry.npmmirror.com/array-slice/1.1.0:
@@ -13066,7 +13136,7 @@ packages:
     dev: true
 
   registry.npmmirror.com/fork-ts-checker-webpack-plugin/5.2.1:
-    resolution: {integrity: sha1-eTJthpeXkG+osk4qvPlCH8gFRQ0=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/fork-ts-checker-webpack-plugin/download/fork-ts-checker-webpack-plugin-5.2.1.tgz?cache=0&sync_timestamp=1634786921116&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Ffork-ts-checker-webpack-plugin%2Fdownload%2Ffork-ts-checker-webpack-plugin-5.2.1.tgz}
+    resolution: {integrity: sha1-eTJthpeXkG+osk4qvPlCH8gFRQ0=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/fork-ts-checker-webpack-plugin/download/fork-ts-checker-webpack-plugin-5.2.1.tgz?cache=0&sync_timestamp=1634784705617&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Ffork-ts-checker-webpack-plugin%2Fdownload%2Ffork-ts-checker-webpack-plugin-5.2.1.tgz}
     name: fork-ts-checker-webpack-plugin
     version: 5.2.1
     engines: {node: '>=10', yarn: '>=1.0.0'}
@@ -13078,7 +13148,7 @@ packages:
       cosmiconfig: registry.nlark.com/cosmiconfig/6.0.0
       deepmerge: registry.nlark.com/deepmerge/4.2.2
       fs-extra: registry.nlark.com/fs-extra/9.1.0
-      memfs: registry.npmmirror.com/memfs/3.3.0
+      memfs: registry.nlark.com/memfs/3.3.0
       minimatch: registry.nlark.com/minimatch/3.0.4
       schema-utils: registry.nlark.com/schema-utils/2.7.0
       semver: registry.nlark.com/semver/7.3.5
@@ -13271,6 +13341,16 @@ packages:
       semver-greatest-satisfied-range: registry.npmmirror.com/semver-greatest-satisfied-range/1.1.0
       v8flags: registry.npmmirror.com/v8flags/3.2.0
       yargs: registry.npmmirror.com/yargs/7.1.2
+    dev: true
+
+  registry.npmmirror.com/gulp-copy/4.0.1:
+    resolution: {integrity: sha1-EqIz/tJr3tYM1ewLmfZb6D87FrI=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/gulp-copy/download/gulp-copy-4.0.1.tgz}
+    name: gulp-copy
+    version: 4.0.1
+    dependencies:
+      gulp: registry.npmmirror.com/gulp/4.0.2
+      plugin-error: registry.npmmirror.com/plugin-error/0.1.2
+      through2: registry.nlark.com/through2/2.0.5
     dev: true
 
   registry.npmmirror.com/gulp-less/5.0.0:
@@ -13668,16 +13748,6 @@ packages:
       - supports-color
     dev: true
 
-  registry.npmmirror.com/memfs/3.3.0:
-    resolution: {integrity: sha1-TaLR/ECgSxcKVmIscWTGvixMvvI=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/memfs/download/memfs-3.3.0.tgz}
-    name: memfs
-    version: 3.3.0
-    engines: {node: '>= 4.0.0'}
-    dependencies:
-      fs-monkey: registry.nlark.com/fs-monkey/1.0.3
-    dev: true
-    optional: true
-
   registry.npmmirror.com/micromark/2.11.4:
     resolution: {integrity: sha1-0TQ2E47qgmOD6CJEnJpcUO5EZlo=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/micromark/download/micromark-2.11.4.tgz}
     name: micromark
@@ -13989,6 +14059,19 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       find-up: registry.npmmirror.com/find-up/4.1.0
+    dev: true
+
+  registry.npmmirror.com/plugin-error/0.1.2:
+    resolution: {integrity: sha1-O5uzM1zPAPQl4HQ34ZJ2ln2kes4=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/plugin-error/download/plugin-error-0.1.2.tgz}
+    name: plugin-error
+    version: 0.1.2
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      ansi-cyan: registry.npmmirror.com/ansi-cyan/0.1.1
+      ansi-red: registry.npmmirror.com/ansi-red/0.1.1
+      arr-diff: registry.nlark.com/arr-diff/1.1.0
+      arr-union: registry.nlark.com/arr-union/2.1.0
+      extend-shallow: registry.nlark.com/extend-shallow/1.1.4
     dev: true
 
   registry.npmmirror.com/postcss-scss/2.1.1:

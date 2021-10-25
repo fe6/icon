@@ -1,0 +1,10 @@
+{
+  "id": "base-39",
+  "title": "图片",
+  "name": "picture",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["图片"],
+  "rtl": false
+}

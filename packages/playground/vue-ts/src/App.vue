@@ -75,6 +75,7 @@
   import './custom-config';
   import {
     IconVideo as VueVideo,
+    IconBulb,
     DEFAULT_ICON_CONFIGS,
     IconProvider,
     WaterIcon,

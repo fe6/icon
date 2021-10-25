@@ -1,0 +1,10 @@
+{
+  "id": "base-16",
+  "title": "标志",
+  "name": "flag",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["标志"],
+  "rtl": false
+}

@@ -95,6 +95,8 @@ buildType.forEach((buildKey: string) => {
   BABEL_CONFIG_MAP[buildKey] = babelConfig;
 });
 
+const root = process.cwd();
+
 function resolve(...arg: string[]): string {
   return path.resolve(process.cwd(), ...arg);
 }
@@ -140,7 +142,11 @@ function createBuildTask(name: TBuildType): string {
         .pipe(gulp.dest(`${cwd}/styles`));
     });
 
-    tasks.push(`build-css-${name}`, `build-less-${name}`);
+    gulp.task(`build-copy-${name}`, () => {
+      return gulp.src('source/icons.json', { cwd: root }).pipe(gulp.dest(cwd));
+    });
+
+    tasks.push(`build-css-${name}`, `build-less-${name}`, `build-copy-${name}`);
   }
 
   gulp.task(`build-${name}`, gulp.parallel(tasks));
@@ -151,7 +157,12 @@ function createBuildTask(name: TBuildType): string {
 export const cleanCode = (done: () => void) => {
   cleanFolderType.forEach((iconItem: TBuildType) => {
     const cwd = resolve('packages/', iconItem);
-    del([`${cwd}/**`, `!${cwd}/package.json`, `!${cwd}/README.md`]);
+    del([
+      `${cwd}/**`,
+      `!${cwd}/package.json`,
+      `!${cwd}/changelog.md`,
+      `!${cwd}/README.md`,
+    ]);
   });
   done();
 };

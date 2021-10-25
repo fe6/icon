@@ -1,0 +1,10 @@
+{
+  "id": "base-9",
+  "title": "删除",
+  "name": "delete",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["删除"],
+  "rtl": false
+}
