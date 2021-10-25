@@ -29,6 +29,10 @@ export default defineConfig({
         replacement: path.resolve(__dirname, '../../cube-vue/src/index.ts'),
       },
       {
+        find: '@fe6/icons.json',
+        replacement: path.resolve(__dirname, '../../cube-vue/icons.json'),
+      },
+      {
         find: 'img-icon.less',
         replacement: path.resolve(
           __dirname,
