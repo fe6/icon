@@ -3,13 +3,54 @@
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
 export default IconWrapper('unordered-list', false, (props: ISvgIconProps) => (
-  <svg width={props.size} height={props.size} viewBox="64 64 896 896">
+  <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
     <path
-      d="M912 192H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 284H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 284H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM104 228a56 56 0 10112 0 56 56 0 10-112 0zm0 284a56 56 0 10112 0 56 56 0 10-112 0zm0 284a56 56 0 10112 0 56 56 0 10-112 0z"
+      d="M18 6H34V12H18V6Z"
+      fill={props.colors[1]}
       stroke={props.colors[0]}
       stroke-width={props.strokeWidth}
       stroke-linecap={props.strokeLinecap}
       stroke-linejoin={props.strokeLinejoin}
+    />
+    <path
+      d="M18 21H38V27H18V21Z"
+      fill={props.colors[1]}
+      stroke={props.colors[0]}
+      stroke-width={props.strokeWidth}
+      stroke-linecap={props.strokeLinecap}
+      stroke-linejoin={props.strokeLinejoin}
+    />
+    <path
+      d="M18 36H44V42H18V36Z"
+      fill={props.colors[1]}
+      stroke={props.colors[0]}
+      stroke-width={props.strokeWidth}
+      stroke-linecap={props.strokeLinecap}
+      stroke-linejoin={props.strokeLinejoin}
+    />
+    <circle
+      cx="8"
+      cy="9"
+      r="2"
+      fill={props.colors[1]}
+      stroke={props.colors[0]}
+      stroke-width={props.strokeWidth}
+    />
+    <circle
+      cx="8"
+      cy="24"
+      r="2"
+      fill={props.colors[1]}
+      stroke={props.colors[0]}
+      stroke-width={props.strokeWidth}
+    />
+    <circle
+      cx="8"
+      cy="39"
+      r="2"
+      fill={props.colors[1]}
+      stroke={props.colors[0]}
+      stroke-width={props.strokeWidth}
     />
   </svg>
 ));

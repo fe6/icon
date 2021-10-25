@@ -3,9 +3,9 @@
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
 export default IconWrapper('right', false, (props: ISvgIconProps) => (
-  <svg width={props.size} height={props.size} viewBox="64 64 896 896">
+  <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
     <path
-      d="M765.7 486.8L314.9 134.7A7.97 7.97 0 00302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 000-50.4z"
+      d="M19 12L31 24L19 36"
       stroke={props.colors[0]}
       stroke-width={props.strokeWidth}
       stroke-linecap={props.strokeLinecap}

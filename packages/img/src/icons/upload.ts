@@ -9,8 +9,12 @@ import { ISvgIconProps, IconWrapper } from '../runtime';
 // 获取 SVG 的 HTML 字符串
 export const getIconUploadSvgHtml = (props: ISvgIconProps) =>
   `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="${props.size}" height="${props.size}" viewBox="64 64 896 896">
-  <path d="M400 317.7h73.9V656c0 4.4 3.6 8 8 8h60c4.4 0 8-3.6 8-8V317.7H624c6.7 0 10.4-7.7 6.3-12.9L518.3 163a8 8 0 00-12.6 0l-112 141.7c-4.1 5.3-.4 13 6.3 13zM878 626h-60c-4.4 0-8 3.6-8 8v154H214V634c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8v198c0 17.7 14.3 32 32 32h684c17.7 0 32-14.3 32-32V634c0-4.4-3.6-8-8-8z" stroke="${props.colors[0]}" stroke-width="${props.strokeWidth}" stroke-linecap="${props.strokeLinecap}" stroke-linejoin="${props.strokeLinejoin}"/>
+<svg width="${props.size}" height="${
+    props.size
+  }" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="48" height="48" fill="white" fill-opacity="0.01"/>
+  <mask id="${`${props.id}6ac256b0`}" mask-units="userSpaceOnUse" x="0" y="0" width="48" height="48" style="mask-type: alpha"/>
+  <g mask="${`url(#${props.id}6ac256b0` + `)`}"/>
 </svg>`;
 
 // 默认导出组件

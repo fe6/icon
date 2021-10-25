@@ -1,10 +1,10 @@
 {
   "id": "base-23",
-  "title": "链接",
-  "name": "link",
+  "title": "点赞",
+  "name": "like",
   "category": "base",
   "categoryCN": "基础",
   "author": "李梦龙",
-  "tag": ["链接"],
+  "tag": ["点赞"],
   "rtl": false
 }

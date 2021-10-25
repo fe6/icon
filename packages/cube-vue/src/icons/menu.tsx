@@ -3,9 +3,23 @@
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
 export default IconWrapper('menu', false, (props: ISvgIconProps) => (
-  <svg width={props.size} height={props.size} viewBox="64 64 896 896">
+  <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
     <path
-      d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"
+      d="M7.94977 11.9498H39.9498"
+      stroke={props.colors[0]}
+      stroke-width={props.strokeWidth}
+      stroke-linecap={props.strokeLinecap}
+      stroke-linejoin={props.strokeLinejoin}
+    />
+    <path
+      d="M7.94977 23.9498H39.9498"
+      stroke={props.colors[0]}
+      stroke-width={props.strokeWidth}
+      stroke-linecap={props.strokeLinecap}
+      stroke-linejoin={props.strokeLinejoin}
+    />
+    <path
+      d="M7.94977 35.9498H39.9498"
       stroke={props.colors[0]}
       stroke-width={props.strokeWidth}
       stroke-linecap={props.strokeLinecap}

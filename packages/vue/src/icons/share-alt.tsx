@@ -3,12 +3,40 @@
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
 export default IconWrapper('share-alt', false, (props: ISvgIconProps) => (
-  <svg width={props.size} height={props.size} viewBox="64 64 896 896">
+  <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
     <path
-      d="M752 664c-28.5 0-54.8 10-75.4 26.7L469.4 540.8a160.68 160.68 0 000-57.6l207.2-149.9C697.2 350 723.5 360 752 360c66.2 0 120-53.8 120-120s-53.8-120-120-120-120 53.8-120 120c0 11.6 1.6 22.7 4.7 33.3L439.9 415.8C410.7 377.1 364.3 352 312 352c-88.4 0-160 71.6-160 160s71.6 160 160 160c52.3 0 98.7-25.1 127.9-63.8l196.8 142.5c-3.1 10.6-4.7 21.8-4.7 33.3 0 66.2 53.8 120 120 120s120-53.8 120-120-53.8-120-120-120zm0-476c28.7 0 52 23.3 52 52s-23.3 52-52 52-52-23.3-52-52 23.3-52 52-52zM312 600c-48.5 0-88-39.5-88-88s39.5-88 88-88 88 39.5 88 88-39.5 88-88 88zm440 236c-28.7 0-52-23.3-52-52s23.3-52 52-52 52 23.3 52 52-23.3 52-52 52z"
+      d="M35 16C37.7614 16 40 13.7614 40 11C40 8.23858 37.7614 6 35 6C32.2386 6 30 8.23858 30 11C30 13.7614 32.2386 16 35 16Z"
+      fill={props.colors[1]}
+      stroke={props.colors[0]}
+      stroke-width={props.strokeWidth}
+      stroke-linejoin={props.strokeLinejoin}
+    />
+    <path
+      d="M13 29C15.7614 29 18 26.7614 18 24C18 21.2386 15.7614 19 13 19C10.2386 19 8 21.2386 8 24C8 26.7614 10.2386 29 13 29Z"
+      fill={props.colors[1]}
+      stroke={props.colors[0]}
+      stroke-width={props.strokeWidth}
+      stroke-linejoin={props.strokeLinejoin}
+    />
+    <path
+      d="M29.9999 13.5745L17.3388 21.2454"
       stroke={props.colors[0]}
       stroke-width={props.strokeWidth}
       stroke-linecap={props.strokeLinecap}
+      stroke-linejoin={props.strokeLinejoin}
+    />
+    <path
+      d="M17.3388 26.5639L30.6792 34.4469"
+      stroke={props.colors[0]}
+      stroke-width={props.strokeWidth}
+      stroke-linecap={props.strokeLinecap}
+      stroke-linejoin={props.strokeLinejoin}
+    />
+    <path
+      d="M35 32C37.7614 32 40 34.2386 40 37C40 39.7614 37.7614 42 35 42C32.2386 42 30 39.7614 30 37C30 34.2386 32.2386 32 35 32Z"
+      fill={props.colors[1]}
+      stroke={props.colors[0]}
+      stroke-width={props.strokeWidth}
       stroke-linejoin={props.strokeLinejoin}
     />
   </svg>

@@ -1,10 +1,10 @@
 {
-  "id": "base-65",
-  "title": "什么应用",
-  "name": "whats-app",
+  "id": "base-70",
+  "title": "循环",
+  "name": "retweet",
   "category": "base",
   "categoryCN": "基础",
   "author": "李梦龙",
-  "tag": ["客服"],
+  "tag": ["循环"],
   "rtl": true
 }
