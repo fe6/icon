@@ -130,6 +130,8 @@ export class CubeGenerator extends RuntimeGenerator {
     this.writeLine();
     this.writeLine(`let contentHtml = svgItem ? originSvg : '';`);
     this.writeLine();
+    this.writeLine('if (colors) {');
+    this.indent(1);
     this.writeLine(
       `colors.forEach((colorItem${typeString}, colorIdx${
         this.useType ? ': number' : ''
@@ -141,6 +143,8 @@ export class CubeGenerator extends RuntimeGenerator {
     );
     this.indent(-1);
     this.writeLine('});');
+    this.indent(-1);
+    this.writeLine('}');
     this.writeLine();
     this.writeLine(
       `contentHtml = contentHtml.replace(/stroke-linejoin="round"/g, \`stroke-linejoin="\${strokeLinejoin}"\`);`,
