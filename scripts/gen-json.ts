@@ -7,12 +7,13 @@
 import fs from 'fs';
 import path from 'path';
 
-import { errorLog, log } from '../packages/compiler/src';
+import { errorLog, log, pascalCase } from '../packages/compiler/src';
 
 interface IIconProps {
   id: number;
   title: string;
   name: string;
+  type: string;
   svg?: string;
   tag: string[];
   category: string;
@@ -67,6 +68,13 @@ fs.readdirSync(path.join(__dirname, '../source')).forEach((dir) => {
             const childDir = path.basename(filePath, '.svg').toLowerCase();
             ALL_ICON_MAP[childDir].svg = fs.readFileSync(filePath, 'utf8');
           }
+        });
+
+        // 生成 type 供全局使用
+        Object.keys(ALL_ICON_MAP).forEach((allKey: string) => {
+          ALL_ICON_MAP[allKey].type = `Icon${pascalCase(
+            ALL_ICON_MAP[allKey].name,
+          )}`;
         });
       }
     });

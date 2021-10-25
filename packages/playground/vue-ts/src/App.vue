@@ -1,6 +1,12 @@
 <!-- @format -->
 
 <template>
+  <h1>所有</h1>
+  <div>
+    <span v-for="icon in iconConfig">
+      <icon-keg :type="icon.type" />
+    </span>
+  </div>
   <h1>定制款</h1>
   <icon-cube :id="94479" :size="200" />
   <CubeVideo />
@@ -56,7 +62,7 @@
     theme="multiColor"
   />
   <h4>使用 Icon 组件</h4>
-  <water-icon type="IconVideo" theme="twoTone" />
+  <icon-keg type="IconVideo" theme="twoTone" />
 
   <h1>全局注册 vue 版</h1>
   <br />
@@ -72,13 +78,12 @@
 <script setup lang="ts">
   // 单文件组件(SFC) <script setup>
   // Check out https://v3.cn.vuejs.org/api/sfc-script-setup.html
+
   import './custom-config';
   import {
     IconVideo as VueVideo,
-    IconBulb,
     DEFAULT_ICON_CONFIGS,
     IconProvider,
-    WaterIcon,
   } from '@fe6/icon-vue';
 
   import {
@@ -86,7 +91,10 @@
     setConfig,
     DEFAULT_ICON_CONFIGS as imgConfig,
   } from '@fe6/icon-img';
-  import { IconVideo as CubeVideo } from '@fe6/icon-cube-vue';
+  import { IconVideo as CubeVideo, IconKeg } from '@fe6/icon-cube-vue';
+  import iconJson from '@fe6/icons.json';
+
+  const iconConfig = iconJson.slice();
 
   const myColors = ['#f00', '#f0f', '#00f', '#0f0'];
 

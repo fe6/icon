@@ -67,7 +67,7 @@ const IIconWaterOptions: IIconAllOptions = {
   },
 };
 
-export const WaterIcon: TAllIcon = IIconWaterOptions as TAllIcon;
+export const IconKeg: TAllIcon = IIconWaterOptions as TAllIcon;
 
 export const waterIconInstall = (Vue: App, prefix?: string): void => {
   Object.values(mapIcon).forEach((icon) => {
