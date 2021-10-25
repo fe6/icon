@@ -45,7 +45,7 @@ const replaceAttrIdTransformer = (
       expression: expression.replace(/url\(#([^)]+)\)/g, (str, e) => {
         if (map[e]) {
           map[e].used = true;
-          return `'url(#' + ${map[e].propName} + '${map[e].newId}' + ')'`;
+          return `\`url(#\$\{${map[e].propName}\}${map[e].newId})\``;
         } // 引用的外部Id
 
         return str;
@@ -73,9 +73,9 @@ export const replaceSelectorIdTransformer = (
       return {
         ...attr,
         type: SvgShapeAttr.DYNAMIC,
-        expression: `'#' + ${map[expression.slice(1)].propName} + '${
+        expression: `\`#\$\{${map[expression.slice(1)].propName}\}${
           map[expression.slice(1)].newId
-        }'`,
+        }\``,
       };
     }
 
@@ -122,7 +122,7 @@ export const replaceIdTransformer = (
             return {
               ..._attr,
               type: SvgShapeAttr.DYNAMIC,
-              expression: `'#' + ${map[e].propName} + '${map[e].newId}'`,
+              expression: `#\${${map[e].propName}\}${map[e].newId}`,
             };
           } // 引用的外部Id
 

@@ -7,6 +7,7 @@ import { transform, ITransformPlugin } from './base';
 import {
   IReplaceIdTransformerOptions,
   IReplaceIdTransformerIdMap,
+  TGenType,
 } from '../types';
 import { guid } from '../util';
 import { getIdTransformer } from './get-id';
@@ -18,6 +19,9 @@ export interface IUniqueIdTransformerOptions {
   propName?: string;
   idName?: string;
   removeUnusedIds?: boolean;
+  // 用 uuid 随机数替换已有的id
+  useUuidForId?: boolean;
+  type: TGenType;
 }
 
 export const uniqueIdTransformer = (
@@ -27,6 +31,7 @@ export const uniqueIdTransformer = (
   const propName = options.propName || 'props';
   const idName = options.idName || 'id';
   const removeUnusedIds = options.removeUnusedIds || false;
+  const useUuidForId = options.useUuidForId || false;
 
   return {
     // 进入时记录所有的ID
@@ -38,9 +43,9 @@ export const uniqueIdTransformer = (
 
       info = transform(info, [getIdTransformer(idMap)]); // 生成Id映射（8位就够了，不用那么多）
 
-      Object.keys(idMap).forEach((key) => {
+      Object.keys(idMap).forEach((key, keyIdx) => {
         map[key] = {
-          newId: guid().slice(0, 8),
+          newId: useUuidForId ? guid().slice(0, 8) : `${options.type}${keyIdx}`,
           propName: (prefix ? `${propName}.` : '') + idName,
           used: false,
         };

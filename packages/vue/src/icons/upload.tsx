@@ -5,7 +5,7 @@ import { ISvgIconProps, IconWrapper } from '../runtime';
 export default IconWrapper('upload', false, (props: ISvgIconProps) => (
   <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
     <mask
-      id={`${props.id}25e3db5f`}
+      id={`${props.id}vue0`}
       maskUnits="userSpaceOnUse"
       x="0"
       y="0"
@@ -14,7 +14,7 @@ export default IconWrapper('upload', false, (props: ISvgIconProps) => (
       style={{ maskType: 'alpha' }}>
       <rect width="48" height="48" fill={props.colors[2]} />
     </mask>
-    <g mask={`url(#${props.id}25e3db5f` + `)`}>
+    <g mask={`url(#${props.id}vue0)`}>
       <path
         d="M6 24.0083V42H42V24"
         stroke={props.colors[0]}
