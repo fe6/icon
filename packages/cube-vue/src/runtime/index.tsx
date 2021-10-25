@@ -121,7 +121,7 @@ export interface IIconBase {
   fill?: string | string[];
 
   // 换肤的颜色数组
-  colors: string[];
+  colors?: string[];
 }
 
 // 包裹后的图标属性

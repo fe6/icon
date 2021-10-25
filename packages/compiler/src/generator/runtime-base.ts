@@ -215,7 +215,7 @@ export class RuntimeGenerator extends Generator {
     if (replaceList.length) {
       this.writeLine();
       this.writeLine('// 换肤的颜色数组');
-      this.writeLine('colors?: string[];');
+      this.writeLine('colors: string[];');
     }
 
     if (hueList.length) {

@@ -48,15 +48,17 @@ export const cubeGetContent = (props: IIconProps): string => {
 
   let contentHtml = svgItem ? originSvg : '';
 
-  colors.forEach((colorItem: string, colorIdx: number) => {
-    contentHtml = contentHtml.replace(
-      new RegExp(
-        `${reColors[colorIdx]}|${reColors[colorIdx].toUpperCase()}`,
-        'g',
-      ),
-      colorItem,
-    );
-  });
+  if (colors) {
+    colors.forEach((colorItem: string, colorIdx: number) => {
+      contentHtml = contentHtml.replace(
+        new RegExp(
+          `${reColors[colorIdx]}|${reColors[colorIdx].toUpperCase()}`,
+          'g',
+        ),
+        colorItem,
+      );
+    });
+  }
 
   contentHtml = contentHtml.replace(
     /stroke-linejoin="round"/g,
