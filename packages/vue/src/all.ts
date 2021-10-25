@@ -36,8 +36,13 @@ const IIconWaterOptions: IIconAllOptions = {
     'spin',
     'type',
   ],
-  setup: (props) => {
-    const type = toPascalCase(props.type);
+  render() {
+    const type = toPascalCase(this.type);
+
+    if (!(type in mapIcon)) {
+      throw new Error(`${type} is not a valid icon type name`);
+    }
+
     const {
       size,
       strokeWidth,
@@ -47,23 +52,18 @@ const IIconWaterOptions: IIconAllOptions = {
       fill,
       colors,
       spin,
-    } = props;
+    } = this;
 
-    if (!(type in mapIcon)) {
-      throw new Error(`${type} is not a valid icon type name`);
-    }
-
-    return () =>
-      createVNode(mapIcon[type as IconType], {
-        size,
-        strokeWidth,
-        strokeLinecap,
-        strokeLinejoin,
-        theme,
-        fill,
-        colors,
-        spin,
-      });
+    return createVNode(mapIcon[this.type as IconType], {
+      size,
+      strokeWidth,
+      strokeLinecap,
+      strokeLinejoin,
+      theme,
+      fill,
+      colors,
+      spin,
+    });
   },
 };
 

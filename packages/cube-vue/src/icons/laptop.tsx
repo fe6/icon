@@ -3,10 +3,27 @@
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
 export default IconWrapper('laptop', false, (props: ISvgIconProps) => (
-  <svg width={props.size} height={props.size} viewBox="64 64 896 896">
-    <path
-      d="M956.9 845.1L896.4 632V168c0-17.7-14.3-32-32-32h-704c-17.7 0-32 14.3-32 32v464L67.9 845.1C60.4 866 75.8 888 98 888h828.8c22.2 0 37.6-22 30.1-42.9zM200.4 208h624v395h-624V208zm228.3 608l8.1-37h150.3l8.1 37H428.7zm224 0l-19.1-86.7c-.8-3.7-4.1-6.3-7.8-6.3H398.2c-3.8 0-7 2.6-7.8 6.3L371.3 816H151l42.3-149h638.2l42.3 149H652.7z"
+  <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
+    <rect
+      x="5"
+      y="8"
+      width="38"
+      height="24"
+      rx="2"
+      fill={props.colors[1]}
       stroke={props.colors[0]}
+      stroke-width={props.strokeWidth}
+    />
+    <path
+      d="M4 40L44 40"
+      stroke={props.colors[0]}
+      stroke-width={props.strokeWidth}
+      stroke-linecap={props.strokeLinecap}
+      stroke-linejoin={props.strokeLinejoin}
+    />
+    <path
+      d="M22 14L26 14"
+      stroke={props.colors[2]}
       stroke-width={props.strokeWidth}
       stroke-linecap={props.strokeLinecap}
       stroke-linejoin={props.strokeLinejoin}

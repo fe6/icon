@@ -2,9 +2,16 @@
 
 <template>
   <h1>所有</h1>
+  -{{ colorDiy }}-
+  <button @click="setColor">设置颜色</button>
   <div>
     <span v-for="icon in iconConfig">
-      <icon-keg :type="icon.type" />
+      <icon-keg
+        :size="100"
+        :type="icon.type"
+        theme="multiColor"
+        :colors="colorDiy"
+      />
     </span>
   </div>
   <h1>定制款</h1>
@@ -79,7 +86,8 @@
   // 单文件组件(SFC) <script setup>
   // Check out https://v3.cn.vuejs.org/api/sfc-script-setup.html
 
-  import './custom-config';
+  import { ref } from 'vue';
+
   import {
     IconVideo as VueVideo,
     DEFAULT_ICON_CONFIGS,
@@ -94,9 +102,13 @@
   import { IconVideo as CubeVideo, IconKeg } from '@fe6/icon-cube-vue';
   import iconJson from '@fe6/icons.json';
 
+  import './custom-config';
+
   const iconConfig = iconJson.slice();
 
   const myColors = ['#f00', '#f0f', '#00f', '#0f0'];
+
+  const myDefColors: string[] = ['#333', '#2f88ff', '#fff', '#43ccf8'];
 
   const vIconDef = IconVideo();
 
@@ -152,6 +164,13 @@
 
   IconProvider({ ...DEFAULT_ICON_CONFIGS, prefix: 'icon', size: '3em' });
   setConfig({ ...imgConfig, prefix: 'icon', size: '13em' });
+
+  const colorDiy = ref(myDefColors.slice());
+  const colorIsDef = ref(true);
+  const setColor = () => {
+    colorIsDef.value = !colorIsDef.value;
+    colorDiy.value = colorIsDef.value ? myDefColors.slice() : myColors.slice();
+  };
 </script>
 
 <style>

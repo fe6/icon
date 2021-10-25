@@ -3,10 +3,43 @@
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
 export default IconWrapper('save', false, (props: ISvgIconProps) => (
-  <svg width={props.size} height={props.size} viewBox="64 64 896 896">
+  <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
     <path
-      d="M893.3 293.3L730.7 130.7c-7.5-7.5-16.7-13-26.7-16V112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V338.5c0-17-6.7-33.2-18.7-45.2zM384 184h256v104H384V184zm456 656H184V184h136v136c0 17.7 14.3 32 32 32h320c17.7 0 32-14.3 32-32V205.8l136 136V840zM512 442c-79.5 0-144 64.5-144 144s64.5 144 144 144 144-64.5 144-144-64.5-144-144-144zm0 224c-44.2 0-80-35.8-80-80s35.8-80 80-80 80 35.8 80 80-35.8 80-80 80z"
+      d="M6 9C6 7.34315 7.34315 6 9 6H34.2814L42 13.2065V39C42 40.6569 40.6569 42 39 42H9C7.34315 42 6 40.6569 6 39V9Z"
+      fill={props.colors[1]}
       stroke={props.colors[0]}
+      stroke-width={props.strokeWidth}
+      stroke-linejoin={props.strokeLinejoin}
+    />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M24.0083 6L24 13.3846C24 13.7245 23.5523 14 23 14H15C14.4477 14 14 13.7245 14 13.3846L14 6"
+      fill={props.colors[3]}
+    />
+    <path
+      d="M24.0083 6L24 13.3846C24 13.7245 23.5523 14 23 14H15C14.4477 14 14 13.7245 14 13.3846L14 6H24.0083Z"
+      stroke={props.colors[2]}
+      stroke-width={props.strokeWidth}
+      stroke-linejoin={props.strokeLinejoin}
+    />
+    <path
+      d="M9 6H34.2814"
+      stroke={props.colors[0]}
+      stroke-width={props.strokeWidth}
+      stroke-linecap={props.strokeLinecap}
+      stroke-linejoin={props.strokeLinejoin}
+    />
+    <path
+      d="M14 26H34"
+      stroke={props.colors[2]}
+      stroke-width={props.strokeWidth}
+      stroke-linecap={props.strokeLinecap}
+      stroke-linejoin={props.strokeLinejoin}
+    />
+    <path
+      d="M14 34H24.0083"
+      stroke={props.colors[2]}
       stroke-width={props.strokeWidth}
       stroke-linecap={props.strokeLinecap}
       stroke-linejoin={props.strokeLinejoin}

@@ -1,10 +1,10 @@
 {
   "id": "base-44",
-  "title": "信息",
-  "name": "profile",
+  "title": "帮助方块",
+  "name": "help-square",
   "category": "base",
   "categoryCN": "基础",
   "author": "李梦龙",
-  "tag": ["信息"],
+  "tag": ["帮助方块"],
   "rtl": false
 }

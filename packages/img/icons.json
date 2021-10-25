@@ -8,7 +8,7 @@
     "author": "李梦龙",
     "tag": ["下", "箭头"],
     "rtl": false,
-    "svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/>\n<path d=\"M24 42L24 6\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M36 30L24 42L12 30\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n",
+    "svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/>\n<path d=\"M24 42L24 6\" stroke=\"#000\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<path d=\"M36 30L24 42L12 30\" stroke=\"#000\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n",
     "type": "IconArrowDown"
   },
   {
@@ -20,7 +20,7 @@
     "author": "李梦龙",
     "tag": ["左", "箭头"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M872 474H286.9l350.2-304c5.6-4.9 2.2-14-5.2-14h-88.5c-3.9 0-7.6 1.4-10.5 3.9L155 487.8a31.96 31.96 0 000 48.3L535.1 866c1.5 1.3 3.3 2 5.2 2h91.5c7.4 0 10.8-9.2 5.2-14L286.9 550H872c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M12 23.9917L36 23.9917\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M24 36L12 24L24 12\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconArrowLeft"
   },
   {
@@ -32,20 +32,8 @@
     "author": "李梦龙",
     "tag": ["下"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M37 18L25 30L13 18\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconDown"
-  },
-  {
-    "id": "arrows-4",
-    "title": "轮回",
-    "name": "retweet",
-    "category": "arrows",
-    "categoryCN": "方向",
-    "author": "李梦龙",
-    "tag": ["轮回"],
-    "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1024 1024\"><path d=\"M136 552h63.6c4.4 0 8-3.6 8-8V288.7h528.6v72.6c0 1.9.6 3.7 1.8 5.2a8.3 8.3 0 0011.7 1.4L893 255.4c4.3-5 3.6-10.3 0-13.2L749.7 129.8a8.22 8.22 0 00-5.2-1.8c-4.6 0-8.4 3.8-8.4 8.4V209H199.7c-39.5 0-71.7 32.2-71.7 71.8V544c0 4.4 3.6 8 8 8zm752-80h-63.6c-4.4 0-8 3.6-8 8v255.3H287.8v-72.6c0-1.9-.6-3.7-1.8-5.2a8.3 8.3 0 00-11.7-1.4L131 768.6c-4.3 5-3.6 10.3 0 13.2l143.3 112.4c1.5 1.2 3.3 1.8 5.2 1.8 4.6 0 8.4-3.8 8.4-8.4V815h536.6c39.5 0 71.7-32.2 71.7-71.8V480c-.2-4.4-3.8-8-8.2-8z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
-    "type": "IconRetweet"
   },
   {
     "id": "arrows-5",
@@ -56,7 +44,7 @@
     "author": "李梦龙",
     "tag": ["右"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M765.7 486.8L314.9 134.7A7.97 7.97 0 00302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 000-50.4z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M19 12L31 24L19 36\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconRight"
   },
   {
@@ -68,7 +56,7 @@
     "author": "李梦龙",
     "tag": ["应用"],
     "rtl": true,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M464 144H160c-8.8 0-16 7.2-16 16v304c0 8.8 7.2 16 16 16h304c8.8 0 16-7.2 16-16V160c0-8.8-7.2-16-16-16zm-52 268H212V212h200v200zm452-268H560c-8.8 0-16 7.2-16 16v304c0 8.8 7.2 16 16 16h304c8.8 0 16-7.2 16-16V160c0-8.8-7.2-16-16-16zm-52 268H612V212h200v200zM464 544H160c-8.8 0-16 7.2-16 16v304c0 8.8 7.2 16 16 16h304c8.8 0 16-7.2 16-16V560c0-8.8-7.2-16-16-16zm-52 268H212V612h200v200zm452-268H560c-8.8 0-16 7.2-16 16v304c0 8.8 7.2 16 16 16h304c8.8 0 16-7.2 16-16V560c0-8.8-7.2-16-16-16zm-52 268H612V612h200v200z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M18 6H8C6.89543 6 6 6.89543 6 8V18C6 19.1046 6.89543 20 8 20H18C19.1046 20 20 19.1046 20 18V8C20 6.89543 19.1046 6 18 6Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M18 28H8C6.89543 28 6 28.8954 6 30V40C6 41.1046 6.89543 42 8 42H18C19.1046 42 20 41.1046 20 40V30C20 28.8954 19.1046 28 18 28Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M40 6H30C28.8954 6 28 6.89543 28 8V18C28 19.1046 28.8954 20 30 20H40C41.1046 20 42 19.1046 42 18V8C42 6.89543 41.1046 6 40 6Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M40 28H30C28.8954 28 28 28.8954 28 30V40C28 41.1046 28.8954 42 30 42H40C41.1046 42 42 41.1046 42 40V30C42 28.8954 41.1046 28 40 28Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconAppstore"
   },
   {
@@ -80,7 +68,7 @@
     "author": "李梦龙",
     "tag": ["灯泡"],
     "rtl": true,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M632 888H392c-4.4 0-8 3.6-8 8v32c0 17.7 14.3 32 32 32h192c17.7 0 32-14.3 32-32v-32c0-4.4-3.6-8-8-8zM512 64c-181.1 0-328 146.9-328 328 0 121.4 66 227.4 164 284.1V792c0 17.7 14.3 32 32 32h264c17.7 0 32-14.3 32-32V676.1c98-56.7 164-162.7 164-284.1 0-181.1-146.9-328-328-328zm127.9 549.8L604 634.6V752H420V634.6l-35.9-20.8C305.4 568.3 256 484.5 256 392c0-141.4 114.6-256 256-256s256 114.6 256 256c0 92.5-49.4 176.3-128.1 221.8z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"#FFF\" fill-opacity=\"0.01\"/><path d=\"M40 20C40 26.8077 35.7484 32.6224 29.7555 34.9336H24H18.2445C12.2516 32.6224 8 26.8077 8 20C8 11.1634 15.1634 4 24 4C32.8366 4 40 11.1634 40 20Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.7555 34.9336L29.0764 43.083C29.0332 43.6013 28.5999 44 28.0798 44H19.9201C19.4 44 18.9668 43.6013 18.9236 43.083L18.2444 34.9336\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M18 17V23L24 20L30 23V17\" stroke=\"#FFF\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconBulb"
   },
   {
@@ -116,7 +104,7 @@
     "author": "李梦龙",
     "tag": ["选择"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M699 353h-46.9c-10.2 0-19.9 4.9-25.9 13.3L469 584.3l-71.2-98.8c-6-8.3-15.6-13.3-25.9-13.3H325c-6.5 0-10.3 7.4-6.5 12.7l124.6 172.8a31.8 31.8 0 0051.7 0l210.6-292c3.9-5.3.1-12.7-6.4-12.7z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M24 44C29.5228 44 34.5228 41.7614 38.1421 38.1421C41.7614 34.5228 44 29.5228 44 24C44 18.4772 41.7614 13.4772 38.1421 9.85786C34.5228 6.23858 29.5228 4 24 4C18.4772 4 13.4772 6.23858 9.85786 9.85786C6.23858 13.4772 4 18.4772 4 24C4 29.5228 6.23858 34.5228 9.85786 38.1421C13.4772 41.7614 18.4772 44 24 44Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M16 24L22 30L34 18\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconCheck"
   },
   {
@@ -128,7 +116,7 @@
     "author": "李梦龙",
     "tag": ["锁"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M686.7 638.6L544.1 535.5V288c0-4.4-3.6-8-8-8H488c-4.4 0-8 3.6-8 8v275.4c0 2.6 1.2 5 3.3 6.5l165.4 120.6c3.6 2.6 8.6 1.8 11.2-1.7l28.6-39c2.6-3.7 1.8-8.7-1.8-11.2z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M24.0083 12L24.0071 24.0088L32.4865 32.4882\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconClockCircle"
   },
   {
@@ -140,7 +128,7 @@
     "author": "李梦龙",
     "tag": ["关闭"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M685.4 354.8c0-4.4-3.6-8-8-8l-66 .3L512 465.6l-99.3-118.4-66.1-.3c-4.4 0-8 3.5-8 8 0 1.9.7 3.7 1.9 5.2l130.1 155L340.5 670a8.32 8.32 0 00-1.9 5.2c0 4.4 3.6 8 8 8l66.1-.3L512 564.4l99.3 118.4 66 .3c4.4 0 8-3.5 8-8 0-1.9-.7-3.7-1.9-5.2L553.5 515l130.1-155c1.2-1.4 1.8-3.3 1.8-5.2z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M512 65C264.6 65 64 265.6 64 513s200.6 448 448 448 448-200.6 448-448S759.4 65 512 65zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M29.6569 18.3431L18.3432 29.6568\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M18.3432 18.3431L29.6569 29.6568\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconCloseCircle"
   },
   {
@@ -152,7 +140,7 @@
     "author": "李梦龙",
     "tag": ["留言"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M573 421c-23.1 0-41 17.9-41 40s17.9 40 41 40c21.1 0 39-17.9 39-40s-17.9-40-39-40zm-280 0c-23.1 0-41 17.9-41 40s17.9 40 41 40c21.1 0 39-17.9 39-40s-17.9-40-39-40z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M894 345a343.92 343.92 0 00-189-130v.1c-17.1-19-36.4-36.5-58-52.1-163.7-119-393.5-82.7-513 81-96.3 133-92.2 311.9 6 439l.8 132.6c0 3.2.5 6.4 1.5 9.4a31.95 31.95 0 0040.1 20.9L309 806c33.5 11.9 68.1 18.7 102.5 20.6l-.5.4c89.1 64.9 205.9 84.4 313 49l127.1 41.4c3.2 1 6.5 1.6 9.9 1.6 17.7 0 32-14.3 32-32V753c88.1-119.6 90.4-284.9 1-408zM323 735l-12-5-99 31-1-104-8-9c-84.6-103.2-90.2-251.9-11-361 96.4-132.2 281.2-161.4 413-66 132.2 96.1 161.5 280.6 66 412-80.1 109.9-223.5 150.5-348 102zm505-17l-8 10 1 104-98-33-12 5c-56 20.8-115.7 22.5-171 7l-.2-.1A367.31 367.31 0 00729 676c76.4-105.3 88.8-237.6 44.4-350.4l.6.4c23 16.5 44.1 37.1 62 62 72.6 99.6 68.5 235.2-8 330z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M433 421c-23.1 0-41 17.9-41 40s17.9 40 41 40c21.1 0 39-17.9 39-40s-17.9-40-39-40z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M33 38H22V30H36V22H44V38H39L36 41L33 38Z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M4 6H36V30H17L13 34L9 30H4V6Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M12 22H18\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\"/><path d=\"M12 14H24\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\"/></svg>\n",
     "type": "IconComment"
   },
   {
@@ -164,7 +152,7 @@
     "author": "李梦龙",
     "tag": ["复制"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M832 64H296c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h496v688c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8V96c0-17.7-14.3-32-32-32zM704 192H192c-17.7 0-32 14.3-32 32v530.7c0 8.5 3.4 16.6 9.4 22.6l173.3 173.3c2.2 2.2 4.7 4 7.4 5.5v1.9h4.2c3.5 1.3 7.2 2 11 2H704c17.7 0 32-14.3 32-32V224c0-17.7-14.3-32-32-32zM350 856.2L263.9 770H350v86.2zM664 888H414V746c0-22.1-17.9-40-40-40H232V264h432v624z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M13 38H41V16H30V4H13V38Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 4L41 16\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M7 20V44H28\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M19 20H23\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\"/><path d=\"M19 28H31\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\"/></svg>\n",
     "type": "IconCopy"
   },
   {
@@ -176,7 +164,7 @@
     "author": "李梦龙",
     "tag": ["客服"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M512 128c-212.1 0-384 171.9-384 384v360c0 13.3 10.7 24 24 24h184c35.3 0 64-28.7 64-64V624c0-35.3-28.7-64-64-64H200v-48c0-172.3 139.7-312 312-312s312 139.7 312 312v48H688c-35.3 0-64 28.7-64 64v208c0 35.3 28.7 64 64 64h184c13.3 0 24-10.7 24-24V512c0-212.1-171.9-384-384-384zM328 632v192H200V632h128zm496 192H696V632h128v192z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M42 30V24.4615C42 14.2655 33.9411 6 24 6C14.0589 6 6 14.2655 6 24.4615V30\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M34 32C34 29.7909 35.7909 28 38 28H42V42H38C35.7909 42 34 40.2091 34 38V32Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M42 32H44C45.1046 32 46 32.8954 46 34V36C46 37.1046 45.1046 38 44 38H42V32Z\" fill=\"black\"/><path d=\"M6 32H4C2.89543 32 2 32.8954 2 34V36C2 37.1046 2.89543 38 4 38H6V32Z\" fill=\"black\"/><path d=\"M6 28H10C12.2091 28 14 29.7909 14 32V38C14 40.2091 12.2091 42 10 42H6V28Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconCustomerService"
   },
   {
@@ -188,7 +176,7 @@
     "author": "李梦龙",
     "tag": ["删除"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M360 184h-8c4.4 0 8-3.6 8-8v8h304v-8c0 4.4 3.6 8 8 8h-8v72h72v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80h72v-72zm504 72H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zM731.3 840H292.7l-24.2-512h487l-24.2 512z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M9 10V44H39V10H9Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M20 20V33\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 20V33\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M4 10H44\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M16 10L19.289 4H28.7771L32 10H16Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconDelete"
   },
   {
@@ -200,7 +188,7 @@
     "author": "李梦龙",
     "tag": ["下载"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M505.7 661a8 8 0 0012.6 0l112-141.7c4.1-5.2.4-12.9-6.3-12.9h-74.1V168c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8v338.3H400c-6.7 0-10.4 7.7-6.3 12.9l112 141.8zM878 626h-60c-4.4 0-8 3.6-8 8v154H214V634c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8v198c0 17.7 14.3 32 32 32h684c17.7 0 32-14.3 32-32V634c0-4.4-3.6-8-8-8z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M6 24.0083V42H42V24\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M33 23L24 32L15 23\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.9917 6V32\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconDownload"
   },
   {
@@ -212,7 +200,7 @@
     "author": "李梦龙",
     "tag": ["拖拽"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M909.3 506.3L781.7 405.6a7.23 7.23 0 00-11.7 5.7V476H548V254h64.8c6 0 9.4-7 5.7-11.7L517.7 114.7a7.14 7.14 0 00-11.3 0L405.6 242.3a7.23 7.23 0 005.7 11.7H476v222H254v-64.8c0-6-7-9.4-11.7-5.7L114.7 506.3a7.14 7.14 0 000 11.3l127.5 100.8c4.7 3.7 11.7.4 11.7-5.7V548h222v222h-64.8c-6 0-9.4 7-5.7 11.7l100.8 127.5c2.9 3.7 8.5 3.7 11.3 0l100.8-127.5c3.7-4.7.4-11.7-5.7-11.7H548V548h222v64.8c0 6 7 9.4 11.7 5.7l127.5-100.8a7.3 7.3 0 00.1-11.4z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M18 10L24 4M24 4L30 10M24 4V24M24 24V44M24 24H44M24 24H4M18 38L24 44M24 44L30 38M38 18L44 24M44 24L38 30M10 18L4 24M4 24L10 30\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconDrag"
   },
   {
@@ -224,7 +212,7 @@
     "author": "李梦龙",
     "tag": ["编辑"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 000-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 009.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M7 42H43\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M11 26.7199V34H18.3172L39 13.3081L31.6951 6L11 26.7199Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconEdit"
   },
   {
@@ -236,7 +224,7 @@
     "author": "李梦龙",
     "tag": ["省略"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M176 511a56 56 0 10112 0 56 56 0 10-112 0zm280 0a56 56 0 10112 0 56 56 0 10-112 0zm280 0a56 56 0 10112 0 56 56 0 10-112 0z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><circle cx=\"12\" cy=\"24\" r=\"3\" fill=\"#000\"/><circle cx=\"24\" cy=\"24\" r=\"3\" fill=\"#000\"/><circle cx=\"36\" cy=\"24\" r=\"3\" fill=\"#000\"/></svg>\n",
     "type": "IconEllipsis"
   },
   {
@@ -248,7 +236,7 @@
     "author": "李梦龙",
     "tag": ["感叹号"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z\"></path><path d=\"M464 688a48 48 0 1096 0 48 48 0 10-96 0zm24-112h48c4.4 0 8-3.6 8-8V296c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M24 44C29.5228 44 34.5228 41.7614 38.1421 38.1421C41.7614 34.5228 44 29.5228 44 24C44 18.4772 41.7614 13.4772 38.1421 9.85786C34.5228 6.23858 29.5228 4 24 4C18.4772 4 13.4772 6.23858 9.85786 9.85786C6.23858 13.4772 4 18.4772 4 24C4 29.5228 6.23858 34.5228 9.85786 38.1421C13.4772 41.7614 18.4772 44 24 44Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M24 37C25.3807 37 26.5 35.8807 26.5 34.5C26.5 33.1193 25.3807 32 24 32C22.6193 32 21.5 33.1193 21.5 34.5C21.5 35.8807 22.6193 37 24 37Z\" fill=\"white\"/><path d=\"M24 12V28\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconExclamationCircle"
   },
   {
@@ -272,7 +260,7 @@
     "author": "李梦龙",
     "tag": ["标志"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M880 305H624V192c0-17.7-14.3-32-32-32H184v-40c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v784c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8V640h248v113c0 17.7 14.3 32 32 32h416c17.7 0 32-14.3 32-32V337c0-17.7-14.3-32-32-32zM184 568V232h368v336H184zm656 145H504v-73h112c4.4 0 8-3.6 8-8V377h216v336z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M8 44H12H16\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M12 44V4\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M40 6H12V22H40L36 14L40 6Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconFlag"
   },
   {
@@ -284,7 +272,7 @@
     "author": "李梦龙",
     "tag": ["文件夹"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M880 298.4H521L403.7 186.2a8.15 8.15 0 00-5.5-2.2H144c-17.7 0-32 14.3-32 32v592c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V330.4c0-17.7-14.3-32-32-32zM840 768H184V256h188.5l119.6 114.4H840V768z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7 6C7 4.89543 7.89543 4 9 4H39C40.1046 4 41 4.89543 41 6V42C41 43.1046 40.1046 44 39 44H9C7.89543 44 7 43.1046 7 42V6Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M16 29H20\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M16 35H26\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M8 5C8 5 11.7647 18 24 18C36.2353 18 40 5 40 5\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"24\" cy=\"18\" r=\"4\" fill=\"#43CCF8\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M15 4H9C7.89543 4 7 4.89543 7 6V12\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M33 4H39C40.1046 4 41 4.89543 41 6V12\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconFolder"
   },
   {
@@ -296,8 +284,32 @@
     "author": "李梦龙",
     "tag": ["表单"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M904 512h-56c-4.4 0-8 3.6-8 8v320H184V184h320c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V520c0-4.4-3.6-8-8-8z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M355.9 534.9L354 653.8c-.1 8.9 7.1 16.2 16 16.2h.4l118-2.9c2-.1 4-.9 5.4-2.3l415.9-415c3.1-3.1 3.1-8.2 0-11.3L785.4 114.3c-1.6-1.6-3.6-2.3-5.7-2.3s-4.1.8-5.7 2.3l-415.8 415a8.3 8.3 0 00-2.3 5.6zm63.5 23.6L779.7 199l45.2 45.1-360.5 359.7-45.7 1.1.7-46.4z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M42 26V40C42 41.1046 41.1046 42 40 42H8C6.89543 42 6 41.1046 6 40V8C6 6.89543 6.89543 6 8 6L22 6\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M14 26.7199V34H21.3172L42 13.3081L34.6951 6L14 26.7199Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconForm"
+  },
+  {
+    "id": "base-69",
+    "title": "帮助圆形",
+    "name": "help-circle",
+    "category": "base",
+    "categoryCN": "基础",
+    "author": "李梦龙",
+    "tag": ["帮助圆形"],
+    "rtl": false,
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M24 44C29.5228 44 34.5228 41.7614 38.1421 38.1421C41.7614 34.5228 44 29.5228 44 24C44 18.4772 41.7614 13.4772 38.1421 9.85786C34.5228 6.23858 29.5228 4 24 4C18.4772 4 13.4772 6.23858 9.85786 9.85786C6.23858 13.4772 4 18.4772 4 24C4 29.5228 6.23858 34.5228 9.85786 38.1421C13.4772 41.7614 18.4772 44 24 44Z\" fill=\"none\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M24 28.6249V24.6249C27.3137 24.6249 30 21.9386 30 18.6249C30 15.3112 27.3137 12.6249 24 12.6249C20.6863 12.6249 18 15.3112 18 18.6249\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M24 37.6249C25.3807 37.6249 26.5 36.5056 26.5 35.1249C26.5 33.7442 25.3807 32.6249 24 32.6249C22.6193 32.6249 21.5 33.7442 21.5 35.1249C21.5 36.5056 22.6193 37.6249 24 37.6249Z\" fill=\"black\"/></svg>\n",
+    "type": "IconHelpCircle"
+  },
+  {
+    "id": "base-44",
+    "title": "帮助方块",
+    "name": "help-square",
+    "category": "base",
+    "categoryCN": "基础",
+    "author": "李梦龙",
+    "tag": ["帮助方块"],
+    "rtl": false,
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M39 6H9C7.34315 6 6 7.34315 6 9V39C6 40.6569 7.34315 42 9 42H39C40.6569 42 42 40.6569 42 39V9C42 7.34315 40.6569 6 39 6Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M24 28.6249V24.6249C27.3137 24.6249 30 21.9386 30 18.6249C30 15.3112 27.3137 12.6249 24 12.6249C20.6863 12.6249 18 15.3112 18 18.6249\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M24 37.6249C25.3807 37.6249 26.5 36.5056 26.5 35.1249C26.5 33.7442 25.3807 32.6249 24 32.6249C22.6193 32.6249 21.5 33.7442 21.5 35.1249C21.5 36.5056 22.6193 37.6249 24 37.6249Z\" fill=\"white\"/></svg>\n",
+    "type": "IconHelpSquare"
   },
   {
     "id": "base-19",
@@ -308,7 +320,7 @@
     "author": "李梦龙",
     "tag": ["家"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 00-44.4 0L77.5 505a63.9 63.9 0 00-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0018.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M44 44V20L24 4L4 20L4 44H16V26H32V44H44Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M24 44V34\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconHome"
   },
   {
@@ -320,7 +332,7 @@
     "author": "李梦龙",
     "tag": ["提示"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M464 336a48 48 0 1096 0 48 48 0 10-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M24 44C29.5228 44 34.5228 41.7614 38.1421 38.1421C41.7614 34.5228 44 29.5228 44 24C44 18.4772 41.7614 13.4772 38.1421 9.85786C34.5228 6.23858 29.5228 4 24 4C18.4772 4 13.4772 6.23858 9.85786 9.85786C6.23858 13.4772 4 18.4772 4 24C4 29.5228 6.23858 34.5228 9.85786 38.1421C13.4772 41.7614 18.4772 44 24 44Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M24 11C25.3807 11 26.5 12.1193 26.5 13.5C26.5 14.8807 25.3807 16 24 16C22.6193 16 21.5 14.8807 21.5 13.5C21.5 12.1193 22.6193 11 24 11Z\" fill=\"white\"/><path d=\"M24.5 34V20H23.5H22.5\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M21 34H28\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconInfoCircle"
   },
   {
@@ -332,8 +344,20 @@
     "author": "李梦龙",
     "tag": ["电脑"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M956.9 845.1L896.4 632V168c0-17.7-14.3-32-32-32h-704c-17.7 0-32 14.3-32 32v464L67.9 845.1C60.4 866 75.8 888 98 888h828.8c22.2 0 37.6-22 30.1-42.9zM200.4 208h624v395h-624V208zm228.3 608l8.1-37h150.3l8.1 37H428.7zm224 0l-19.1-86.7c-.8-3.7-4.1-6.3-7.8-6.3H398.2c-3.8 0-7 2.6-7.8 6.3L371.3 816H151l42.3-149h638.2l42.3 149H652.7z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"5\" y=\"8\" width=\"38\" height=\"24\" rx=\"2\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\"/><path d=\"M4 40L44 40\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M22 14L26 14\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconLaptop"
+  },
+  {
+    "id": "base-23",
+    "title": "点赞",
+    "name": "like",
+    "category": "base",
+    "categoryCN": "基础",
+    "author": "李梦龙",
+    "tag": ["点赞"],
+    "rtl": false,
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M27.6 18.6V11.4C27.6 8.41766 25.1823 6 22.2 6L15 22.2V42H35.916C37.7111 42.0203 39.2468 40.7149 39.516 38.94L42 22.74C42.1585 21.6957 41.8504 20.6346 41.1573 19.8375C40.4643 19.0405 39.4561 18.588 38.4 18.6H27.6Z\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M15 22.0002H10.194C8.08532 21.9629 6.2827 23.7096 6 25.7996V38.3996C6.2827 40.4896 8.08532 42.0369 10.194 41.9996H15V22.0002Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/></svg>\n",
+    "type": "IconLike"
   },
   {
     "id": "base-22",
@@ -344,20 +368,8 @@
     "author": "李梦龙",
     "tag": ["线图表"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M888 792H200V168c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v688c0 4.4 3.6 8 8 8h752c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM305.8 637.7c3.1 3.1 8.1 3.1 11.3 0l138.3-137.6L583 628.5c3.1 3.1 8.2 3.1 11.3 0l275.4-275.3c3.1-3.1 3.1-8.2 0-11.3l-39.6-39.6a8.03 8.03 0 00-11.3 0l-230 229.9L461.4 404a8.03 8.03 0 00-11.3 0L266.3 586.7a8.03 8.03 0 000 11.3l39.5 39.7z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M6 6V42H42\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M14 34L22 18L32 27L42 6\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconLineChart"
-  },
-  {
-    "id": "base-23",
-    "title": "链接",
-    "name": "link",
-    "category": "base",
-    "categoryCN": "基础",
-    "author": "李梦龙",
-    "tag": ["链接"],
-    "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M885.9 533.7c16.8-22.2 26.1-49.4 26.1-77.7 0-44.9-25.1-87.4-65.5-111.1a67.67 67.67 0 00-34.3-9.3H572.4l6-122.9c1.4-29.7-9.1-57.9-29.5-79.4A106.62 106.62 0 00471 99.9c-52 0-98 35-111.8 85.1l-85.9 311H144c-17.7 0-32 14.3-32 32v364c0 17.7 14.3 32 32 32h601.3c9.2 0 18.2-1.8 26.5-5.4 47.6-20.3 78.3-66.8 78.3-118.4 0-12.6-1.8-25-5.4-37 16.8-22.2 26.1-49.4 26.1-77.7 0-12.6-1.8-25-5.4-37 16.8-22.2 26.1-49.4 26.1-77.7-.2-12.6-2-25.1-5.6-37.1zM184 852V568h81v284h-81zm636.4-353l-21.9 19 13.9 25.4a56.2 56.2 0 016.9 27.3c0 16.5-7.2 32.2-19.6 43l-21.9 19 13.9 25.4a56.2 56.2 0 016.9 27.3c0 16.5-7.2 32.2-19.6 43l-21.9 19 13.9 25.4a56.2 56.2 0 016.9 27.3c0 22.4-13.2 42.6-33.6 51.8H329V564.8l99.5-360.5a44.1 44.1 0 0142.2-32.3c7.6 0 15.1 2.2 21.1 6.7 9.9 7.4 15.2 18.6 14.6 30.5l-9.6 198.4h314.4C829 418.5 840 436.9 840 456c0 16.5-7.2 32.1-19.6 43z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
-    "type": "IconLink"
   },
   {
     "id": "base-24",
@@ -368,7 +380,7 @@
     "author": "李梦龙",
     "tag": ["加载"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" focusable=\"false\" class=\"anticon-spin\" viewBox=\"0 0 1024 1024\"><path d=\"M988 548c-19.9 0-36-16.1-36-36 0-59.4-11.6-117-34.6-171.3a440.45 440.45 0 00-94.3-139.9 437.71 437.71 0 00-139.9-94.3C629 83.6 571.4 72 512 72c-19.9 0-36-16.1-36-36s16.1-36 36-36c69.1 0 136.2 13.5 199.3 40.3C772.3 66 827 103 874 150c47 47 83.9 101.8 109.7 162.7 26.7 63.1 40.2 130.2 40.2 199.3.1 19.9-16 36-35.9 36z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M4 24C4 35.0457 12.9543 44 24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconLoading"
   },
   {
@@ -380,7 +392,7 @@
     "author": "李梦龙",
     "tag": ["锁"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M832 464h-68V240c0-70.7-57.3-128-128-128H388c-70.7 0-128 57.3-128 128v224h-68c-17.7 0-32 14.3-32 32v384c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V496c0-17.7-14.3-32-32-32zM332 240c0-30.9 25.1-56 56-56h248c30.9 0 56 25.1 56 56v224H332V240zm460 600H232V536h560v304zM484 701v53c0 4.4 3.6 8 8 8h40c4.4 0 8-3.6 8-8v-53a48.01 48.01 0 10-56 0z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><rect x=\"6\" y=\"22\" width=\"36\" height=\"22\" rx=\"2\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M14 22V14C14 8.47715 18.4772 4 24 4C29.5228 4 34 8.47715 34 14V22\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M24 30V36\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconLock"
   },
   {
@@ -392,7 +404,7 @@
     "author": "李梦龙",
     "tag": ["退出"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M868 732h-70.3c-4.8 0-9.3 2.1-12.3 5.8-7 8.5-14.5 16.7-22.4 24.5a353.84 353.84 0 01-112.7 75.9A352.8 352.8 0 01512.4 866c-47.9 0-94.3-9.4-137.9-27.8a353.84 353.84 0 01-112.7-75.9 353.28 353.28 0 01-76-112.5C167.3 606.2 158 559.9 158 512s9.4-94.2 27.8-137.8c17.8-42.1 43.4-80 76-112.5s70.5-58.1 112.7-75.9c43.6-18.4 90-27.8 137.9-27.8 47.9 0 94.3 9.3 137.9 27.8 42.2 17.8 80.1 43.4 112.7 75.9 7.9 7.9 15.3 16.1 22.4 24.5 3 3.7 7.6 5.8 12.3 5.8H868c6.3 0 10.2-7 6.7-12.3C798 160.5 663.8 81.6 511.3 82 271.7 82.6 79.6 277.1 82 516.4 84.4 751.9 276.2 942 512.4 942c152.1 0 285.7-78.8 362.3-197.7 3.4-5.3-.4-12.3-6.7-12.3zm88.9-226.3L815 393.7c-5.3-4.2-13-.4-13 6.3v76H488c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h314v76c0 6.7 7.8 10.5 13 6.3l141.9-112a8 8 0 000-12.6z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M23.9917 6L6 6L6 42H24\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M33 33L42 24L33 15\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M16 23.9917H42\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconLogout"
   },
   {
@@ -404,7 +416,7 @@
     "author": "李梦龙",
     "tag": ["菜单"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M7.94977 11.9498H39.9498\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M7.94977 23.9498H39.9498\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M7.94977 35.9498H39.9498\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconMenu"
   },
   {
@@ -416,7 +428,7 @@
     "author": "李梦龙",
     "tag": ["菜单折叠"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 000 13.8z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M8 10.5H40\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M24 19.5H40\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M24 28.5H40\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M8 37.5H40\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M16 19L8 24L16 29V19Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconMenuFold"
   },
   {
@@ -428,7 +440,7 @@
     "author": "李梦龙",
     "tag": ["菜单不折叠"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM142.4 642.1L298.7 519a8.84 8.84 0 000-13.9L142.4 381.9c-5.8-4.6-14.4-.5-14.4 6.9v246.3a8.9 8.9 0 0014.4 7z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M8 10.5H40\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M24 19.5H40\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M24 28.5H40\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M8 37.5H40\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M8 19L16 24L8 29V19Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconMenuUnfold"
   },
   {
@@ -440,7 +452,7 @@
     "author": "李梦龙",
     "tag": ["提示"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M464 512a48 48 0 1096 0 48 48 0 10-96 0zm200 0a48 48 0 1096 0 48 48 0 10-96 0zm-400 0a48 48 0 1096 0 48 48 0 10-96 0zm661.2-173.6c-22.6-53.7-55-101.9-96.3-143.3a444.35 444.35 0 00-143.3-96.3C630.6 75.7 572.2 64 512 64h-2c-60.6.3-119.3 12.3-174.5 35.9a445.35 445.35 0 00-142 96.5c-40.9 41.3-73 89.3-95.2 142.8-23 55.4-34.6 114.3-34.3 174.9A449.4 449.4 0 00112 714v152a46 46 0 0046 46h152.1A449.4 449.4 0 00510 960h2.1c59.9 0 118-11.6 172.7-34.3a444.48 444.48 0 00142.8-95.2c41.3-40.9 73.8-88.7 96.5-142 23.6-55.2 35.6-113.9 35.9-174.5.3-60.9-11.5-120-34.8-175.6zm-151.1 438C704 845.8 611 884 512 884h-1.7c-60.3-.3-120.2-15.3-173.1-43.5l-8.4-4.5H188V695.2l-4.5-8.4C155.3 633.9 140.3 574 140 513.7c-.4-99.7 37.7-193.3 107.6-263.8 69.8-70.5 163.1-109.5 262.8-109.9h1.7c50 0 98.5 9.7 144.2 28.9 44.6 18.7 84.6 45.6 119 80 34.3 34.3 61.3 74.4 80 119 19.4 46.2 29.1 95.2 28.9 145.8-.6 99.6-39.7 192.9-110.1 262.7z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M44 24C44 35.0457 35.0457 44 24 44C18.0265 44 4 44 4 44C4 44 4 29.0722 4 24C4 12.9543 12.9543 4 24 4C35.0457 4 44 12.9543 44 24Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M14 18L32 18\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M14 26H32\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M14 34H24\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconMessage"
   },
   {
@@ -452,7 +464,7 @@
     "author": "李梦龙",
     "tag": ["减"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M872 474H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h720c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M10.5 24L38.5 24\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconMinus"
   },
   {
@@ -464,7 +476,7 @@
     "author": "李梦龙",
     "tag": ["圆形减"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M696 480H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h368c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M16 24L32 24\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconMinusCircle"
   },
   {
@@ -476,7 +488,7 @@
     "author": "李梦龙",
     "tag": ["方形减"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M328 544h368c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><rect x=\"6\" y=\"6\" width=\"36\" height=\"36\" rx=\"3\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M16 24L32 24\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconMinusSquare"
   },
   {
@@ -488,7 +500,7 @@
     "author": "李梦龙",
     "tag": ["移动电话"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M744 62H280c-35.3 0-64 28.7-64 64v768c0 35.3 28.7 64 64 64h464c35.3 0 64-28.7 64-64V126c0-35.3-28.7-64-64-64zm-8 824H288V134h448v752zM472 784a40 40 0 1080 0 40 40 0 10-80 0z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M8 30H40V42C40 43.1046 39.1046 44 38 44H10C8.89543 44 8 43.1046 8 42V30Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M40 30V6C40 4.89543 39.1046 4 38 4H10C8.89543 4 8 4.89543 8 6V30\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M22 37H26\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\"/></svg>\n",
     "type": "IconMobile"
   },
   {
@@ -500,7 +512,7 @@
     "author": "李梦龙",
     "tag": ["收款"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M911.5 700.7a8 8 0 00-10.3-4.8L840 718.2V180c0-37.6-30.4-68-68-68H252c-37.6 0-68 30.4-68 68v538.2l-61.3-22.3c-.9-.3-1.8-.5-2.7-.5-4.4 0-8 3.6-8 8V763c0 3.3 2.1 6.3 5.3 7.5L501 910.1c7.1 2.6 14.8 2.6 21.9 0l383.8-139.5c3.2-1.2 5.3-4.2 5.3-7.5v-59.6c0-1-.2-1.9-.5-2.8zM512 837.5l-256-93.1V184h512v560.4l-256 93.1zM660.6 312h-54.5c-3 0-5.8 1.7-7.1 4.4l-84.7 168.8H511l-84.7-168.8a8 8 0 00-7.1-4.4h-55.7c-1.3 0-2.6.3-3.8 1-3.9 2.1-5.3 7-3.2 10.8l103.9 191.6h-57c-4.4 0-8 3.6-8 8v27.1c0 4.4 3.6 8 8 8h76v39h-76c-4.4 0-8 3.6-8 8v27.1c0 4.4 3.6 8 8 8h76V704c0 4.4 3.6 8 8 8h49.9c4.4 0 8-3.6 8-8v-63.5h76.3c4.4 0 8-3.6 8-8v-27.1c0-4.4-3.6-8-8-8h-76.3v-39h76.3c4.4 0 8-3.6 8-8v-27.1c0-4.4-3.6-8-8-8H564l103.7-191.6c.6-1.2 1-2.5 1-3.8-.1-4.3-3.7-7.9-8.1-7.9z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\"><g><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\" stroke-linejoin=\"round\" stroke-width=\"4\" stroke=\"none\" fill-rule=\"evenodd\"/><g transform=\"translate(4.000000, 7.000000)\"><rect stroke=\"black\" fill=\"#2F88FF\" fill-rule=\"nonzero\" x=\"0\" y=\"0\" width=\"40\" height=\"34\" rx=\"5\" stroke-linejoin=\"round\" stroke-width=\"4\"/><g transform=\"translate(13.000000, 8.000000)\"><polyline points=\"1 0 7 6 13 0\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" stroke=\"white\" fill=\"none\" fill-rule=\"evenodd\"/><path d=\"M0,8 L14,8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" stroke=\"white\" fill=\"none\" fill-rule=\"evenodd\"/><path d=\"M0,14 L14,14\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" stroke=\"white\" fill=\"none\" fill-rule=\"evenodd\"/><path d=\"M7,8 L7,19\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"4\" stroke=\"white\" fill=\"none\" fill-rule=\"evenodd\"/></g></g></g></svg>\n",
     "type": "IconMoneyCollect"
   },
   {
@@ -512,7 +524,7 @@
     "author": "李梦龙",
     "tag": ["更多"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M456 231a56 56 0 10112 0 56 56 0 10-112 0zm0 280a56 56 0 10112 0 56 56 0 10-112 0zm0 280a56 56 0 10112 0 56 56 0 10-112 0z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><circle cx=\"24\" cy=\"12\" r=\"3\" fill=\"black\"/><circle cx=\"24\" cy=\"24\" r=\"3\" fill=\"black\"/><circle cx=\"24\" cy=\"35\" r=\"3\" fill=\"black\"/></svg>\n",
     "type": "IconMore"
   },
   {
@@ -524,7 +536,7 @@
     "author": "李梦龙",
     "tag": ["圆形支付"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372zm159.6-585h-59.5c-3 0-5.8 1.7-7.1 4.4l-90.6 180H511l-90.6-180a8 8 0 00-7.1-4.4h-60.7c-1.3 0-2.6.3-3.8 1-3.9 2.1-5.3 7-3.2 10.9L457 515.7h-61.4c-4.4 0-8 3.6-8 8v29.9c0 4.4 3.6 8 8 8h81.7V603h-81.7c-4.4 0-8 3.6-8 8v29.9c0 4.4 3.6 8 8 8h81.7V717c0 4.4 3.6 8 8 8h54.3c4.4 0 8-3.6 8-8v-68.1h82c4.4 0 8-3.6 8-8V611c0-4.4-3.6-8-8-8h-82v-41.5h82c4.4 0 8-3.6 8-8v-29.9c0-4.4-3.6-8-8-8h-62l111.1-204.8c.6-1.2 1-2.5 1-3.8-.1-4.4-3.7-8-8.1-8z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M18 22H30\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M18 28H30\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M24.0083 22V34\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 15L24 21L18 15\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconPayCircle"
   },
   {
@@ -536,7 +548,7 @@
     "author": "李梦龙",
     "tag": ["手机"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M877.1 238.7L770.6 132.3c-13-13-30.4-20.3-48.8-20.3s-35.8 7.2-48.8 20.3L558.3 246.8c-13 13-20.3 30.5-20.3 48.9 0 18.5 7.2 35.8 20.3 48.9l89.6 89.7a405.46 405.46 0 01-86.4 127.3c-36.7 36.9-79.6 66-127.2 86.6l-89.6-89.7c-13-13-30.4-20.3-48.8-20.3a68.2 68.2 0 00-48.8 20.3L132.3 673c-13 13-20.3 30.5-20.3 48.9 0 18.5 7.2 35.8 20.3 48.9l106.4 106.4c22.2 22.2 52.8 34.9 84.2 34.9 6.5 0 12.8-.5 19.2-1.6 132.4-21.8 263.8-92.3 369.9-198.3C818 606 888.4 474.6 910.4 342.1c6.3-37.6-6.3-76.3-33.3-103.4zm-37.6 91.5c-19.5 117.9-82.9 235.5-178.4 331s-213 158.9-330.9 178.4c-14.8 2.5-30-2.5-40.8-13.2L184.9 721.9 295.7 611l119.8 120 .9.9 21.6-8a481.29 481.29 0 00285.7-285.8l8-21.6-120.8-120.7 110.8-110.9 104.5 104.5c10.8 10.8 15.8 26 13.3 40.8z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 49\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M16.9963 7.68583C17.7228 7.68583 18.3922 8.07985 18.7449 8.71509L21.1913 13.1219C21.5116 13.6989 21.5267 14.3968 21.2315 14.9871L18.8747 19.7008C18.8747 19.7008 19.5577 23.2122 22.4161 26.0706C25.2746 28.929 28.7742 29.6002 28.7742 29.6002L33.4871 27.2438C34.0778 26.9484 34.7762 26.9637 35.3534 27.2846L39.7727 29.7416C40.4074 30.0945 40.8009 30.7635 40.8009 31.4896L40.8009 36.5631C40.8009 39.1468 38.401 41.0129 35.953 40.1868C30.925 38.4903 23.1203 35.2601 18.1735 30.3132C13.2267 25.3664 9.99643 17.5617 8.29989 12.5338C7.47387 10.0857 9.33996 7.68583 11.9236 7.68583L16.9963 7.68583Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconPhone"
   },
   {
@@ -548,7 +560,7 @@
     "author": "李梦龙",
     "tag": ["图片"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M928 160H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32zm-40 632H136v-39.9l138.5-164.3 150.1 178L658.1 489 888 761.6V792zm0-129.8L664.2 396.8c-3.2-3.8-9-3.8-12.2 0L424.6 666.4l-144-170.7c-3.2-3.8-9-3.8-12.2 0L136 652.7V232h752v430.2zM304 456a88 88 0 100-176 88 88 0 000 176zm0-116c15.5 0 28 12.5 28 28s-12.5 28-28 28-28-12.5-28-28 12.5-28 28-28z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\"><g><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\" stroke-linejoin=\"round\" stroke-width=\"4\" stroke=\"none\" fill-rule=\"evenodd\"/><g transform=\"translate(5.000000, 8.000000)\"><path d=\"M2,0 L36,0 C37.1045695,-2.02906125e-16 38,0.8954305 38,2 L38,30 C38,31.1045695 37.1045695,32 36,32 L2,32 C0.8954305,32 1.3527075e-16,31.1045695 0,30 L0,2 C-1.3527075e-16,0.8954305 0.8954305,2.02906125e-16 2,0 Z\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"black\" fill=\"none\" fill-rule=\"evenodd\"/><circle stroke-width=\"4\" stroke-linecap=\"round\" cx=\"9.5\" cy=\"8.5\" r=\"1.5\" stroke-linejoin=\"round\" stroke=\"black\" fill=\"none\" fill-rule=\"evenodd\"/><path d=\"M10,16 L15,20 L21,13 L38,26 L38,30 C38,31.1045695 37.1045695,32 36,32 L2,32 C0.8954305,32 2.27508946e-13,31.1045695 2.27373675e-13,30 L2.27373675e-13,26 L10,16 Z\" stroke-width=\"4\" fill=\"#2F88FF\" fill-rule=\"nonzero\" stroke-linejoin=\"round\" stroke=\"black\"/></g></g></svg>\n",
     "type": "IconPicture"
   },
   {
@@ -560,7 +572,7 @@
     "author": "李梦龙",
     "tag": ["加"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M482 152h60q8 0 8 8v704q0 8-8 8h-60q-8 0-8-8V160q0-8 8-8z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M176 474h672q8 0 8 8v60q0 8-8 8H176q-8 0-8-8v-60q0-8 8-8z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M24.0607 10L24.024 38\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M10 24L38 24\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconPlus"
   },
   {
@@ -572,7 +584,7 @@
     "author": "李梦龙",
     "tag": ["圆形加"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M696 480H544V328c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v152H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h152v152c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V544h152c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M24 16V32\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M16 24L32 24\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconPlusCircle"
   },
   {
@@ -584,7 +596,7 @@
     "author": "李梦龙",
     "tag": ["方形加"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M328 544h152v152c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V544h152c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H544V328c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v152H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><rect x=\"6\" y=\"6\" width=\"36\" height=\"36\" rx=\"3\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M24 16V32\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M16 24L32 24\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconPlusSquare"
   },
   {
@@ -596,20 +608,8 @@
     "author": "李梦龙",
     "tag": ["打印"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M820 436h-40c-4.4 0-8 3.6-8 8v40c0 4.4 3.6 8 8 8h40c4.4 0 8-3.6 8-8v-40c0-4.4-3.6-8-8-8zm32-104H732V120c0-4.4-3.6-8-8-8H300c-4.4 0-8 3.6-8 8v212H172c-44.2 0-80 35.8-80 80v328c0 17.7 14.3 32 32 32h168v132c0 4.4 3.6 8 8 8h424c4.4 0 8-3.6 8-8V772h168c17.7 0 32-14.3 32-32V412c0-44.2-35.8-80-80-80zM360 180h304v152H360V180zm304 664H360V568h304v276zm200-140H732V500H292v204H160V412c0-6.6 5.4-12 12-12h680c6.6 0 12 5.4 12 12v292z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M48 0H0V48H48V0Z\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M37 32H11V44H37V32Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 20H44V38H37.0173V32H10.9805V38H4V20Z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M38 4H10V20H38V4Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconPrinter"
-  },
-  {
-    "id": "base-44",
-    "title": "信息",
-    "name": "profile",
-    "category": "base",
-    "categoryCN": "基础",
-    "author": "李梦龙",
-    "tag": ["信息"],
-    "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 728H184V184h656v656zM492 400h184c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H492c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8zm0 144h184c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H492c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8zm0 144h184c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H492c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8zM340 368a40 40 0 1080 0 40 40 0 10-80 0zm0 144a40 40 0 1080 0 40 40 0 10-80 0zm0 144a40 40 0 1080 0 40 40 0 10-80 0z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
-    "type": "IconProfile"
   },
   {
     "id": "base-45",
@@ -620,20 +620,32 @@
     "author": "李梦龙",
     "tag": ["二维码"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M468 128H160c-17.7 0-32 14.3-32 32v308c0 4.4 3.6 8 8 8h332c4.4 0 8-3.6 8-8V136c0-4.4-3.6-8-8-8zm-56 284H192V192h220v220zm-138-74h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm194 210H136c-4.4 0-8 3.6-8 8v308c0 17.7 14.3 32 32 32h308c4.4 0 8-3.6 8-8V556c0-4.4-3.6-8-8-8zm-56 284H192V612h220v220zm-138-74h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm590-630H556c-4.4 0-8 3.6-8 8v332c0 4.4 3.6 8 8 8h332c4.4 0 8-3.6 8-8V160c0-17.7-14.3-32-32-32zm-32 284H612V192h220v220zm-138-74h56c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm194 210h-48c-4.4 0-8 3.6-8 8v134h-78V556c0-4.4-3.6-8-8-8H556c-4.4 0-8 3.6-8 8v332c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V644h78v102c0 4.4 3.6 8 8 8h190c4.4 0 8-3.6 8-8V556c0-4.4-3.6-8-8-8zM746 832h-48c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8zm142 0h-48c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M18 6H6V18H18V6Z\" fill=\"none\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M18 30H6V42H18V30Z\" fill=\"none\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M42 30H30V42H42V30Z\" fill=\"none\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M42 6H30V18H42V6Z\" fill=\"none\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M24 6V24\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\"/><path d=\"M24 30V42\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\"/><path d=\"M24 24L6 24\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\"/><path d=\"M42 24H30\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\"/></svg>\n",
     "type": "IconQrcode"
   },
   {
-    "id": "base-46",
-    "title": "圆形问题",
-    "name": "question-circle",
+    "id": "base-68",
+    "title": "刷新",
+    "name": "refresh",
     "category": "base",
     "categoryCN": "基础",
     "author": "李梦龙",
-    "tag": ["圆形问题"],
-    "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M623.6 316.7C593.6 290.4 554 276 512 276s-81.6 14.5-111.6 40.7C369.2 344 352 380.7 352 420v7.6c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V420c0-44.1 43.1-80 96-80s96 35.9 96 80c0 31.1-22 59.6-56.1 72.7-21.2 8.1-39.2 22.3-52.1 40.9-13.1 19-19.9 41.8-19.9 64.9V620c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-22.7a48.3 48.3 0 0130.9-44.8c59-22.7 97.1-74.7 97.1-132.5.1-39.3-17.1-76-48.3-103.3zM472 732a40 40 0 1080 0 40 40 0 10-80 0z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
-    "type": "IconQuestionCircle"
+    "tag": ["刷新"],
+    "rtl": true,
+    "svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M42 8V24\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M6 24L6 40\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M6 24C6 33.9411 14.0589 42 24 42C28.8556 42 33.2622 40.0774 36.5 36.9519\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M42.0007 24C42.0007 14.0589 33.9418 6 24.0007 6C18.9152 6 14.3223 8.10896 11.0488 11.5\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
+    "type": "IconRefresh"
+  },
+  {
+    "id": "base-70",
+    "title": "循环",
+    "name": "retweet",
+    "category": "base",
+    "categoryCN": "基础",
+    "author": "李梦龙",
+    "tag": ["循环"],
+    "rtl": true,
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M4 25C4 18.3502 9.39624 13 16 13L44 13\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M38 7L44 13L38 19\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M44 23C44 29.6498 38.6038 35 32 35H4\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M10 41L4 35L10 29\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
+    "type": "IconRetweet"
   },
   {
     "id": "base-47",
@@ -644,7 +656,7 @@
     "author": "李梦龙",
     "tag": ["信用卡"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M866.9 169.9L527.1 54.1C523 52.7 517.5 52 512 52s-11 .7-15.1 2.1L157.1 169.9c-8.3 2.8-15.1 12.4-15.1 21.2v482.4c0 8.8 5.7 20.4 12.6 25.9L499.3 968c3.5 2.7 8 4.1 12.6 4.1s9.2-1.4 12.6-4.1l344.7-268.6c6.9-5.4 12.6-17 12.6-25.9V191.1c.2-8.8-6.6-18.3-14.9-21.2zM810 654.3L512 886.5 214 654.3V226.7l298-101.6 298 101.6v427.6zm-405.8-201c-3-4.1-7.8-6.6-13-6.6H336c-6.5 0-10.3 7.4-6.5 12.7l126.4 174a16.1 16.1 0 0026 0l212.6-292.7c3.8-5.3 0-12.7-6.5-12.7h-55.2c-5.1 0-10 2.5-13 6.6L468.9 542.4l-64.7-89.1z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 49\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M48 1H0V49H48V1Z\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M6 9.25564L24.0086 4L42 9.25564V20.0337C42 31.3622 34.7502 41.4194 24.0026 45.0005C13.2521 41.4195 6 31.36 6 20.0287V9.25564Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M15 23L22 30L34 18\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconSafetyCertificate"
   },
   {
@@ -656,7 +668,7 @@
     "author": "李梦龙",
     "tag": ["保存"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M893.3 293.3L730.7 130.7c-7.5-7.5-16.7-13-26.7-16V112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V338.5c0-17-6.7-33.2-18.7-45.2zM384 184h256v104H384V184zm456 656H184V184h136v136c0 17.7 14.3 32 32 32h320c17.7 0 32-14.3 32-32V205.8l136 136V840zM512 442c-79.5 0-144 64.5-144 144s64.5 144 144 144 144-64.5 144-144-64.5-144-144-144zm0 224c-44.2 0-80-35.8-80-80s35.8-80 80-80 80 35.8 80 80-35.8 80-80 80z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M6 9C6 7.34315 7.34315 6 9 6H34.2814L42 13.2065V39C42 40.6569 40.6569 42 39 42H9C7.34315 42 6 40.6569 6 39V9Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M24.0083 6L24 13.3846C24 13.7245 23.5523 14 23 14H15C14.4477 14 14 13.7245 14 13.3846L14 6\" fill=\"#43CCF8\"/><path d=\"M24.0083 6L24 13.3846C24 13.7245 23.5523 14 23 14H15C14.4477 14 14 13.7245 14 13.3846L14 6H24.0083Z\" stroke=\"white\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M9 6H34.2814\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M14 26H34\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M14 34H24.0083\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconSave"
   },
   {
@@ -668,20 +680,8 @@
     "author": "李梦龙",
     "tag": ["搜索"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0011.6 0l43.6-43.5a8.2 8.2 0 000-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M21 38C30.3888 38 38 30.3888 38 21C38 11.6112 30.3888 4 21 4C11.6112 4 4 11.6112 4 21C4 30.3888 11.6112 38 21 38Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M26.6568 14.3431C25.2091 12.8954 23.2091 12 21 12C18.7909 12 16.7909 12.8954 15.3431 14.3431\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M33.2218 33.2218L41.7071 41.7071\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconSearch"
-  },
-  {
-    "id": "base-50",
-    "title": "下拉选择",
-    "name": "select",
-    "category": "base",
-    "categoryCN": "基础",
-    "author": "李梦龙",
-    "tag": ["下拉选择"],
-    "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h360c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H184V184h656v320c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8V144c0-17.7-14.3-32-32-32zM653.3 599.4l52.2-52.2a8.01 8.01 0 00-4.7-13.6l-179.4-21c-5.1-.6-9.5 3.7-8.9 8.9l21 179.4c.8 6.6 8.9 9.4 13.6 4.7l52.4-52.4 256.2 256.2c3.1 3.1 8.2 3.1 11.3 0l42.4-42.4c3.1-3.1 3.1-8.2 0-11.3L653.3 599.4z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
-    "type": "IconSelect"
   },
   {
     "id": "base-51",
@@ -692,7 +692,7 @@
     "author": "李梦龙",
     "tag": ["发送"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M931.4 498.9L94.9 79.5c-3.4-1.7-7.3-2.1-11-1.2a15.99 15.99 0 00-11.7 19.3l86.2 352.2c1.3 5.3 5.2 9.6 10.4 11.3l147.7 50.7-147.6 50.7c-5.2 1.8-9.1 6-10.3 11.3L72.2 926.5c-.9 3.7-.5 7.6 1.2 10.9 3.9 7.9 13.5 11.1 21.5 7.2l836.5-417c3.1-1.5 5.6-4.1 7.2-7.1 3.9-8 .7-17.6-7.2-21.6zM170.8 826.3l50.3-205.6 295.2-101.3c2.3-.8 4.2-2.6 5-5 1.4-4.2-.8-8.7-5-10.2L221.1 403 171 198.2l628 314.9-628.2 313.2z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M48 0H0V48H48V0Z\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M43 5L29.7 43L22.1 25.9L5 18.3L43 5Z\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M43.0001 5L22.1001 25.9\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconSend"
   },
   {
@@ -704,7 +704,7 @@
     "author": "李梦龙",
     "tag": ["设置"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M924.8 625.7l-65.5-56c3.1-19 4.7-38.4 4.7-57.8s-1.6-38.8-4.7-57.8l65.5-56a32.03 32.03 0 009.3-35.2l-.9-2.6a443.74 443.74 0 00-79.7-137.9l-1.8-2.1a32.12 32.12 0 00-35.1-9.5l-81.3 28.9c-30-24.6-63.5-44-99.7-57.6l-15.7-85a32.05 32.05 0 00-25.8-25.7l-2.7-.5c-52.1-9.4-106.9-9.4-159 0l-2.7.5a32.05 32.05 0 00-25.8 25.7l-15.8 85.4a351.86 351.86 0 00-99 57.4l-81.9-29.1a32 32 0 00-35.1 9.5l-1.8 2.1a446.02 446.02 0 00-79.7 137.9l-.9 2.6c-4.5 12.5-.8 26.5 9.3 35.2l66.3 56.6c-3.1 18.8-4.6 38-4.6 57.1 0 19.2 1.5 38.4 4.6 57.1L99 625.5a32.03 32.03 0 00-9.3 35.2l.9 2.6c18.1 50.4 44.9 96.9 79.7 137.9l1.8 2.1a32.12 32.12 0 0035.1 9.5l81.9-29.1c29.8 24.5 63.1 43.9 99 57.4l15.8 85.4a32.05 32.05 0 0025.8 25.7l2.7.5a449.4 449.4 0 00159 0l2.7-.5a32.05 32.05 0 0025.8-25.7l15.7-85a350 350 0 0099.7-57.6l81.3 28.9a32 32 0 0035.1-9.5l1.8-2.1c34.8-41.1 61.6-87.5 79.7-137.9l.9-2.6c4.5-12.3.8-26.3-9.3-35zM788.3 465.9c2.5 15.1 3.8 30.6 3.8 46.1s-1.3 31-3.8 46.1l-6.6 40.1 74.7 63.9a370.03 370.03 0 01-42.6 73.6L721 702.8l-31.4 25.8c-23.9 19.6-50.5 35-79.3 45.8l-38.1 14.3-17.9 97a377.5 377.5 0 01-85 0l-17.9-97.2-37.8-14.5c-28.5-10.8-55-26.2-78.7-45.7l-31.4-25.9-93.4 33.2c-17-22.9-31.2-47.6-42.6-73.6l75.5-64.5-6.5-40c-2.4-14.9-3.7-30.3-3.7-45.5 0-15.3 1.2-30.6 3.7-45.5l6.5-40-75.5-64.5c11.3-26.1 25.6-50.7 42.6-73.6l93.4 33.2 31.4-25.9c23.7-19.5 50.2-34.9 78.7-45.7l37.9-14.3 17.9-97.2c28.1-3.2 56.8-3.2 85 0l17.9 97 38.1 14.3c28.7 10.8 55.4 26.2 79.3 45.8l31.4 25.8 92.8-32.9c17 22.9 31.2 47.6 42.6 73.6L781.8 426l6.5 39.9zM512 326c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm79.2 255.2A111.6 111.6 0 01512 614c-29.9 0-58-11.7-79.2-32.8A111.6 111.6 0 01400 502c0-29.9 11.7-58 32.8-79.2C454 401.6 482.1 390 512 390c29.9 0 58 11.6 79.2 32.8A111.6 111.6 0 01624 502c0 29.9-11.7 58-32.8 79.2z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M18.2838 43.1712C14.9327 42.1735 11.9498 40.3212 9.58787 37.8669C10.469 36.8226 11 35.4733 11 34C11 30.6863 8.31371 28 5 28C4.79955 28 4.60139 28.0098 4.40599 28.029C4.13979 26.7276 4 25.3801 4 24C4 21.9094 4.32077 19.8937 4.91579 17.9994C4.94381 17.9998 4.97188 18 5 18C8.31371 18 11 15.3137 11 12C11 11.0487 10.7786 10.1491 10.3846 9.34999C12.6975 7.19937 15.5205 5.5899 18.6521 4.72302C19.6444 6.66807 21.6667 8.00001 24 8.00001C26.3333 8.00001 28.3556 6.66807 29.3479 4.72302C32.4795 5.5899 35.3025 7.19937 37.6154 9.34999C37.2214 10.1491 37 11.0487 37 12C37 15.3137 39.6863 18 43 18C43.0281 18 43.0562 17.9998 43.0842 17.9994C43.6792 19.8937 44 21.9094 44 24C44 25.3801 43.8602 26.7276 43.594 28.029C43.3986 28.0098 43.2005 28 43 28C39.6863 28 37 30.6863 37 34C37 35.4733 37.531 36.8226 38.4121 37.8669C36.0502 40.3212 33.0673 42.1735 29.7162 43.1712C28.9428 40.7518 26.676 39 24 39C21.324 39 19.0572 40.7518 18.2838 43.1712Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M24 31C27.866 31 31 27.866 31 24C31 20.134 27.866 17 24 17C20.134 17 17 20.134 17 24C17 27.866 20.134 31 24 31Z\" fill=\"#43CCF8\" stroke=\"white\" stroke-width=\"4\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconSetting"
   },
   {
@@ -716,7 +716,7 @@
     "author": "李梦龙",
     "tag": ["分享"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M752 664c-28.5 0-54.8 10-75.4 26.7L469.4 540.8a160.68 160.68 0 000-57.6l207.2-149.9C697.2 350 723.5 360 752 360c66.2 0 120-53.8 120-120s-53.8-120-120-120-120 53.8-120 120c0 11.6 1.6 22.7 4.7 33.3L439.9 415.8C410.7 377.1 364.3 352 312 352c-88.4 0-160 71.6-160 160s71.6 160 160 160c52.3 0 98.7-25.1 127.9-63.8l196.8 142.5c-3.1 10.6-4.7 21.8-4.7 33.3 0 66.2 53.8 120 120 120s120-53.8 120-120-53.8-120-120-120zm0-476c28.7 0 52 23.3 52 52s-23.3 52-52 52-52-23.3-52-52 23.3-52 52-52zM312 600c-48.5 0-88-39.5-88-88s39.5-88 88-88 88 39.5 88 88-39.5 88-88 88zm440 236c-28.7 0-52-23.3-52-52s23.3-52 52-52 52 23.3 52 52-23.3 52-52 52z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M35 16C37.7614 16 40 13.7614 40 11C40 8.23858 37.7614 6 35 6C32.2386 6 30 8.23858 30 11C30 13.7614 32.2386 16 35 16Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M13 29C15.7614 29 18 26.7614 18 24C18 21.2386 15.7614 19 13 19C10.2386 19 8 21.2386 8 24C8 26.7614 10.2386 29 13 29Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M29.9999 13.5745L17.3388 21.2454\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M17.3388 26.5639L30.6792 34.4469\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M35 32C37.7614 32 40 34.2386 40 37C40 39.7614 37.7614 42 35 42C32.2386 42 30 39.7614 30 37C30 34.2386 32.2386 32 35 32Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconShareAlt"
   },
   {
@@ -728,7 +728,7 @@
     "author": "李梦龙",
     "tag": ["店铺"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M882 272.1V144c0-17.7-14.3-32-32-32H174c-17.7 0-32 14.3-32 32v128.1c-16.7 1-30 14.9-30 31.9v131.7a177 177 0 0014.4 70.4c4.3 10.2 9.6 19.8 15.6 28.9v345c0 17.6 14.3 32 32 32h676c17.7 0 32-14.3 32-32V535a175 175 0 0015.6-28.9c9.5-22.3 14.4-46 14.4-70.4V304c0-17-13.3-30.9-30-31.9zM214 184h596v88H214v-88zm362 656.1H448V736h128v104.1zm234 0H640V704c0-17.7-14.3-32-32-32H416c-17.7 0-32 14.3-32 32v136.1H214V597.9c2.9 1.4 5.9 2.8 9 4 22.3 9.4 46 14.1 70.4 14.1s48-4.7 70.4-14.1c13.8-5.8 26.8-13.2 38.7-22.1.2-.1.4-.1.6 0a180.4 180.4 0 0038.7 22.1c22.3 9.4 46 14.1 70.4 14.1 24.4 0 48-4.7 70.4-14.1 13.8-5.8 26.8-13.2 38.7-22.1.2-.1.4-.1.6 0a180.4 180.4 0 0038.7 22.1c22.3 9.4 46 14.1 70.4 14.1 24.4 0 48-4.7 70.4-14.1 3-1.3 6-2.6 9-4v242.2zm30-404.4c0 59.8-49 108.3-109.3 108.3-40.8 0-76.4-22.1-95.2-54.9-2.9-5-8.1-8.1-13.9-8.1h-.6c-5.7 0-11 3.1-13.9 8.1A109.24 109.24 0 01512 544c-40.7 0-76.2-22-95-54.7-3-5.1-8.4-8.3-14.3-8.3s-11.4 3.2-14.3 8.3a109.63 109.63 0 01-95.1 54.7C233 544 184 495.5 184 435.7v-91.2c0-.3.2-.5.5-.5h655c.3 0 .5.2.5.5v91.2z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M40.0393 22V42H8.03931V22\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M5.84231 13.7766C4.31276 17.7377 7.26307 22 11.5092 22C14.8229 22 17.5276 19.3137 17.5276 16C17.5276 19.3137 20.2139 22 23.5276 22H24.546C27.8597 22 30.546 19.3137 30.546 16C30.546 19.3137 33.2518 22 36.5655 22C40.8139 22 43.767 17.7352 42.2362 13.7723L39.2337 6H8.84523L5.84231 13.7766Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconShop"
   },
   {
@@ -740,7 +740,7 @@
     "author": "李梦龙",
     "tag": ["停止"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372 0-89 31.3-170.8 83.5-234.8l523.3 523.3C682.8 852.7 601 884 512 884zm288.5-137.2L277.2 223.5C341.2 171.3 423 140 512 140c205.4 0 372 166.6 372 372 0 89-31.3 170.8-83.5 234.8z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M15 15L33 33\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconStop"
   },
   {
@@ -752,7 +752,7 @@
     "author": "李梦龙",
     "tag": ["刷新"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M168 504.2c1-43.7 10-86.1 26.9-126 17.3-41 42.1-77.7 73.7-109.4S337 212.3 378 195c42.4-17.9 87.4-27 133.9-27s91.5 9.1 133.8 27A341.5 341.5 0 01755 268.8c9.9 9.9 19.2 20.4 27.8 31.4l-60.2 47a8 8 0 003 14.1l175.7 43c5 1.2 9.9-2.6 9.9-7.7l.8-180.9c0-6.7-7.7-10.5-12.9-6.3l-56.4 44.1C765.8 155.1 646.2 92 511.8 92 282.7 92 96.3 275.6 92 503.8a8 8 0 008 8.2h60c4.4 0 7.9-3.5 8-7.8zm756 7.8h-60c-4.4 0-7.9 3.5-8 7.8-1 43.7-10 86.1-26.9 126-17.3 41-42.1 77.8-73.7 109.4A342.45 342.45 0 01512.1 856a342.24 342.24 0 01-243.2-100.8c-9.9-9.9-19.2-20.4-27.8-31.4l60.2-47a8 8 0 00-3-14.1l-175.7-43c-5-1.2-9.9 2.6-9.9 7.7l-.7 181c0 6.7 7.7 10.5 12.9 6.3l56.4-44.1C258.2 868.9 377.8 932 512.2 932c229.2 0 415.5-183.7 419.8-411.8a8 8 0 00-8-8.2z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"17\" y=\"24.0711\" width=\"10\" height=\"10\" rx=\"2\" transform=\"rotate(-45 17 24.0711)\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M40.1201 16C37.1747 10.0731 31.0586 6 23.9912 6C16.9237 6 10.9454 10.0731 8 16\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\"/><path d=\"M8 8V16\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\"/><path d=\"M14.7803 16L8.00013 16\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\"/><path d=\"M8 32C10.9454 37.9269 17.0615 42 24.129 42C31.1964 42 37.1747 37.9269 40.1201 32\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\"/><path d=\"M40.1201 40V32\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\"/><path d=\"M33.3398 32L40.12 32\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\"/></svg>\n",
     "type": "IconSync"
   },
   {
@@ -764,7 +764,7 @@
     "author": "李梦龙",
     "tag": ["团队"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M824.2 699.9a301.55 301.55 0 00-86.4-60.4C783.1 602.8 812 546.8 812 484c0-110.8-92.4-201.7-203.2-200-109.1 1.7-197 90.6-197 200 0 62.8 29 118.8 74.2 155.5a300.95 300.95 0 00-86.4 60.4C345 754.6 314 826.8 312 903.8a8 8 0 008 8.2h56c4.3 0 7.9-3.4 8-7.7 1.9-58 25.4-112.3 66.7-153.5A226.62 226.62 0 01612 684c60.9 0 118.2 23.7 161.3 66.8C814.5 792 838 846.3 840 904.3c.1 4.3 3.7 7.7 8 7.7h56a8 8 0 008-8.2c-2-77-33-149.2-87.8-203.9zM612 612c-34.2 0-66.4-13.3-90.5-37.5a126.86 126.86 0 01-37.5-91.8c.3-32.8 13.4-64.5 36.3-88 24-24.6 56.1-38.3 90.4-38.7 33.9-.3 66.8 12.9 91 36.6 24.8 24.3 38.4 56.8 38.4 91.4 0 34.2-13.3 66.3-37.5 90.5A127.3 127.3 0 01612 612zM361.5 510.4c-.9-8.7-1.4-17.5-1.4-26.4 0-15.9 1.5-31.4 4.3-46.5.7-3.6-1.2-7.3-4.5-8.8-13.6-6.1-26.1-14.5-36.9-25.1a127.54 127.54 0 01-38.7-95.4c.9-32.1 13.8-62.6 36.3-85.6 24.7-25.3 57.9-39.1 93.2-38.7 31.9.3 62.7 12.6 86 34.4 7.9 7.4 14.7 15.6 20.4 24.4 2 3.1 5.9 4.4 9.3 3.2 17.6-6.1 36.2-10.4 55.3-12.4 5.6-.6 8.8-6.6 6.3-11.6-32.5-64.3-98.9-108.7-175.7-109.9-110.9-1.7-203.3 89.2-203.3 199.9 0 62.8 28.9 118.8 74.2 155.5-31.8 14.7-61.1 35-86.5 60.4-54.8 54.7-85.8 126.9-87.8 204a8 8 0 008 8.2h56.1c4.3 0 7.9-3.4 8-7.7 1.9-58 25.4-112.3 66.7-153.5 29.4-29.4 65.4-49.8 104.7-59.7 3.9-1 6.5-4.7 6-8.7z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path d=\"M19 20C22.866 20 26 16.866 26 13C26 9.13401 22.866 6 19 6C15.134 6 12 9.13401 12 13C12 16.866 15.134 20 19 20Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M32.6077 7C34.6405 8.2249 36.0001 10.4537 36.0001 13C36.0001 15.5463 34.6405 17.7751 32.6077 19\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M4 40.8V42H34V40.8C34 36.3196 34 34.0794 33.1281 32.3681C32.3611 30.8628 31.1372 29.6389 29.6319 28.8719C27.9206 28 25.6804 28 21.2 28H16.8C12.3196 28 10.0794 28 8.36808 28.8719C6.86278 29.6389 5.63893 30.8628 4.87195 32.3681C4 34.0794 4 36.3196 4 40.8Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M43.9999 42V40.8C43.9999 36.3196 43.9999 34.0794 43.128 32.3681C42.361 30.8628 41.1371 29.6389 39.6318 28.8719\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconTeam"
   },
   {
@@ -776,7 +776,7 @@
     "author": "李梦龙",
     "tag": ["开锁"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M832 464H332V240c0-30.9 25.1-56 56-56h248c30.9 0 56 25.1 56 56v68c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-68c0-70.7-57.3-128-128-128H388c-70.7 0-128 57.3-128 128v224h-68c-17.7 0-32 14.3-32 32v384c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V496c0-17.7-14.3-32-32-32zm-40 376H232V536h560v304zM484 701v53c0 4.4 3.6 8 8 8h40c4.4 0 8-3.6 8-8v-53a48.01 48.01 0 10-56 0z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><rect x=\"7\" y=\"22.0476\" width=\"34\" height=\"22\" rx=\"2\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M14 22V14.0047C13.9948 8.87022 17.9227 4.56718 23.0859 4.05117C28.249 3.53516 32.9673 6.97408 34 12.0059\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M24 30V36\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconUnlock"
   },
   {
@@ -788,7 +788,7 @@
     "author": "李梦龙",
     "tag": ["无序列表"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M912 192H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 284H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 284H328c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h584c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM104 228a56 56 0 10112 0 56 56 0 10-112 0zm0 284a56 56 0 10112 0 56 56 0 10-112 0zm0 284a56 56 0 10112 0 56 56 0 10-112 0z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M18 6H34V12H18V6Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M18 21H38V27H18V21Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M18 36H44V42H18V36Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"8\" cy=\"9\" r=\"2\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\"/><circle cx=\"8\" cy=\"24\" r=\"2\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\"/><circle cx=\"8\" cy=\"39\" r=\"2\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\"/></svg>\n",
     "type": "IconUnorderedList"
   },
   {
@@ -800,7 +800,7 @@
     "author": "李梦龙",
     "tag": ["上传"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M400 317.7h73.9V656c0 4.4 3.6 8 8 8h60c4.4 0 8-3.6 8-8V317.7H624c6.7 0 10.4-7.7 6.3-12.9L518.3 163a8 8 0 00-12.6 0l-112 141.7c-4.1 5.3-.4 13 6.3 13zM878 626h-60c-4.4 0-8 3.6-8 8v154H214V634c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8v198c0 17.7 14.3 32 32 32h684c17.7 0 32-14.3 32-32V634c0-4.4-3.6-8-8-8z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><mask id=\"icon-57aec87061b9f784\" maskUnits=\"userSpaceOnUse\" x=\"0\" y=\"0\" width=\"48\" height=\"48\" style=\"mask-type: alpha\"><rect width=\"48\" height=\"48\" fill=\"white\"/></mask><g mask=\"url(#icon-57aec87061b9f784)\"><path d=\"M6 24.0083V42H42V24\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M33 15L24 6L15 15\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.9917 32V6\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></svg>\n",
     "type": "IconUpload"
   },
   {
@@ -812,7 +812,7 @@
     "author": "李梦龙",
     "tag": ["用户"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M858.5 763.6a374 374 0 00-80.6-119.5 375.63 375.63 0 00-119.5-80.6c-.4-.2-.8-.3-1.2-.5C719.5 518 760 444.7 760 362c0-137-111-248-248-248S264 225 264 362c0 82.7 40.5 156 102.8 201.1-.4.2-.8.3-1.2.5-44.8 18.9-85 46-119.5 80.6a375.63 375.63 0 00-80.6 119.5A371.7 371.7 0 00136 901.8a8 8 0 008 8.2h60c4.4 0 7.9-3.5 8-7.8 2-77.2 33-149.5 87.8-204.3 56.7-56.7 132-87.9 212.2-87.9s155.5 31.2 212.2 87.9C779 752.7 810 825 812 902.2c.1 4.4 3.6 7.8 8 7.8h60a8 8 0 008-8.2c-1-47.8-10.9-94.3-29.5-138.2zM512 534c-45.9 0-89.1-17.9-121.6-50.4S340 407.9 340 362c0-45.9 17.9-89.1 50.4-121.6S466.1 190 512 190s89.1 17.9 121.6 50.4S684 316.1 684 362c0 45.9-17.9 89.1-50.4 121.6S557.9 534 512 534z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"12\" r=\"8\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M42 44C42 34.0589 33.9411 26 24 26C14.0589 26 6 34.0589 6 44\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n",
     "type": "IconUser"
   },
   {
@@ -836,7 +836,7 @@
     "author": "李梦龙",
     "tag": ["钱包"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-40 464H528V448h312v128zm0 264H184V184h656v200H496c-17.7 0-32 14.3-32 32v192c0 17.7 14.3 32 32 32h344v200zM580 512a40 40 0 1080 0 40 40 0 10-80 0z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"5\" y=\"13\" width=\"38\" height=\"26\" rx=\"2\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><rect x=\"25\" y=\"20\" width=\"18\" height=\"11\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M43 18L43 33\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M32 13C32 8 28.5 7 27 7C23.6667 7 16.1 7 12.5 7C8.9 7 8 9.86567 8 11.2985V13\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"33.5\" cy=\"25.5\" r=\"1.5\" fill=\"white\"/></svg>\n",
     "type": "IconWallet"
   },
   {
@@ -848,19 +848,7 @@
     "author": "李梦龙",
     "tag": ["提醒"],
     "rtl": false,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M464 720a48 48 0 1096 0 48 48 0 10-96 0zm16-304v184c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V416c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8zm475.7 440l-416-720c-6.2-10.7-16.9-16-27.7-16s-21.6 5.3-27.7 16l-416 720C56 877.4 71.4 904 96 904h832c24.6 0 40-26.6 27.7-48zm-783.5-27.9L512 239.9l339.8 588.2H172.2z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M24 5.00018L2 43.0002H46L24 5.00018Z\" fill=\"#2F88FF\" stroke=\"black\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M24 35.0002V36.0002\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\"/><path d=\"M24 19.0007L24.0083 29.0002\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\"/></svg>\n",
     "type": "IconWarning"
-  },
-  {
-    "id": "base-65",
-    "title": "什么应用",
-    "name": "whats-app",
-    "category": "base",
-    "categoryCN": "基础",
-    "author": "李梦龙",
-    "tag": ["客服"],
-    "rtl": true,
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"896\" height=\"896\" viewBox=\"64 64 896 896\"><path d=\"M713.5 599.9c-10.9-5.6-65.2-32.2-75.3-35.8-10.1-3.8-17.5-5.6-24.8 5.6-7.4 11.1-28.4 35.8-35 43.3-6.4 7.4-12.9 8.3-23.8 2.8-64.8-32.4-107.3-57.8-150-131.1-11.3-19.5 11.3-18.1 32.4-60.2 3.6-7.4 1.8-13.7-1-19.3-2.8-5.6-24.8-59.8-34-81.9-8.9-21.5-18.1-18.5-24.8-18.9-6.4-.4-13.7-.4-21.1-.4-7.4 0-19.3 2.8-29.4 13.7-10.1 11.1-38.6 37.8-38.6 92s39.5 106.7 44.9 114.1c5.6 7.4 77.7 118.6 188.4 166.5 70 30.2 97.4 32.8 132.4 27.6 21.3-3.2 65.2-26.6 74.3-52.5 9.1-25.8 9.1-47.9 6.4-52.5-2.7-4.9-10.1-7.7-21-13z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M925.2 338.4c-22.6-53.7-55-101.9-96.3-143.3a444.35 444.35 0 00-143.3-96.3C630.6 75.7 572.2 64 512 64h-2c-60.6.3-119.3 12.3-174.5 35.9a445.35 445.35 0 00-142 96.5c-40.9 41.3-73 89.3-95.2 142.8-23 55.4-34.6 114.3-34.3 174.9A449.4 449.4 0 00112 714v152a46 46 0 0046 46h152.1A449.4 449.4 0 00510 960h2.1c59.9 0 118-11.6 172.7-34.3a444.48 444.48 0 00142.8-95.2c41.3-40.9 73.8-88.7 96.5-142 23.6-55.2 35.6-113.9 35.9-174.5.3-60.9-11.5-120-34.8-175.6zm-151.1 438C704 845.8 611 884 512 884h-1.7c-60.3-.3-120.2-15.3-173.1-43.5l-8.4-4.5H188V695.2l-4.5-8.4C155.3 633.9 140.3 574 140 513.7c-.4-99.7 37.7-193.3 107.6-263.8 69.8-70.5 163.1-109.5 262.8-109.9h1.7c50 0 98.5 9.7 144.2 28.9 44.6 18.7 84.6 45.6 119 80 34.3 34.3 61.3 74.4 80 119 19.4 46.2 29.1 95.2 28.9 145.8-.6 99.6-39.7 192.9-110.1 262.7z\" stroke=\"black\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>\n",
-    "type": "IconWhatsApp"
   }
 ]

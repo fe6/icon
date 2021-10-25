@@ -143,9 +143,16 @@ export class AllGenerator extends RuntimeGenerator {
         .join(', ')}, 'spin', 'type'],`,
     ); // 生成 props
 
-    this.writeLine('setup: (props => {');
+    this.writeLine('render() {');
     this.indent(1);
-    this.writeLine('const type = toPascalCase(props.type);');
+    this.writeLine('const type = toPascalCase(this.type);');
+
+    this.writeLine();
+    this.writeLine(`if (!(type in ${iconMap})) {
+      throw new Error(\`\$\{type\} is not a valid icon type name\`);
+    }`);
+    this.writeLine();
+
     this.writeLine('const {');
     this.indent(1);
     this.getPropKeys().forEach((key: string) => {
@@ -153,16 +160,11 @@ export class AllGenerator extends RuntimeGenerator {
     });
     this.writeLine('spin,');
     this.indent(-1);
-    this.writeLine('} = props;'); // 生成渲染属性
-
-    this.writeLine();
-    this.writeLine(`if (!(type in ${iconMap})) {
-      throw new Error(\`\$\{type\} is not a valid icon type name\`);
-    }`);
+    this.writeLine('} = this;'); // 生成渲染属性
 
     this.writeLine();
     this.writeLine(
-      `return () => createVNode(${iconMap}[type${
+      `return createVNode(${iconMap}[this.type${
         this.useType ? ` as ${iconType}` : ''
       }], {`,
     );
@@ -176,7 +178,7 @@ export class AllGenerator extends RuntimeGenerator {
 
     this.writeLine('});');
     this.indent(-1);
-    this.writeLine('}),');
+    this.writeLine('},');
     this.indent(-1);
     this.writeLine('};');
 
