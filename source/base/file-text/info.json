@@ -1,0 +1,10 @@
+{
+  "id": "base-15",
+  "title": "文本文件",
+  "name": "file-text",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["文件", "字体", "文本"],
+  "rtl": false
+}

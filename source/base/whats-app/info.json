@@ -1,0 +1,10 @@
+{
+  "id": "base-65",
+  "title": "什么应用",
+  "name": "whats-app",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["客服"],
+  "rtl": true
+}

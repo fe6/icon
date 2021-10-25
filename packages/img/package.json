@@ -41,6 +41,9 @@
   "engines": {
     "node": ">= 16.0.0"
   },
+  "sideEffects": [
+    "styles/**"
+  ],
   "packageManager": "pnpm",
   "peerDependencies": {
     "@vue/runtime-dom": "3.x",

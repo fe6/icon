@@ -1,0 +1,10 @@
+{
+  "id": "base-12",
+  "title": "编辑",
+  "name": "edit",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["编辑"],
+  "rtl": false
+}

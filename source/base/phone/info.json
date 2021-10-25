@@ -1,0 +1,10 @@
+{
+  "id": "base-38",
+  "title": "手机",
+  "name": "phone",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["手机"],
+  "rtl": false
+}

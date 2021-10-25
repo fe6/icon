@@ -1,0 +1,10 @@
+{
+  "id": "base-37",
+  "title": "圆形支付",
+  "name": "pay-circle",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["圆形支付"],
+  "rtl": false
+}

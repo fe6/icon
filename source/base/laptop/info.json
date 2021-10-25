@@ -1,0 +1,10 @@
+{
+  "id": "base-21",
+  "title": "电脑",
+  "name": "laptop",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["电脑"],
+  "rtl": false
+}

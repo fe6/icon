@@ -1,0 +1,10 @@
+{
+  "id": "base-5",
+  "title": "关闭",
+  "name": "close-circle",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["关闭"],
+  "rtl": false
+}

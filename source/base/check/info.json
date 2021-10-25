@@ -1,0 +1,10 @@
+{
+  "id": "base-3",
+  "title": "选择",
+  "name": "check",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["选择"],
+  "rtl": false
+}
