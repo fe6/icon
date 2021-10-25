@@ -6,8 +6,13 @@
 
 export { default as IconArrowDown } from './icons/arrow-down';
 export { default as IconArrowLeft } from './icons/arrow-left';
-export { default as IconBulb } from './icons/bulb';
+export { default as IconDown } from './icons/down';
+export { default as IconRetweet } from './icons/retweet';
+export { default as IconRight } from './icons/right';
 export { default as IconAppstore } from './icons/appstore';
+export { default as IconBulb } from './icons/bulb';
+export { default as IconCardImg } from './icons/card-img';
+export { default as IconCardPanel } from './icons/card-panel';
 export { default as IconCheck } from './icons/check';
 export { default as IconClockCircle } from './icons/clock-circle';
 export { default as IconCloseCircle } from './icons/close-circle';
