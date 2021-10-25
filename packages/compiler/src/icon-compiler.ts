@@ -133,8 +133,9 @@ class IconCompiler {
               }),
           }),
         );
-      } // 增加动态颜色替换
+      }
 
+      // 增加动态颜色替换
       if (hueList.length) {
         plugins.push(
           dynamicHueTransformer({
@@ -145,16 +146,20 @@ class IconCompiler {
             forceReplaceColor: false,
           }),
         );
-      } // 删除多余的ID
+      }
 
+      // 删除多余的ID
       plugins.push(
         uniqueIdTransformer({
           prefix: true,
           removeUnusedIds: true,
+          useUuidForId: false,
+          type,
         }),
-      ); // 处理CSS动画
+      );
 
       if (style) {
+        // 处理CSS动画
         plugins.push(
           uniqueKeyframesIdTransformer({
             prefix: true,

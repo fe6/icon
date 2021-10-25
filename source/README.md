@@ -19,3 +19,4 @@
   - 外部填充颜色(#2f88ff|#2F88FF)
   - 内部描边颜色(#fff|#FFF|white)
   - 内部填充颜色(#43ccf8|#43CCF8)
+- 带 ID 的 mask 需要修改成 maskX ， 如 mask0

@@ -13,8 +13,8 @@ export const getIconUploadSvgHtml = (props: ISvgIconProps) =>
     props.size
   }" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="48" height="48" fill="white" fill-opacity="0.01"/>
-  <mask id="${`${props.id}6ac256b0`}" mask-units="userSpaceOnUse" x="0" y="0" width="48" height="48" style="mask-type: alpha"/>
-  <g mask="${`url(#${props.id}6ac256b0` + `)`}"/>
+  <mask id="${`${props.id}img0`}" mask-units="userSpaceOnUse" x="0" y="0" width="48" height="48" style="mask-type: alpha"/>
+  <g mask="${`url(#${props.id}img0)`}"/>
 </svg>`;
 
 // 默认导出组件
