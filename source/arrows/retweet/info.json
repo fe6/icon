@@ -1,9 +1,9 @@
 {
   "id": "arrows-4",
   "title": "轮回",
-  "name": "bulb",
+  "name": "retweet",
   "category": "arrows",
-  "categoryCN": "基础",
+  "categoryCN": "方向",
   "author": "李梦龙",
   "tag": ["轮回"],
   "rtl": false

@@ -6,8 +6,13 @@
 
 export { getIconArrowDownSvgHtml } from './icons/arrow-down';
 export { getIconArrowLeftSvgHtml } from './icons/arrow-left';
-export { getIconBulbSvgHtml } from './icons/bulb';
+export { getIconDownSvgHtml } from './icons/down';
+export { getIconRetweetSvgHtml } from './icons/retweet';
+export { getIconRightSvgHtml } from './icons/right';
 export { getIconAppstoreSvgHtml } from './icons/appstore';
+export { getIconBulbSvgHtml } from './icons/bulb';
+export { getIconCardImgSvgHtml } from './icons/card-img';
+export { getIconCardPanelSvgHtml } from './icons/card-panel';
 export { getIconCheckSvgHtml } from './icons/check';
 export { getIconClockCircleSvgHtml } from './icons/clock-circle';
 export { getIconCloseCircleSvgHtml } from './icons/close-circle';
