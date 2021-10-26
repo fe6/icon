@@ -66,7 +66,7 @@ export const BUILD_CODE_CONFIG: Omit<IIconToolsOptions, 'type'> = {
       order: [0, 0, 1, 1],
     },
     {
-      name: 'two-tone',
+      name: 'twoTone',
       fill: [
         {
           type: 'color',
@@ -83,7 +83,7 @@ export const BUILD_CODE_CONFIG: Omit<IIconToolsOptions, 'type'> = {
       order: [0, 1, 0, 1],
     },
     {
-      name: 'multi-color',
+      name: 'multiColor',
       fill: [
         {
           type: 'color',

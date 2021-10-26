@@ -13,19 +13,8 @@ export type StrokeLinejoin = 'miter' | 'round' | 'bevel';
 // 描边端点类型
 export type StrokeLinecap = 'butt' | 'round' | 'square';
 
-// 基础主题
-export type TCubeBaseTheme = 'outline' | 'filled' | 'two-tone' | 'multi-color';
-
 // 主题
-export type TCubeTheme =
-  | 'outline'
-  | 'filled'
-  | 'twoTone'
-  | 'TwoTone'
-  | 'two-tone'
-  | 'multiColor'
-  | 'MultiColor'
-  | 'multi-color';
+export type TCubeTheme = 'outline' | 'filled' | 'twoTone' | 'multiColor';
 
 // 基础的类型
 export interface ICubeBaseColors {
@@ -249,17 +238,13 @@ const getColors = (theme: TCubeTheme, oldColor: string[]) => {
       newColors.push(oldColor[2]);
       newColors.push(oldColor[2]);
       break;
-    case 'two-tone':
     case 'twoTone':
-    case 'TwoTone':
       newColors.push(oldColor[0]);
       newColors.push(oldColor[1]);
       newColors.push(oldColor[0]);
       newColors.push(oldColor[1]);
       break;
-    case 'multi-color':
     case 'multiColor':
-    case 'MultiColor':
       newColors.push(oldColor[0]);
       newColors.push(oldColor[1]);
       newColors.push(oldColor[2]);
@@ -317,9 +302,7 @@ export const IconConverter = (
       oldColors.push('#fff');
       oldColors.push('#fff');
       break;
-    case 'two-tone':
     case 'twoTone':
-    case 'TwoTone':
       oldColors.push(
         typeof fill[0] === 'string' && !config.colors.twoTone.outStrokeColor
           ? fill[0]
@@ -341,9 +324,7 @@ export const IconConverter = (
           : config.colors.twoTone.outFillColor,
       );
       break;
-    case 'multi-color':
     case 'multiColor':
-    case 'MultiColor':
       oldColors.push(
         typeof fill[0] === 'string' && !config.colors.multiColor.outStrokeColor
           ? fill[0]
