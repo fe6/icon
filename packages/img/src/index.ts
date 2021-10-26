@@ -9,3 +9,4 @@ export * as waterMap from './map';
 export * from './svg';
 export * from './all';
 export { setConfig, DEFAULT_ICON_CONFIGS } from './runtime';
+export type { TCubeTheme } from './runtime';

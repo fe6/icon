@@ -46,6 +46,8 @@ export class IndexGenerator extends Generator {
       `export { ${configName}, DEFAULT_${this.prefix.toUpperCase()}_CONFIGS } from './runtime';`,
     );
 
+    this.writeLine(`export type { TCubeTheme } from './runtime';`);
+
     return this.getResult();
   }
 }
