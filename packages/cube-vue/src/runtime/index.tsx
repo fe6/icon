@@ -14,7 +14,7 @@ export type StrokeLinejoin = 'miter' | 'round' | 'bevel';
 export type StrokeLinecap = 'butt' | 'round' | 'square';
 
 // 主题
-export type Theme =
+export type TCubeTheme =
   | 'outline'
   | 'filled'
   | 'twoTone'
@@ -72,23 +72,23 @@ export interface IIconConfig {
   rtl: boolean;
 
   // 默认主题
-  theme: Theme;
+  theme: TCubeTheme;
 
   // 主题默认颜色
   colors: {
     outline: {
-      fill: string;
-      background: string;
+      outStrokeColor: string;
+      outFillColor: string;
     };
 
     filled: {
-      fill: string;
-      background: string;
+      outStrokeColor: string;
+      outFillColor: string;
     };
 
     twoTone: {
-      fill: string;
-      twoTone: string;
+      outStrokeColor: string;
+      outFillColor: string;
     };
 
     multiColor: {
@@ -115,7 +115,7 @@ export interface IIconBase {
   strokeLinejoin?: StrokeLinejoin;
 
   // 默认主题
-  theme?: Theme;
+  theme?: TCubeTheme;
 
   // 填充色
   fill?: string | string[];
@@ -162,16 +162,16 @@ export const DEFAULT_ICON_CONFIGS: IIconConfig = {
   theme: 'outline',
   colors: {
     outline: {
-      fill: '#333',
-      background: 'transparent',
+      outStrokeColor: '#333',
+      outFillColor: 'transparent',
     },
     filled: {
-      fill: '#333',
-      background: '#fff',
+      outStrokeColor: '#333',
+      outFillColor: '#fff',
     },
     twoTone: {
-      fill: '#333',
-      twoTone: '#2f88ff',
+      outStrokeColor: '#333',
+      outFillColor: '#2f88ff',
     },
     multiColor: {
       outStrokeColor: '#333',
@@ -232,7 +232,7 @@ export const getSvgProp = (
 };
 
 // 获取颜色
-const getColors = (theme: Theme, oldColor: string[]) => {
+const getColors = (theme: TCubeTheme, oldColor: string[]) => {
   const newColors: string[] = [];
 
   switch (theme) {
@@ -290,20 +290,28 @@ export const IconConverter = (
   switch (theme) {
     case 'outline':
       oldColors.push(
-        typeof fill[0] === 'string' ? fill[0] : config.colors.outline.fill,
+        typeof fill[0] === 'string'
+          ? fill[0]
+          : config.colors.outline.outStrokeColor,
       );
       oldColors.push('transparent');
       oldColors.push(
-        typeof fill[0] === 'string' ? fill[0] : config.colors.outline.fill,
+        typeof fill[0] === 'string'
+          ? fill[0]
+          : config.colors.outline.outStrokeColor,
       );
       oldColors.push('transparent');
       break;
     case 'filled':
       oldColors.push(
-        typeof fill[0] === 'string' ? fill[0] : config.colors.filled.fill,
+        typeof fill[0] === 'string'
+          ? fill[0]
+          : config.colors.filled.outStrokeColor,
       );
       oldColors.push(
-        typeof fill[0] === 'string' ? fill[0] : config.colors.filled.fill,
+        typeof fill[0] === 'string'
+          ? fill[0]
+          : config.colors.filled.outStrokeColor,
       );
       oldColors.push('#fff');
       oldColors.push('#fff');
@@ -312,16 +320,24 @@ export const IconConverter = (
     case 'twoTone':
     case 'TwoTone':
       oldColors.push(
-        typeof fill[0] === 'string' ? fill[0] : config.colors.twoTone.fill,
+        typeof fill[0] === 'string'
+          ? fill[0]
+          : config.colors.twoTone.outStrokeColor,
       );
       oldColors.push(
-        typeof fill[1] === 'string' ? fill[1] : config.colors.twoTone.twoTone,
+        typeof fill[1] === 'string'
+          ? fill[1]
+          : config.colors.twoTone.outFillColor,
       );
       oldColors.push(
-        typeof fill[0] === 'string' ? fill[0] : config.colors.twoTone.fill,
+        typeof fill[0] === 'string'
+          ? fill[0]
+          : config.colors.twoTone.outStrokeColor,
       );
       oldColors.push(
-        typeof fill[1] === 'string' ? fill[1] : config.colors.twoTone.twoTone,
+        typeof fill[1] === 'string'
+          ? fill[1]
+          : config.colors.twoTone.outFillColor,
       );
       break;
     case 'multi-color':

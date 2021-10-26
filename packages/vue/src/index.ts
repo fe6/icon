@@ -8,3 +8,4 @@ export * from './map';
 export * as waterMap from './map';
 export * from './all';
 export { IconProvider, DEFAULT_ICON_CONFIGS } from './runtime';
+export type { TCubeTheme } from './runtime';

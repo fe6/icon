@@ -177,7 +177,7 @@ export class RuntimeGenerator extends Generator {
           }${item.name}'`;
         })
         .join(' | ');
-      this.writeLine(`export type Theme = ${themeString};`);
+      this.writeLine(`export type TCubeTheme = ${themeString};`);
       this.writeLine();
     } // 渐变色处理
 
@@ -255,7 +255,7 @@ export class RuntimeGenerator extends Generator {
     if (this.theme.length) {
       this.writeLine();
       this.writeLine('// 默认主题');
-      this.writeLine('theme: Theme;');
+      this.writeLine('theme: TCubeTheme;');
 
       if (this.hasDefaultTheme) {
         this.writeLine();
@@ -331,7 +331,7 @@ export class RuntimeGenerator extends Generator {
     if (this.theme.length) {
       this.writeLine();
       this.writeLine('// 默认主题');
-      this.writeLine('theme?: Theme;');
+      this.writeLine('theme?: TCubeTheme;');
     } // 添加类型
 
     const list = this.getColorTypes();
@@ -880,7 +880,9 @@ export class RuntimeGenerator extends Generator {
       this.writeLine();
 
       if (this.useType) {
-        this.writeLine('const theme: Theme = icon?.theme || config.theme;');
+        this.writeLine(
+          'const theme: TCubeTheme = icon?.theme || config.theme;',
+        );
       } else {
         this.writeLine(
           'const theme = icon && icon.theme ? icon.theme : config.theme;',
@@ -1190,7 +1192,7 @@ export class RuntimeGenerator extends Generator {
   processGetColor() {
     this.writeLine('// 获取颜色');
     this.writeLine(
-      `const getColors = (theme${this.useType ? ': Theme' : ''}, oldColor${
+      `const getColors = (theme${this.useType ? ': TCubeTheme' : ''}, oldColor${
         this.useType ? ': string[]' : ''
       }) => {`,
     );

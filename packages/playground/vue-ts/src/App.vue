@@ -2,14 +2,24 @@
 
 <template>
   <h1>所有</h1>
-  -{{ colorDiy }}-
+  -{{ colorDiy }}-<br />
   <button @click="setColor">设置颜色</button>
+  <br />
+  当前主题: {{ themeNow }}<br /><button
+    v-for="tItem in themeIcon"
+    :key="tItem"
+    @click="setTheme(tItem)"
+  >
+    主题 {{ tItem }}
+  </button>
+  <br />
+  <br />
   <div>
     <span v-for="icon in iconConfig">
       <icon-keg
         :size="100"
         :type="icon.type"
-        theme="multiColor"
+        :theme="themeNow"
         :colors="colorDiy"
       />
     </span>
@@ -99,7 +109,12 @@
     setConfig,
     DEFAULT_ICON_CONFIGS as imgConfig,
   } from '@fe6/icon-img';
-  import { IconVideo as CubeVideo, IconKeg } from '@fe6/icon-cube-vue';
+  import {
+    IconVideo as CubeVideo,
+    IconKeg,
+    TCubeTheme,
+  } from '@fe6/icon-cube-vue';
+
   import iconJson from '@fe6/icons.json';
 
   import './custom-config';
@@ -165,11 +180,17 @@
   IconProvider({ ...DEFAULT_ICON_CONFIGS, prefix: 'icon', size: '3em' });
   setConfig({ ...imgConfig, prefix: 'icon', size: '13em' });
 
+  const themeIcon = Object.keys(DEFAULT_ICON_CONFIGS.colors);
+
   const colorDiy = ref(myDefColors.slice());
   const colorIsDef = ref(true);
   const setColor = () => {
     colorIsDef.value = !colorIsDef.value;
     colorDiy.value = colorIsDef.value ? myDefColors.slice() : myColors.slice();
+  };
+  const themeNow = ref(themeIcon[0]);
+  const setTheme = (newTheme: typeof TCubeTheme) => {
+    themeNow.value = newTheme;
   };
 </script>
 
