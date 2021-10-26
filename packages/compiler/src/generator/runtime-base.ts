@@ -185,6 +185,26 @@ export class RuntimeGenerator extends Generator {
         .join(' | ');
       this.writeLine(`export type TCubeTheme = ${themeString};`);
       this.writeLine();
+
+      this.writeLine('// 基础的类型');
+      this.writeLine(`export interface ICubeBaseColors {`);
+      this.indent(1);
+      this.writeLine('outStrokeColor: string;');
+      this.writeLine('outFillColor: string;');
+      this.indent(-1);
+      this.writeLine(`}`);
+      this.writeLine();
+
+      this.writeLine('// 多色的类型');
+      this.writeLine(
+        `export interface ICubeMoreColors extends ICubeBaseColors {`,
+      );
+      this.indent(1);
+      this.writeLine('innerStrokeColor: string;');
+      this.writeLine('innerFillColor: string;');
+      this.indent(-1);
+      this.writeLine(`}`);
+      this.writeLine();
     } // 渐变色处理
 
     if (hueList.length) {
@@ -279,25 +299,12 @@ export class RuntimeGenerator extends Generator {
 
           this.writeLine();
 
-          this.writeLine(`${camelCase(item.name)}: {`);
-
-          this.indent(1);
-
-          item.fill.forEach((fItem: IThemeColor) => {
-            if (!fItem.name) {
-              return;
-            }
-
-            this.writeLine(
-              `${camelCase(fItem.name)}: ${
-                fItem.type === 'hue' ? 'HSL' : 'string'
-              };`,
-            );
-          });
-
-          this.indent(-1);
-
-          this.writeLine('};');
+          const colorName = camelCase(item.name);
+          this.writeLine(
+            `${colorName}: ${
+              colorName === 'multiColor' ? 'ICubeMoreColors' : 'ICubeBaseColors'
+            };`,
+          );
         });
         this.indent(-1);
         this.writeLine('};');
@@ -632,7 +639,9 @@ export class RuntimeGenerator extends Generator {
               this.write(`'${fill.color}'`);
             } else {
               this.write(
-                `typeof fill[${order}] === 'string' ? fill[${order}] : `,
+                `typeof fill[${order}] === 'string' && !config.colors.${camelCase(
+                  theme.name,
+                )}.${camelCase(fill.name)} ? fill[${order}] : `,
               );
 
               if (fill.currentColor) {
