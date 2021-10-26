@@ -1,0 +1,10 @@
+{
+  "id": "edit-1",
+  "title": "方头端点",
+  "name": "endpoint-flat",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["方头端点", "端点类型"],
+  "rtl": true
+}
