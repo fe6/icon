@@ -26,7 +26,7 @@ let count = 0;
 
 const errors: { [key: string]: boolean } = {};
 const printErrorMsg = (msg: string, data?: string) => {
-  errorLog(`${msg}, ${data || ''}`);
+  errorLog(`${msg}, ${data || ''}`, true);
 
   if (data) {
     errors[data] = true;
