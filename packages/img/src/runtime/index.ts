@@ -24,6 +24,18 @@ export type TCubeTheme =
   | 'MultiColor'
   | 'multi-color';
 
+// 基础的类型
+export interface ICubeBaseColors {
+  outStrokeColor: string;
+  outFillColor: string;
+}
+
+// 多色的类型
+export interface ICubeMoreColors extends ICubeBaseColors {
+  innerStrokeColor: string;
+  innerFillColor: string;
+}
+
 // 包裹前的图标属性
 export interface ISvgIconProps {
   // 当前图标的唯一Id
@@ -76,27 +88,13 @@ export interface IIconConfig {
 
   // 主题默认颜色
   colors: {
-    outline: {
-      outStrokeColor: string;
-      outFillColor: string;
-    };
+    outline: ICubeBaseColors;
 
-    filled: {
-      outStrokeColor: string;
-      outFillColor: string;
-    };
+    filled: ICubeBaseColors;
 
-    twoTone: {
-      outStrokeColor: string;
-      outFillColor: string;
-    };
+    twoTone: ICubeBaseColors;
 
-    multiColor: {
-      outStrokeColor: string;
-      outFillColor: string;
-      innerStrokeColor: string;
-      innerFillColor: string;
-    };
+    multiColor: ICubeMoreColors;
   };
 }
 

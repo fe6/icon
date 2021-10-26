@@ -27,6 +27,18 @@ export type TCubeTheme =
   | 'MultiColor'
   | 'multi-color';
 
+// 基础的类型
+export interface ICubeBaseColors {
+  outStrokeColor: string;
+  outFillColor: string;
+}
+
+// 多色的类型
+export interface ICubeMoreColors extends ICubeBaseColors {
+  innerStrokeColor: string;
+  innerFillColor: string;
+}
+
 // 包裹前的图标属性
 export interface ISvgIconProps {
   // 当前图标的唯一Id
@@ -79,27 +91,13 @@ export interface IIconConfig {
 
   // 主题默认颜色
   colors: {
-    outline: {
-      outStrokeColor: string;
-      outFillColor: string;
-    };
+    outline: ICubeBaseColors;
 
-    filled: {
-      outStrokeColor: string;
-      outFillColor: string;
-    };
+    filled: ICubeBaseColors;
 
-    twoTone: {
-      outStrokeColor: string;
-      outFillColor: string;
-    };
+    twoTone: ICubeBaseColors;
 
-    multiColor: {
-      outStrokeColor: string;
-      outFillColor: string;
-      innerStrokeColor: string;
-      innerFillColor: string;
-    };
+    multiColor: ICubeMoreColors;
   };
 }
 
@@ -293,13 +291,13 @@ export const IconConverter = (
   switch (theme) {
     case 'outline':
       oldColors.push(
-        typeof fill[0] === 'string'
+        typeof fill[0] === 'string' && !config.colors.outline.outStrokeColor
           ? fill[0]
           : config.colors.outline.outStrokeColor,
       );
       oldColors.push('transparent');
       oldColors.push(
-        typeof fill[0] === 'string'
+        typeof fill[0] === 'string' && !config.colors.outline.outStrokeColor
           ? fill[0]
           : config.colors.outline.outStrokeColor,
       );
@@ -307,12 +305,12 @@ export const IconConverter = (
       break;
     case 'filled':
       oldColors.push(
-        typeof fill[0] === 'string'
+        typeof fill[0] === 'string' && !config.colors.filled.outStrokeColor
           ? fill[0]
           : config.colors.filled.outStrokeColor,
       );
       oldColors.push(
-        typeof fill[0] === 'string'
+        typeof fill[0] === 'string' && !config.colors.filled.outStrokeColor
           ? fill[0]
           : config.colors.filled.outStrokeColor,
       );
@@ -323,22 +321,22 @@ export const IconConverter = (
     case 'twoTone':
     case 'TwoTone':
       oldColors.push(
-        typeof fill[0] === 'string'
+        typeof fill[0] === 'string' && !config.colors.twoTone.outStrokeColor
           ? fill[0]
           : config.colors.twoTone.outStrokeColor,
       );
       oldColors.push(
-        typeof fill[1] === 'string'
+        typeof fill[1] === 'string' && !config.colors.twoTone.outFillColor
           ? fill[1]
           : config.colors.twoTone.outFillColor,
       );
       oldColors.push(
-        typeof fill[0] === 'string'
+        typeof fill[0] === 'string' && !config.colors.twoTone.outStrokeColor
           ? fill[0]
           : config.colors.twoTone.outStrokeColor,
       );
       oldColors.push(
-        typeof fill[1] === 'string'
+        typeof fill[1] === 'string' && !config.colors.twoTone.outFillColor
           ? fill[1]
           : config.colors.twoTone.outFillColor,
       );
@@ -347,22 +345,23 @@ export const IconConverter = (
     case 'multiColor':
     case 'MultiColor':
       oldColors.push(
-        typeof fill[0] === 'string'
+        typeof fill[0] === 'string' && !config.colors.multiColor.outStrokeColor
           ? fill[0]
           : config.colors.multiColor.outStrokeColor,
       );
       oldColors.push(
-        typeof fill[1] === 'string'
+        typeof fill[1] === 'string' && !config.colors.multiColor.outFillColor
           ? fill[1]
           : config.colors.multiColor.outFillColor,
       );
       oldColors.push(
-        typeof fill[2] === 'string'
+        typeof fill[2] === 'string' &&
+          !config.colors.multiColor.innerStrokeColor
           ? fill[2]
           : config.colors.multiColor.innerStrokeColor,
       );
       oldColors.push(
-        typeof fill[3] === 'string'
+        typeof fill[3] === 'string' && !config.colors.multiColor.innerFillColor
           ? fill[3]
           : config.colors.multiColor.innerFillColor,
       );
