@@ -13,6 +13,9 @@ export type StrokeLinejoin = 'miter' | 'round' | 'bevel';
 // 描边端点类型
 export type StrokeLinecap = 'butt' | 'round' | 'square';
 
+// 基础主题
+export type TCubeBaseTheme = 'outline' | 'filled' | 'two-tone' | 'multi-color';
+
 // 主题
 export type TCubeTheme =
   | 'outline'
