@@ -275,7 +275,6 @@ export const IconWrapper = (
 ): IconOptions => {
   const options: IconOptions = {
     name: `icon-${name}`,
-    inject: ['ICON_CONFIGS'],
     props: [
       'size',
       'strokeWidth',

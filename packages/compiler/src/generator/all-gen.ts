@@ -135,7 +135,7 @@ export class AllGenerator extends RuntimeGenerator {
     );
     this.indent(1); // 处理name
 
-    this.writeLine(`name: 'water-icon',`);
+    this.writeLine(`name: 'icon-keg',`);
 
     this.writeLine(
       `props: [${this.getPropKeys()
