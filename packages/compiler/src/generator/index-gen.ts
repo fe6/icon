@@ -34,19 +34,7 @@ export class IndexGenerator extends Generator {
       this.writeLine("export * from './cube';");
     }
 
-    let configName = '';
-
-    if (this.type === 'img') {
-      configName = 'setConfig';
-    } else {
-      configName = this.getTypeName('provider');
-    }
-
-    this.writeLine(
-      `export { ${configName}, DEFAULT_${this.prefix.toUpperCase()}_CONFIGS } from './runtime';`,
-    );
-
-    this.writeLine(`export type { TCubeTheme } from './runtime';`);
+    this.writeLine(`export * from './runtime';`);
 
     return this.getResult();
   }
