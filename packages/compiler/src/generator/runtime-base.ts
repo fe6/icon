@@ -167,21 +167,12 @@ export class RuntimeGenerator extends Generator {
     } // 主题
 
     if (theme.length) {
-      this.writeLine('// 基础主题');
-      const themeBaseString = theme
-        .map((item: IIconThemeInfo) => `'${item.name}'`)
-        .join(' | ');
-      this.writeLine(`export type TCubeBaseTheme = ${themeBaseString};`);
-      this.writeLine();
       this.writeLine('// 主题');
       const themeString = theme
-        .map((item: IIconThemeInfo) => {
-          return `${
-            item.name.includes('-')
-              ? `'${camelCase(item.name)}' | '${pascalCase(item.name)}' | '`
-              : "'"
-          }${item.name}'`;
-        })
+        .map(
+          (item: IIconThemeInfo) =>
+            `'${item.name.includes('-') ? camelCase(item.name) : item.name}'`,
+        )
         .join(' | ');
       this.writeLine(`export type TCubeTheme = ${themeString};`);
       this.writeLine();
@@ -616,11 +607,6 @@ export class RuntimeGenerator extends Generator {
       this.indent(1);
       this.theme.forEach((theme: IIconThemeInfo) => {
         this.writeLine(`case '${theme.name}':`);
-
-        if (theme.name.includes('-')) {
-          this.writeLine(`case '${camelCase(theme.name)}':`);
-          this.writeLine(`case '${pascalCase(theme.name)}':`);
-        }
 
         this.indent(1);
 
@@ -1232,9 +1218,7 @@ export class RuntimeGenerator extends Generator {
     this.writeLine('newColors.push(oldColor[2]);');
     this.writeLine('break;');
     this.indent(-1);
-    this.writeLine("case 'two-tone':");
     this.writeLine("case 'twoTone':");
-    this.writeLine("case 'TwoTone':");
     this.indent(1);
     this.writeLine('newColors.push(oldColor[0]);');
     this.writeLine('newColors.push(oldColor[1]);');
@@ -1242,9 +1226,7 @@ export class RuntimeGenerator extends Generator {
     this.writeLine('newColors.push(oldColor[1]);');
     this.writeLine('break;');
     this.indent(-1);
-    this.writeLine("case 'multi-color':");
     this.writeLine("case 'multiColor':");
-    this.writeLine("case 'MultiColor':");
     this.indent(1);
     this.writeLine('newColors.push(oldColor[0]);');
     this.writeLine('newColors.push(oldColor[1]);');

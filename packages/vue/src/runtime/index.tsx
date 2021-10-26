@@ -13,19 +13,8 @@ export type StrokeLinejoin = 'miter' | 'round' | 'bevel';
 // 描边端点类型
 export type StrokeLinecap = 'butt' | 'round' | 'square';
 
-// 基础主题
-export type TCubeBaseTheme = 'outline' | 'filled' | 'two-tone' | 'multi-color';
-
 // 主题
-export type TCubeTheme =
-  | 'outline'
-  | 'filled'
-  | 'twoTone'
-  | 'TwoTone'
-  | 'two-tone'
-  | 'multiColor'
-  | 'MultiColor'
-  | 'multi-color';
+export type TCubeTheme = 'outline' | 'filled' | 'twoTone' | 'multiColor';
 
 // 基础的类型
 export interface ICubeBaseColors {
@@ -217,9 +206,7 @@ export const IconConverter = (
       colors.push('#fff');
       colors.push('#fff');
       break;
-    case 'two-tone':
     case 'twoTone':
-    case 'TwoTone':
       colors.push(
         typeof fill[0] === 'string'
           ? fill[0]
@@ -241,9 +228,7 @@ export const IconConverter = (
           : config.colors.twoTone.outFillColor,
       );
       break;
-    case 'multi-color':
     case 'multiColor':
-    case 'MultiColor':
       colors.push(
         typeof fill[0] === 'string'
           ? fill[0]
