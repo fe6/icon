@@ -167,6 +167,12 @@ export class RuntimeGenerator extends Generator {
     } // 主题
 
     if (theme.length) {
+      this.writeLine('// 基础主题');
+      const themeBaseString = theme
+        .map((item: IIconThemeInfo) => `'${item.name}'`)
+        .join(' | ');
+      this.writeLine(`export type TCubeBaseTheme = ${themeBaseString};`);
+      this.writeLine();
       this.writeLine('// 主题');
       const themeString = theme
         .map((item: IIconThemeInfo) => {
