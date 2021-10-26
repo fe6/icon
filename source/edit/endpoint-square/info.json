@@ -1,0 +1,10 @@
+{
+  "id": "edit-4",
+  "title": "方头节点",
+  "name": "node-flat",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["方头节点", "端点类型"],
+  "rtl": true
+}

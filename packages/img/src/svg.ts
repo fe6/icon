@@ -75,3 +75,8 @@ export { getIconUserSvgHtml } from './icons/user';
 export { getIconVideoSvgHtml } from './icons/video';
 export { getIconWalletSvgHtml } from './icons/wallet';
 export { getIconWarningSvgHtml } from './icons/warning';
+export { getIconEndpointFlatSvgHtml } from './icons/endpoint-flat';
+export { getIconEndpointRoundSvgHtml } from './icons/endpoint-round';
+export { getIconNodeFlatSvgHtml } from './icons/node-flat';
+export { getIconNodeRoundSvgHtml } from './icons/node-round';
+export { getIconNodeSquareSvgHtml } from './icons/node-square';

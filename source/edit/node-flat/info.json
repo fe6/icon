@@ -1,0 +1,10 @@
+{
+  "id": "edit-4",
+  "title": "平头端点",
+  "name": "node-flat",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["平头端点", "端点类型"],
+  "rtl": true
+}
