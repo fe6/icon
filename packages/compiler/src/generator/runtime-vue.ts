@@ -83,7 +83,7 @@ export class VueRuntimeGenerator extends RuntimeGenerator {
 
     this.writeLine(`name: '${prefix}-' + name,`); // 处理inject
 
-    this.writeLine(`inject: ['${this.prefix.toUpperCase()}_CONFIGS'],`); // 处理属性
+    // this.writeLine(`inject: ['${this.prefix.toUpperCase()}_CONFIGS'],`); // 处理属性
 
     this.writeLine(
       `props: [${this.getPropKeys()

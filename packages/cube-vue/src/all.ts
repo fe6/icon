@@ -24,7 +24,7 @@ const toPascalCase = (val: string): string => {
 };
 
 const IIconWaterOptions: IIconAllOptions = {
-  name: 'water-icon',
+  name: 'icon-keg',
   props: [
     'size',
     'strokeWidth',
