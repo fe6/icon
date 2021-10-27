@@ -28,7 +28,7 @@ export interface ICubeMoreColors extends ICubeBaseColors {
 // 包裹前的图标属性
 export interface ISvgIconProps {
   // 当前图标的唯一Id
-  id: string;
+  id?: string;
 
   // 图标尺寸大小，默认1em
   size: number | string;
