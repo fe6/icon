@@ -59,7 +59,7 @@ export class AllGenerator extends RuntimeGenerator {
     }
 
     this.writeLine(
-      `export const water${this.getTypeName('')} = (props${
+      `export const iconKeg = (props${
         this.useType ? `: ${allProps}` : ''
       }) => {`,
     );
@@ -193,7 +193,7 @@ export class AllGenerator extends RuntimeGenerator {
     this.writeLine();
 
     this.writeLine(
-      `export const waterIconInstall = (Vue${
+      `export const iconKegInstall = (Vue${
         this.useType ? ': App' : ''
       }, prefix${this.useType ? '?: string' : ''})${
         this.useType ? ': void' : ''
