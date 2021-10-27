@@ -1,7 +1,7 @@
 <!-- @format -->
 
 <template>
-  <h1>所有</h1>
+  <h1>cube vue 所有</h1>
   -{{ colorDiy }}-<br />
   <button @click="setColor">设置颜色</button>
   <br />
@@ -15,6 +15,12 @@
   <br />
   <br />
   <div>
+    <h3>img</h3>
+    <span v-for="imgIcon in imgGroup">
+      <!-- <img :src="imgIcon" /> -->
+      <span v-html="imgIcon" />
+    </span>
+    <h3>svg</h3>
     <span v-for="icon in iconConfig">
       <icon-keg
         :size="100"
@@ -33,7 +39,7 @@
   <h4>定制属性</h4>
   <span v-html="vIconProps" />
   <h4>默认主题</h4>
-  Filled<span v-html="vIconFilled" /> Outline<span v-html="vIconOutline" />
+  Filled<img :src="vIconFilled" /> Outline<span v-html="vIconOutline" />
   TwoTone<span v-html="vIconTwoTone" /> MultiColor<span
     v-html="vIconMultiColor"
   />
@@ -108,6 +114,7 @@
     IconVideo,
     setConfig,
     DEFAULT_ICON_CONFIGS as imgConfig,
+    waterIcon as waterImgIcon,
   } from '@fe6/icon-img';
   import {
     IconVideo as CubeVideo,
@@ -136,8 +143,8 @@
   const vIconFilled = IconVideo({
     size: 100,
     theme: 'filled',
+    base64: true,
   });
-
   const vIconOutline = IconVideo({
     size: 100,
     theme: 'outline',
@@ -187,11 +194,32 @@
   const setColor = () => {
     colorIsDef.value = !colorIsDef.value;
     colorDiy.value = colorIsDef.value ? myDefColors.slice() : myColors.slice();
+    renderImgBase64();
   };
   const themeNow = ref(themeIcon[0]);
   const setTheme = (newTheme: typeof TCubeTheme) => {
     themeNow.value = newTheme;
+    renderImgBase64();
   };
+
+  // 生成 img base64
+  const imgGroup = ref<string[]>([]);
+  const renderImgBase64 = () => {
+    imgGroup.value = [];
+    iconConfig.forEach(({ type }: any) => {
+      imgGroup.value.push(
+        waterImgIcon({
+          size: 100,
+          theme: themeNow.value,
+          fill: colorDiy.value,
+          type,
+          // base64: true,
+        }),
+      );
+    });
+  };
+
+  renderImgBase64();
 </script>
 
 <style>

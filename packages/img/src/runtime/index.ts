@@ -114,6 +114,8 @@ export interface IIconBase {
 // 包裹后的图标属性
 export interface IIconProps extends IIconBase {
   spin?: boolean;
+  // ture 则返回不带 img 标签的图片 base64
+  base64?: boolean;
 }
 
 // 包裹后的图标属性
@@ -283,7 +285,7 @@ const urlBase64EncodeChars =
   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_';
 
 // 通用的 Base64 编码函数
-const base64encode = (str: string, isUrl?: boolean): string => {
+export const base64encode = (str: string, isUrl?: boolean): string => {
   let out = '';
   let idx = 0;
   const len: number = str.length;
@@ -333,7 +335,7 @@ const base64encode = (str: string, isUrl?: boolean): string => {
 };
 
 // 把 unicode 码转换成 utf8 编码
-const unicodeToUtf8 = (str: string): string => {
+export const unicodeToUtf8 = (str: string): string => {
   let out = '';
   let idx: number;
   let code: number;
@@ -395,8 +397,10 @@ export const IconWrapper = (
     const svgHtml = render(svgProps);
     const src = base64encode(unicodeToUtf8(svgHtml));
 
-    return `<span class="${cls.join(' ')}">
-        <img class"${
+    return props?.base64
+      ? `data:image/svg+xml;base64,${src}`
+      : `<span class="${cls.join(' ')}">
+        <img class="${
           config.prefix
         }-icon-img" src="data:image/svg+xml;base64,${src}" />
       </span>`;

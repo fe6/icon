@@ -33,6 +33,8 @@ export class ImgRuntimeGenerator extends RuntimeGenerator {
     );
     this.indent(1);
     this.writeLine('spin?: boolean;');
+    this.writeLine('// ture 则返回不带 img 标签的图片 base64');
+    this.writeLine('base64?: boolean;');
     this.indent(-1);
     this.writeLine('}');
     this.writeLine();
@@ -77,7 +79,7 @@ export class ImgRuntimeGenerator extends RuntimeGenerator {
     this.writeLine('// 通用的 Base64 编码函数');
 
     this.writeLine(
-      `const base64encode = (str${typeString}, isUrl${
+      `export const base64encode = (str${typeString}, isUrl${
         this.useType ? '?: boolean' : ''
       })${typeString} => {`,
     );
@@ -155,7 +157,7 @@ export class ImgRuntimeGenerator extends RuntimeGenerator {
 
     this.writeLine('// 把 unicode 码转换成 utf8 编码');
     this.writeLine(
-      `const unicodeToUtf8 = (str${typeString})${typeString} => {`,
+      `export const unicodeToUtf8 = (str${typeString})${typeString} => {`,
     );
     this.indent(1);
     this.writeLine(`let out${typeString} = '';`);
@@ -278,12 +280,16 @@ export class ImgRuntimeGenerator extends RuntimeGenerator {
     this.writeLine('const src = base64encode(unicodeToUtf8(svgHtml));');
     this.writeLine();
 
-    this.writeLine('return (');
+    this.writeLine(
+      `return (${this.useType ? '' : 'props && '}props${
+        this.useType ? '?' : ''
+      }.base64 ? \`data:image/svg+xml;base64,\${src}\` : `,
+    );
     this.indent(1);
     this.writeLine(`\`<span class=\"\${cls.join(' ')}\">`);
     this.indent(1);
     this.writeLine(
-      `<img class"\${config.prefix}-${this.prefix}-img" src="data:image/svg+xml;base64,\${src}" />`,
+      `<img class="\${config.prefix}-${this.prefix}-img" src="data:image/svg+xml;base64,\${src}" />`,
     );
     this.indent(-1);
     this.writeLine('</span>`');
