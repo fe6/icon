@@ -227,7 +227,7 @@ export class RuntimeGenerator extends Generator {
     this.writeLine();
     this.writeLine('// 当前图标的唯一Id');
     this.writeLine('id?: string;');
-    this.processSvgCommonType();
+    this.processSvgCommonType(true);
 
     if (replaceList.length) {
       this.writeLine();
