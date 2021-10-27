@@ -5,11 +5,11 @@
  */
 
 import * as IconMap from './map';
-import { ISvgIconProps } from './runtime';
+import { IIconProps } from './runtime';
 
 export type IconType = keyof typeof IconMap;
 
-export interface IIconAllProps extends ISvgIconProps {
+export interface IIconAllProps extends IIconProps {
   type: IconType | string;
 }
 
