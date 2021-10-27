@@ -31,16 +31,16 @@ export interface ISvgIconProps {
   id?: string;
 
   // 图标尺寸大小，默认1em
-  size: number | string;
+  size?: number | string;
 
   // 描边宽度
-  strokeWidth: number;
+  strokeWidth?: number;
 
   // 描边端点类型
-  strokeLinecap: StrokeLinecap;
+  strokeLinecap?: StrokeLinecap;
 
   // 描边连接线类型
-  strokeLinejoin: StrokeLinejoin;
+  strokeLinejoin?: StrokeLinejoin;
 
   // 换肤的颜色数组
   colors: string[];
