@@ -201,7 +201,10 @@ export class ImgGenerator extends IconGenerator {
   processAttr(attr: ISvgAttr) {
     const name = attr.name;
     const type = attr.type;
-    const expression = attr.expression;
+    const expression = attr.expression.replace(
+      /props.colors\[/, // 因为 colors 可传属性，会找不到的时候，解决 ts 类型判断
+      'props.colors?.[',
+    );
     this.write(' ');
     this.write(
       name === 'viewBox' || name === 'maskUnits' ? name : hyphenate(name),
