@@ -173,11 +173,14 @@ export class ImgGenerator extends IconGenerator {
       this.processInlineStyle(style);
     }
 
-    if (type === 'svg' && (this.style || children.length)) {
+    if (
+      (type === 'svg' || type === 'g' || type === 'mask') &&
+      (this.style || children.length)
+    ) {
       this.writeLine('>');
       this.indent(1);
 
-      if (type === 'svg' && this.style) {
+      if ((type === 'svg' || type === 'g' || type === 'mask') && this.style) {
         this.writeLine('<style>');
         this.processStyle(css);
         this.writeLine('</style>');
@@ -187,7 +190,7 @@ export class ImgGenerator extends IconGenerator {
         this.processTag(item, css);
       });
       this.indent(-1);
-      this.writeLine(`</${type}>\`;`);
+      this.writeLine(`</${type}>${type === 'svg' ? '`' : ''};`);
 
       return;
     }
@@ -200,7 +203,9 @@ export class ImgGenerator extends IconGenerator {
     const type = attr.type;
     const expression = attr.expression;
     this.write(' ');
-    this.write(name === 'viewBox' ? name : hyphenate(name));
+    this.write(
+      name === 'viewBox' || name === 'maskUnits' ? name : hyphenate(name),
+    );
     this.write('="');
 
     if (type === SvgShapeAttr.DYNAMIC) {

@@ -4,8 +4,6 @@ import { ISvgIconProps, IconWrapper } from '../runtime';
 
 export default IconWrapper('file-text', false, (props: ISvgIconProps) => (
   <svg
-    focusable="false"
-    class=""
     width={props.size}
     height={props.size}
     fill={props.colors[0]}
