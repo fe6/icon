@@ -39,7 +39,7 @@ export class AllGenerator extends RuntimeGenerator {
     this.processHeaderComment();
 
     const iconMap = this.getTypeName('map');
-    const iconProps = this.getInterfaceName('props', true);
+    const iconProps = this.getInterfaceName('props');
     const iconType = this.getTypeName('type');
     const allProps = this.getInterfaceName('AllProps');
 
