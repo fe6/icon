@@ -16,10 +16,10 @@
   <br />
   <div>
     <h3>img</h3>
-    <span v-for="imgIcon in imgGroup">
-      <!-- <img :src="imgIcon" /> -->
+    <img :src="imgIcon" :key="idx" v-for="(imgIcon, idx) in imgGroup" />
+    <!-- <span :key="idx" v-for="(imgIcon, idx) in imgGroup">
       <span v-html="imgIcon" />
-    </span>
+    </span> -->
     <h3>svg</h3>
     <span v-for="icon in iconConfig">
       <icon-keg
@@ -114,7 +114,7 @@
     IconVideo,
     setConfig,
     DEFAULT_ICON_CONFIGS as imgConfig,
-    waterIcon as waterImgIcon,
+    iconKeg as waterImgIcon,
   } from '@fe6/icon-img';
   import {
     IconVideo as CubeVideo,
@@ -213,7 +213,7 @@
           theme: themeNow.value,
           fill: colorDiy.value,
           type,
-          // base64: true,
+          base64: true,
         }),
       );
     });

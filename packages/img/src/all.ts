@@ -13,6 +13,6 @@ export interface IIconAllProps extends ISvgIconProps {
   type: IconType | string;
 }
 
-export const waterIcon = (props: IIconAllProps) => {
+export const iconKeg = (props: IIconAllProps) => {
   return IconMap[props.type as IconType](props);
 };

@@ -69,7 +69,7 @@ const IIconWaterOptions: IIconAllOptions = {
 
 export const IconKeg: TAllIcon = IIconWaterOptions as TAllIcon;
 
-export const waterIconInstall = (Vue: App, prefix?: string): void => {
+export const iconKegInstall = (Vue: App, prefix?: string): void => {
   Object.values(mapIcon).forEach((icon) => {
     if (icon.name) {
       Vue.component(
