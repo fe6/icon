@@ -77,6 +77,7 @@ export { default as IconWallet } from './icons/wallet';
 export { default as IconWarning } from './icons/warning';
 export { default as IconEndpointFlat } from './icons/endpoint-flat';
 export { default as IconEndpointRound } from './icons/endpoint-round';
+export { default as IconEndpointSquare } from './icons/endpoint-square';
 export { default as IconNodeFlat } from './icons/node-flat';
 export { default as IconNodeRound } from './icons/node-round';
 export { default as IconNodeSquare } from './icons/node-square';
