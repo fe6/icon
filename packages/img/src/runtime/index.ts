@@ -43,7 +43,7 @@ export interface ISvgIconProps {
   strokeLinejoin?: StrokeLinejoin;
 
   // 换肤的颜色数组
-  colors: string[];
+  colors?: string[];
 
   // 是否旋转
   spin?: boolean;
