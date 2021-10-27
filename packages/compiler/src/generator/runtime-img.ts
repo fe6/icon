@@ -35,6 +35,8 @@ export class ImgRuntimeGenerator extends RuntimeGenerator {
     this.writeLine('spin?: boolean;');
     this.writeLine('// ture 则返回不带 img 标签的图片 base64');
     this.writeLine('base64?: boolean;');
+    this.writeLine('// id 字段的随机数');
+    this.writeLine('id?: string;');
     this.indent(-1);
     this.writeLine('}');
     this.writeLine();
@@ -49,14 +51,14 @@ export class ImgRuntimeGenerator extends RuntimeGenerator {
     this.writeLine(
       `export type ${this.getTypeName(
         'Render',
-      )} = (props: ${this.getInterfaceName('props', true)}) => string;`,
+      )} = (props: ${this.getInterfaceName('props')}) => string;`,
     );
     this.writeLine();
     this.writeLine('// 包裹后的图标');
     this.writeLine(
       `export type ${this.getTypeName(
         'Return',
-      )} = (props: ${this.getInterfaceName('props', true)}) => string;`,
+      )} = (props: ${this.getInterfaceName('props')}) => string;`,
     );
     this.writeLine();
   }

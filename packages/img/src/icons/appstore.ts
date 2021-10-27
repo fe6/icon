@@ -4,10 +4,10 @@
  * @author 由 fe6 自动生成
  */
 
-import { ISvgIconProps, IconWrapper } from '../runtime';
+import { IIconProps, IconWrapper } from '../runtime';
 
 // 获取 SVG 的 HTML 字符串
-export const getIconAppstoreSvgHtml = (props: ISvgIconProps) =>
+export const getIconAppstoreSvgHtml = (props: IIconProps) =>
   `<?xml version="1.0" encoding="UTF-8"?>
 <svg width="${props.size}" height="${props.size}" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M18 6H8C6.89543 6 6 6.89543 6 8V18C6 19.1046 6.89543 20 8 20H18C19.1046 20 20 19.1046 20 18V8C20 6.89543 19.1046 6 18 6Z" fill="${props.colors?.[1]}" stroke="${props.colors?.[0]}" stroke-width="${props.strokeWidth}" stroke-linejoin="${props.strokeLinejoin}"/>
