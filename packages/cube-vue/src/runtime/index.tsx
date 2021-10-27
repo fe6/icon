@@ -228,15 +228,15 @@ const getColors = (theme: TCubeTheme, oldColor: string[]) => {
   switch (theme) {
     case 'outline':
       newColors.push(oldColor[0]);
-      newColors.push('transparent');
+      newColors.push(oldColor[1]);
       newColors.push(oldColor[0]);
-      newColors.push('transparent');
+      newColors.push(oldColor[1]);
       break;
     case 'filled':
       newColors.push(oldColor[0]);
       newColors.push(oldColor[0]);
-      newColors.push(oldColor[2]);
-      newColors.push(oldColor[2]);
+      newColors.push(oldColor[1]);
+      newColors.push(oldColor[1]);
       break;
     case 'twoTone':
       newColors.push(oldColor[0]);
@@ -280,13 +280,21 @@ export const IconConverter = (
           ? fill[0]
           : config.colors.outline.outStrokeColor,
       );
-      oldColors.push('transparent');
+      oldColors.push(
+        typeof fill[1] === 'string' && !config.colors.outline.outFillColor
+          ? fill[1]
+          : config.colors.outline.outFillColor,
+      );
       oldColors.push(
         typeof fill[0] === 'string' && !config.colors.outline.outStrokeColor
           ? fill[0]
           : config.colors.outline.outStrokeColor,
       );
-      oldColors.push('transparent');
+      oldColors.push(
+        typeof fill[1] === 'string' && !config.colors.outline.outFillColor
+          ? fill[1]
+          : config.colors.outline.outFillColor,
+      );
       break;
     case 'filled':
       oldColors.push(
@@ -299,8 +307,16 @@ export const IconConverter = (
           ? fill[0]
           : config.colors.filled.outStrokeColor,
       );
-      oldColors.push('#fff');
-      oldColors.push('#fff');
+      oldColors.push(
+        typeof fill[1] === 'string' && !config.colors.filled.outFillColor
+          ? fill[1]
+          : config.colors.filled.outFillColor,
+      );
+      oldColors.push(
+        typeof fill[1] === 'string' && !config.colors.filled.outFillColor
+          ? fill[1]
+          : config.colors.filled.outFillColor,
+      );
       break;
     case 'twoTone':
       oldColors.push(

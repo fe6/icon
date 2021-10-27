@@ -181,13 +181,21 @@ export const IconConverter = (
           ? fill[0]
           : config.colors.outline.outStrokeColor,
       );
-      colors.push('transparent');
+      colors.push(
+        typeof fill[1] === 'string'
+          ? fill[1]
+          : config.colors.outline.outFillColor,
+      );
       colors.push(
         typeof fill[0] === 'string'
           ? fill[0]
           : config.colors.outline.outStrokeColor,
       );
-      colors.push('transparent');
+      colors.push(
+        typeof fill[1] === 'string'
+          ? fill[1]
+          : config.colors.outline.outFillColor,
+      );
       break;
     case 'filled':
       colors.push(
@@ -200,8 +208,16 @@ export const IconConverter = (
           ? fill[0]
           : config.colors.filled.outStrokeColor,
       );
-      colors.push('#fff');
-      colors.push('#fff');
+      colors.push(
+        typeof fill[1] === 'string'
+          ? fill[1]
+          : config.colors.filled.outFillColor,
+      );
+      colors.push(
+        typeof fill[1] === 'string'
+          ? fill[1]
+          : config.colors.filled.outFillColor,
+      );
       break;
     case 'twoTone':
       colors.push(

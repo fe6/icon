@@ -41,7 +41,7 @@ export const BUILD_CODE_CONFIG: Omit<IIconToolsOptions, 'type'> = {
         {
           type: 'color',
           color: 'transparent',
-          fixed: true,
+          // fixed: true,
           name: 'outFillColor',
         },
       ],
@@ -59,7 +59,7 @@ export const BUILD_CODE_CONFIG: Omit<IIconToolsOptions, 'type'> = {
         {
           type: 'color',
           color: '#fff',
-          fixed: true,
+          // fixed: true,
           name: 'outFillColor',
         },
       ],

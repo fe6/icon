@@ -6,6 +6,7 @@
     "gen:code": "ts-node scripts/gen-code.ts",
     "gen:clean": "gulp cleanCode",
     "gen": "pnpm gen:clean && pnpm gen:json && pnpm gen:code",
+    "id": "ts-node scripts/get-ids.ts",
     "lint:fix": "eslint './**/*.{js,ts,tsx,json}' --fix && pretty-quick",
     "lint": "eslint './**/*.{js,ts,tsx,json}' && pretty-quick",
     "release": "ts-node ./scripts/release.ts",

@@ -22,8 +22,6 @@ interface IIconProps {
   rtl: boolean;
 }
 
-let count = 0;
-
 const errors: { [key: string]: boolean } = {};
 const printErrorMsg = (msg: string, data?: string) => {
   errorLog(`${msg}, ${data || ''}`, true);
@@ -37,51 +35,6 @@ const iconNameMap: { [key: string]: boolean } = {};
 const iconIdMap: { [key: string]: boolean } = {};
 
 const ALL_ICON_MAP: { [key: string]: IIconProps } = {};
-
-// 读取资源文件夹
-fs.readdirSync(path.join(__dirname, '../source')).forEach((dir) => {
-  const dirPath = path.join(__dirname, '../source', dir);
-  if (fs.statSync(dirPath).isDirectory()) {
-    // 读取每个 icon 文件夹
-    fs.readdirSync(dirPath).forEach((childDir) => {
-      const iconPath = path.join(dirPath, childDir);
-      if (ALL_ICON_MAP[childDir]) {
-        printErrorMsg(`图标名字(${childDir})重复`);
-      }
-      if (fs.statSync(iconPath).isDirectory()) {
-        const iconFolder = fs.readdirSync(iconPath);
-        // 读取 icon 文件夹的文件
-        iconFolder.forEach((file) => {
-          const filePath = path.join(iconPath, file);
-          // 操作 JSON
-          if (file.includes('json')) {
-            ALL_ICON_MAP[childDir] = {
-              ...JSON.parse(fs.readFileSync(filePath, 'utf8')),
-            };
-            count++;
-          }
-        });
-        iconFolder.forEach((file) => {
-          const filePath = path.join(iconPath, file);
-          // 操作 SVG
-          if (file.includes('svg')) {
-            const childDir = path.basename(filePath, '.svg').toLowerCase();
-            ALL_ICON_MAP[childDir].svg = fs.readFileSync(filePath, 'utf8');
-          }
-        });
-
-        // 生成 type 供全局使用
-        Object.keys(ALL_ICON_MAP).forEach((allKey: string) => {
-          ALL_ICON_MAP[allKey].type = `Icon${pascalCase(
-            ALL_ICON_MAP[allKey].name,
-          )}`;
-        });
-      }
-    });
-  }
-});
-
-const data: IIconProps[] = [];
 
 // icon 名字验证
 const testIconName = (iName: string) => {
@@ -100,6 +53,62 @@ const testIconName = (iName: string) => {
   }
 };
 
+// 读取资源文件夹
+fs.readdirSync(path.join(__dirname, '../source')).forEach((dir) => {
+  const dirPath = path.join(__dirname, '../source', dir);
+  if (fs.statSync(dirPath).isDirectory()) {
+    // 读取每个 icon 文件夹
+    fs.readdirSync(dirPath)
+      .filter((dpItem: string) => !/.DS_Store|README.md/.test(dpItem))
+      .forEach((childDir) => {
+        const iconPath = path.join(dirPath, childDir);
+
+        testIconName(childDir);
+
+        if (fs.statSync(iconPath).isDirectory()) {
+          const iconFolder = fs.readdirSync(iconPath);
+          // 读取 icon 文件夹的文件
+          iconFolder.forEach((file) => {
+            const filePath = path.join(iconPath, file);
+            // 操作 JSON
+            if (file.includes('json')) {
+              const jsonDatas = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+
+              if (jsonDatas.name !== childDir) {
+                errorLog(
+                  'ICON 文件夹名字和 JSON 中配置的名字(name)不统一',
+                  true,
+                );
+              }
+
+              ALL_ICON_MAP[jsonDatas.name] = {
+                ...jsonDatas,
+              };
+            }
+          });
+
+          iconFolder.forEach((file) => {
+            const filePath = path.join(iconPath, file);
+            // 操作 SVG
+            if (file.includes('svg')) {
+              const childDir = path.basename(filePath, '.svg').toLowerCase();
+              ALL_ICON_MAP[childDir].svg = fs.readFileSync(filePath, 'utf8');
+            }
+          });
+
+          // 生成 type 供全局使用
+          Object.keys(ALL_ICON_MAP).forEach((allKey: string) => {
+            ALL_ICON_MAP[allKey].type = `Icon${pascalCase(
+              ALL_ICON_MAP[allKey].name,
+            )}`;
+          });
+        }
+      });
+  }
+});
+
+const data: IIconProps[] = [];
+
 // icon ID 验证
 const testIconId = (iId: string) => {
   if (!iconIdMap[iId]) {
@@ -117,7 +126,6 @@ const testIconId = (iId: string) => {
 Object.keys(ALL_ICON_MAP).forEach((key) => {
   if (Object.prototype.hasOwnProperty.call(ALL_ICON_MAP, key)) {
     const dataItem = ALL_ICON_MAP[key];
-    testIconName(key);
     testIconId(String(dataItem.id));
     data.push(dataItem);
     delete ALL_ICON_MAP[key];
@@ -126,10 +134,10 @@ Object.keys(ALL_ICON_MAP).forEach((key) => {
   }
 });
 
-log(`总图标数, ${count}`);
+log(`总图标数, ${data.length}`);
 
 fs.writeFileSync(
   path.resolve(__dirname, '../source/icons.json'),
-  JSON.stringify(data, null, 4),
+  JSON.stringify(data, null, 2),
   'utf8',
 );
