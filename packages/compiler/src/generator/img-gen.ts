@@ -68,7 +68,7 @@ export class ImgGenerator extends IconGenerator {
 
   renderGetSvgCode(info: IInfo) {
     const useType = this.useType;
-    const typeName = this.getInterfaceName('props', true);
+    const typeName = this.getInterfaceName('props');
 
     this.write(`(props${useType ? `: ${typeName}` : ''}) => `);
     this.writeLine();
@@ -90,7 +90,7 @@ export class ImgGenerator extends IconGenerator {
     this.space();
     this.write('{');
     const imports: string[] = [];
-    const typeName = this.getInterfaceName('props', true);
+    const typeName = this.getInterfaceName('props');
     const wrapperName = this.getTypeName('wrapper');
 
     if (useType) {

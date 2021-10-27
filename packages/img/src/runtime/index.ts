@@ -116,16 +116,18 @@ export interface IIconProps extends IIconBase {
   spin?: boolean;
   // ture 则返回不带 img 标签的图片 base64
   base64?: boolean;
+  // id 字段的随机数
+  id?: string;
 }
 
 // 包裹后的图标属性
 export type IconOptions = IIconProps;
 
 // 包裹前的图标渲染器
-export type IconRender = (props: ISvgIconProps) => string;
+export type IconRender = (props: IIconProps) => string;
 
 // 包裹后的图标
-export type IconReturn = (props: ISvgIconProps) => string;
+export type IconReturn = (props: IIconProps) => string;
 
 // 默认属性
 export const DEFAULT_ICON_CONFIGS: IIconConfig = {

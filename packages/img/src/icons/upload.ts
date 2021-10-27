@@ -4,10 +4,10 @@
  * @author 由 fe6 自动生成
  */
 
-import { ISvgIconProps, IconWrapper } from '../runtime';
+import { IIconProps, IconWrapper } from '../runtime';
 
 // 获取 SVG 的 HTML 字符串
-export const getIconUploadSvgHtml = (props: ISvgIconProps) =>
+export const getIconUploadSvgHtml = (props: IIconProps) =>
   `<?xml version="1.0" encoding="UTF-8"?>
 <svg width="${props.size}" height="${
     props.size
