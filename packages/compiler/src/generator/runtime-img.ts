@@ -278,18 +278,19 @@ export class ImgRuntimeGenerator extends RuntimeGenerator {
     this.writeLine('const svgProps = IconConverter(guid(), props, config);');
     this.writeLine('const svgHtml = render(svgProps);');
     this.writeLine('const src = base64encode(unicodeToUtf8(svgHtml));');
+    this.writeLine(`const svgBase64 = \`data:image/svg+xml;base64,\${src}\`;`);
     this.writeLine();
 
     this.writeLine(
       `return (${this.useType ? '' : 'props && '}props${
         this.useType ? '?' : ''
-      }.base64 ? \`data:image/svg+xml;base64,\${src}\` : `,
+      }.base64 ? svgBase64 : `,
     );
     this.indent(1);
     this.writeLine(`\`<span class=\"\${cls.join(' ')}\">`);
     this.indent(1);
     this.writeLine(
-      `<img class="\${config.prefix}-${this.prefix}-img" src="data:image/svg+xml;base64,\${src}" />`,
+      `<img class="\${config.prefix}-${this.prefix}-img" src="\${svgBase64}" />`,
     );
     this.indent(-1);
     this.writeLine('</span>`');

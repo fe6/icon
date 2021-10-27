@@ -396,13 +396,12 @@ export const IconWrapper = (
     const svgProps = IconConverter(guid(), props, config);
     const svgHtml = render(svgProps);
     const src = base64encode(unicodeToUtf8(svgHtml));
+    const svgBase64 = `data:image/svg+xml;base64,${src}`;
 
     return props?.base64
-      ? `data:image/svg+xml;base64,${src}`
+      ? svgBase64
       : `<span class="${cls.join(' ')}">
-        <img class="${
-          config.prefix
-        }-icon-img" src="data:image/svg+xml;base64,${src}" />
+        <img class="${config.prefix}-icon-img" src="${svgBase64}" />
       </span>`;
   };
 }; // end IconWrapper
