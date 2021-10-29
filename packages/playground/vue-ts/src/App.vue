@@ -3,7 +3,7 @@
 <template>
   <h1>cube vue 所有</h1>
   -{{ colorDiy }}-<br />
-  <button @click="setColor">设置颜色</button>
+  <button @click="() => setColor(true)">设置颜色</button>
   <br />
   当前主题: {{ themeNow }}<br /><button
     v-for="tItem in themeIcon"
@@ -17,9 +17,6 @@
   <div>
     <h3>img</h3>
     <img :src="imgIcon" :key="idx" v-for="(imgIcon, idx) in imgGroup" />
-    <!-- <span :key="idx" v-for="(imgIcon, idx) in imgGroup">
-      <span v-html="imgIcon" />
-    </span> -->
     <h3>svg</h3>
     <span v-for="icon in iconConfig">
       <icon-keg
@@ -93,11 +90,14 @@
   <br />
   <i-video :size="100" />
   <h4>颜色</h4>
-  <i-video :size="100" :colors="myColors" />
-  <i-video :size="100" theme="filled" :fill="myColors" />
-  <i-video :size="100" theme="outline" :fill="myColors" />
-  <i-video :size="100" theme="twoTone" :fill="myColors" />
-  <i-video :size="100" theme="multiColor" :fill="myColors" />
+  默认主题: outline<i-video :size="100" :colors="myColors" /> filled<i-video
+    :size="100"
+    theme="filled"
+    :colors="myColors"
+  />
+  outline<i-video :size="100" theme="outline" :colors="myColors" />
+  twoTone<i-video :size="100" theme="twoTone" :colors="myColors" />
+  multiColor<i-video :size="100" theme="multiColor" :colors="myColors" />
 </template>
 
 <script setup lang="ts">
@@ -134,7 +134,7 @@
 
   const myColors = ['#f00', '#f0f', '#00f', '#0f0'];
 
-  const myDefColors: string[] = ['#333', '#2f88ff', '#fff', '#43ccf8'];
+  const myDefColors: string[] = ['#0f0', '#2f88ff', '#fff', '#43ccf8'];
 
   const vIconDef = IconVideo();
 
@@ -166,25 +166,25 @@
 
   const vIconThemeFilled = IconVideo({
     size: 100,
-    fill: myColors,
+    colors: myColors,
     theme: 'filled',
   });
 
   const vIconThemeOutline = IconVideo({
     size: 100,
-    fill: myColors,
+    colors: myColors,
     theme: 'outline',
   });
 
   const vIconThemeTwoTone = IconVideo({
     size: 100,
-    fill: myColors,
+    colors: myColors,
     theme: 'twoTone',
   });
 
   const vIconThemeMultiColor = IconVideo({
     size: 100,
-    fill: myColors,
+    colors: myColors,
     theme: 'multiColor',
   });
 
@@ -195,13 +195,26 @@
 
   const colorDiy = ref(myDefColors.slice());
   const colorIsDef = ref(true);
-  const setColor = () => {
+  const themeNow = ref(themeIcon[0]);
+
+  const setColor = (is?: boolean) => {
     colorIsDef.value = !colorIsDef.value;
-    colorDiy.value = colorIsDef.value ? myDefColors.slice() : myColors.slice();
+    switch (themeNow.value) {
+      case 'twoTone':
+        colorDiy.value = (is ? myColors : myDefColors).slice(0, 2);
+        break;
+      case 'multiColor':
+        colorDiy.value = (is ? myColors : myDefColors).slice();
+        break;
+
+      default:
+        colorDiy.value = (is ? myColors : myDefColors).slice(0, 1);
+        break;
+    }
     renderImgBase64();
     renderDiyBase64();
   };
-  const themeNow = ref(themeIcon[0]);
+
   const setTheme = (newTheme: typeof TCubeTheme) => {
     themeNow.value = newTheme;
     renderImgBase64();
@@ -212,13 +225,13 @@
   const imgGroup = ref<string[]>([]);
   const renderImgBase64 = () => {
     imgGroup.value = [];
-    iconConfig.forEach(({ type }: any) => {
+    iconConfig.forEach(({ type, svg }: any) => {
       imgGroup.value.push(
         waterImgIcon({
           size: 100,
           theme: themeNow.value,
-          fill: colorDiy.value,
-          type,
+          svg,
+          colors: colorDiy.value,
           base64: true,
         }),
       );
@@ -233,7 +246,7 @@
     diySvgHtml.value = ImgKeg({
       size: 200,
       theme: themeNow.value,
-      fill: colorDiy.value,
+      colors: colorDiy.value,
       svg: diySvg,
       strokeWidth: 2,
       strokeLinecap: 'round',
@@ -242,6 +255,7 @@
     });
   };
   renderDiyBase64();
+  setColor();
 </script>
 
 <style>

@@ -196,6 +196,17 @@ export class RuntimeGenerator extends Generator {
       this.indent(-1);
       this.writeLine(`}`);
       this.writeLine();
+
+      this.writeLine('// 颜色类型');
+      this.writeLine(`export interface IColors {`);
+      this.indent(1);
+      this.writeLine('outline: ICubeBaseColors;');
+      this.writeLine('filled: ICubeBaseColors;');
+      this.writeLine('twoTone: ICubeBaseColors;');
+      this.writeLine('multiColor: ICubeMoreColors;');
+      this.indent(-1);
+      this.writeLine(`}`);
+      this.writeLine();
     } // 渐变色处理
 
     if (hueList.length) {
@@ -283,28 +294,7 @@ export class RuntimeGenerator extends Generator {
       if (this.hasDefaultTheme) {
         this.writeLine();
         this.writeLine('// 主题默认颜色');
-        this.writeLine('colors: {');
-        this.indent(1);
-        this.theme.forEach((item: IIconThemeInfo) => {
-          if (
-            !item.fill.some((item: IThemeColor) => {
-              return item.name;
-            })
-          ) {
-            return;
-          }
-
-          this.writeLine();
-
-          const colorName = camelCase(item.name);
-          this.writeLine(
-            `${colorName}: ${
-              colorName === 'multiColor' ? 'ICubeMoreColors' : 'ICubeBaseColors'
-            };`,
-          );
-        });
-        this.indent(-1);
-        this.writeLine('};');
+        this.writeLine('colors: IColors');
       }
     } else if (this.colors.length) {
       const list: string[] = [];
@@ -801,7 +791,7 @@ export class RuntimeGenerator extends Generator {
         'colors',
       )}oldColors).slice();`,
     );
-    this.writeLine('colors = getColors(theme, colors);');
+    this.writeLine('colors = getColors(theme, colors, config.colors);');
     this.writeLine();
 
     this.writeLine('return {');
@@ -1207,7 +1197,7 @@ export class RuntimeGenerator extends Generator {
     this.writeLine(
       `const getColors = (theme${this.useType ? ': TCubeTheme' : ''}, oldColor${
         this.useType ? ': string[]' : ''
-      }) => {`,
+      }, defColors${this.useType ? ': IColors' : ''}) => {`,
     );
     this.indent(1);
     this.writeLine('const newColors: string[] = [];');
@@ -1216,34 +1206,66 @@ export class RuntimeGenerator extends Generator {
     this.indent(1);
     this.writeLine("case 'outline':");
     this.indent(1);
-    this.writeLine('newColors.push(oldColor[0]);');
-    this.writeLine('newColors.push(oldColor[1]);');
-    this.writeLine('newColors.push(oldColor[0]);');
-    this.writeLine('newColors.push(oldColor[1]);');
+    this.writeLine(
+      'newColors.push(oldColor[0] || defColors.outline.outStrokeColor);',
+    );
+    this.writeLine(
+      'newColors.push(oldColor[1] || defColors.outline.outFillColor);',
+    );
+    this.writeLine(
+      'newColors.push(oldColor[0] || defColors.outline.outStrokeColor);',
+    );
+    this.writeLine(
+      'newColors.push(oldColor[1] || defColors.outline.outFillColor);',
+    );
     this.writeLine('break;');
     this.indent(-1);
     this.writeLine("case 'filled':");
     this.indent(1);
-    this.writeLine('newColors.push(oldColor[0]);');
-    this.writeLine('newColors.push(oldColor[0]);');
-    this.writeLine('newColors.push(oldColor[1]);');
-    this.writeLine('newColors.push(oldColor[1]);');
+    this.writeLine(
+      'newColors.push(oldColor[0] || defColors.filled.outStrokeColor);',
+    );
+    this.writeLine(
+      'newColors.push(oldColor[0] || defColors.filled.outStrokeColor);',
+    );
+    this.writeLine(
+      'newColors.push(oldColor[1] || defColors.filled.outFillColor);',
+    );
+    this.writeLine(
+      'newColors.push(oldColor[1] || defColors.filled.outFillColor);',
+    );
     this.writeLine('break;');
     this.indent(-1);
     this.writeLine("case 'twoTone':");
     this.indent(1);
-    this.writeLine('newColors.push(oldColor[0]);');
-    this.writeLine('newColors.push(oldColor[1]);');
-    this.writeLine('newColors.push(oldColor[0]);');
-    this.writeLine('newColors.push(oldColor[1]);');
+    this.writeLine(
+      'newColors.push(oldColor[0] || defColors.twoTone.outStrokeColor);',
+    );
+    this.writeLine(
+      'newColors.push(oldColor[1] || defColors.twoTone.outFillColor);',
+    );
+    this.writeLine(
+      'newColors.push(oldColor[0] || defColors.twoTone.outStrokeColor);',
+    );
+    this.writeLine(
+      'newColors.push(oldColor[1] || defColors.twoTone.outFillColor);',
+    );
     this.writeLine('break;');
     this.indent(-1);
     this.writeLine("case 'multiColor':");
     this.indent(1);
-    this.writeLine('newColors.push(oldColor[0]);');
-    this.writeLine('newColors.push(oldColor[1]);');
-    this.writeLine('newColors.push(oldColor[2]);');
-    this.writeLine('newColors.push(oldColor[3]);');
+    this.writeLine(
+      'newColors.push(oldColor[0] || defColors.multiColor.outStrokeColor);',
+    );
+    this.writeLine(
+      'newColors.push(oldColor[1] || defColors.multiColor.outFillColor);',
+    );
+    this.writeLine(
+      'newColors.push(oldColor[2] || defColors.multiColor.innerStrokeColor);',
+    );
+    this.writeLine(
+      'newColors.push(oldColor[3] || defColors.multiColor.innerFillColor);',
+    );
     this.writeLine('break;');
     this.indent(-1);
     this.indent(-1);
