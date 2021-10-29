@@ -45,7 +45,11 @@ export class AllGenerator extends RuntimeGenerator {
 
     this.writeLine(`import * as ${iconMap} from './map';`);
     if (this.useType) {
-      this.writeLine(`import { ${iconProps} } from './runtime';`);
+      this.writeLine(
+        `import { ${iconProps}, ${this.getTypeName(
+          'wrapper ',
+        )} } from './runtime';`,
+      );
       this.writeLine();
 
       this.writeLine(`export type ${iconType} = keyof typeof ${iconMap};`);
@@ -58,17 +62,130 @@ export class AllGenerator extends RuntimeGenerator {
       this.writeLine();
     }
 
+    const typeString = this.useType ? ': string' : '';
+    const typeStrArray = this.useType ? `${typeString}[]` : '';
+
+    this.writeLine('// 正则 数据中的默认颜色 替换');
+    this.writeLine(
+      `const reColors${typeStrArray} = ['#333', '#2f88ff', '#fff', '#43ccf8'];`,
+    );
+    this.writeLine();
+    this.writeLine('// 获取 SVG 内容');
+    this.writeLine(
+      `export const allGetContent = (svgItem${typeString}, props${
+        this.useType ? `: ${iconProps}` : ''
+      })${typeString} => {`,
+    );
+    this.indent(1);
+    this.writeLine('if (!svgItem) {');
+    this.indent(1);
+    this.writeLine(`return '';`);
+    this.indent(-1);
+    this.writeLine('};');
+    this.writeLine();
+    this.writeLine(
+      'const { size, colors, strokeLinejoin, strokeLinecap, strokeWidth } = props;',
+    );
+    this.writeLine();
+
+    this.writeLine('let originSvg = svgItem;');
+    this.writeLine();
+    this.writeLine(`originSvg = originSvg.replace(/\\\\/g, '');`);
+    this.writeLine(
+      "originSvg = originSvg[0] === '\"' ? originSvg.substr(1, originSvg.length - 1) : originSvg;",
+    );
+    this.writeLine(
+      "originSvg = originSvg[originSvg.length - 1] === '\"' ? originSvg.substr(0, originSvg.length - 1) : originSvg;",
+    );
+    this.writeLine(
+      `originSvg = originSvg.replace(/width="d{0,}"/, \`width="\${size}"\`);`,
+    );
+    this.writeLine(
+      `originSvg = originSvg.replace(/height="d{0,}"/, \`height="\${size}"\`);`,
+    );
+    this.writeLine();
+    this.writeLine("let contentHtml = svgItem ? originSvg : '';");
+    this.writeLine();
+    this.writeLine('if (colors) {');
+    this.indent(1);
+    this.writeLine(
+      `colors.forEach((colorItem${typeString}, colorIdx${
+        this.useType ? ': number' : ''
+      }) => {`,
+    );
+    this.indent(1);
+    this.writeLine('contentHtml = contentHtml.replace(');
+    this.indent(1);
+    this.writeLine('new RegExp(');
+    this.indent(1);
+    this.writeLine(
+      `\`\${reColors[colorIdx]}|\${reColors[colorIdx].toUpperCase()}\`,`,
+    );
+    this.writeLine("'g',");
+    this.indent(-1);
+    this.writeLine('),');
+    this.writeLine('colorItem,');
+    this.indent(-1);
+    this.writeLine(');');
+    this.indent(-1);
+    this.writeLine('});');
+    this.indent(-1);
+    this.writeLine('};');
+    this.writeLine();
+    this.writeLine('contentHtml = contentHtml.replace(');
+    this.indent(-1);
+    this.writeLine('/stroke-linejoin="round"/g,');
+    this.writeLine(`\`stroke-linejoin="\${strokeLinejoin}"\`,`);
+    this.indent(-1);
+    this.writeLine(');');
+    this.writeLine();
+    this.writeLine('contentHtml = contentHtml.replace(');
+    this.indent(-1);
+    this.writeLine('/stroke-linecap="round"/g,');
+    this.writeLine(`\`stroke-linecap="\${strokeLinecap}"\`,`);
+    this.indent(-1);
+    this.writeLine(');');
+    this.writeLine();
+    this.writeLine('contentHtml = contentHtml.replace(');
+    this.indent(-1);
+    this.writeLine('/stroke-width="4"/g,');
+    this.writeLine(`\`stroke-width="\${strokeWidth}"\`,`);
+    this.indent(-1);
+    this.writeLine(');');
+    this.writeLine();
+    this.writeLine('return contentHtml;');
+    this.indent(-1);
+    this.writeLine('};');
+    this.writeLine();
+
     this.writeLine(
       `export const iconKeg = (props${
         this.useType ? `: ${allProps}` : ''
       }) => {`,
     );
     this.indent(1);
+    this.writeLine('if (props && props.type) {');
+    this.indent(1);
     this.writeLine(
-      `return ${iconMap}[props.type${
-        this.useType ? ` as ${iconType}` : ''
-      }](props)`,
+      `return IconMap[props.type${this.useType ? ' as IconType' : ''}](props);`,
     );
+    this.indent(-1);
+    this.writeLine('}');
+    this.writeLine();
+    this.writeLine('if (props && props.svg) {');
+    this.indent(1);
+    this.writeLine(
+      `return IconWrapper('icon-keg', true, (props${
+        this.useType ? `: ${iconProps}` : ''
+      }) => {`,
+    );
+    this.indent(1);
+    this.writeLine('let curSvg = String(props.svg);');
+    this.writeLine('return allGetContent(curSvg, props);');
+    this.indent(-1);
+    this.writeLine('})(props);');
+    this.indent(-1);
+    this.writeLine('}');
     this.indent(-1);
     this.writeLine('};');
   }

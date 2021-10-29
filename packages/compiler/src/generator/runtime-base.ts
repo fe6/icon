@@ -245,6 +245,12 @@ export class RuntimeGenerator extends Generator {
     this.writeLine('// 是否旋转');
     this.writeLine('spin?: boolean;');
 
+    if (this.type === 'img') {
+      this.writeLine();
+      this.writeLine('// 渲染数据中是 svg');
+      this.writeLine('svg?: string;');
+    }
+
     this.indent(-1);
     this.writeLine('}');
     this.writeLine();
@@ -349,6 +355,12 @@ export class RuntimeGenerator extends Generator {
     this.writeLine();
     this.writeLine('// 换肤的颜色数组');
     this.writeLine('colors?: string[];');
+
+    if (this.type === 'img') {
+      this.writeLine();
+      this.writeLine('// 渲染数据中是 svg');
+      this.writeLine('svg?: string;');
+    }
 
     this.indent(-1);
     this.writeLine('}');
@@ -1090,6 +1102,10 @@ export class RuntimeGenerator extends Generator {
     if (this.hueList.length) {
       this.writeLine('format: (idx, s , l) => {');
       this.writeLine('},');
+    }
+
+    if (this.type === 'img') {
+      this.writeLine(`svg: ${mayBeText('svg')}'',`);
     }
 
     this.writeLine('id');
