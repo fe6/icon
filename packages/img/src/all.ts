@@ -10,7 +10,7 @@ import { IIconProps, IconWrapper } from './runtime';
 export type IconType = keyof typeof IconMap;
 
 export interface IIconAllProps extends IIconProps {
-  type: IconType | string;
+  type?: IconType | string;
 }
 
 // 正则 数据中的默认颜色 替换

@@ -56,7 +56,7 @@ export class AllGenerator extends RuntimeGenerator {
       this.writeLine();
       this.writeLine(`export interface ${allProps} extends ${iconProps} {`);
       this.indent(1);
-      this.writeLine(`type: ${iconType} | string;`);
+      this.writeLine(`type?: ${iconType} | string;`);
       this.indent(-1);
       this.writeLine(`}`);
       this.writeLine();

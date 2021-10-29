@@ -124,8 +124,6 @@ export interface IIconProps extends IIconBase {
   base64?: boolean;
   // id 字段的随机数
   id?: string;
-  // 渲染数据中是svg
-  svg?: string;
 }
 
 // 包裹后的图标属性
