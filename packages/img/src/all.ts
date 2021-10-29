@@ -35,8 +35,8 @@ export const allGetContent = (svgItem: string, props: IIconProps): string => {
     originSvg[originSvg.length - 1] === '"'
       ? originSvg.substr(0, originSvg.length - 1)
       : originSvg;
-  originSvg = originSvg.replace(/width="d{0,}"/, `width="${size}"`);
-  originSvg = originSvg.replace(/height="d{0,}"/, `height="${size}"`);
+  originSvg = originSvg.replace(/width="\d{0,}\w{2,3}"/, `width="${size}"`);
+  originSvg = originSvg.replace(/height="\d{0,}\w{2,3}"/, `height="${size}"`);
 
   let contentHtml = svgItem ? originSvg : '';
 

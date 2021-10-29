@@ -142,11 +142,20 @@ function createBuildTask(name: TBuildType): string {
         .pipe(gulp.dest(`${cwd}/styles`));
     });
 
-    gulp.task(`build-copy-${name}`, () => {
+    gulp.task(`build-copy-icons-${name}`, () => {
       return gulp.src('source/icons.json', { cwd: root }).pipe(gulp.dest(cwd));
     });
 
-    tasks.push(`build-css-${name}`, `build-less-${name}`, `build-copy-${name}`);
+    gulp.task(`build-copy-config-${name}`, () => {
+      return gulp.src('source/config.json', { cwd: root }).pipe(gulp.dest(cwd));
+    });
+
+    tasks.push(
+      `build-css-${name}`,
+      `build-less-${name}`,
+      `build-copy-icons-${name}`,
+      `build-copy-config-${name}`,
+    );
   }
 
   gulp.task(`build-${name}`, gulp.parallel(tasks));

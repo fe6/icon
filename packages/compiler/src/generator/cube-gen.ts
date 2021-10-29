@@ -119,13 +119,13 @@ export class CubeGenerator extends RuntimeGenerator {
     );
     this.writeLine();
     this.writeLine(
-      `originSvg = originSvg.replace(/viewBox=\"\d{0,} \d{0,} \d{0,} \d{0,}\"/, \`viewBox="\${viewBox}"\`);`,
+      `originSvg = originSvg.replace(/viewBox=\"\\d{0,} \\d{0,} \\d{0,} \\d{0,}\"/, \`viewBox="\${viewBox}"\`);`,
     );
     this.writeLine(
-      `originSvg = originSvg.replace(/width="\d{0,}"/, \`width="\${size}"\`);`,
+      `originSvg = originSvg.replace(/width="\\d{0,}\\w{2,3}"/, \`width="\${size}"\`);`,
     );
     this.writeLine(
-      `originSvg = originSvg.replace(/height="\d{0,}"/, \`height="\${size}"\`);`,
+      `originSvg = originSvg.replace(/height="\\d{0,}\\w{2,3}"/, \`height="\${size}"\`);`,
     );
     this.writeLine();
     this.writeLine(`let contentHtml = svgItem ? originSvg : '';`);

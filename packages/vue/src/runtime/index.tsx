@@ -157,7 +157,7 @@ export const DEFAULT_ICON_CONFIGS: IIconConfig = {
       innerFillColor: '#43ccf8',
     },
   },
-  prefix: 'i',
+  prefix: 'cube',
 };
 
 const guid = (): string => {
@@ -278,7 +278,7 @@ export const IconConverter = (
   };
 }; // 属性转换函数 IconConverter end
 
-const IconContext = Symbol('i-icon-context');
+const IconContext = Symbol('cube-icon-context');
 
 // 图标配置Provider
 export const IconProvider = (config: IIconConfig): void => {

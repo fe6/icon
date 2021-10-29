@@ -9,12 +9,15 @@ import path from 'path';
 
 import { errorLog, log, pascalCase } from '../packages/compiler/src';
 
+import { iconConfig } from './conf';
+
 interface IIconProps {
   id: number;
   title: string;
   name: string;
   type: string;
   svg?: string;
+  config?: typeof iconConfig;
   tag: string[];
   category: string;
   categoryCN: string;
@@ -93,6 +96,7 @@ fs.readdirSync(path.join(__dirname, '../source')).forEach((dir) => {
             if (file.includes('svg')) {
               const childDir = path.basename(filePath, '.svg').toLowerCase();
               ALL_ICON_MAP[childDir].svg = fs.readFileSync(filePath, 'utf8');
+              ALL_ICON_MAP[childDir].config = iconConfig;
             }
           });
 
@@ -136,8 +140,16 @@ Object.keys(ALL_ICON_MAP).forEach((key) => {
 
 log(`总图标数, ${data.length}`);
 
+// 生成 icon.json
 fs.writeFileSync(
   path.resolve(__dirname, '../source/icons.json'),
   JSON.stringify(data, null, 2),
+  'utf8',
+);
+
+// 生成 config.json
+fs.writeFileSync(
+  path.resolve(__dirname, '../source/config.json'),
+  JSON.stringify(iconConfig, null, 2),
   'utf8',
 );

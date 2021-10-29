@@ -5,7 +5,7 @@
  */
 
 export default `
-.i-icon {
+.cube-icon {
   display: inline-block;
   color: inherit;
   font-style: normal;
@@ -18,22 +18,22 @@ export default `
   -moz-osx-font-smoothing: grayscale;
 }
 
-.i-icon-spin svg {
-  animation: i-icon-spin 1s infinite linear;
+.cube-icon-spin svg {
+  animation: cube-icon-spin 1s infinite linear;
 }
 
-.i-icon-rtl {
+.cube-icon-rtl {
   transform: scaleX(-1);
 }
 
-@keyframes i-icon-spin {
+@keyframes cube-icon-spin {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg)
   }
 }
 
-@-webkit-keyframes i-icon-spin {
+@-webkit-keyframes cube-icon-spin {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg)

@@ -40,11 +40,11 @@ export const cubeGetContent = (props: IIconProps): string => {
   let originSvg = getSvgProp(svgItem, 'content', 'String', canSet, '');
 
   originSvg = originSvg.replace(
-    /viewBox="d{0,} d{0,} d{0,} d{0,}"/,
+    /viewBox="\d{0,} \d{0,} \d{0,} \d{0,}"/,
     `viewBox="${viewBox}"`,
   );
-  originSvg = originSvg.replace(/width="d{0,}"/, `width="${size}"`);
-  originSvg = originSvg.replace(/height="d{0,}"/, `height="${size}"`);
+  originSvg = originSvg.replace(/width="\d{0,}\w{2,3}"/, `width="${size}"`);
+  originSvg = originSvg.replace(/height="\d{0,}\w{2,3}"/, `height="${size}"`);
 
   let contentHtml = svgItem ? originSvg : '';
 
