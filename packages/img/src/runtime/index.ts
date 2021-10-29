@@ -47,6 +47,9 @@ export interface ISvgIconProps {
 
   // 是否旋转
   spin?: boolean;
+
+  // 渲染数据中是 svg
+  svg?: string;
 }
 
 // 图标配置属性
@@ -109,6 +112,9 @@ export interface IIconBase {
 
   // 换肤的颜色数组
   colors?: string[];
+
+  // 渲染数据中是 svg
+  svg?: string;
 }
 
 // 包裹后的图标属性
@@ -118,6 +124,8 @@ export interface IIconProps extends IIconBase {
   base64?: boolean;
   // id 字段的随机数
   id?: string;
+  // 渲染数据中是svg
+  svg?: string;
 }
 
 // 包裹后的图标属性
@@ -275,6 +283,7 @@ export const IconConverter = (
     strokeLinecap: icon?.strokeLinecap || config.strokeLinecap,
     strokeLinejoin: icon?.strokeLinejoin || config.strokeLinejoin,
     colors: icon?.colors || colors,
+    svg: icon?.svg || '',
     id,
   };
 }; // 属性转换函数 IconConverter end

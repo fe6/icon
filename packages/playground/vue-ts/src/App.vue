@@ -33,6 +33,8 @@
   <h1>定制款</h1>
   <icon-cube :id="94479" :size="200" />
   <CubeVideo />
+  <h3>img 通过 svg 渲染</h3>
+  <img :src="diySvgHtml" />
   <h1>img 版</h1>
   <h4>定制属性</h4>
   <span v-html="vIconDef" />
@@ -113,6 +115,7 @@
   import {
     IconVideo,
     setConfig,
+    iconKeg as ImgKeg,
     DEFAULT_ICON_CONFIGS as imgConfig,
     iconKeg as waterImgIcon,
   } from '@fe6/icon-img';
@@ -124,6 +127,7 @@
 
   import iconJson from '@fe6/icons.json';
 
+  import { diySvg } from './diy';
   import './custom-config';
 
   const iconConfig = iconJson.slice();
@@ -195,11 +199,13 @@
     colorIsDef.value = !colorIsDef.value;
     colorDiy.value = colorIsDef.value ? myDefColors.slice() : myColors.slice();
     renderImgBase64();
+    renderDiyBase64();
   };
   const themeNow = ref(themeIcon[0]);
   const setTheme = (newTheme: typeof TCubeTheme) => {
     themeNow.value = newTheme;
     renderImgBase64();
+    renderDiyBase64();
   };
 
   // 生成 img base64
@@ -220,6 +226,22 @@
   };
 
   renderImgBase64();
+
+  const diySvgHtml = ref('');
+
+  const renderDiyBase64 = () => {
+    diySvgHtml.value = ImgKeg({
+      size: 200,
+      theme: themeNow.value,
+      fill: colorDiy.value,
+      svg: diySvg,
+      strokeWidth: 2,
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round',
+      base64: true,
+    });
+  };
+  renderDiyBase64();
 </script>
 
 <style>

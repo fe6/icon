@@ -37,6 +37,8 @@ export class ImgRuntimeGenerator extends RuntimeGenerator {
     this.writeLine('base64?: boolean;');
     this.writeLine('// id 字段的随机数');
     this.writeLine('id?: string;');
+    this.writeLine('// 渲染数据中是svg');
+    this.writeLine('svg?: string;');
     this.indent(-1);
     this.writeLine('}');
     this.writeLine();

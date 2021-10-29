@@ -2,7 +2,7 @@
 
 # Water Icon 图标
 
-> Water 图标体系
+> Water 图标体系， vue 项目中使用
 
 ## 介绍
 
