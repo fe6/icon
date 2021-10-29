@@ -107,9 +107,6 @@ export interface IIconBase {
   // 默认主题
   theme?: TCubeTheme;
 
-  // 填充色
-  fill?: string | string[];
-
   // 换肤的颜色数组
   colors?: string[];
 
@@ -179,7 +176,7 @@ export const IconConverter = (
   icon: IIconBase,
   config: IIconConfig,
 ): ISvgIconProps => {
-  const fill = typeof icon?.fill === 'string' ? [icon?.fill] : icon?.fill || [];
+  const fill = icon?.colors || [];
   const colors: string[] = [];
 
   const theme: TCubeTheme = icon?.theme || config.theme;
@@ -280,7 +277,7 @@ export const IconConverter = (
     strokeWidth: icon?.strokeWidth || config.strokeWidth,
     strokeLinecap: icon?.strokeLinecap || config.strokeLinecap,
     strokeLinejoin: icon?.strokeLinejoin || config.strokeLinejoin,
-    colors: icon?.colors || colors,
+    colors,
     svg: icon?.svg || '',
     id,
   };

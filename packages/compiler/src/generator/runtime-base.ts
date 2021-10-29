@@ -344,13 +344,13 @@ export class RuntimeGenerator extends Generator {
       this.writeLine('theme?: TCubeTheme;');
     } // 添加类型
 
-    const list = this.getColorTypes();
+    // const list = this.getColorTypes();
 
-    if (list.length > 0) {
-      this.writeLine();
-      this.writeLine('// 填充色');
-      this.writeLine(`fill?: ${list.join(' | ')};`);
-    }
+    // if (list.length > 0) {
+    //   this.writeLine();
+    //   this.writeLine('// 填充色');
+    //   this.writeLine(`fill?: ${list.join(' | ')};`);
+    // }
 
     this.writeLine();
     this.writeLine('// 换肤的颜色数组');
@@ -575,13 +575,11 @@ export class RuntimeGenerator extends Generator {
     this.indent(1);
 
     if (this.colors.length) {
-      this.writeLine(
-        `const fill = ${
-          this.useType ? '' : 'icon && ('
-        }typeof icon${typeMay}.fill === 'string' ? [icon${typeMay}.fill] : icon${typeMay}.fill${
-          this.useType ? '' : ')'
-        } || [];`,
-      );
+      if (this.useType) {
+        this.writeLine('const fill = icon?.colors || [];');
+      } else {
+        this.writeLine('const fill = icon && icon.colors ? icon.colors : [];');
+      }
     }
 
     if (this.replaceList.length) {
@@ -864,13 +862,11 @@ export class RuntimeGenerator extends Generator {
     this.indent(1);
 
     if (this.colors.length) {
-      this.writeLine(
-        `const fill = ${
-          this.useType ? '' : 'icon && ('
-        }typeof icon${typeMay}.fill === 'string' ? [icon${typeMay}.fill] : icon${typeMay}.fill${
-          this.useType ? '' : ')'
-        } || [];`,
-      );
+      if (this.useType) {
+        this.writeLine('const fill = icon?.colors || [];');
+      } else {
+        this.writeLine('const fill = icon && icon.colors ? icon.colors : [];');
+      }
     }
 
     if (this.replaceList.length) {
@@ -1096,7 +1092,7 @@ export class RuntimeGenerator extends Generator {
     }
 
     if (this.replaceList.length) {
-      this.writeLine(`colors: ${mayBeText('colors')}colors,`);
+      this.writeLine(`colors,`);
     }
 
     if (this.hueList.length) {
@@ -1166,7 +1162,7 @@ export class RuntimeGenerator extends Generator {
   getTSvgAttr() {
     this.writeLine();
     this.writeLine(
-      `type TSvgAttr = 'canSet' | 'theme' | 'size' | 'strokeWidth' | 'strokeLinecap' | 'strokeLinejoin' | 'theme' | 'fill' | 'colors' | 'spin' | 'content' | 'viewBox';`,
+      `type TSvgAttr = 'canSet' | 'theme' | 'size' | 'strokeWidth' | 'strokeLinecap' | 'strokeLinejoin' | 'colors' | 'spin' | 'content' | 'viewBox';`,
     );
     this.writeLine();
   }
@@ -1338,8 +1334,6 @@ export class RuntimeGenerator extends Generator {
     const arr: string[] = [];
     const fixedSize = this.fixedSize;
     const stroke = this.stroke;
-    const hueList = this.hueList;
-    const replaceList = this.replaceList;
     const strokeLinecap = this.strokeLinecap;
     const strokeLinejoin = this.strokeLinejoin;
 
@@ -1363,10 +1357,6 @@ export class RuntimeGenerator extends Generator {
 
     if (this.theme.length) {
       arr.push('theme');
-    }
-
-    if (hueList.length || replaceList.length) {
-      arr.push('fill');
     }
 
     arr.push('colors');
