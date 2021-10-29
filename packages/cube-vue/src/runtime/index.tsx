@@ -107,9 +107,6 @@ export interface IIconBase {
   // 默认主题
   theme?: TCubeTheme;
 
-  // 填充色
-  fill?: string | string[];
-
   // 换肤的颜色数组
   colors?: string[];
 }
@@ -191,8 +188,6 @@ type TSvgAttr =
   | 'strokeWidth'
   | 'strokeLinecap'
   | 'strokeLinejoin'
-  | 'theme'
-  | 'fill'
   | 'colors'
   | 'spin'
   | 'content'
@@ -260,7 +255,7 @@ export const IconConverter = (
   icon: IIconProps,
   config: IIconConfig,
 ): ISvgIconProps => {
-  const fill = typeof icon?.fill === 'string' ? [icon?.fill] : icon?.fill || [];
+  const fill = icon?.colors || [];
   const oldColors: string[] = [];
   const svgItem: IIconCubeItemData | null = getSvgItem(id);
   const canSet = getSvgProp(svgItem, 'canSet', 'Boolean', false, true);
@@ -440,7 +435,6 @@ export const IconWrapper = (
       'strokeLinecap',
       'strokeLinejoin',
       'theme',
-      'fill',
       'colors',
       'spin',
       'id',
@@ -455,7 +449,6 @@ export const IconWrapper = (
           strokeLinecap,
           strokeLinejoin,
           theme,
-          fill,
           colors,
           spin,
         } = props;
@@ -469,7 +462,6 @@ export const IconWrapper = (
             strokeLinecap,
             strokeLinejoin,
             theme,
-            fill,
             colors,
             spin,
             id: propsId,

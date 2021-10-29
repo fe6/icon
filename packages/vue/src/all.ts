@@ -31,7 +31,6 @@ const IIconWaterOptions: IIconAllOptions = {
     'strokeLinecap',
     'strokeLinejoin',
     'theme',
-    'fill',
     'colors',
     'spin',
     'type',
@@ -49,7 +48,6 @@ const IIconWaterOptions: IIconAllOptions = {
       strokeLinecap,
       strokeLinejoin,
       theme,
-      fill,
       colors,
       spin,
     } = this;
@@ -60,7 +58,6 @@ const IIconWaterOptions: IIconAllOptions = {
       strokeLinecap,
       strokeLinejoin,
       theme,
-      fill,
       colors,
       spin,
     });
