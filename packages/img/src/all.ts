@@ -14,7 +14,8 @@ export interface IIconAllProps extends IIconProps {
 }
 
 // 正则 数据中的默认颜色 替换
-const reColors: string[] = ['#333', '#2f88ff', '#fff', '#43ccf8'];
+const reColors: string[] = ['#000', '#2f88ff', '#fff', '#43ccf8'];
+const reEnColors: string[] = ['black', '#2f88ff', 'white', '#43ccf8'];
 
 // 获取 SVG 内容
 export const allGetContent = (svgItem: string, props: IIconProps): string => {
@@ -44,7 +45,9 @@ export const allGetContent = (svgItem: string, props: IIconProps): string => {
     colors.forEach((colorItem: string, colorIdx: number) => {
       contentHtml = contentHtml.replace(
         new RegExp(
-          `${reColors[colorIdx]}|${reColors[colorIdx].toUpperCase()}`,
+          `${reColors[colorIdx]}|${reColors[colorIdx].toUpperCase()}|${
+            reEnColors[colorIdx]
+          }|${reEnColors[colorIdx].toUpperCase()}`,
           'g',
         ),
         colorItem,

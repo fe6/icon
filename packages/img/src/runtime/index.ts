@@ -25,6 +25,14 @@ export interface ICubeMoreColors extends ICubeBaseColors {
   innerFillColor: string;
 }
 
+// 颜色类型
+export interface IColors {
+  outline: ICubeBaseColors;
+  filled: ICubeBaseColors;
+  twoTone: ICubeBaseColors;
+  multiColor: ICubeMoreColors;
+}
+
 // 包裹前的图标属性
 export interface ISvgIconProps {
   // 当前图标的唯一Id
@@ -79,15 +87,7 @@ export interface IIconConfig {
   theme: TCubeTheme;
 
   // 主题默认颜色
-  colors: {
-    outline: ICubeBaseColors;
-
-    filled: ICubeBaseColors;
-
-    twoTone: ICubeBaseColors;
-
-    multiColor: ICubeMoreColors;
-  };
+  colors: IColors;
 }
 
 // 图标基础属性

@@ -28,6 +28,14 @@ export interface ICubeMoreColors extends ICubeBaseColors {
   innerFillColor: string;
 }
 
+// 颜色类型
+export interface IColors {
+  outline: ICubeBaseColors;
+  filled: ICubeBaseColors;
+  twoTone: ICubeBaseColors;
+  multiColor: ICubeMoreColors;
+}
+
 // 包裹前的图标属性
 export interface ISvgIconProps {
   // 当前图标的唯一Id
@@ -79,15 +87,7 @@ export interface IIconConfig {
   theme: TCubeTheme;
 
   // 主题默认颜色
-  colors: {
-    outline: ICubeBaseColors;
-
-    filled: ICubeBaseColors;
-
-    twoTone: ICubeBaseColors;
-
-    multiColor: ICubeMoreColors;
-  };
+  colors: IColors;
 }
 
 // 图标基础属性
@@ -217,33 +217,37 @@ export const getSvgProp = (
 };
 
 // 获取颜色
-const getColors = (theme: TCubeTheme, oldColor: string[]) => {
+const getColors = (
+  theme: TCubeTheme,
+  oldColor: string[],
+  defColors: IColors,
+) => {
   const newColors: string[] = [];
 
   switch (theme) {
     case 'outline':
-      newColors.push(oldColor[0]);
-      newColors.push(oldColor[1]);
-      newColors.push(oldColor[0]);
-      newColors.push(oldColor[1]);
+      newColors.push(oldColor[0] || defColors.outline.outStrokeColor);
+      newColors.push(oldColor[1] || defColors.outline.outFillColor);
+      newColors.push(oldColor[0] || defColors.outline.outStrokeColor);
+      newColors.push(oldColor[1] || defColors.outline.outFillColor);
       break;
     case 'filled':
-      newColors.push(oldColor[0]);
-      newColors.push(oldColor[0]);
-      newColors.push(oldColor[1]);
-      newColors.push(oldColor[1]);
+      newColors.push(oldColor[0] || defColors.filled.outStrokeColor);
+      newColors.push(oldColor[0] || defColors.filled.outStrokeColor);
+      newColors.push(oldColor[1] || defColors.filled.outFillColor);
+      newColors.push(oldColor[1] || defColors.filled.outFillColor);
       break;
     case 'twoTone':
-      newColors.push(oldColor[0]);
-      newColors.push(oldColor[1]);
-      newColors.push(oldColor[0]);
-      newColors.push(oldColor[1]);
+      newColors.push(oldColor[0] || defColors.twoTone.outStrokeColor);
+      newColors.push(oldColor[1] || defColors.twoTone.outFillColor);
+      newColors.push(oldColor[0] || defColors.twoTone.outStrokeColor);
+      newColors.push(oldColor[1] || defColors.twoTone.outFillColor);
       break;
     case 'multiColor':
-      newColors.push(oldColor[0]);
-      newColors.push(oldColor[1]);
-      newColors.push(oldColor[2]);
-      newColors.push(oldColor[3]);
+      newColors.push(oldColor[0] || defColors.multiColor.outStrokeColor);
+      newColors.push(oldColor[1] || defColors.multiColor.outFillColor);
+      newColors.push(oldColor[2] || defColors.multiColor.innerStrokeColor);
+      newColors.push(oldColor[3] || defColors.multiColor.innerFillColor);
       break;
   }
   return newColors;
@@ -401,7 +405,7 @@ export const IconConverter = (
     canSet,
     icon?.colors || oldColors,
   ).slice();
-  colors = getColors(theme, colors);
+  colors = getColors(theme, colors, config.colors);
 
   return {
     size,

@@ -9,19 +9,19 @@
   "theme": "outline",
   "colors": {
     "outline": {
-      "outStrokeColor": "#333",
+      "outStrokeColor": "#000",
       "outFillColor": "transparent"
     },
     "filled": {
-      "outStrokeColor": "#333",
+      "outStrokeColor": "#000",
       "outFillColor": "transparent"
     },
     "twoTone": {
-      "outStrokeColor": "#333",
+      "outStrokeColor": "#000",
       "outFillColor": "#2f88ff"
     },
     "multiColor": {
-      "outStrokeColor": "#333",
+      "outStrokeColor": "#000",
       "outFillColor": "#2f88ff",
       "innerStrokeColor": "#fff",
       "innerFillColor": "#43ccf8"

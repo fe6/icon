@@ -67,7 +67,10 @@ export class AllGenerator extends RuntimeGenerator {
 
     this.writeLine('// 正则 数据中的默认颜色 替换');
     this.writeLine(
-      `const reColors${typeStrArray} = ['#333', '#2f88ff', '#fff', '#43ccf8'];`,
+      `const reColors${typeStrArray} = ['#000', '#2f88ff', '#fff', '#43ccf8'];`,
+    );
+    this.writeLine(
+      `const reEnColors${typeStrArray} = ['black', '#2f88ff', 'white', '#43ccf8'];`,
     );
     this.writeLine();
     this.writeLine('// 获取 SVG 内容');
@@ -114,19 +117,9 @@ export class AllGenerator extends RuntimeGenerator {
       }) => {`,
     );
     this.indent(1);
-    this.writeLine('contentHtml = contentHtml.replace(');
-    this.indent(1);
-    this.writeLine('new RegExp(');
-    this.indent(1);
     this.writeLine(
-      `\`\${reColors[colorIdx]}|\${reColors[colorIdx].toUpperCase()}\`,`,
+      `contentHtml = contentHtml.replace(new RegExp(\`\${reColors[colorIdx]}|\${reColors[colorIdx].toUpperCase()}|\${reEnColors[colorIdx]}|\${reEnColors[colorIdx].toUpperCase()}\`, 'g'), colorItem);`,
     );
-    this.writeLine("'g',");
-    this.indent(-1);
-    this.writeLine('),');
-    this.writeLine('colorItem,');
-    this.indent(-1);
-    this.writeLine(');');
     this.indent(-1);
     this.writeLine('});');
     this.indent(-1);
