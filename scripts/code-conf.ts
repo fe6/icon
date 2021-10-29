@@ -9,7 +9,7 @@ export const BUILD_CODE_CONFIG: Omit<IIconToolsOptions, 'type'> = {
   stroke: 4,
   strokeLinejoin: 'round',
   strokeLinecap: 'round',
-  cssPrefix: 'i',
+  cssPrefix: 'cube',
   colors: [
     {
       type: 'color',

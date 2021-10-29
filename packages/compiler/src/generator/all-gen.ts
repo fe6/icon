@@ -98,10 +98,10 @@ export class AllGenerator extends RuntimeGenerator {
       "originSvg = originSvg[originSvg.length - 1] === '\"' ? originSvg.substr(0, originSvg.length - 1) : originSvg;",
     );
     this.writeLine(
-      `originSvg = originSvg.replace(/width="d{0,}"/, \`width="\${size}"\`);`,
+      `originSvg = originSvg.replace(/width="\\d{0,}\\w{2,3}"/, \`width="\${size}"\`);`,
     );
     this.writeLine(
-      `originSvg = originSvg.replace(/height="d{0,}"/, \`height="\${size}"\`);`,
+      `originSvg = originSvg.replace(/height="\\d{0,}\\w{2,3}"/, \`height="\${size}"\`);`,
     );
     this.writeLine();
     this.writeLine("let contentHtml = svgItem ? originSvg : '';");

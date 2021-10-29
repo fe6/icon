@@ -164,7 +164,7 @@ export const DEFAULT_ICON_CONFIGS: IIconConfig = {
       innerFillColor: '#43ccf8',
     },
   },
-  prefix: 'i',
+  prefix: 'cube',
 };
 
 const guid = (): string => {
