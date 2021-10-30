@@ -69,7 +69,7 @@ export default (cssClassName: string): ILessConfig[] => {
     },
     {
       type: 'writeLine',
-      text: `.${cssClassName}-spin svg {`,
+      text: `.${cssClassName}-spin svg, .${cssClassName}-spin img, .${cssClassName}-spin-img {`,
     },
     {
       type: 'indent',
