@@ -51,58 +51,7 @@ export class LessGenerator extends Generator {
     if (this.$opts.type === 'cube-vue') {
       this.writeLine('`;');
     }
-    // this.writeLine(`.${cssClassName} {`);
-    // this.indent(1);
-    // this.writeLine('display: inline-block;');
-    // this.writeLine('color: inherit;');
-    // this.writeLine('font-style: normal;');
-    // this.writeLine('line-height: 0;');
-    // this.writeLine('text-align: center;');
-    // this.writeLine('text-transform: none;');
-    // this.writeLine('vertical-align: -0.125em;');
-    // this.writeLine('text-rendering: optimizeLegibility;');
-    // this.writeLine('-webkit-font-smoothing: antialiased;');
-    // this.writeLine('-moz-osx-font-smoothing: grayscale;');
-    // this.writeLine();
 
-    // this.writeLine('&-spin svg {');
-    // this.indent(1);
-    // this.writeLine(`animation: ${cssClassName}-spin 1s infinite linear;`);
-    // this.indent(-1);
-    // this.writeLine('}');
-    // this.writeLine();
-
-    // this.writeLine('&-rtl {');
-    // this.indent(1);
-    // this.writeLine('transform: scaleX(-1);');
-    // this.indent(-1);
-    // this.writeLine('}');
-
-    // this.indent(-1);
-    // this.writeLine('}');
-    // this.writeLine();
-    // this.writeLine(`@keyframes ${cssClassName}-spin {`);
-    // this.indent(1);
-    // this.writeLine('100% {');
-    // this.indent(1);
-    // this.writeLine('-webkit-transform: rotate(360deg);');
-    // this.writeLine('transform: rotate(360deg)');
-    // this.indent(-1);
-    // this.writeLine('}');
-    // this.indent(-1);
-    // this.writeLine('}');
-    // this.writeLine();
-    // this.writeLine(`@-webkit-keyframes ${cssClassName}-spin {`);
-    // this.indent(1);
-    // this.writeLine('100% {');
-    // this.indent(1);
-    // this.writeLine('-webkit-transform: rotate(360deg);');
-    // this.writeLine('transform: rotate(360deg)');
-    // this.indent(-1);
-    // this.writeLine('}');
-    // this.indent(-1);
-    // this.writeLine('}');
-    // this.writeLine();
     return this.getResult();
   }
 }

@@ -18,7 +18,7 @@ export default `
   -moz-osx-font-smoothing: grayscale;
 }
 
-.cube-icon-spin svg {
+.cube-icon-spin svg, .cube-icon-spin img, .cube-icon-spin-img {
   animation: cube-icon-spin 1s infinite linear;
 }
 
