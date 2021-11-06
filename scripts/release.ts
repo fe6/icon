@@ -12,7 +12,7 @@ import { resolve } from 'path';
 
 import { errorLog, log } from '../packages/compiler/src';
 
-import { VERSION_INCREMENTS, COMPILER_TYPE } from './config';
+import { VERSION_INCREMENTS, PACKAGE_TYPE } from './config';
 
 const args = require('minimist')(process.argv.slice(2));
 
@@ -216,7 +216,7 @@ export async function goRelease(version: string) {
     if (targetVersion) {
       testVersion(targetVersion);
     }
-    if (COMPILER_TYPE.includes(targetPackageName)) {
+    if (PACKAGE_TYPE.includes(targetPackageName)) {
       await goRelease(targetVersion);
     }
   } else {
