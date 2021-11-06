@@ -8,12 +8,7 @@ type TGenTypeRelase = TGenType | 'compiler';
 
 export const COMPILER_TYPE: TGenType[] = ['vue', 'img', 'cube-vue'];
 
-export const PACKAGE_TYPE: TGenTypeRelase[] = [
-  'vue',
-  'img',
-  'cube-vue',
-  'compiler',
-];
+export const PACKAGE_TYPE: TGenTypeRelase[] = ['vue', 'img', 'cube-vue'];
 
 export const VERSION_INCREMENTS: semver.ReleaseType[] = [
   'patch',
