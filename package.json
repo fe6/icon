@@ -10,7 +10,8 @@
     "lint:fix": "eslint './**/*.{js,ts,tsx,json}' --fix && pretty-quick",
     "lint": "eslint './**/*.{js,ts,tsx,json}' && pretty-quick",
     "release:before": "ts-node ./scripts/release-hooks-before",
-    "build:code": "gulp"
+    "build:code": "gulp",
+    "move": "gulp moveFile && ts-node ./scripts/gen-icon-json"
   },
   "engines": {
     "node": ">= 16.0.0",
@@ -65,6 +66,7 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-copy": "^4.0.1",
     "gulp-less": "^5.0.0",
+    "gulp-rename": "^2.0.0",
     "gulp-typescript": "^6.0.0-alpha.1",
     "husky": "^7.0.2",
     "less": "^4.1.2",

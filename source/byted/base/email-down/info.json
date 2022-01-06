@@ -1,0 +1,10 @@
+{
+  "id": "byted-email-down",
+  "title": "byted-email-down",
+  "name": "email-down",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["email-down", "byted-email-down"],
+  "rtl": false
+}

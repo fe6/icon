@@ -1,0 +1,10 @@
+{
+  "id": "byted-send-backward",
+  "title": "byted-send-backward",
+  "name": "send-backward",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["send-backward", "byted-send-backward"],
+  "rtl": false
+}

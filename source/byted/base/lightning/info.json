@@ -1,0 +1,10 @@
+{
+  "id": "byted-lightning",
+  "title": "byted-lightning",
+  "name": "lightning",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["lightning", "byted-lightning"],
+  "rtl": false
+}

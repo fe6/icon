@@ -1,0 +1,10 @@
+{
+  "id": "byted-helpcenter",
+  "title": "byted-helpcenter",
+  "name": "helpcenter",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["helpcenter", "byted-helpcenter"],
+  "rtl": false
+}

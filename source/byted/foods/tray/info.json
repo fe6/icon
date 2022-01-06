@@ -1,0 +1,10 @@
+{
+  "id": "byted-tray",
+  "title": "byted-tray",
+  "name": "tray",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["tray", "byted-tray"],
+  "rtl": false
+}

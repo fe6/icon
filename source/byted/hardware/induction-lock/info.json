@@ -1,0 +1,10 @@
+{
+  "id": "byted-induction-lock",
+  "title": "byted-induction-lock",
+  "name": "induction-lock",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["induction-lock", "byted-induction-lock"],
+  "rtl": false
+}

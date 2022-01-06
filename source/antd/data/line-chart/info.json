@@ -1,0 +1,10 @@
+{
+  "id": "antd-line-chart",
+  "title": "线性图表",
+  "name": "line-chart",
+  "category": "data",
+  "categoryCN": "数据",
+  "author": "李梦龙",
+  "tag": ["线性图表"],
+  "rtl": false
+}

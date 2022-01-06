@@ -1,0 +1,10 @@
+{
+  "id": "byted-kungfu",
+  "title": "byted-kungfu",
+  "name": "kungfu",
+  "category": "sports",
+  "categoryCN": "运动",
+  "author": "李梦龙",
+  "tag": ["kungfu", "byted-kungfu"],
+  "rtl": false
+}

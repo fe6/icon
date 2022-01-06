@@ -1,0 +1,10 @@
+{
+  "id": "byted-data-user",
+  "title": "byted-data-user",
+  "name": "data-user",
+  "category": "datas",
+  "categoryCN": "数据库",
+  "author": "李梦龙",
+  "tag": ["data-user", "byted-data-user"],
+  "rtl": false
+}

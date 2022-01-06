@@ -1,0 +1,10 @@
+{
+  "id": "byted-box",
+  "title": "byted-box",
+  "name": "box",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["box", "byted-box"],
+  "rtl": false
+}

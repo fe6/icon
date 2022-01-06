@@ -1,0 +1,10 @@
+{
+  "id": "byted-computer",
+  "title": "byted-computer",
+  "name": "computer",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["computer", "byted-computer"],
+  "rtl": false
+}

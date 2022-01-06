@@ -1,0 +1,10 @@
+{
+  "id": "antd-radar-chart",
+  "title": "雷达图表",
+  "name": "radar-chart",
+  "category": "data",
+  "categoryCN": "数据",
+  "author": "李梦龙",
+  "tag": ["雷达图表"],
+  "rtl": false
+}

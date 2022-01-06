@@ -1,0 +1,10 @@
+{
+  "id": "byted-blockchain",
+  "title": "byted-blockchain",
+  "name": "blockchain",
+  "category": "money",
+  "categoryCN": "钱财",
+  "author": "李梦龙",
+  "tag": ["blockchain", "byted-blockchain"],
+  "rtl": false
+}

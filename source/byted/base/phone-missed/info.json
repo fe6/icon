@@ -1,0 +1,10 @@
+{
+  "id": "byted-phone-missed",
+  "title": "byted-phone-missed",
+  "name": "phone-missed",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["phone-missed", "byted-phone-missed"],
+  "rtl": false
+}

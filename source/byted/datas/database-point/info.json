@@ -1,0 +1,10 @@
+{
+  "id": "byted-database-point",
+  "title": "byted-database-point",
+  "name": "database-point",
+  "category": "datas",
+  "categoryCN": "数据库",
+  "author": "李梦龙",
+  "tag": ["database-point", "byted-database-point"],
+  "rtl": false
+}

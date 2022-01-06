@@ -1,0 +1,10 @@
+{
+  "id": "byted-turn-on",
+  "title": "byted-turn-on",
+  "name": "turn-on",
+  "category": "hands",
+  "categoryCN": "手势",
+  "author": "李梦龙",
+  "tag": ["turn-on", "byted-turn-on"],
+  "rtl": false
+}

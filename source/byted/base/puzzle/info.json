@@ -1,0 +1,10 @@
+{
+  "id": "byted-puzzle",
+  "title": "byted-puzzle",
+  "name": "puzzle",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["puzzle", "byted-puzzle"],
+  "rtl": false
+}

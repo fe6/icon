@@ -1,0 +1,10 @@
+{
+  "id": "byted-delete",
+  "title": "byted-delete",
+  "name": "delete",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["delete", "byted-delete"],
+  "rtl": false
+}

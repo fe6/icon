@@ -1,0 +1,10 @@
+{
+  "id": "byted-shield",
+  "title": "byted-shield",
+  "name": "shield",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["shield", "byted-shield"],
+  "rtl": false
+}

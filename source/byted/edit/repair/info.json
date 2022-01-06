@@ -1,0 +1,10 @@
+{
+  "id": "byted-repair",
+  "title": "byted-repair",
+  "name": "repair",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["repair", "byted-repair"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "antd-radius-upright",
+  "title": "圆角上右",
+  "name": "radius-upright",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["圆角上右"],
+  "rtl": false
+}

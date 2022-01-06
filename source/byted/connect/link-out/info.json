@@ -1,0 +1,10 @@
+{
+  "id": "byted-link-out",
+  "title": "byted-link-out",
+  "name": "link-out",
+  "category": "connect",
+  "categoryCN": "连接",
+  "author": "李梦龙",
+  "tag": ["link-out", "byted-link-out"],
+  "rtl": false
+}

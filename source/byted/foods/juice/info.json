@@ -1,0 +1,10 @@
+{
+  "id": "byted-juice",
+  "title": "byted-juice",
+  "name": "juice",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["juice", "byted-juice"],
+  "rtl": false
+}

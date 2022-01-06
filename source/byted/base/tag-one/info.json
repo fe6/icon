@@ -1,0 +1,10 @@
+{
+  "id": "byted-tag-one",
+  "title": "byted-tag-one",
+  "name": "tag-one",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["tag-one", "byted-tag-one"],
+  "rtl": false
+}

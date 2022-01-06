@@ -1,0 +1,10 @@
+{
+  "id": "antd-copy",
+  "title": "复制",
+  "name": "copy",
+  "category": "editor",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["复制"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-application-menu",
+  "title": "byted-application-menu",
+  "name": "application-menu",
+  "category": "operate",
+  "categoryCN": "操作",
+  "author": "李梦龙",
+  "tag": ["application-menu", "byted-application-menu"],
+  "rtl": false
+}

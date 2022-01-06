@@ -1,0 +1,10 @@
+{
+  "id": "byted-close-wifi",
+  "title": "byted-close-wifi",
+  "name": "close-wifi",
+  "category": "others",
+  "categoryCN": "其它",
+  "author": "李梦龙",
+  "tag": ["close-wifi", "byted-close-wifi"],
+  "rtl": false
+}

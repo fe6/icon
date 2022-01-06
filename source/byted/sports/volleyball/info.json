@@ -1,0 +1,10 @@
+{
+  "id": "byted-volleyball",
+  "title": "byted-volleyball",
+  "name": "volleyball",
+  "category": "sports",
+  "categoryCN": "运动",
+  "author": "李梦龙",
+  "tag": ["volleyball", "byted-volleyball"],
+  "rtl": false
+}

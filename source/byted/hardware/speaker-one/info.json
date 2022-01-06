@@ -1,0 +1,10 @@
+{
+  "id": "byted-speaker-one",
+  "title": "byted-speaker-one",
+  "name": "speaker-one",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["speaker-one", "byted-speaker-one"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-cell",
+  "title": "byted-cell",
+  "name": "cell",
+  "category": "health",
+  "categoryCN": "健康",
+  "author": "李梦龙",
+  "tag": ["cell", "byted-cell"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-pin",
+  "title": "byted-pin",
+  "name": "pin",
+  "category": "operate",
+  "categoryCN": "操作",
+  "author": "李梦龙",
+  "tag": ["pin", "byted-pin"],
+  "rtl": false
+}

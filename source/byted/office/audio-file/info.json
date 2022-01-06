@@ -1,0 +1,10 @@
+{
+  "id": "byted-audio-file",
+  "title": "byted-audio-file",
+  "name": "audio-file",
+  "category": "office",
+  "categoryCN": "办公",
+  "author": "李梦龙",
+  "tag": ["audio-file", "byted-audio-file"],
+  "rtl": false
+}

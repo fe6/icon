@@ -1,0 +1,10 @@
+{
+  "id": "byted-drone",
+  "title": "byted-drone",
+  "name": "drone",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["drone", "byted-drone"],
+  "rtl": false
+}

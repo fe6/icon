@@ -1,0 +1,10 @@
+{
+  "id": "byted-folder-code-one",
+  "title": "byted-folder-code-one",
+  "name": "folder-code-one",
+  "category": "books",
+  "categoryCN": "书籍",
+  "author": "李梦龙",
+  "tag": ["folder-code-one", "byted-folder-code-one"],
+  "rtl": false
+}

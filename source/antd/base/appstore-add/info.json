@@ -1,0 +1,10 @@
+{
+  "id": "antd-appstore-add",
+  "title": "appstore-add",
+  "name": "appstore-add",
+  "category": "base",
+  "categoryCN": "通用",
+  "author": "李梦龙",
+  "tag": ["appstore-add"],
+  "rtl": false
+}

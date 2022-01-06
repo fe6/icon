@@ -1,0 +1,10 @@
+{
+  "id": "byted-plan",
+  "title": "byted-plan",
+  "name": "plan",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["plan", "byted-plan"],
+  "rtl": false
+}

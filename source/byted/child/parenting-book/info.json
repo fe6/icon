@@ -1,0 +1,10 @@
+{
+  "id": "byted-parenting-book",
+  "title": "byted-parenting-book",
+  "name": "parenting-book",
+  "category": "child",
+  "categoryCN": "儿童",
+  "author": "李梦龙",
+  "tag": ["parenting-book", "byted-parenting-book"],
+  "rtl": false
+}

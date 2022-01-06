@@ -1,0 +1,10 @@
+{
+  "id": "byted-process-line",
+  "title": "byted-process-line",
+  "name": "process-line",
+  "category": "abstract",
+  "categoryCN": "抽象",
+  "author": "李梦龙",
+  "tag": ["process-line", "byted-process-line"],
+  "rtl": false
+}

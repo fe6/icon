@@ -1,0 +1,10 @@
+{
+  "id": "byted-font-size",
+  "title": "byted-font-size",
+  "name": "font-size",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["font-size", "byted-font-size"],
+  "rtl": false
+}

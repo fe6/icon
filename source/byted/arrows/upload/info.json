@@ -1,0 +1,10 @@
+{
+  "id": "byted-upload",
+  "title": "byted-upload",
+  "name": "upload",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["upload", "byted-upload"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-bowling",
+  "title": "byted-bowling",
+  "name": "bowling",
+  "category": "sports",
+  "categoryCN": "运动",
+  "author": "李梦龙",
+  "tag": ["bowling", "byted-bowling"],
+  "rtl": false
+}

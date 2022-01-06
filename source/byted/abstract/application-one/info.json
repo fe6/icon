@@ -1,0 +1,10 @@
+{
+  "id": "byted-application-one",
+  "title": "byted-application-one",
+  "name": "application-one",
+  "category": "abstract",
+  "categoryCN": "抽象",
+  "author": "李梦龙",
+  "tag": ["application-one", "byted-application-one"],
+  "rtl": false
+}

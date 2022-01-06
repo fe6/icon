@@ -1,0 +1,10 @@
+{
+  "id": "byted-strikethrough",
+  "title": "byted-strikethrough",
+  "name": "strikethrough",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["strikethrough", "byted-strikethrough"],
+  "rtl": false
+}

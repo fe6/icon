@@ -1,0 +1,10 @@
+{
+  "id": "byted-parallel-gateway",
+  "title": "byted-parallel-gateway",
+  "name": "parallel-gateway",
+  "category": "abstract",
+  "categoryCN": "抽象",
+  "author": "李梦龙",
+  "tag": ["parallel-gateway", "byted-parallel-gateway"],
+  "rtl": false
+}

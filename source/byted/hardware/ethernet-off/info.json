@@ -1,0 +1,10 @@
+{
+  "id": "byted-ethernet-off",
+  "title": "byted-ethernet-off",
+  "name": "ethernet-off",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["ethernet-off", "byted-ethernet-off"],
+  "rtl": false
+}

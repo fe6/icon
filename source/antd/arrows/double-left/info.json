@@ -1,0 +1,10 @@
+{
+  "id": "antd-double-left",
+  "title": "双三角左",
+  "name": "double-left",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["左", "双三角"],
+  "rtl": false
+}

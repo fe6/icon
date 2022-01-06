@@ -1,0 +1,10 @@
+{
+  "id": "byted-cardioelectric",
+  "title": "byted-cardioelectric",
+  "name": "cardioelectric",
+  "category": "health",
+  "categoryCN": "健康",
+  "author": "李梦龙",
+  "tag": ["cardioelectric", "byted-cardioelectric"],
+  "rtl": false
+}

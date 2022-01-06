@@ -1,0 +1,10 @@
+{
+  "id": "antd-dingtalk",
+  "title": "钉钉",
+  "name": "dingtalk",
+  "category": "logo",
+  "categoryCN": "品牌",
+  "author": "李梦龙",
+  "tag": ["钉钉"],
+  "rtl": false
+}

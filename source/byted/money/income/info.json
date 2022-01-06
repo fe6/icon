@@ -1,0 +1,10 @@
+{
+  "id": "byted-income",
+  "title": "byted-income",
+  "name": "income",
+  "category": "money",
+  "categoryCN": "钱财",
+  "author": "李梦龙",
+  "tag": ["income", "byted-income"],
+  "rtl": false
+}

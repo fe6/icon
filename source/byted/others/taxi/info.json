@@ -1,0 +1,10 @@
+{
+  "id": "byted-taxi",
+  "title": "byted-taxi",
+  "name": "taxi",
+  "category": "others",
+  "categoryCN": "其它",
+  "author": "李梦龙",
+  "tag": ["taxi", "byted-taxi"],
+  "rtl": false
+}

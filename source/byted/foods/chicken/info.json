@@ -1,0 +1,10 @@
+{
+  "id": "byted-chicken",
+  "title": "byted-chicken",
+  "name": "chicken",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["chicken", "byted-chicken"],
+  "rtl": false
+}

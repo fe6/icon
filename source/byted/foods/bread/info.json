@@ -1,0 +1,10 @@
+{
+  "id": "byted-bread",
+  "title": "byted-bread",
+  "name": "bread",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["bread", "byted-bread"],
+  "rtl": false
+}

@@ -14,6 +14,10 @@ export default defineConfig({
         replacement: path.resolve(__dirname, '../../vue/src/index.ts'),
       },
       {
+        find: 'icon-vue-keg',
+        replacement: path.resolve(__dirname, '../../vue/src/all.ts'),
+      },
+      {
         find: 'icon.less',
         replacement: path.resolve(
           __dirname,

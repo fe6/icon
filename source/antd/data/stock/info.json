@@ -1,0 +1,10 @@
+{
+  "id": "antd-stock",
+  "title": "涨幅图表1",
+  "name": "stock",
+  "category": "data",
+  "categoryCN": "数据",
+  "author": "李梦龙",
+  "tag": ["涨幅图表1"],
+  "rtl": false
+}

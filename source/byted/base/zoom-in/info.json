@@ -1,0 +1,10 @@
+{
+  "id": "byted-zoom-in",
+  "title": "byted-zoom-in",
+  "name": "zoom-in",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["zoom-in", "byted-zoom-in"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-disk-one",
+  "title": "byted-disk-one",
+  "name": "disk-one",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["disk-one", "byted-disk-one"],
+  "rtl": false
+}

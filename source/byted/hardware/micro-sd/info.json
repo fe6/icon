@@ -1,0 +1,10 @@
+{
+  "id": "byted-micro-sd",
+  "title": "byted-micro-sd",
+  "name": "micro-sd",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["micro-sd", "byted-micro-sd"],
+  "rtl": false
+}

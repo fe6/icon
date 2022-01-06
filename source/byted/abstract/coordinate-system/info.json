@@ -1,0 +1,10 @@
+{
+  "id": "byted-coordinate-system",
+  "title": "byted-coordinate-system",
+  "name": "coordinate-system",
+  "category": "abstract",
+  "categoryCN": "抽象",
+  "author": "李梦龙",
+  "tag": ["coordinate-system", "byted-coordinate-system"],
+  "rtl": false
+}

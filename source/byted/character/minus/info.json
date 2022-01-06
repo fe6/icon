@@ -1,0 +1,10 @@
+{
+  "id": "byted-minus",
+  "title": "byted-minus",
+  "name": "minus",
+  "category": "character",
+  "categoryCN": "符号",
+  "author": "李梦龙",
+  "tag": ["minus", "byted-minus"],
+  "rtl": false
+}

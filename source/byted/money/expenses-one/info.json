@@ -1,0 +1,10 @@
+{
+  "id": "byted-expenses-one",
+  "title": "byted-expenses-one",
+  "name": "expenses-one",
+  "category": "money",
+  "categoryCN": "钱财",
+  "author": "李梦龙",
+  "tag": ["expenses-one", "byted-expenses-one"],
+  "rtl": false
+}

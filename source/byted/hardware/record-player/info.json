@@ -1,0 +1,10 @@
+{
+  "id": "byted-record-player",
+  "title": "byted-record-player",
+  "name": "record-player",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["record-player", "byted-record-player"],
+  "rtl": false
+}

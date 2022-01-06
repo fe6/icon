@@ -1,0 +1,10 @@
+{
+  "id": "byted-volume-notice",
+  "title": "byted-volume-notice",
+  "name": "volume-notice",
+  "category": "music",
+  "categoryCN": "声音",
+  "author": "李梦龙",
+  "tag": ["volume-notice", "byted-volume-notice"],
+  "rtl": false
+}

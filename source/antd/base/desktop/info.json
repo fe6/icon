@@ -1,0 +1,10 @@
+{
+  "id": "antd-desktop",
+  "title": "desktop",
+  "name": "desktop",
+  "category": "base",
+  "categoryCN": "通用",
+  "author": "李梦龙",
+  "tag": ["desktop"],
+  "rtl": false
+}

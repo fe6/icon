@@ -1,0 +1,10 @@
+{
+  "id": "byted-add-mode",
+  "title": "byted-add-mode",
+  "name": "add-mode",
+  "category": "operate",
+  "categoryCN": "操作",
+  "author": "李梦龙",
+  "tag": ["add-mode", "byted-add-mode"],
+  "rtl": false
+}

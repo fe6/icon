@@ -1,0 +1,10 @@
+{
+  "id": "byted-phone-video-call",
+  "title": "byted-phone-video-call",
+  "name": "phone-video-call",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["phone-video-call", "byted-phone-video-call"],
+  "rtl": false
+}

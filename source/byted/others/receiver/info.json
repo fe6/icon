@@ -1,0 +1,10 @@
+{
+  "id": "byted-receiver",
+  "title": "byted-receiver",
+  "name": "receiver",
+  "category": "others",
+  "categoryCN": "其它",
+  "author": "李梦龙",
+  "tag": ["receiver", "byted-receiver"],
+  "rtl": false
+}

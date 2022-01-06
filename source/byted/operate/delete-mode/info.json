@@ -1,0 +1,10 @@
+{
+  "id": "byted-delete-mode",
+  "title": "byted-delete-mode",
+  "name": "delete-mode",
+  "category": "operate",
+  "categoryCN": "操作",
+  "author": "李梦龙",
+  "tag": ["delete-mode", "byted-delete-mode"],
+  "rtl": false
+}

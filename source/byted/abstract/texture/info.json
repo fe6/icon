@@ -1,0 +1,10 @@
+{
+  "id": "byted-texture",
+  "title": "byted-texture",
+  "name": "texture",
+  "category": "abstract",
+  "categoryCN": "抽象",
+  "author": "李梦龙",
+  "tag": ["texture", "byted-texture"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-comment-one",
+  "title": "byted-comment-one",
+  "name": "comment-one",
+  "category": "communicate",
+  "categoryCN": "交流",
+  "author": "李梦龙",
+  "tag": ["comment-one", "byted-comment-one"],
+  "rtl": false
+}

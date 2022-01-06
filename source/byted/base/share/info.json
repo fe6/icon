@@ -1,0 +1,10 @@
+{
+  "id": "byted-share",
+  "title": "byted-share",
+  "name": "share",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["share", "byted-share"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-resistor",
+  "title": "byted-resistor",
+  "name": "resistor",
+  "category": "industry",
+  "categoryCN": "工业",
+  "author": "李梦龙",
+  "tag": ["resistor", "byted-resistor"],
+  "rtl": false
+}

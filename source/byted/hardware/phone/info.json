@@ -1,0 +1,10 @@
+{
+  "id": "byted-phone",
+  "title": "byted-phone",
+  "name": "phone",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["phone", "byted-phone"],
+  "rtl": false
+}

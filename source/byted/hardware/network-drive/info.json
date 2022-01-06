@@ -1,0 +1,10 @@
+{
+  "id": "byted-network-drive",
+  "title": "byted-network-drive",
+  "name": "network-drive",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["network-drive", "byted-network-drive"],
+  "rtl": false
+}

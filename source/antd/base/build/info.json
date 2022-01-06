@@ -1,0 +1,10 @@
+{
+  "id": "antd-build",
+  "title": "build",
+  "name": "build",
+  "category": "base",
+  "categoryCN": "通用",
+  "author": "李梦龙",
+  "tag": ["build"],
+  "rtl": false
+}

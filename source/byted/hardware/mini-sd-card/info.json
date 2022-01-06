@@ -1,0 +1,10 @@
+{
+  "id": "byted-mini-sd-card",
+  "title": "byted-mini-sd-card",
+  "name": "mini-sd-card",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["mini-sd-card", "byted-mini-sd-card"],
+  "rtl": false
+}

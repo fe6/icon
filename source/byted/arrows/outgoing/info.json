@@ -1,0 +1,10 @@
+{
+  "id": "byted-outgoing",
+  "title": "byted-outgoing",
+  "name": "outgoing",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["outgoing", "byted-outgoing"],
+  "rtl": false
+}

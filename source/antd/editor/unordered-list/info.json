@@ -1,0 +1,10 @@
+{
+  "id": "antd-unordered-list",
+  "title": "无序列表",
+  "name": "unordered-list",
+  "category": "editor",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["无序列表"],
+  "rtl": false
+}

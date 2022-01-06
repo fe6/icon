@@ -1,0 +1,10 @@
+{
+  "id": "antd-arrow-up",
+  "title": "箭头上",
+  "name": "arrow-up",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["上", "箭头"],
+  "rtl": false
+}

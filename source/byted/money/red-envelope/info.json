@@ -1,0 +1,10 @@
+{
+  "id": "byted-red-envelope",
+  "title": "byted-red-envelope",
+  "name": "red-envelope",
+  "category": "money",
+  "categoryCN": "钱财",
+  "author": "李梦龙",
+  "tag": ["red-envelope", "byted-red-envelope"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-table-report",
+  "title": "byted-table-report",
+  "name": "table-report",
+  "category": "abstract",
+  "categoryCN": "抽象",
+  "author": "李梦龙",
+  "tag": ["table-report", "byted-table-report"],
+  "rtl": false
+}

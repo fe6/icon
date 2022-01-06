@@ -1,0 +1,10 @@
+{
+  "id": "antd-environment",
+  "title": "environment",
+  "name": "environment",
+  "category": "base",
+  "categoryCN": "通用",
+  "author": "李梦龙",
+  "tag": ["environment"],
+  "rtl": false
+}

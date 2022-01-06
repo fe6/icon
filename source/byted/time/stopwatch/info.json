@@ -1,0 +1,10 @@
+{
+  "id": "byted-stopwatch",
+  "title": "byted-stopwatch",
+  "name": "stopwatch",
+  "category": "time",
+  "categoryCN": "时间",
+  "author": "李梦龙",
+  "tag": ["stopwatch", "byted-stopwatch"],
+  "rtl": false
+}

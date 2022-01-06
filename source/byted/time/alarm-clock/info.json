@@ -1,0 +1,10 @@
+{
+  "id": "byted-alarm-clock",
+  "title": "byted-alarm-clock",
+  "name": "alarm-clock",
+  "category": "time",
+  "categoryCN": "时间",
+  "author": "李梦龙",
+  "tag": ["alarm-clock", "byted-alarm-clock"],
+  "rtl": false
+}

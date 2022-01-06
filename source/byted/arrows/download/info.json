@@ -1,0 +1,10 @@
+{
+  "id": "byted-download",
+  "title": "byted-download",
+  "name": "download",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["download", "byted-download"],
+  "rtl": false
+}

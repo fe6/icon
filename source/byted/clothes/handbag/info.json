@@ -1,0 +1,10 @@
+{
+  "id": "byted-handbag",
+  "title": "byted-handbag",
+  "name": "handbag",
+  "category": "clothes",
+  "categoryCN": "服饰",
+  "author": "李梦龙",
+  "tag": ["handbag", "byted-handbag"],
+  "rtl": false
+}

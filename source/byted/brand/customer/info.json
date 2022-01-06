@@ -1,0 +1,10 @@
+{
+  "id": "byted-customer",
+  "title": "byted-customer",
+  "name": "customer",
+  "category": "brand",
+  "categoryCN": "品牌",
+  "author": "李梦龙",
+  "tag": ["customer", "byted-customer"],
+  "rtl": false
+}

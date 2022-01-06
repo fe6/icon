@@ -1,0 +1,10 @@
+{
+  "id": "antd-cloud-upload",
+  "title": "cloud-upload",
+  "name": "cloud-upload",
+  "category": "base",
+  "categoryCN": "通用",
+  "author": "李梦龙",
+  "tag": ["cloud-upload"],
+  "rtl": false
+}

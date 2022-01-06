@@ -1,0 +1,10 @@
+{
+  "id": "byted-history",
+  "title": "byted-history",
+  "name": "history",
+  "category": "time",
+  "categoryCN": "时间",
+  "author": "李梦龙",
+  "tag": ["history", "byted-history"],
+  "rtl": false
+}

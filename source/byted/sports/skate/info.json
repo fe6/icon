@@ -1,0 +1,10 @@
+{
+  "id": "byted-skate",
+  "title": "byted-skate",
+  "name": "skate",
+  "category": "sports",
+  "categoryCN": "运动",
+  "author": "李梦龙",
+  "tag": ["skate", "byted-skate"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-carrot",
+  "title": "byted-carrot",
+  "name": "carrot",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["carrot", "byted-carrot"],
+  "rtl": false
+}

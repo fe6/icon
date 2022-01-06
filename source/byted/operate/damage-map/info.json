@@ -1,0 +1,10 @@
+{
+  "id": "byted-damage-map",
+  "title": "byted-damage-map",
+  "name": "damage-map",
+  "category": "operate",
+  "categoryCN": "操作",
+  "author": "李梦龙",
+  "tag": ["damage-map", "byted-damage-map"],
+  "rtl": false
+}

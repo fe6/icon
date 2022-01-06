@@ -1,0 +1,10 @@
+{
+  "id": "byted-parking",
+  "title": "byted-parking",
+  "name": "parking",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["parking", "byted-parking"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-beer",
+  "title": "byted-beer",
+  "name": "beer",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["beer", "byted-beer"],
+  "rtl": false
+}

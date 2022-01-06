@@ -1,0 +1,10 @@
+{
+  "id": "byted-toilet",
+  "title": "byted-toilet",
+  "name": "toilet",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["toilet", "byted-toilet"],
+  "rtl": false
+}

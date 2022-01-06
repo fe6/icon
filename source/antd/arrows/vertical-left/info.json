@@ -1,0 +1,10 @@
+{
+  "id": "antd-vertical-left",
+  "title": "垂直居左",
+  "name": "vertical-left",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["垂直居左"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-prescription",
+  "title": "byted-prescription",
+  "name": "prescription",
+  "category": "health",
+  "categoryCN": "健康",
+  "author": "李梦龙",
+  "tag": ["prescription", "byted-prescription"],
+  "rtl": false
+}

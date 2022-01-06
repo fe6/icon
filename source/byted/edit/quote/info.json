@@ -1,0 +1,10 @@
+{
+  "id": "byted-quote",
+  "title": "byted-quote",
+  "name": "quote",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["quote", "byted-quote"],
+  "rtl": false
+}

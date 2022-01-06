@@ -1,0 +1,10 @@
+{
+  "id": "byted-rotation-horizontal",
+  "title": "byted-rotation-horizontal",
+  "name": "rotation-horizontal",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["rotation-horizontal", "byted-rotation-horizontal"],
+  "rtl": false
+}

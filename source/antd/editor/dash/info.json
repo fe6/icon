@@ -1,0 +1,10 @@
+{
+  "id": "antd-dash",
+  "title": "虚线",
+  "name": "dash",
+  "category": "editor",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["虚线"],
+  "rtl": false
+}

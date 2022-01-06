@@ -1,0 +1,10 @@
+{
+  "id": "byted-bezier-curve",
+  "title": "byted-bezier-curve",
+  "name": "bezier-curve",
+  "category": "connect",
+  "categoryCN": "连接",
+  "author": "李梦龙",
+  "tag": ["bezier-curve", "byted-bezier-curve"],
+  "rtl": false
+}

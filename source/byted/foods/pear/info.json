@@ -1,0 +1,10 @@
+{
+  "id": "byted-pear",
+  "title": "byted-pear",
+  "name": "pear",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["pear", "byted-pear"],
+  "rtl": false
+}

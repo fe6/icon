@@ -1,0 +1,10 @@
+{
+  "id": "antd-rollback",
+  "title": "折返",
+  "name": "rollback",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["折返"],
+  "rtl": false
+}

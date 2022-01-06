@@ -1,0 +1,10 @@
+{
+  "id": "byted-upload-logs",
+  "title": "byted-upload-logs",
+  "name": "upload-logs",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["upload-logs", "byted-upload-logs"],
+  "rtl": false
+}

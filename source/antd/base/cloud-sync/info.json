@@ -1,0 +1,10 @@
+{
+  "id": "antd-cloud-sync",
+  "title": "cloud-sync",
+  "name": "cloud-sync",
+  "category": "base",
+  "categoryCN": "通用",
+  "author": "李梦龙",
+  "tag": ["cloud-sync"],
+  "rtl": false
+}

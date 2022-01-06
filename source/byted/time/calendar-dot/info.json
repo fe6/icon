@@ -1,0 +1,10 @@
+{
+  "id": "byted-calendar-dot",
+  "title": "byted-calendar-dot",
+  "name": "calendar-dot",
+  "category": "time",
+  "categoryCN": "时间",
+  "author": "李梦龙",
+  "tag": ["calendar-dot", "byted-calendar-dot"],
+  "rtl": false
+}

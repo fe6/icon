@@ -1,0 +1,10 @@
+{
+  "id": "byted-find",
+  "title": "byted-find",
+  "name": "find",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["find", "byted-find"],
+  "rtl": false
+}

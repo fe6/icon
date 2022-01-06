@@ -1,0 +1,10 @@
+{
+  "id": "byted-contrast-view",
+  "title": "byted-contrast-view",
+  "name": "contrast-view",
+  "category": "operate",
+  "categoryCN": "操作",
+  "author": "李梦龙",
+  "tag": ["contrast-view", "byted-contrast-view"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-worker",
+  "title": "byted-worker",
+  "name": "worker",
+  "category": "industry",
+  "categoryCN": "工业",
+  "author": "李梦龙",
+  "tag": ["worker", "byted-worker"],
+  "rtl": false
+}

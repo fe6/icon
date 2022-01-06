@@ -1,0 +1,10 @@
+{
+  "id": "antd-border-verticle",
+  "title": "边框水平中间",
+  "name": "border-verticle",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["水平中间", "边框"],
+  "rtl": false
+}

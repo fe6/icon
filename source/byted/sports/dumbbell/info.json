@@ -1,0 +1,10 @@
+{
+  "id": "byted-dumbbell",
+  "title": "byted-dumbbell",
+  "name": "dumbbell",
+  "category": "sports",
+  "categoryCN": "运动",
+  "author": "李梦龙",
+  "tag": ["dumbbell", "byted-dumbbell"],
+  "rtl": false
+}

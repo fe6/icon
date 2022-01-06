@@ -1,0 +1,10 @@
+{
+  "id": "byted-radar",
+  "title": "byted-radar",
+  "name": "radar",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["radar", "byted-radar"],
+  "rtl": false
+}

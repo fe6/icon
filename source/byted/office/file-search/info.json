@@ -1,0 +1,10 @@
+{
+  "id": "byted-file-search",
+  "title": "byted-file-search",
+  "name": "file-search",
+  "category": "office",
+  "categoryCN": "办公",
+  "author": "李梦龙",
+  "tag": ["file-search", "byted-file-search"],
+  "rtl": false
+}

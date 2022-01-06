@@ -1,0 +1,10 @@
+{
+  "id": "byted-gate-machine",
+  "title": "byted-gate-machine",
+  "name": "gate-machine",
+  "category": "travel",
+  "categoryCN": "旅行",
+  "author": "李梦龙",
+  "tag": ["gate-machine", "byted-gate-machine"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-playback-progress",
+  "title": "byted-playback-progress",
+  "name": "playback-progress",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["playback-progress", "byted-playback-progress"],
+  "rtl": false
+}

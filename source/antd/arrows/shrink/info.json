@@ -1,0 +1,10 @@
+{
+  "id": "antd-shrink",
+  "title": "箭头退出全屏",
+  "name": "shrink",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["箭头", "退出全屏"],
+  "rtl": false
+}

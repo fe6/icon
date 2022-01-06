@@ -1,0 +1,10 @@
+{
+  "id": "byted-bitcoin",
+  "title": "byted-bitcoin",
+  "name": "bitcoin",
+  "category": "character",
+  "categoryCN": "符号",
+  "author": "李梦龙",
+  "tag": ["bitcoin", "byted-bitcoin"],
+  "rtl": false
+}

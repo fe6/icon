@@ -1,0 +1,10 @@
+{
+  "id": "byted-transfer-data",
+  "title": "byted-transfer-data",
+  "name": "transfer-data",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["transfer-data", "byted-transfer-data"],
+  "rtl": false
+}

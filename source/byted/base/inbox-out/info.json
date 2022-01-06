@@ -1,0 +1,10 @@
+{
+  "id": "byted-inbox-out",
+  "title": "byted-inbox-out",
+  "name": "inbox-out",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["inbox-out", "byted-inbox-out"],
+  "rtl": false
+}

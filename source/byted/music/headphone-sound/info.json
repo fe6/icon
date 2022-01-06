@@ -1,0 +1,10 @@
+{
+  "id": "byted-headphone-sound",
+  "title": "byted-headphone-sound",
+  "name": "headphone-sound",
+  "category": "music",
+  "categoryCN": "声音",
+  "author": "李梦龙",
+  "tag": ["headphone-sound", "byted-headphone-sound"],
+  "rtl": false
+}

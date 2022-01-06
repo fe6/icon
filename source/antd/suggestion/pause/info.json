@@ -1,0 +1,10 @@
+{
+  "id": "antd-pause",
+  "title": "暂停",
+  "name": "pause",
+  "category": "suggestion",
+  "categoryCN": "建议",
+  "author": "李梦龙",
+  "tag": ["暂停"],
+  "rtl": false
+}

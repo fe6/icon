@@ -1,0 +1,10 @@
+{
+  "id": "byted-noodles",
+  "title": "byted-noodles",
+  "name": "noodles",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["noodles", "byted-noodles"],
+  "rtl": false
+}

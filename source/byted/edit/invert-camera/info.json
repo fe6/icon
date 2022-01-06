@@ -1,0 +1,10 @@
+{
+  "id": "byted-invert-camera",
+  "title": "byted-invert-camera",
+  "name": "invert-camera",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["invert-camera", "byted-invert-camera"],
+  "rtl": false
+}

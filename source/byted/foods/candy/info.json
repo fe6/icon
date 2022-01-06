@@ -1,0 +1,10 @@
+{
+  "id": "byted-candy",
+  "title": "byted-candy",
+  "name": "candy",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["candy", "byted-candy"],
+  "rtl": false
+}

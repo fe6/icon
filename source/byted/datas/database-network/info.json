@@ -1,0 +1,10 @@
+{
+  "id": "byted-database-network",
+  "title": "byted-database-network",
+  "name": "database-network",
+  "category": "datas",
+  "categoryCN": "数据库",
+  "author": "李梦龙",
+  "tag": ["database-network", "byted-database-network"],
+  "rtl": false
+}

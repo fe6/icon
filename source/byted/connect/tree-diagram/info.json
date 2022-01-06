@@ -1,0 +1,10 @@
+{
+  "id": "byted-tree-diagram",
+  "title": "byted-tree-diagram",
+  "name": "tree-diagram",
+  "category": "connect",
+  "categoryCN": "连接",
+  "author": "李梦龙",
+  "tag": ["tree-diagram", "byted-tree-diagram"],
+  "rtl": false
+}

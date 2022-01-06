@@ -1,0 +1,10 @@
+{
+  "id": "byted-compass",
+  "title": "byted-compass",
+  "name": "compass",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["compass", "byted-compass"],
+  "rtl": false
+}

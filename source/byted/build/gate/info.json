@@ -1,0 +1,10 @@
+{
+  "id": "byted-gate",
+  "title": "byted-gate",
+  "name": "gate",
+  "category": "build",
+  "categoryCN": "建筑",
+  "author": "李梦龙",
+  "tag": ["gate", "byted-gate"],
+  "rtl": false
+}

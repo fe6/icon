@@ -1,0 +1,10 @@
+{
+  "id": "antd-ordered-list",
+  "title": "有序列表",
+  "name": "ordered-list",
+  "category": "editor",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["有序列表"],
+  "rtl": false
+}

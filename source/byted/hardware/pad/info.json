@@ -1,0 +1,10 @@
+{
+  "id": "byted-pad",
+  "title": "byted-pad",
+  "name": "pad",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["pad", "byted-pad"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-file-settings",
+  "title": "byted-file-settings",
+  "name": "file-settings",
+  "category": "office",
+  "categoryCN": "办公",
+  "author": "李梦龙",
+  "tag": ["file-settings", "byted-file-settings"],
+  "rtl": false
+}

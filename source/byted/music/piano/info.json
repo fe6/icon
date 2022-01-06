@@ -1,0 +1,10 @@
+{
+  "id": "byted-piano",
+  "title": "byted-piano",
+  "name": "piano",
+  "category": "music",
+  "categoryCN": "声音",
+  "author": "李梦龙",
+  "tag": ["piano", "byted-piano"],
+  "rtl": false
+}

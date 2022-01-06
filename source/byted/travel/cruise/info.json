@@ -1,0 +1,10 @@
+{
+  "id": "byted-cruise",
+  "title": "byted-cruise",
+  "name": "cruise",
+  "category": "travel",
+  "categoryCN": "旅行",
+  "author": "李梦龙",
+  "tag": ["cruise", "byted-cruise"],
+  "rtl": false
+}

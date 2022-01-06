@@ -1,0 +1,10 @@
+{
+  "id": "byted-align-text-right",
+  "title": "byted-align-text-right",
+  "name": "align-text-right",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["align-text-right", "byted-align-text-right"],
+  "rtl": false
+}

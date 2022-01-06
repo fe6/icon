@@ -1,0 +1,10 @@
+{
+  "id": "byted-translate",
+  "title": "byted-translate",
+  "name": "translate",
+  "category": "others",
+  "categoryCN": "其它",
+  "author": "李梦龙",
+  "tag": ["translate", "byted-translate"],
+  "rtl": false
+}

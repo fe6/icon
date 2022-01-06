@@ -1,0 +1,10 @@
+{
+  "id": "antd-scissor",
+  "title": "剪切",
+  "name": "scissor",
+  "category": "editor",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["剪切"],
+  "rtl": false
+}

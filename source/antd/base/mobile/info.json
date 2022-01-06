@@ -1,0 +1,10 @@
+{
+  "id": "antd-mobile",
+  "title": "mobile",
+  "name": "mobile",
+  "category": "base",
+  "categoryCN": "通用",
+  "author": "李梦龙",
+  "tag": ["mobile"],
+  "rtl": false
+}

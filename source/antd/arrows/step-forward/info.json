@@ -1,0 +1,10 @@
+{
+  "id": "antd-step-forward",
+  "title": "下一步",
+  "name": "step-forward",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["步骤", "下一步"],
+  "rtl": false
+}

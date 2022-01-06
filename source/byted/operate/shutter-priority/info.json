@@ -1,0 +1,10 @@
+{
+  "id": "byted-shutter-priority",
+  "title": "byted-shutter-priority",
+  "name": "shutter-priority",
+  "category": "operate",
+  "categoryCN": "操作",
+  "author": "李梦龙",
+  "tag": ["shutter-priority", "byted-shutter-priority"],
+  "rtl": false
+}

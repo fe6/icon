@@ -1,0 +1,10 @@
+{
+  "id": "byted-browser",
+  "title": "byted-browser",
+  "name": "browser",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["browser", "byted-browser"],
+  "rtl": false
+}

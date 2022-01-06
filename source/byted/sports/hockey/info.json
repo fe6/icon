@@ -1,0 +1,10 @@
+{
+  "id": "byted-hockey",
+  "title": "byted-hockey",
+  "name": "hockey",
+  "category": "sports",
+  "categoryCN": "运动",
+  "author": "李梦龙",
+  "tag": ["hockey", "byted-hockey"],
+  "rtl": false
+}

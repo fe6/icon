@@ -1,0 +1,10 @@
+{
+  "id": "byted-milk",
+  "title": "byted-milk",
+  "name": "milk",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["milk", "byted-milk"],
+  "rtl": false
+}

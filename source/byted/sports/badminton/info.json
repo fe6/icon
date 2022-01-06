@@ -1,0 +1,10 @@
+{
+  "id": "byted-badminton",
+  "title": "byted-badminton",
+  "name": "badminton",
+  "category": "sports",
+  "categoryCN": "运动",
+  "author": "李梦龙",
+  "tag": ["badminton", "byted-badminton"],
+  "rtl": false
+}

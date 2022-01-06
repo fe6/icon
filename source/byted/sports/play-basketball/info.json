@@ -1,0 +1,10 @@
+{
+  "id": "byted-play-basketball",
+  "title": "byted-play-basketball",
+  "name": "play-basketball",
+  "category": "sports",
+  "categoryCN": "运动",
+  "author": "李梦龙",
+  "tag": ["play-basketball", "byted-play-basketball"],
+  "rtl": false
+}

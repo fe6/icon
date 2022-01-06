@@ -1,0 +1,10 @@
+{
+  "id": "byted-excel",
+  "title": "byted-excel",
+  "name": "excel",
+  "category": "office",
+  "categoryCN": "办公",
+  "author": "李梦龙",
+  "tag": ["excel", "byted-excel"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "antd-form",
+  "title": "表单",
+  "name": "form",
+  "category": "editor",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["表单"],
+  "rtl": false
+}

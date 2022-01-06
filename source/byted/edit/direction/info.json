@@ -1,0 +1,10 @@
+{
+  "id": "byted-direction",
+  "title": "byted-direction",
+  "name": "direction",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["direction", "byted-direction"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-move",
+  "title": "byted-move",
+  "name": "move",
+  "category": "hands",
+  "categoryCN": "手势",
+  "author": "李梦龙",
+  "tag": ["move", "byted-move"],
+  "rtl": false
+}

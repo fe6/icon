@@ -1,0 +1,10 @@
+{
+  "id": "byted-ticket",
+  "title": "byted-ticket",
+  "name": "ticket",
+  "category": "office",
+  "categoryCN": "办公",
+  "author": "李梦龙",
+  "tag": ["ticket", "byted-ticket"],
+  "rtl": false
+}

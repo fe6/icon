@@ -1,0 +1,10 @@
+{
+  "id": "byted-mail-review",
+  "title": "byted-mail-review",
+  "name": "mail-review",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["mail-review", "byted-mail-review"],
+  "rtl": false
+}

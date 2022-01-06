@@ -1,0 +1,10 @@
+{
+  "id": "byted-u-disk",
+  "title": "byted-u-disk",
+  "name": "u-disk",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["u-disk", "byted-u-disk"],
+  "rtl": false
+}

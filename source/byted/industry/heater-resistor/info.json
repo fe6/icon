@@ -1,0 +1,10 @@
+{
+  "id": "byted-heater-resistor",
+  "title": "byted-heater-resistor",
+  "name": "heater-resistor",
+  "category": "industry",
+  "categoryCN": "工业",
+  "author": "李梦龙",
+  "tag": ["heater-resistor", "byted-heater-resistor"],
+  "rtl": false
+}

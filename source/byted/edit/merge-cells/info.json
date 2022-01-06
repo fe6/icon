@@ -1,0 +1,10 @@
+{
+  "id": "byted-merge-cells",
+  "title": "byted-merge-cells",
+  "name": "merge-cells",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["merge-cells", "byted-merge-cells"],
+  "rtl": false
+}

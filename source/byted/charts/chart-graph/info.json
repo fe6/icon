@@ -1,0 +1,10 @@
+{
+  "id": "byted-chart-graph",
+  "title": "byted-chart-graph",
+  "name": "chart-graph",
+  "category": "charts",
+  "categoryCN": "图表",
+  "author": "李梦龙",
+  "tag": ["chart-graph", "byted-chart-graph"],
+  "rtl": false
+}

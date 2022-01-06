@@ -1,0 +1,10 @@
+{
+  "id": "antd-exclamation-circle",
+  "title": "圆角感叹号",
+  "name": "exclamation-circle",
+  "category": "suggestion",
+  "categoryCN": "建议",
+  "author": "李梦龙",
+  "tag": ["圆角感叹号"],
+  "rtl": false
+}

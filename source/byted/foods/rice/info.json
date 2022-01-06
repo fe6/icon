@@ -1,0 +1,10 @@
+{
+  "id": "byted-rice",
+  "title": "byted-rice",
+  "name": "rice",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["rice", "byted-rice"],
+  "rtl": false
+}

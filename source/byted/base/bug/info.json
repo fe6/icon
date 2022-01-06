@@ -1,0 +1,10 @@
+{
+  "id": "byted-bug",
+  "title": "byted-bug",
+  "name": "bug",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["bug", "byted-bug"],
+  "rtl": false
+}

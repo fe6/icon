@@ -1,0 +1,10 @@
+{
+  "id": "byted-electronic-door-lock",
+  "title": "byted-electronic-door-lock",
+  "name": "electronic-door-lock",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["electronic-door-lock", "byted-electronic-door-lock"],
+  "rtl": false
+}

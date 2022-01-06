@@ -1,0 +1,10 @@
+{
+  "id": "byted-broadcast-radio",
+  "title": "byted-broadcast-radio",
+  "name": "broadcast-radio",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["broadcast-radio", "byted-broadcast-radio"],
+  "rtl": false
+}

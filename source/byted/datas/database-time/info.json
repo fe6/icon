@@ -1,0 +1,10 @@
+{
+  "id": "byted-database-time",
+  "title": "byted-database-time",
+  "name": "database-time",
+  "category": "datas",
+  "categoryCN": "数据库",
+  "author": "李梦龙",
+  "tag": ["database-time", "byted-database-time"],
+  "rtl": false
+}

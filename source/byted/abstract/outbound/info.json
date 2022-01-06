@@ -1,0 +1,10 @@
+{
+  "id": "byted-outbound",
+  "title": "byted-outbound",
+  "name": "outbound",
+  "category": "abstract",
+  "categoryCN": "抽象",
+  "author": "李梦龙",
+  "tag": ["outbound", "byted-outbound"],
+  "rtl": false
+}

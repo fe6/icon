@@ -1,0 +1,10 @@
+{
+  "id": "byted-stock-market",
+  "title": "byted-stock-market",
+  "name": "stock-market",
+  "category": "money",
+  "categoryCN": "钱财",
+  "author": "李梦龙",
+  "tag": ["stock-market", "byted-stock-market"],
+  "rtl": false
+}

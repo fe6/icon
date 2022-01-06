@@ -1,0 +1,10 @@
+{
+  "id": "byted-detection",
+  "title": "byted-detection",
+  "name": "detection",
+  "category": "health",
+  "categoryCN": "健康",
+  "author": "李梦龙",
+  "tag": ["detection", "byted-detection"],
+  "rtl": false
+}

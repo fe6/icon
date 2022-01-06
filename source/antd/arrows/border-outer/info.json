@@ -1,0 +1,10 @@
+{
+  "id": "antd-border-outer",
+  "title": "边框外",
+  "name": "border-outer",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["外", "边框"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-transfer",
+  "title": "byted-transfer",
+  "name": "transfer",
+  "category": "travel",
+  "categoryCN": "旅行",
+  "author": "李梦龙",
+  "tag": ["transfer", "byted-transfer"],
+  "rtl": false
+}

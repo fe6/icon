@@ -1,0 +1,10 @@
+{
+  "id": "byted-application",
+  "title": "byted-application",
+  "name": "application",
+  "category": "build",
+  "categoryCN": "建筑",
+  "author": "李梦龙",
+  "tag": ["application", "byted-application"],
+  "rtl": false
+}

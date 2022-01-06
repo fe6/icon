@@ -1,0 +1,10 @@
+{
+  "id": "byted-erase",
+  "title": "byted-erase",
+  "name": "erase",
+  "category": "operate",
+  "categoryCN": "操作",
+  "author": "李梦龙",
+  "tag": ["erase", "byted-erase"],
+  "rtl": false
+}

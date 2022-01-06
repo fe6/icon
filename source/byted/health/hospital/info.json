@@ -1,0 +1,10 @@
+{
+  "id": "byted-hospital",
+  "title": "byted-hospital",
+  "name": "hospital",
+  "category": "health",
+  "categoryCN": "健康",
+  "author": "李梦龙",
+  "tag": ["hospital", "byted-hospital"],
+  "rtl": false
+}

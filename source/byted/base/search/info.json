@@ -1,0 +1,10 @@
+{
+  "id": "byted-search",
+  "title": "byted-search",
+  "name": "search",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["search", "byted-search"],
+  "rtl": false
+}

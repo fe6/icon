@@ -1,0 +1,10 @@
+{
+  "id": "byted-weightlifting",
+  "title": "byted-weightlifting",
+  "name": "weightlifting",
+  "category": "sports",
+  "categoryCN": "运动",
+  "author": "李梦龙",
+  "tag": ["weightlifting", "byted-weightlifting"],
+  "rtl": false
+}

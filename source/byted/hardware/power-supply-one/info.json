@@ -1,0 +1,10 @@
+{
+  "id": "byted-power-supply-one",
+  "title": "byted-power-supply-one",
+  "name": "power-supply-one",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["power-supply-one", "byted-power-supply-one"],
+  "rtl": false
+}

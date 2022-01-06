@@ -1,0 +1,10 @@
+{
+  "id": "byted-delivery",
+  "title": "byted-delivery",
+  "name": "delivery",
+  "category": "hands",
+  "categoryCN": "手势",
+  "author": "李梦龙",
+  "tag": ["delivery", "byted-delivery"],
+  "rtl": false
+}

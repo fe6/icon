@@ -1,0 +1,10 @@
+{
+  "id": "byted-vacuum-cleaner",
+  "title": "byted-vacuum-cleaner",
+  "name": "vacuum-cleaner",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["vacuum-cleaner", "byted-vacuum-cleaner"],
+  "rtl": false
+}

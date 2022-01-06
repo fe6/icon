@@ -1,0 +1,10 @@
+{
+  "id": "byted-boxing",
+  "title": "byted-boxing",
+  "name": "boxing",
+  "category": "sports",
+  "categoryCN": "运动",
+  "author": "李梦龙",
+  "tag": ["boxing", "byted-boxing"],
+  "rtl": false
+}

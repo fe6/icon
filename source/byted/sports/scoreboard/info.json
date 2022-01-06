@@ -1,0 +1,10 @@
+{
+  "id": "byted-scoreboard",
+  "title": "byted-scoreboard",
+  "name": "scoreboard",
+  "category": "sports",
+  "categoryCN": "运动",
+  "author": "李梦龙",
+  "tag": ["scoreboard", "byted-scoreboard"],
+  "rtl": false
+}

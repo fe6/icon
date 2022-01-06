@@ -1,0 +1,10 @@
+{
+  "id": "byted-music-cd",
+  "title": "byted-music-cd",
+  "name": "music-cd",
+  "category": "music",
+  "categoryCN": "声音",
+  "author": "李梦龙",
+  "tag": ["music-cd", "byted-music-cd"],
+  "rtl": false
+}

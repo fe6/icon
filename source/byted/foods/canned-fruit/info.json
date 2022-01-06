@@ -1,0 +1,10 @@
+{
+  "id": "byted-canned-fruit",
+  "title": "byted-canned-fruit",
+  "name": "canned-fruit",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["canned-fruit", "byted-canned-fruit"],
+  "rtl": false
+}

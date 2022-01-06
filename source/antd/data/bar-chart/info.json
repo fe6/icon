@@ -1,0 +1,10 @@
+{
+  "id": "antd-bar-chart",
+  "title": "柱形图表",
+  "name": "bar-chart",
+  "category": "data",
+  "categoryCN": "数据",
+  "author": "李梦龙",
+  "tag": ["柱形图表"],
+  "rtl": false
+}

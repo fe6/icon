@@ -1,0 +1,10 @@
+{
+  "id": "byted-disk-two",
+  "title": "byted-disk-two",
+  "name": "disk-two",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["disk-two", "byted-disk-two"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-file-excel",
+  "title": "byted-file-excel",
+  "name": "file-excel",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["file-excel", "byted-file-excel"],
+  "rtl": false
+}

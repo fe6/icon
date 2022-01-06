@@ -1,0 +1,10 @@
+{
+  "id": "byted-app-switch",
+  "title": "byted-app-switch",
+  "name": "app-switch",
+  "category": "abstract",
+  "categoryCN": "抽象",
+  "author": "李梦龙",
+  "tag": ["app-switch", "byted-app-switch"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-link-interrupt",
+  "title": "byted-link-interrupt",
+  "name": "link-interrupt",
+  "category": "connect",
+  "categoryCN": "连接",
+  "author": "李梦龙",
+  "tag": ["link-interrupt", "byted-link-interrupt"],
+  "rtl": false
+}

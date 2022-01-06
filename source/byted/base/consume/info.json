@@ -1,0 +1,10 @@
+{
+  "id": "byted-consume",
+  "title": "byted-consume",
+  "name": "consume",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["consume", "byted-consume"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "antd-dot-chart",
+  "title": "散点图表",
+  "name": "dot-chart",
+  "category": "data",
+  "categoryCN": "数据",
+  "author": "李梦龙",
+  "tag": ["散点图表"],
+  "rtl": false
+}

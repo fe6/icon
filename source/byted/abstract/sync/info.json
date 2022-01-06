@@ -1,0 +1,10 @@
+{
+  "id": "byted-sync",
+  "title": "byted-sync",
+  "name": "sync",
+  "category": "abstract",
+  "categoryCN": "抽象",
+  "author": "李梦龙",
+  "tag": ["sync", "byted-sync"],
+  "rtl": false
+}

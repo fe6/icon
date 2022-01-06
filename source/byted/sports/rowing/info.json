@@ -1,0 +1,10 @@
+{
+  "id": "byted-rowing",
+  "title": "byted-rowing",
+  "name": "rowing",
+  "category": "sports",
+  "categoryCN": "运动",
+  "author": "李梦龙",
+  "tag": ["rowing", "byted-rowing"],
+  "rtl": false
+}

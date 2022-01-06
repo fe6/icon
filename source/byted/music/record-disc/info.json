@@ -1,0 +1,10 @@
+{
+  "id": "byted-record-disc",
+  "title": "byted-record-disc",
+  "name": "record-disc",
+  "category": "music",
+  "categoryCN": "声音",
+  "author": "李梦龙",
+  "tag": ["record-disc", "byted-record-disc"],
+  "rtl": false
+}

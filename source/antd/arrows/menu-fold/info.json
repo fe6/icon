@@ -1,0 +1,10 @@
+{
+  "id": "antd-menu-fold",
+  "title": "菜单收起",
+  "name": "menu-fold",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["菜单收起"],
+  "rtl": false
+}

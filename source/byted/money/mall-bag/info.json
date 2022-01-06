@@ -1,0 +1,10 @@
+{
+  "id": "byted-mall-bag",
+  "title": "byted-mall-bag",
+  "name": "mall-bag",
+  "category": "money",
+  "categoryCN": "钱财",
+  "author": "李梦龙",
+  "tag": ["mall-bag", "byted-mall-bag"],
+  "rtl": false
+}

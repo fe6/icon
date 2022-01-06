@@ -1,0 +1,10 @@
+{
+  "id": "byted-entertainment",
+  "title": "byted-entertainment",
+  "name": "entertainment",
+  "category": "music",
+  "categoryCN": "声音",
+  "author": "李梦龙",
+  "tag": ["entertainment", "byted-entertainment"],
+  "rtl": false
+}

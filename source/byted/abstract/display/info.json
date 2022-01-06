@@ -1,0 +1,10 @@
+{
+  "id": "byted-display",
+  "title": "byted-display",
+  "name": "display",
+  "category": "abstract",
+  "categoryCN": "抽象",
+  "author": "李梦龙",
+  "tag": ["display", "byted-display"],
+  "rtl": false
+}

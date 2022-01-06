@@ -1,0 +1,10 @@
+{
+  "id": "byted-brightness",
+  "title": "byted-brightness",
+  "name": "brightness",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["brightness", "byted-brightness"],
+  "rtl": false
+}

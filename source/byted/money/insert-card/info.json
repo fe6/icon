@@ -1,0 +1,10 @@
+{
+  "id": "byted-insert-card",
+  "title": "byted-insert-card",
+  "name": "insert-card",
+  "category": "money",
+  "categoryCN": "钱财",
+  "author": "李梦龙",
+  "tag": ["insert-card", "byted-insert-card"],
+  "rtl": false
+}

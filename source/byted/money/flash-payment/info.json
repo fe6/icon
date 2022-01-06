@@ -1,0 +1,10 @@
+{
+  "id": "byted-flash-payment",
+  "title": "byted-flash-payment",
+  "name": "flash-payment",
+  "category": "money",
+  "categoryCN": "钱财",
+  "author": "李梦龙",
+  "tag": ["flash-payment", "byted-flash-payment"],
+  "rtl": false
+}

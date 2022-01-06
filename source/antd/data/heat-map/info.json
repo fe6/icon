@@ -1,0 +1,10 @@
+{
+  "id": "antd-heat-map",
+  "title": "下跌图表",
+  "name": "heat-map",
+  "category": "data",
+  "categoryCN": "数据",
+  "author": "李梦龙",
+  "tag": ["下跌图表"],
+  "rtl": false
+}

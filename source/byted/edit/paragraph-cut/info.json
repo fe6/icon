@@ -1,0 +1,10 @@
+{
+  "id": "byted-paragraph-cut",
+  "title": "byted-paragraph-cut",
+  "name": "paragraph-cut",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["paragraph-cut", "byted-paragraph-cut"],
+  "rtl": false
+}

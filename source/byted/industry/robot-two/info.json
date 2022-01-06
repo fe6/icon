@@ -1,0 +1,10 @@
+{
+  "id": "byted-robot-two",
+  "title": "byted-robot-two",
+  "name": "robot-two",
+  "category": "industry",
+  "categoryCN": "工业",
+  "author": "李梦龙",
+  "tag": ["robot-two", "byted-robot-two"],
+  "rtl": false
+}

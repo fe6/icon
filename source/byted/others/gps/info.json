@@ -1,0 +1,10 @@
+{
+  "id": "byted-gps",
+  "title": "byted-gps",
+  "name": "gps",
+  "category": "others",
+  "categoryCN": "其它",
+  "author": "李梦龙",
+  "tag": ["gps", "byted-gps"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-folder-close",
+  "title": "byted-folder-close",
+  "name": "folder-close",
+  "category": "books",
+  "categoryCN": "书籍",
+  "author": "李梦龙",
+  "tag": ["folder-close", "byted-folder-close"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-hold-interface",
+  "title": "byted-hold-interface",
+  "name": "hold-interface",
+  "category": "hands",
+  "categoryCN": "手势",
+  "author": "李梦龙",
+  "tag": ["hold-interface", "byted-hold-interface"],
+  "rtl": false
+}

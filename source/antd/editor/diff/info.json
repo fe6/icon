@@ -1,0 +1,10 @@
+{
+  "id": "antd-diff",
+  "title": "不同",
+  "name": "diff",
+  "category": "editor",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["不同"],
+  "rtl": false
+}

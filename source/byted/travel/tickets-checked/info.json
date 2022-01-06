@@ -1,0 +1,10 @@
+{
+  "id": "byted-tickets-checked",
+  "title": "byted-tickets-checked",
+  "name": "tickets-checked",
+  "category": "travel",
+  "categoryCN": "旅行",
+  "author": "李梦龙",
+  "tag": ["tickets-checked", "byted-tickets-checked"],
+  "rtl": false
+}

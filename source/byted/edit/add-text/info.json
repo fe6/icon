@@ -1,0 +1,10 @@
+{
+  "id": "byted-add-text",
+  "title": "byted-add-text",
+  "name": "add-text",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["add-text", "byted-add-text"],
+  "rtl": false
+}

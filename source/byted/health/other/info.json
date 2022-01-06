@@ -1,0 +1,10 @@
+{
+  "id": "byted-other",
+  "title": "byted-other",
+  "name": "other",
+  "category": "health",
+  "categoryCN": "健康",
+  "author": "李梦龙",
+  "tag": ["other", "byted-other"],
+  "rtl": false
+}

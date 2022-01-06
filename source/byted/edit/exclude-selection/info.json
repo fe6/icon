@@ -1,0 +1,10 @@
+{
+  "id": "byted-exclude-selection",
+  "title": "byted-exclude-selection",
+  "name": "exclude-selection",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["exclude-selection", "byted-exclude-selection"],
+  "rtl": false
+}

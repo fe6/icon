@@ -1,0 +1,10 @@
+{
+  "id": "byted-light-rain",
+  "title": "byted-light-rain",
+  "name": "light-rain",
+  "category": "weather",
+  "categoryCN": "天气",
+  "author": "李梦龙",
+  "tag": ["light-rain", "byted-light-rain"],
+  "rtl": false
+}

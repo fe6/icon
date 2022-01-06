@@ -1,0 +1,10 @@
+{
+  "id": "byted-message-search",
+  "title": "byted-message-search",
+  "name": "message-search",
+  "category": "communicate",
+  "categoryCN": "交流",
+  "author": "李梦龙",
+  "tag": ["message-search", "byted-message-search"],
+  "rtl": false
+}

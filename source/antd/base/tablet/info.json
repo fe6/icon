@@ -1,0 +1,10 @@
+{
+  "id": "antd-tablet",
+  "title": "tablet",
+  "name": "tablet",
+  "category": "base",
+  "categoryCN": "通用",
+  "author": "李梦龙",
+  "tag": ["tablet"],
+  "rtl": false
+}

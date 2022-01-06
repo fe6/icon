@@ -1,0 +1,10 @@
+{
+  "id": "antd-swap",
+  "title": "折返棱角",
+  "name": "swap",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["折返棱角"],
+  "rtl": false
+}

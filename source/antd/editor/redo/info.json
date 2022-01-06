@@ -1,0 +1,10 @@
+{
+  "id": "antd-redo",
+  "title": "撤销",
+  "name": "redo",
+  "category": "editor",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["撤销"],
+  "rtl": false
+}

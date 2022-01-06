@@ -1,0 +1,10 @@
+{
+  "id": "byted-shuffle",
+  "title": "byted-shuffle",
+  "name": "shuffle",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["shuffle", "byted-shuffle"],
+  "rtl": false
+}

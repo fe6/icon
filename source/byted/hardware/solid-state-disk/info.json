@@ -1,0 +1,10 @@
+{
+  "id": "byted-solid-state-disk",
+  "title": "byted-solid-state-disk",
+  "name": "solid-state-disk",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["solid-state-disk", "byted-solid-state-disk"],
+  "rtl": false
+}

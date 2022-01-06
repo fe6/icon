@@ -1,0 +1,10 @@
+{
+  "id": "byted-luggage",
+  "title": "byted-luggage",
+  "name": "luggage",
+  "category": "travel",
+  "categoryCN": "旅行",
+  "author": "李梦龙",
+  "tag": ["luggage", "byted-luggage"],
+  "rtl": false
+}

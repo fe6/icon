@@ -1,0 +1,10 @@
+{
+  "id": "byted-heavy-wind",
+  "title": "byted-heavy-wind",
+  "name": "heavy-wind",
+  "category": "weather",
+  "categoryCN": "天气",
+  "author": "李梦龙",
+  "tag": ["heavy-wind", "byted-heavy-wind"],
+  "rtl": false
+}

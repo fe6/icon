@@ -1,0 +1,10 @@
+{
+  "id": "byted-oscillator",
+  "title": "byted-oscillator",
+  "name": "oscillator",
+  "category": "industry",
+  "categoryCN": "工业",
+  "author": "李梦龙",
+  "tag": ["oscillator", "byted-oscillator"],
+  "rtl": false
+}

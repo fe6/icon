@@ -1,0 +1,10 @@
+{
+  "id": "byted-chart-pie",
+  "title": "byted-chart-pie",
+  "name": "chart-pie",
+  "category": "charts",
+  "categoryCN": "图表",
+  "author": "李梦龙",
+  "tag": ["chart-pie", "byted-chart-pie"],
+  "rtl": false
+}

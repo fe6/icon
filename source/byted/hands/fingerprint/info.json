@@ -1,0 +1,10 @@
+{
+  "id": "byted-fingerprint",
+  "title": "byted-fingerprint",
+  "name": "fingerprint",
+  "category": "hands",
+  "categoryCN": "手势",
+  "author": "李梦龙",
+  "tag": ["fingerprint", "byted-fingerprint"],
+  "rtl": false
+}

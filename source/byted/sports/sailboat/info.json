@@ -1,0 +1,10 @@
+{
+  "id": "byted-sailboat",
+  "title": "byted-sailboat",
+  "name": "sailboat",
+  "category": "sports",
+  "categoryCN": "运动",
+  "author": "李梦龙",
+  "tag": ["sailboat", "byted-sailboat"],
+  "rtl": false
+}

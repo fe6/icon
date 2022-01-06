@@ -1,0 +1,10 @@
+{
+  "id": "byted-liqueur",
+  "title": "byted-liqueur",
+  "name": "liqueur",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["liqueur", "byted-liqueur"],
+  "rtl": false
+}

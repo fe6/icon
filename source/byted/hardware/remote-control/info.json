@@ -1,0 +1,10 @@
+{
+  "id": "byted-remote-control",
+  "title": "byted-remote-control",
+  "name": "remote-control",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["remote-control", "byted-remote-control"],
+  "rtl": false
+}

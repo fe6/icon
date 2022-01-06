@@ -1,0 +1,10 @@
+{
+  "id": "byted-devices",
+  "title": "byted-devices",
+  "name": "devices",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["devices", "byted-devices"],
+  "rtl": false
+}

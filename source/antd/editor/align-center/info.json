@@ -1,0 +1,10 @@
+{
+  "id": "antd-align-center",
+  "title": "居中",
+  "name": "align-center",
+  "category": "editor",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["居中"],
+  "rtl": false
+}

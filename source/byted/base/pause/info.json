@@ -1,0 +1,10 @@
+{
+  "id": "byted-pause",
+  "title": "byted-pause",
+  "name": "pause",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["pause", "byted-pause"],
+  "rtl": false
+}

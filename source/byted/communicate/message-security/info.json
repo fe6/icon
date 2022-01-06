@@ -1,0 +1,10 @@
+{
+  "id": "byted-message-security",
+  "title": "byted-message-security",
+  "name": "message-security",
+  "category": "communicate",
+  "categoryCN": "交流",
+  "author": "李梦龙",
+  "tag": ["message-security", "byted-message-security"],
+  "rtl": false
+}

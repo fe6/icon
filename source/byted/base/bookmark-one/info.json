@@ -1,0 +1,10 @@
+{
+  "id": "byted-bookmark-one",
+  "title": "byted-bookmark-one",
+  "name": "bookmark-one",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["bookmark-one", "byted-bookmark-one"],
+  "rtl": false
+}

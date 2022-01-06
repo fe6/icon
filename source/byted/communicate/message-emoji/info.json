@@ -1,0 +1,10 @@
+{
+  "id": "byted-message-emoji",
+  "title": "byted-message-emoji",
+  "name": "message-emoji",
+  "category": "communicate",
+  "categoryCN": "交流",
+  "author": "李梦龙",
+  "tag": ["message-emoji", "byted-message-emoji"],
+  "rtl": false
+}

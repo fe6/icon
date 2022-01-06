@@ -1,0 +1,10 @@
+{
+  "id": "byted-folder-quality",
+  "title": "byted-folder-quality",
+  "name": "folder-quality",
+  "category": "books",
+  "categoryCN": "书籍",
+  "author": "李梦龙",
+  "tag": ["folder-quality", "byted-folder-quality"],
+  "rtl": false
+}

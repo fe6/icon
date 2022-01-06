@@ -1,0 +1,10 @@
+{
+  "id": "byted-monitor",
+  "title": "byted-monitor",
+  "name": "monitor",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["monitor", "byted-monitor"],
+  "rtl": false
+}

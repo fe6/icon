@@ -1,0 +1,10 @@
+{
+  "id": "byted-nutrition",
+  "title": "byted-nutrition",
+  "name": "nutrition",
+  "category": "health",
+  "categoryCN": "健康",
+  "author": "李梦龙",
+  "tag": ["nutrition", "byted-nutrition"],
+  "rtl": false
+}

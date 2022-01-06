@@ -70,9 +70,69 @@ export class AllGenerator extends RuntimeGenerator {
       `const reColors${typeStrArray} = ['#000', '#2f88ff', '#fff', '#43ccf8'];`,
     );
     this.writeLine(
+      `const reFullColors${typeStrArray} = ['#000000', '#2f88ff', '#ffffff', '#43ccf8'];`,
+    );
+    this.writeLine(
       `const reEnColors${typeStrArray} = ['black', '#2f88ff', 'white', '#43ccf8'];`,
     );
     this.writeLine();
+    this.writeLine('// rgb 和 #fff 转换成 #ffffff');
+    this.writeLine();
+    this.writeLine(`const colorHex = (color${typeString}) => {`);
+    this.indent(1);
+    this.writeLine('let that = color;');
+    this.writeLine('//十六进制颜色值的正则表达式');
+    this.writeLine('const reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;');
+    this.writeLine('// 如果是rgb颜色表示');
+    this.writeLine('if (/^(rgb|RGB)/.test(that)) {');
+    this.indent(1);
+    this.writeLine(
+      'const aColor = that.replace(/(?:(|)|rgb|RGB)*/g, "").split(",");',
+    );
+    this.writeLine('let strHex = "#";');
+    this.writeLine('for (let i=0; i<aColor.length; i++) {');
+    this.indent(1);
+    this.writeLine('let hex = Number(aColor[i]).toString(16);');
+    this.writeLine('if (hex.length < 2) {');
+    this.indent(1);
+    this.writeLine("hex = '0' + hex;");
+    this.indent(-1);
+    this.writeLine('}');
+    this.writeLine('strHex += hex;');
+    this.indent(-1);
+    this.writeLine('}');
+    this.writeLine('if (strHex.length !== 7) {');
+    this.indent(1);
+    this.writeLine('strHex = that;');
+    this.indent(-1);
+    this.writeLine('}');
+    this.writeLine('return strHex;');
+    this.indent(-1);
+    this.writeLine('} else if (reg.test(that)) {');
+    this.indent(1);
+    this.writeLine('const aNum = that.replace(/#/,"").split("");');
+    this.writeLine('if (aNum.length === 6) {');
+    this.indent(1);
+    this.writeLine('return that;');
+    this.indent(-1);
+    this.writeLine('} else if(aNum.length === 3) {');
+    this.indent(1);
+    this.writeLine('let numHex = "#";');
+    this.writeLine('for (let i=0; i<aNum.length; i+=1) {');
+    this.indent(1);
+    this.writeLine('numHex += (aNum[i] + aNum[i]);');
+    this.indent(-1);
+    this.writeLine('}');
+    this.writeLine('return numHex;');
+    this.indent(-1);
+    this.writeLine('}');
+    this.indent(-1);
+    this.writeLine('}');
+    this.writeLine('return that;');
+    this.indent(-1);
+    this.writeLine('};');
+    this.writeLine();
+
     this.writeLine('// 获取 SVG 内容');
     this.writeLine(
       `export const allGetContent = (svgItem${typeString}, props${
@@ -118,7 +178,7 @@ export class AllGenerator extends RuntimeGenerator {
     );
     this.indent(1);
     this.writeLine(
-      `contentHtml = contentHtml.replace(new RegExp(\`\${reColors[colorIdx]}|\${reColors[colorIdx].toUpperCase()}|\${reEnColors[colorIdx]}|\${reEnColors[colorIdx].toUpperCase()}\`, 'g'), colorItem);`,
+      `contentHtml = contentHtml.replace(new RegExp(\`\${reColors[colorIdx]}|\${reColors[colorIdx].toUpperCase()}|\${reEnColors[colorIdx]}|\${reEnColors[colorIdx].toUpperCase()}|\${reFullColors[colorIdx]}|\${reFullColors[colorIdx].toUpperCase()}\`, 'g'), colorHex(colorItem));`,
     );
     this.indent(-1);
     this.writeLine('});');

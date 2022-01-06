@@ -1,0 +1,10 @@
+{
+  "id": "byted-undo",
+  "title": "byted-undo",
+  "name": "undo",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["undo", "byted-undo"],
+  "rtl": false
+}

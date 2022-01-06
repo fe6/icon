@@ -1,0 +1,10 @@
+{
+  "id": "antd-border-horizontal",
+  "title": "边框垂直中间",
+  "name": "border-horizontal",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["垂直中间", "边框"],
+  "rtl": false
+}

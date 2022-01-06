@@ -1,0 +1,10 @@
+{
+  "id": "byted-app-store",
+  "title": "byted-app-store",
+  "name": "app-store",
+  "category": "brand",
+  "categoryCN": "品牌",
+  "author": "李梦龙",
+  "tag": ["app-store", "byted-app-store"],
+  "rtl": false
+}

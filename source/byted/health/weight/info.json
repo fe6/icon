@@ -1,0 +1,10 @@
+{
+  "id": "byted-weight",
+  "title": "byted-weight",
+  "name": "weight",
+  "category": "health",
+  "categoryCN": "健康",
+  "author": "李梦龙",
+  "tag": ["weight", "byted-weight"],
+  "rtl": false
+}

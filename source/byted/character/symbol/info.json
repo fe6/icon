@@ -1,0 +1,10 @@
+{
+  "id": "byted-symbol",
+  "title": "byted-symbol",
+  "name": "symbol",
+  "category": "character",
+  "categoryCN": "符号",
+  "author": "李梦龙",
+  "tag": ["symbol", "byted-symbol"],
+  "rtl": false
+}

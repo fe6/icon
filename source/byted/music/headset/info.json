@@ -1,0 +1,10 @@
+{
+  "id": "byted-headset",
+  "title": "byted-headset",
+  "name": "headset",
+  "category": "music",
+  "categoryCN": "声音",
+  "author": "李梦龙",
+  "tag": ["headset", "byted-headset"],
+  "rtl": false
+}

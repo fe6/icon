@@ -1,0 +1,10 @@
+{
+  "id": "byted-coupon",
+  "title": "byted-coupon",
+  "name": "coupon",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["coupon", "byted-coupon"],
+  "rtl": false
+}

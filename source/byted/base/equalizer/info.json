@@ -1,0 +1,10 @@
+{
+  "id": "byted-equalizer",
+  "title": "byted-equalizer",
+  "name": "equalizer",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["equalizer", "byted-equalizer"],
+  "rtl": false
+}

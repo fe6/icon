@@ -1,0 +1,10 @@
+{
+  "id": "byted-exclusive-gateway",
+  "title": "byted-exclusive-gateway",
+  "name": "exclusive-gateway",
+  "category": "abstract",
+  "categoryCN": "抽象",
+  "author": "李梦龙",
+  "tag": ["exclusive-gateway", "byted-exclusive-gateway"],
+  "rtl": false
+}

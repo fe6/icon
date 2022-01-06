@@ -1,0 +1,10 @@
+{
+  "id": "antd-alipay",
+  "title": "支付宝",
+  "name": "alipay",
+  "category": "logo",
+  "categoryCN": "品牌",
+  "author": "李梦龙",
+  "tag": ["支付宝"],
+  "rtl": false
+}

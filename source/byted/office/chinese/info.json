@@ -1,0 +1,10 @@
+{
+  "id": "byted-chinese",
+  "title": "byted-chinese",
+  "name": "chinese",
+  "category": "office",
+  "categoryCN": "办公",
+  "author": "李梦龙",
+  "tag": ["chinese", "byted-chinese"],
+  "rtl": false
+}

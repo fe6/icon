@@ -1,0 +1,10 @@
+{
+  "id": "byted-folder-settings-one",
+  "title": "byted-folder-settings-one",
+  "name": "folder-settings-one",
+  "category": "books",
+  "categoryCN": "书籍",
+  "author": "李梦龙",
+  "tag": ["folder-settings-one", "byted-folder-settings-one"],
+  "rtl": false
+}

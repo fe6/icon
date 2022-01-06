@@ -1,0 +1,10 @@
+{
+  "id": "byted-internal-data",
+  "title": "byted-internal-data",
+  "name": "internal-data",
+  "category": "abstract",
+  "categoryCN": "抽象",
+  "author": "李梦龙",
+  "tag": ["internal-data", "byted-internal-data"],
+  "rtl": false
+}

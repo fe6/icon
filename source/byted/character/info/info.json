@@ -1,0 +1,10 @@
+{
+  "id": "byted-info",
+  "title": "byted-info",
+  "name": "info",
+  "category": "character",
+  "categoryCN": "符号",
+  "author": "李梦龙",
+  "tag": ["info", "byted-info"],
+  "rtl": false
+}

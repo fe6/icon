@@ -1,0 +1,10 @@
+{
+  "id": "byted-column",
+  "title": "byted-column",
+  "name": "column",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["column", "byted-column"],
+  "rtl": false
+}

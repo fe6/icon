@@ -1,0 +1,10 @@
+{
+  "id": "byted-bus",
+  "title": "byted-bus",
+  "name": "bus",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["bus", "byted-bus"],
+  "rtl": false
+}

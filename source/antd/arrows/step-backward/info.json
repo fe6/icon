@@ -1,0 +1,10 @@
+{
+  "id": "antd-step-backward",
+  "title": "上一步",
+  "name": "step-backward",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["步骤", "上一步"],
+  "rtl": false
+}

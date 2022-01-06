@@ -1,0 +1,10 @@
+{
+  "id": "byted-pivot-table",
+  "title": "byted-pivot-table",
+  "name": "pivot-table",
+  "category": "charts",
+  "categoryCN": "图表",
+  "author": "李梦龙",
+  "tag": ["pivot-table", "byted-pivot-table"],
+  "rtl": false
+}

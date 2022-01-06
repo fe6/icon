@@ -1,0 +1,10 @@
+{
+  "id": "antd-api",
+  "title": "api",
+  "name": "api",
+  "category": "base",
+  "categoryCN": "通用",
+  "author": "李梦龙",
+  "tag": ["api"],
+  "rtl": false
+}

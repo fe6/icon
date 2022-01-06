@@ -1,0 +1,10 @@
+{
+  "id": "antd-zoom-in",
+  "title": "放大",
+  "name": "zoom-in",
+  "category": "editor",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["放大"],
+  "rtl": false
+}

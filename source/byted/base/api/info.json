@@ -1,0 +1,10 @@
+{
+  "id": "byted-api",
+  "title": "byted-api",
+  "name": "api",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["api", "byted-api"],
+  "rtl": false
+}

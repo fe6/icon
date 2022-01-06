@@ -1,0 +1,10 @@
+{
+  "id": "byted-dashboard-one",
+  "title": "byted-dashboard-one",
+  "name": "dashboard-one",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["dashboard-one", "byted-dashboard-one"],
+  "rtl": false
+}

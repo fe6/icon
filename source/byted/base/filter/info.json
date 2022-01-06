@@ -1,0 +1,10 @@
+{
+  "id": "byted-filter",
+  "title": "byted-filter",
+  "name": "filter",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["filter", "byted-filter"],
+  "rtl": false
+}

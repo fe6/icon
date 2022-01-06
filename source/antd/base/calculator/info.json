@@ -1,0 +1,10 @@
+{
+  "id": "antd-calculator",
+  "title": "calculator",
+  "name": "calculator",
+  "category": "base",
+  "categoryCN": "通用",
+  "author": "李梦龙",
+  "tag": ["calculator"],
+  "rtl": false
+}

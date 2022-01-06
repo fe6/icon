@@ -1,0 +1,10 @@
+{
+  "id": "byted-ordered-list",
+  "title": "byted-ordered-list",
+  "name": "ordered-list",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["ordered-list", "byted-ordered-list"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-golf-course",
+  "title": "byted-golf-course",
+  "name": "golf-course",
+  "category": "sports",
+  "categoryCN": "运动",
+  "author": "李梦龙",
+  "tag": ["golf-course", "byted-golf-course"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-folder",
+  "title": "byted-folder",
+  "name": "folder",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["folder", "byted-folder"],
+  "rtl": false
+}

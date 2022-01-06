@@ -1,0 +1,10 @@
+{
+  "id": "byted-asterisk-key",
+  "title": "byted-asterisk-key",
+  "name": "asterisk-key",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["asterisk-key", "byted-asterisk-key"],
+  "rtl": false
+}

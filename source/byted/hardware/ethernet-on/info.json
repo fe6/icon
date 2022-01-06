@@ -1,0 +1,10 @@
+{
+  "id": "byted-ethernet-on",
+  "title": "byted-ethernet-on",
+  "name": "ethernet-on",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["ethernet-on", "byted-ethernet-on"],
+  "rtl": false
+}

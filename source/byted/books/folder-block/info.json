@@ -1,0 +1,10 @@
+{
+  "id": "byted-folder-block",
+  "title": "byted-folder-block",
+  "name": "folder-block",
+  "category": "books",
+  "categoryCN": "书籍",
+  "author": "李梦龙",
+  "tag": ["folder-block", "byted-folder-block"],
+  "rtl": false
+}

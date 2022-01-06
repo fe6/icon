@@ -1,0 +1,10 @@
+{
+  "id": "byted-help",
+  "title": "byted-help",
+  "name": "help",
+  "category": "character",
+  "categoryCN": "符号",
+  "author": "李梦龙",
+  "tag": ["help", "byted-help"],
+  "rtl": false
+}

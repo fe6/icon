@@ -1,0 +1,10 @@
+{
+  "id": "byted-scan",
+  "title": "byted-scan",
+  "name": "scan",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["scan", "byted-scan"],
+  "rtl": false
+}

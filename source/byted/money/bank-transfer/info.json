@@ -1,0 +1,10 @@
+{
+  "id": "byted-bank-transfer",
+  "title": "byted-bank-transfer",
+  "name": "bank-transfer",
+  "category": "money",
+  "categoryCN": "钱财",
+  "author": "李梦龙",
+  "tag": ["bank-transfer", "byted-bank-transfer"],
+  "rtl": false
+}

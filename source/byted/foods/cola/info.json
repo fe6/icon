@@ -1,0 +1,10 @@
+{
+  "id": "byted-cola",
+  "title": "byted-cola",
+  "name": "cola",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["cola", "byted-cola"],
+  "rtl": false
+}

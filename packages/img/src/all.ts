@@ -15,7 +15,44 @@ export interface IIconAllProps extends IIconProps {
 
 // 正则 数据中的默认颜色 替换
 const reColors: string[] = ['#000', '#2f88ff', '#fff', '#43ccf8'];
+const reFullColors: string[] = ['#000000', '#2f88ff', '#ffffff', '#43ccf8'];
 const reEnColors: string[] = ['black', '#2f88ff', 'white', '#43ccf8'];
+
+// rgb 和 #fff 转换成 #ffffff
+
+const colorHex = (color: string) => {
+  const that = color;
+  // 十六进制颜色值的正则表达式
+  const reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
+  // 如果是rgb颜色表示
+  if (/^(rgb|RGB)/.test(that)) {
+    const aColor = that.replace(/(?:(|)|rgb|RGB)*/g, '').split(',');
+    let strHex = '#';
+    for (let i = 0; i < aColor.length; i++) {
+      let hex = Number(aColor[i]).toString(16);
+      if (hex.length < 2) {
+        hex = `0${hex}`;
+      }
+      strHex += hex;
+    }
+    if (strHex.length !== 7) {
+      strHex = that;
+    }
+    return strHex;
+  } else if (reg.test(that)) {
+    const aNum = that.replace(/#/, '').split('');
+    if (aNum.length === 6) {
+      return that;
+    } else if (aNum.length === 3) {
+      let numHex = '#';
+      for (let i = 0; i < aNum.length; i += 1) {
+        numHex += aNum[i] + aNum[i];
+      }
+      return numHex;
+    }
+  }
+  return that;
+};
 
 // 获取 SVG 内容
 export const allGetContent = (svgItem: string, props: IIconProps): string => {
@@ -47,10 +84,12 @@ export const allGetContent = (svgItem: string, props: IIconProps): string => {
         new RegExp(
           `${reColors[colorIdx]}|${reColors[colorIdx].toUpperCase()}|${
             reEnColors[colorIdx]
-          }|${reEnColors[colorIdx].toUpperCase()}`,
+          }|${reEnColors[colorIdx].toUpperCase()}|${
+            reFullColors[colorIdx]
+          }|${reFullColors[colorIdx].toUpperCase()}`,
           'g',
         ),
-        colorItem,
+        colorHex(colorItem),
       );
     });
   }

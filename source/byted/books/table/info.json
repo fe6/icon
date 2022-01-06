@@ -1,0 +1,10 @@
+{
+  "id": "byted-table",
+  "title": "byted-table",
+  "name": "table",
+  "category": "books",
+  "categoryCN": "书籍",
+  "author": "李梦龙",
+  "tag": ["table", "byted-table"],
+  "rtl": false
+}

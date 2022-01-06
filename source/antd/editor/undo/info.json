@@ -1,0 +1,10 @@
+{
+  "id": "antd-undo",
+  "title": "反撤销",
+  "name": "undo",
+  "category": "editor",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["反撤销"],
+  "rtl": false
+}

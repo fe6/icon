@@ -1,0 +1,10 @@
+{
+  "id": "byted-activity-source",
+  "title": "byted-activity-source",
+  "name": "activity-source",
+  "category": "charts",
+  "categoryCN": "图表",
+  "author": "李梦龙",
+  "tag": ["activity-source", "byted-activity-source"],
+  "rtl": false
+}

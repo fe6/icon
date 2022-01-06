@@ -1,0 +1,10 @@
+{
+  "id": "byted-hat",
+  "title": "byted-hat",
+  "name": "hat",
+  "category": "clothes",
+  "categoryCN": "服饰",
+  "author": "李梦龙",
+  "tag": ["hat", "byted-hat"],
+  "rtl": false
+}

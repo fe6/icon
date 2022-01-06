@@ -1,0 +1,10 @@
+{
+  "id": "byted-address-book",
+  "title": "byted-address-book",
+  "name": "address-book",
+  "category": "peoples",
+  "categoryCN": "人群",
+  "author": "李梦龙",
+  "tag": ["address-book", "byted-address-book"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "antd-box-plot",
+  "title": "盒子图表",
+  "name": "box-plot",
+  "category": "data",
+  "categoryCN": "数据",
+  "author": "李梦龙",
+  "tag": ["盒子图表"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "antd-audit",
+  "title": "audit",
+  "name": "audit",
+  "category": "base",
+  "categoryCN": "通用",
+  "author": "李梦龙",
+  "tag": ["audit"],
+  "rtl": false
+}

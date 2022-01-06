@@ -1,0 +1,10 @@
+{
+  "id": "byted-connection-point-two",
+  "title": "byted-connection-point-two",
+  "name": "connection-point-two",
+  "category": "connect",
+  "categoryCN": "连接",
+  "author": "李梦龙",
+  "tag": ["connection-point-two", "byted-connection-point-two"],
+  "rtl": false
+}

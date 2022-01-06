@@ -1,0 +1,10 @@
+{
+  "id": "byted-sd",
+  "title": "byted-sd",
+  "name": "sd",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["sd", "byted-sd"],
+  "rtl": false
+}

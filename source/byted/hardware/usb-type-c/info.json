@@ -1,0 +1,10 @@
+{
+  "id": "byted-usb-type-c",
+  "title": "byted-usb-type-c",
+  "name": "usb-type-c",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["usb-type-c", "byted-usb-type-c"],
+  "rtl": false
+}

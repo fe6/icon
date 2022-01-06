@@ -1,0 +1,10 @@
+{
+  "id": "antd-login",
+  "title": "登录",
+  "name": "login",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["登录"],
+  "rtl": false
+}

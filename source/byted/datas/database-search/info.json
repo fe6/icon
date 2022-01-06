@@ -1,0 +1,10 @@
+{
+  "id": "byted-database-search",
+  "title": "byted-database-search",
+  "name": "database-search",
+  "category": "datas",
+  "categoryCN": "数据库",
+  "author": "李梦龙",
+  "tag": ["database-search", "byted-database-search"],
+  "rtl": false
+}

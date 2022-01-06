@@ -1,0 +1,10 @@
+{
+  "id": "byted-hot-pot",
+  "title": "byted-hot-pot",
+  "name": "hot-pot",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["hot-pot", "byted-hot-pot"],
+  "rtl": false
+}

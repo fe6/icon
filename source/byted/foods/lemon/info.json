@@ -1,0 +1,10 @@
+{
+  "id": "byted-lemon",
+  "title": "byted-lemon",
+  "name": "lemon",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["lemon", "byted-lemon"],
+  "rtl": false
+}

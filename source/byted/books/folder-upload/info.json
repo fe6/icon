@@ -1,0 +1,10 @@
+{
+  "id": "byted-folder-upload",
+  "title": "byted-folder-upload",
+  "name": "folder-upload",
+  "category": "books",
+  "categoryCN": "书籍",
+  "author": "李梦龙",
+  "tag": ["folder-upload", "byted-folder-upload"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "antd-border-right",
+  "title": "边框右",
+  "name": "border-right",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["右", "边框"],
+  "rtl": false
+}

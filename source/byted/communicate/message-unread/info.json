@@ -1,0 +1,10 @@
+{
+  "id": "byted-message-unread",
+  "title": "byted-message-unread",
+  "name": "message-unread",
+  "category": "communicate",
+  "categoryCN": "交流",
+  "author": "李梦龙",
+  "tag": ["message-unread", "byted-message-unread"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-chip",
+  "title": "byted-chip",
+  "name": "chip",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["chip", "byted-chip"],
+  "rtl": false
+}

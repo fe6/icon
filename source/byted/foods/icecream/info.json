@@ -1,0 +1,10 @@
+{
+  "id": "byted-icecream",
+  "title": "byted-icecream",
+  "name": "icecream",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["icecream", "byted-icecream"],
+  "rtl": false
+}

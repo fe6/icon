@@ -1,0 +1,10 @@
+{
+  "id": "byted-sort-amount-down",
+  "title": "byted-sort-amount-down",
+  "name": "sort-amount-down",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["sort-amount-down", "byted-sort-amount-down"],
+  "rtl": false
+}

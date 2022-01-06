@@ -1,0 +1,10 @@
+{
+  "id": "byted-replay-music",
+  "title": "byted-replay-music",
+  "name": "replay-music",
+  "category": "music",
+  "categoryCN": "声音",
+  "author": "李梦龙",
+  "tag": ["replay-music", "byted-replay-music"],
+  "rtl": false
+}

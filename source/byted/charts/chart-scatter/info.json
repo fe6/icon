@@ -1,0 +1,10 @@
+{
+  "id": "byted-chart-scatter",
+  "title": "byted-chart-scatter",
+  "name": "chart-scatter",
+  "category": "charts",
+  "categoryCN": "图表",
+  "author": "李梦龙",
+  "tag": ["chart-scatter", "byted-chart-scatter"],
+  "rtl": false
+}

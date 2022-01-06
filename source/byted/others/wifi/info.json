@@ -1,0 +1,10 @@
+{
+  "id": "byted-wifi",
+  "title": "byted-wifi",
+  "name": "wifi",
+  "category": "others",
+  "categoryCN": "其它",
+  "author": "李梦龙",
+  "tag": ["wifi", "byted-wifi"],
+  "rtl": false
+}

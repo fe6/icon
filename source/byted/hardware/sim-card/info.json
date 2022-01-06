@@ -1,0 +1,10 @@
+{
+  "id": "byted-sim-card",
+  "title": "byted-sim-card",
+  "name": "sim-card",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["sim-card", "byted-sim-card"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-auto-line-width",
+  "title": "byted-auto-line-width",
+  "name": "auto-line-width",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["auto-line-width", "byted-auto-line-width"],
+  "rtl": false
+}

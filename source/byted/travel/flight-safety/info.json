@@ -1,0 +1,10 @@
+{
+  "id": "byted-flight-safety",
+  "title": "byted-flight-safety",
+  "name": "flight-safety",
+  "category": "travel",
+  "categoryCN": "旅行",
+  "author": "李梦龙",
+  "tag": ["flight-safety", "byted-flight-safety"],
+  "rtl": false
+}

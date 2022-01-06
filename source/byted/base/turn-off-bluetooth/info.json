@@ -1,0 +1,10 @@
+{
+  "id": "byted-turn-off-bluetooth",
+  "title": "byted-turn-off-bluetooth",
+  "name": "turn-off-bluetooth",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["turn-off-bluetooth", "byted-turn-off-bluetooth"],
+  "rtl": false
+}

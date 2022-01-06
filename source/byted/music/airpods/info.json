@@ -1,0 +1,10 @@
+{
+  "id": "byted-airpods",
+  "title": "byted-airpods",
+  "name": "airpods",
+  "category": "music",
+  "categoryCN": "声音",
+  "author": "李梦龙",
+  "tag": ["airpods", "byted-airpods"],
+  "rtl": false
+}
