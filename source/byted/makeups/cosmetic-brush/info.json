@@ -1,0 +1,10 @@
+{
+  "id": "byted-cosmetic-brush",
+  "title": "byted-cosmetic-brush",
+  "name": "cosmetic-brush",
+  "category": "makeups",
+  "categoryCN": "美妆",
+  "author": "李梦龙",
+  "tag": ["cosmetic-brush", "byted-cosmetic-brush"],
+  "rtl": false
+}

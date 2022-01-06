@@ -1,0 +1,10 @@
+{
+  "id": "byted-many-to-many",
+  "title": "byted-many-to-many",
+  "name": "many-to-many",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["many-to-many", "byted-many-to-many"],
+  "rtl": false
+}

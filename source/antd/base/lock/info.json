@@ -1,0 +1,10 @@
+{
+  "id": "antd-lock",
+  "title": "lock",
+  "name": "lock",
+  "category": "base",
+  "categoryCN": "通用",
+  "author": "李梦龙",
+  "tag": ["lock"],
+  "rtl": false
+}

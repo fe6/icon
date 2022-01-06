@@ -1,0 +1,10 @@
+{
+  "id": "byted-sales-report",
+  "title": "byted-sales-report",
+  "name": "sales-report",
+  "category": "abstract",
+  "categoryCN": "抽象",
+  "author": "李梦龙",
+  "tag": ["sales-report", "byted-sales-report"],
+  "rtl": false
+}

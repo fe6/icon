@@ -1,0 +1,10 @@
+{
+  "id": "byted-gift",
+  "title": "byted-gift",
+  "name": "gift",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["gift", "byted-gift"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-report",
+  "title": "byted-report",
+  "name": "report",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["report", "byted-report"],
+  "rtl": false
+}

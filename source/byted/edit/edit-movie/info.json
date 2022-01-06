@@ -1,0 +1,10 @@
+{
+  "id": "byted-edit-movie",
+  "title": "byted-edit-movie",
+  "name": "edit-movie",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["edit-movie", "byted-edit-movie"],
+  "rtl": false
+}

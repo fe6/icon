@@ -1,0 +1,10 @@
+{
+  "id": "byted-cpu",
+  "title": "byted-cpu",
+  "name": "cpu",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["cpu", "byted-cpu"],
+  "rtl": false
+}

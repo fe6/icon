@@ -1,0 +1,10 @@
+{
+  "id": "byted-login",
+  "title": "byted-login",
+  "name": "login",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["login", "byted-login"],
+  "rtl": false
+}

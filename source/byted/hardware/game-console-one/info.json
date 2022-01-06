@@ -1,0 +1,10 @@
+{
+  "id": "byted-game-console-one",
+  "title": "byted-game-console-one",
+  "name": "game-console-one",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["game-console-one", "byted-game-console-one"],
+  "rtl": false
+}

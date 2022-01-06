@@ -1,0 +1,10 @@
+{
+  "id": "byted-alarm",
+  "title": "byted-alarm",
+  "name": "alarm",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["alarm", "byted-alarm"],
+  "rtl": false
+}

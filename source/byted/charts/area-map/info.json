@@ -1,0 +1,10 @@
+{
+  "id": "byted-area-map",
+  "title": "byted-area-map",
+  "name": "area-map",
+  "category": "charts",
+  "categoryCN": "图表",
+  "author": "李梦龙",
+  "tag": ["area-map", "byted-area-map"],
+  "rtl": false
+}

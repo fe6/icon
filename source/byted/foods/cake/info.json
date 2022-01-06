@@ -1,0 +1,10 @@
+{
+  "id": "byted-cake",
+  "title": "byted-cake",
+  "name": "cake",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["cake", "byted-cake"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "antd-caret-down",
+  "title": "三角下",
+  "name": "caret-down",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["下", "三角"],
+  "rtl": false
+}

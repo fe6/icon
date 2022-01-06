@@ -1,0 +1,10 @@
+{
+  "id": "byted-folder-music",
+  "title": "byted-folder-music",
+  "name": "folder-music",
+  "category": "books",
+  "categoryCN": "书籍",
+  "author": "李梦龙",
+  "tag": ["folder-music", "byted-folder-music"],
+  "rtl": false
+}

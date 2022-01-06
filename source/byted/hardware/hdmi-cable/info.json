@@ -1,0 +1,10 @@
+{
+  "id": "byted-hdmi-cable",
+  "title": "byted-hdmi-cable",
+  "name": "hdmi-cable",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["hdmi-cable", "byted-hdmi-cable"],
+  "rtl": false
+}

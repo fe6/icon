@@ -1,0 +1,10 @@
+{
+  "id": "byted-text-wrap-truncation",
+  "title": "byted-text-wrap-truncation",
+  "name": "text-wrap-truncation",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["text-wrap-truncation", "byted-text-wrap-truncation"],
+  "rtl": false
+}

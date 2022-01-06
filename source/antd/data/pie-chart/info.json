@@ -1,0 +1,10 @@
+{
+  "id": "antd-pie-chart",
+  "title": "饼图图表",
+  "name": "pie-chart",
+  "category": "data",
+  "categoryCN": "数据",
+  "author": "李梦龙",
+  "tag": ["饼图图表"],
+  "rtl": false
+}

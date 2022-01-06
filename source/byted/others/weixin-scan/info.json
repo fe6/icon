@@ -1,0 +1,10 @@
+{
+  "id": "byted-weixin-scan",
+  "title": "byted-weixin-scan",
+  "name": "weixin-scan",
+  "category": "others",
+  "categoryCN": "其它",
+  "author": "李梦龙",
+  "tag": ["weixin-scan", "byted-weixin-scan"],
+  "rtl": false
+}

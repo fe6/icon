@@ -1,0 +1,10 @@
+{
+  "id": "byted-gopro",
+  "title": "byted-gopro",
+  "name": "gopro",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["gopro", "byted-gopro"],
+  "rtl": false
+}

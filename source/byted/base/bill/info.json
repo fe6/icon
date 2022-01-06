@@ -1,0 +1,10 @@
+{
+  "id": "byted-bill",
+  "title": "byted-bill",
+  "name": "bill",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["bill", "byted-bill"],
+  "rtl": false
+}

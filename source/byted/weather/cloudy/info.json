@@ -1,0 +1,10 @@
+{
+  "id": "byted-cloudy",
+  "title": "byted-cloudy",
+  "name": "cloudy",
+  "category": "weather",
+  "categoryCN": "天气",
+  "author": "李梦龙",
+  "tag": ["cloudy", "byted-cloudy"],
+  "rtl": false
+}

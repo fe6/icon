@@ -1,0 +1,10 @@
+{
+  "id": "byted-baggage-delay",
+  "title": "byted-baggage-delay",
+  "name": "baggage-delay",
+  "category": "travel",
+  "categoryCN": "旅行",
+  "author": "李梦龙",
+  "tag": ["baggage-delay", "byted-baggage-delay"],
+  "rtl": false
+}

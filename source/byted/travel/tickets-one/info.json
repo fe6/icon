@@ -1,0 +1,10 @@
+{
+  "id": "byted-tickets-one",
+  "title": "byted-tickets-one",
+  "name": "tickets-one",
+  "category": "travel",
+  "categoryCN": "旅行",
+  "author": "李梦龙",
+  "tag": ["tickets-one", "byted-tickets-one"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-page",
+  "title": "byted-page",
+  "name": "page",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["page", "byted-page"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-apple-one",
+  "title": "byted-apple-one",
+  "name": "apple-one",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["apple-one", "byted-apple-one"],
+  "rtl": false
+}

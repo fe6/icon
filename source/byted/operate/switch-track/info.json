@@ -1,0 +1,10 @@
+{
+  "id": "byted-switch-track",
+  "title": "byted-switch-track",
+  "name": "switch-track",
+  "category": "operate",
+  "categoryCN": "操作",
+  "author": "李梦龙",
+  "tag": ["switch-track", "byted-switch-track"],
+  "rtl": false
+}

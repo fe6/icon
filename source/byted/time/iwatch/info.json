@@ -1,0 +1,10 @@
+{
+  "id": "byted-iwatch",
+  "title": "byted-iwatch",
+  "name": "iwatch",
+  "category": "time",
+  "categoryCN": "时间",
+  "author": "李梦龙",
+  "tag": ["iwatch", "byted-iwatch"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-perfume",
+  "title": "byted-perfume",
+  "name": "perfume",
+  "category": "clothes",
+  "categoryCN": "服饰",
+  "author": "李梦龙",
+  "tag": ["perfume", "byted-perfume"],
+  "rtl": false
+}

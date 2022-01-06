@@ -1,0 +1,10 @@
+{
+  "id": "byted-certificate",
+  "title": "byted-certificate",
+  "name": "certificate",
+  "category": "others",
+  "categoryCN": "其它",
+  "author": "李梦龙",
+  "tag": ["certificate", "byted-certificate"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "antd-left-circle",
+  "title": "圆角左",
+  "name": "left-circle",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["左", "圆角"],
+  "rtl": false
+}

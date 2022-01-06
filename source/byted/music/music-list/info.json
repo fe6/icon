@@ -1,0 +1,10 @@
+{
+  "id": "byted-music-list",
+  "title": "byted-music-list",
+  "name": "music-list",
+  "category": "music",
+  "categoryCN": "声音",
+  "author": "李梦龙",
+  "tag": ["music-list", "byted-music-list"],
+  "rtl": false
+}

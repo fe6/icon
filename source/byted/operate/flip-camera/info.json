@@ -1,0 +1,10 @@
+{
+  "id": "byted-flip-camera",
+  "title": "byted-flip-camera",
+  "name": "flip-camera",
+  "category": "operate",
+  "categoryCN": "操作",
+  "author": "李梦龙",
+  "tag": ["flip-camera", "byted-flip-camera"],
+  "rtl": false
+}

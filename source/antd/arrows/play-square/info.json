@@ -1,0 +1,10 @@
+{
+  "id": "antd-play-square",
+  "title": "方角播放",
+  "name": "play-square",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["方角播放"],
+  "rtl": false
+}

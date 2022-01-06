@@ -1,0 +1,10 @@
+{
+  "id": "antd-filter",
+  "title": "filter",
+  "name": "filter",
+  "category": "base",
+  "categoryCN": "通用",
+  "author": "李梦龙",
+  "tag": ["filter"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-api-app",
+  "title": "byted-api-app",
+  "name": "api-app",
+  "category": "abstract",
+  "categoryCN": "抽象",
+  "author": "李梦龙",
+  "tag": ["api-app", "byted-api-app"],
+  "rtl": false
+}

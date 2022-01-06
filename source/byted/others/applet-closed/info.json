@@ -1,0 +1,10 @@
+{
+  "id": "byted-applet-closed",
+  "title": "byted-applet-closed",
+  "name": "applet-closed",
+  "category": "others",
+  "categoryCN": "其它",
+  "author": "李梦龙",
+  "tag": ["applet-closed", "byted-applet-closed"],
+  "rtl": false
+}

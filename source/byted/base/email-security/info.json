@@ -1,0 +1,10 @@
+{
+  "id": "byted-email-security",
+  "title": "byted-email-security",
+  "name": "email-security",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["email-security", "byted-email-security"],
+  "rtl": false
+}

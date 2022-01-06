@@ -1,0 +1,10 @@
+{
+  "id": "byted-printer-one",
+  "title": "byted-printer-one",
+  "name": "printer-one",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["printer-one", "byted-printer-one"],
+  "rtl": false
+}

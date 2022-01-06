@@ -1,0 +1,10 @@
+{
+  "id": "byted-phone-incoming-one",
+  "title": "byted-phone-incoming-one",
+  "name": "phone-incoming-one",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["phone-incoming-one", "byted-phone-incoming-one"],
+  "rtl": false
+}

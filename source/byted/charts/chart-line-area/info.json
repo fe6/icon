@@ -1,0 +1,10 @@
+{
+  "id": "byted-chart-line-area",
+  "title": "byted-chart-line-area",
+  "name": "chart-line-area",
+  "category": "charts",
+  "categoryCN": "图表",
+  "author": "李梦龙",
+  "tag": ["chart-line-area", "byted-chart-line-area"],
+  "rtl": false
+}

@@ -17,6 +17,7 @@ interface IIconProps {
   name: string;
   type: string;
   svg?: string;
+  source?: string;
   config?: typeof iconConfig;
   tag: string[];
   category: string;
@@ -51,61 +52,81 @@ const testIconName = (iName: string) => {
     printErrorMsg('SVG 命名只允许小写字母/连字符/数字', iName);
   }
 
-  if (!/^h[1-6]$/.test(iName) && /\d/g.test(iName)) {
-    printErrorMsg('SVG 命名出现数字（数字不表意，不推荐)', iName);
-  }
+  // if (!/^h[1-6]$/.test(iName) && /\d/g.test(iName)) {
+  //   printErrorMsg('SVG 命名出现数字（数字不表意，不推荐)', iName);
+  // }
 };
 
 // 读取资源文件夹
-fs.readdirSync(path.join(__dirname, '../source')).forEach((dir) => {
-  const dirPath = path.join(__dirname, '../source', dir);
-  if (fs.statSync(dirPath).isDirectory()) {
+fs.readdirSync(path.join(__dirname, '../source')).forEach((typeName) => {
+  const typePath = path.join(__dirname, '../source', typeName);
+  if (fs.statSync(typePath).isDirectory()) {
     // 读取每个 icon 文件夹
-    fs.readdirSync(dirPath)
+    fs.readdirSync(typePath)
       .filter((dpItem: string) => !/.DS_Store|README.md/.test(dpItem))
-      .forEach((childDir) => {
-        const iconPath = path.join(dirPath, childDir);
+      .forEach((typeDir) => {
+        const dirPath = path.join(typePath, typeDir);
 
-        testIconName(childDir);
+        if (fs.statSync(dirPath).isDirectory()) {
+          // 读取每个 icon 文件夹
+          fs.readdirSync(dirPath)
+            .filter((dpItem: string) => !/.DS_Store|README.md/.test(dpItem))
+            .forEach((childDir) => {
+              const iconPath = path.join(dirPath, childDir);
 
-        if (fs.statSync(iconPath).isDirectory()) {
-          const iconFolder = fs.readdirSync(iconPath);
-          // 读取 icon 文件夹的文件
-          iconFolder.forEach((file) => {
-            const filePath = path.join(iconPath, file);
-            // 操作 JSON
-            if (file.includes('json')) {
-              const jsonDatas = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+              if (fs.statSync(iconPath).isDirectory()) {
+                const iconFolder = fs.readdirSync(iconPath);
+                // 读取 icon 文件夹的文件
+                iconFolder.forEach((file) => {
+                  const filePath = path.join(iconPath, file);
+                  // 操作 JSON
+                  if (file.includes('json')) {
+                    const jsonDatas = JSON.parse(
+                      fs.readFileSync(filePath, 'utf8'),
+                    );
 
-              if (jsonDatas.name !== childDir) {
-                errorLog(
-                  'ICON 文件夹名字和 JSON 中配置的名字(name)不统一',
-                  true,
-                );
+                    if (jsonDatas.name !== childDir) {
+                      errorLog(
+                        'ICON 文件夹名字和 JSON 中配置的名字(name)不统一',
+                        true,
+                      );
+                    }
+
+                    ALL_ICON_MAP[jsonDatas.name] = {
+                      ...jsonDatas,
+                    };
+                  }
+                });
+
+                iconFolder.forEach((file) => {
+                  const filePath = path.join(iconPath, file);
+                  // 操作 SVG
+                  if (file.includes('svg')) {
+                    const childDir = path
+                      .basename(filePath, '.svg')
+                      .toLowerCase();
+                    ALL_ICON_MAP[childDir].svg = fs.readFileSync(
+                      filePath,
+                      'utf8',
+                    );
+                    ALL_ICON_MAP[childDir].config = iconConfig;
+                    ALL_ICON_MAP[childDir].source = typeName;
+                    ALL_ICON_MAP[
+                      childDir
+                    ].name = `${typeName}-${ALL_ICON_MAP[childDir].name}`;
+                  }
+                });
+
+                testIconName(ALL_ICON_MAP[childDir].name);
+
+                // 生成 type 供全局使用
+                Object.keys(ALL_ICON_MAP).forEach((allKey: string) => {
+                  ALL_ICON_MAP[allKey].type = `Icon${pascalCase(
+                    ALL_ICON_MAP[allKey].name,
+                  )}`;
+                });
               }
-
-              ALL_ICON_MAP[jsonDatas.name] = {
-                ...jsonDatas,
-              };
-            }
-          });
-
-          iconFolder.forEach((file) => {
-            const filePath = path.join(iconPath, file);
-            // 操作 SVG
-            if (file.includes('svg')) {
-              const childDir = path.basename(filePath, '.svg').toLowerCase();
-              ALL_ICON_MAP[childDir].svg = fs.readFileSync(filePath, 'utf8');
-              ALL_ICON_MAP[childDir].config = iconConfig;
-            }
-          });
-
-          // 生成 type 供全局使用
-          Object.keys(ALL_ICON_MAP).forEach((allKey: string) => {
-            ALL_ICON_MAP[allKey].type = `Icon${pascalCase(
-              ALL_ICON_MAP[allKey].name,
-            )}`;
-          });
+            });
         }
       });
   }
@@ -121,9 +142,9 @@ const testIconId = (iId: string) => {
     printErrorMsg(`SVG ID( ${iId} ) 重复`, iId);
   }
 
-  if (!/\d/g.test(iId)) {
-    printErrorMsg('SVG ID 必须是数字', iId);
-  }
+  // if (!/\d/g.test(iId)) {
+  //   printErrorMsg('SVG ID 必须是数字', iId);
+  // }
 };
 
 // 添加到数据中

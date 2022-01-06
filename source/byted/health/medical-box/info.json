@@ -1,0 +1,10 @@
+{
+  "id": "byted-medical-box",
+  "title": "byted-medical-box",
+  "name": "medical-box",
+  "category": "health",
+  "categoryCN": "健康",
+  "author": "李梦龙",
+  "tag": ["medical-box", "byted-medical-box"],
+  "rtl": false
+}

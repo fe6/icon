@@ -1,0 +1,10 @@
+{
+  "id": "byted-microphone",
+  "title": "byted-microphone",
+  "name": "microphone",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["microphone", "byted-microphone"],
+  "rtl": false
+}

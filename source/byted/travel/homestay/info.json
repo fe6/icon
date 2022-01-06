@@ -1,0 +1,10 @@
+{
+  "id": "byted-homestay",
+  "title": "byted-homestay",
+  "name": "homestay",
+  "category": "travel",
+  "categoryCN": "旅行",
+  "author": "李梦龙",
+  "tag": ["homestay", "byted-homestay"],
+  "rtl": false
+}

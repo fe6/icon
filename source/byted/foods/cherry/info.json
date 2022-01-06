@@ -1,0 +1,10 @@
+{
+  "id": "byted-cherry",
+  "title": "byted-cherry",
+  "name": "cherry",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["cherry", "byted-cherry"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-laptop",
+  "title": "byted-laptop",
+  "name": "laptop",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["laptop", "byted-laptop"],
+  "rtl": false
+}

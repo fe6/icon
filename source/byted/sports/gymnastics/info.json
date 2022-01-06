@@ -1,0 +1,10 @@
+{
+  "id": "byted-gymnastics",
+  "title": "byted-gymnastics",
+  "name": "gymnastics",
+  "category": "sports",
+  "categoryCN": "运动",
+  "author": "李梦龙",
+  "tag": ["gymnastics", "byted-gymnastics"],
+  "rtl": false
+}

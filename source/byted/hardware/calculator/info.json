@@ -1,0 +1,10 @@
+{
+  "id": "byted-calculator",
+  "title": "byted-calculator",
+  "name": "calculator",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["calculator", "byted-calculator"],
+  "rtl": false
+}

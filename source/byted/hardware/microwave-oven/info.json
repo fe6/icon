@@ -1,0 +1,10 @@
+{
+  "id": "byted-microwave-oven",
+  "title": "byted-microwave-oven",
+  "name": "microwave-oven",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["microwave-oven", "byted-microwave-oven"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-voice-input",
+  "title": "byted-voice-input",
+  "name": "voice-input",
+  "category": "others",
+  "categoryCN": "其它",
+  "author": "李梦龙",
+  "tag": ["voice-input", "byted-voice-input"],
+  "rtl": false
+}

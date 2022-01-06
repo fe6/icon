@@ -1,0 +1,10 @@
+{
+  "id": "byted-bread-machine",
+  "title": "byted-bread-machine",
+  "name": "bread-machine",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["bread-machine", "byted-bread-machine"],
+  "rtl": false
+}

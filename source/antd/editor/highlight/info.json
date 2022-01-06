@@ -1,0 +1,10 @@
+{
+  "id": "antd-highlight",
+  "title": "高亮",
+  "name": "highlight",
+  "category": "editor",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["高亮"],
+  "rtl": false
+}

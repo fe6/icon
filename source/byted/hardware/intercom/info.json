@@ -1,0 +1,10 @@
+{
+  "id": "byted-intercom",
+  "title": "byted-intercom",
+  "name": "intercom",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["intercom", "byted-intercom"],
+  "rtl": false
+}

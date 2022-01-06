@@ -1,0 +1,10 @@
+{
+  "id": "byted-ungroup",
+  "title": "byted-ungroup",
+  "name": "ungroup",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["ungroup", "byted-ungroup"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-rectangle",
+  "title": "byted-rectangle",
+  "name": "rectangle",
+  "category": "graphics",
+  "categoryCN": "图形",
+  "author": "李梦龙",
+  "tag": ["rectangle", "byted-rectangle"],
+  "rtl": false
+}

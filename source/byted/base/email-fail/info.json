@@ -1,0 +1,10 @@
+{
+  "id": "byted-email-fail",
+  "title": "byted-email-fail",
+  "name": "email-fail",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["email-fail", "byted-email-fail"],
+  "rtl": false
+}

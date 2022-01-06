@@ -1,0 +1,10 @@
+{
+  "id": "byted-t-shirt",
+  "title": "byted-t-shirt",
+  "name": "t-shirt",
+  "category": "clothes",
+  "categoryCN": "服饰",
+  "author": "李梦龙",
+  "tag": ["t-shirt", "byted-t-shirt"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-people-delete",
+  "title": "byted-people-delete",
+  "name": "people-delete",
+  "category": "peoples",
+  "categoryCN": "人群",
+  "author": "李梦龙",
+  "tag": ["people-delete", "byted-people-delete"],
+  "rtl": false
+}

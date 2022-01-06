@@ -1,0 +1,10 @@
+{
+  "id": "byted-reverse-rotation",
+  "title": "byted-reverse-rotation",
+  "name": "reverse-rotation",
+  "category": "operate",
+  "categoryCN": "操作",
+  "author": "李梦龙",
+  "tag": ["reverse-rotation", "byted-reverse-rotation"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-sleep",
+  "title": "byted-sleep",
+  "name": "sleep",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["sleep", "byted-sleep"],
+  "rtl": false
+}

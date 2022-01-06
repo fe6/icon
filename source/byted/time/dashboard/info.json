@@ -1,0 +1,10 @@
+{
+  "id": "byted-dashboard",
+  "title": "byted-dashboard",
+  "name": "dashboard",
+  "category": "time",
+  "categoryCN": "时间",
+  "author": "李梦龙",
+  "tag": ["dashboard", "byted-dashboard"],
+  "rtl": false
+}

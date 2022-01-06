@@ -1,0 +1,10 @@
+{
+  "id": "byted-email-push",
+  "title": "byted-email-push",
+  "name": "email-push",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["email-push", "byted-email-push"],
+  "rtl": false
+}

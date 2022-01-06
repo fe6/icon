@@ -1,0 +1,10 @@
+{
+  "id": "byted-unlock",
+  "title": "byted-unlock",
+  "name": "unlock",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["unlock", "byted-unlock"],
+  "rtl": false
+}

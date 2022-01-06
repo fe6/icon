@@ -1,0 +1,10 @@
+{
+  "id": "byted-health-products",
+  "title": "byted-health-products",
+  "name": "health-products",
+  "category": "makeups",
+  "categoryCN": "美妆",
+  "author": "李梦龙",
+  "tag": ["health-products", "byted-health-products"],
+  "rtl": false
+}

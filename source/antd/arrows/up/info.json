@@ -1,0 +1,10 @@
+{
+  "id": "antd-up",
+  "title": "方向上",
+  "name": "up",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["方向上"],
+  "rtl": false
+}

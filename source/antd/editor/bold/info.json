@@ -1,0 +1,10 @@
+{
+  "id": "antd-bold",
+  "title": "加粗",
+  "name": "bold",
+  "category": "editor",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["加粗"],
+  "rtl": false
+}

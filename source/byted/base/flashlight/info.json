@@ -1,0 +1,10 @@
+{
+  "id": "byted-flashlight",
+  "title": "byted-flashlight",
+  "name": "flashlight",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["flashlight", "byted-flashlight"],
+  "rtl": false
+}

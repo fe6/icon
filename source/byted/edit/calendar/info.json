@@ -1,0 +1,10 @@
+{
+  "id": "byted-calendar",
+  "title": "byted-calendar",
+  "name": "calendar",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["calendar", "byted-calendar"],
+  "rtl": false
+}

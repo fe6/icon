@@ -1,0 +1,10 @@
+{
+  "id": "byted-folder-conversion",
+  "title": "byted-folder-conversion",
+  "name": "folder-conversion",
+  "category": "books",
+  "categoryCN": "书籍",
+  "author": "李梦龙",
+  "tag": ["folder-conversion", "byted-folder-conversion"],
+  "rtl": false
+}

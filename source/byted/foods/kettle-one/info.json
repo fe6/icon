@@ -1,0 +1,10 @@
+{
+  "id": "byted-kettle-one",
+  "title": "byted-kettle-one",
+  "name": "kettle-one",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["kettle-one", "byted-kettle-one"],
+  "rtl": false
+}

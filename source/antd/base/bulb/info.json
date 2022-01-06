@@ -1,0 +1,10 @@
+{
+  "id": "antd-bulb",
+  "title": "bulb",
+  "name": "bulb",
+  "category": "base",
+  "categoryCN": "通用",
+  "author": "李梦龙",
+  "tag": ["bulb"],
+  "rtl": false
+}

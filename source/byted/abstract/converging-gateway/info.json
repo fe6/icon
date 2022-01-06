@@ -1,0 +1,10 @@
+{
+  "id": "byted-converging-gateway",
+  "title": "byted-converging-gateway",
+  "name": "converging-gateway",
+  "category": "abstract",
+  "categoryCN": "抽象",
+  "author": "李梦龙",
+  "tag": ["converging-gateway", "byted-converging-gateway"],
+  "rtl": false
+}

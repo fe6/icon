@@ -1,0 +1,10 @@
+{
+  "id": "byted-chest",
+  "title": "byted-chest",
+  "name": "chest",
+  "category": "health",
+  "categoryCN": "健康",
+  "author": "李梦龙",
+  "tag": ["chest", "byted-chest"],
+  "rtl": false
+}

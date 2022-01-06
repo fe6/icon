@@ -1,0 +1,10 @@
+{
+  "id": "byted-email-lock",
+  "title": "byted-email-lock",
+  "name": "email-lock",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["email-lock", "byted-email-lock"],
+  "rtl": false
+}

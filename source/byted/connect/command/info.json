@@ -1,0 +1,10 @@
+{
+  "id": "byted-command",
+  "title": "byted-command",
+  "name": "command",
+  "category": "connect",
+  "categoryCN": "连接",
+  "author": "李梦龙",
+  "tag": ["command", "byted-command"],
+  "rtl": false
+}

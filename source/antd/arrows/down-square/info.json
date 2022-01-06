@@ -1,0 +1,10 @@
+{
+  "id": "antd-down-square",
+  "title": "方向方角下",
+  "name": "down-square",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["下", "方向方角"],
+  "rtl": false
+}

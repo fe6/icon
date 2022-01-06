@@ -1,0 +1,10 @@
+{
+  "id": "byted-bank-card",
+  "title": "byted-bank-card",
+  "name": "bank-card",
+  "category": "money",
+  "categoryCN": "钱财",
+  "author": "李梦龙",
+  "tag": ["bank-card", "byted-bank-card"],
+  "rtl": false
+}

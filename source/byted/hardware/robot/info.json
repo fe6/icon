@@ -1,0 +1,10 @@
+{
+  "id": "byted-robot",
+  "title": "byted-robot",
+  "name": "robot",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["robot", "byted-robot"],
+  "rtl": false
+}

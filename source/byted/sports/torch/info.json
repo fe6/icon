@@ -1,0 +1,10 @@
+{
+  "id": "byted-torch",
+  "title": "byted-torch",
+  "name": "torch",
+  "category": "sports",
+  "categoryCN": "运动",
+  "author": "李梦龙",
+  "tag": ["torch", "byted-torch"],
+  "rtl": false
+}

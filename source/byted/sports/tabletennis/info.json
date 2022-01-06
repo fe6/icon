@@ -1,0 +1,10 @@
+{
+  "id": "byted-tabletennis",
+  "title": "byted-tabletennis",
+  "name": "tabletennis",
+  "category": "sports",
+  "categoryCN": "运动",
+  "author": "李梦龙",
+  "tag": ["tabletennis", "byted-tabletennis"],
+  "rtl": false
+}

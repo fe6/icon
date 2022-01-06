@@ -1,0 +1,10 @@
+{
+  "id": "byted-email-search",
+  "title": "byted-email-search",
+  "name": "email-search",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["email-search", "byted-email-search"],
+  "rtl": false
+}

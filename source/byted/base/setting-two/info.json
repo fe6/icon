@@ -1,0 +1,10 @@
+{
+  "id": "byted-setting-two",
+  "title": "byted-setting-two",
+  "name": "setting-two",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["setting-two", "byted-setting-two"],
+  "rtl": false
+}

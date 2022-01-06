@@ -1,0 +1,10 @@
+{
+  "id": "byted-screenshot",
+  "title": "byted-screenshot",
+  "name": "screenshot",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["screenshot", "byted-screenshot"],
+  "rtl": false
+}

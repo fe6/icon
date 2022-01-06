@@ -1,0 +1,10 @@
+{
+  "id": "byted-phone-outgoing",
+  "title": "byted-phone-outgoing",
+  "name": "phone-outgoing",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["phone-outgoing", "byted-phone-outgoing"],
+  "rtl": false
+}

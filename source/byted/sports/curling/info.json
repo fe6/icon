@@ -1,0 +1,10 @@
+{
+  "id": "byted-curling",
+  "title": "byted-curling",
+  "name": "curling",
+  "category": "sports",
+  "categoryCN": "运动",
+  "author": "李梦龙",
+  "tag": ["curling", "byted-curling"],
+  "rtl": false
+}

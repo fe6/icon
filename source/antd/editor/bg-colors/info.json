@@ -1,0 +1,10 @@
+{
+  "id": "antd-bg-colors",
+  "title": "背景颜色",
+  "name": "bg-colors",
+  "category": "editor",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["背景颜色"],
+  "rtl": false
+}

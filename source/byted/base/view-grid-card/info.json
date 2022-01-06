@@ -1,0 +1,10 @@
+{
+  "id": "byted-view-grid-card",
+  "title": "byted-view-grid-card",
+  "name": "view-grid-card",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["view-grid-card", "byted-view-grid-card"],
+  "rtl": false
+}

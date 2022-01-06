@@ -1,0 +1,10 @@
+{
+  "id": "byted-flip-horizontally",
+  "title": "byted-flip-horizontally",
+  "name": "flip-horizontally",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["flip-horizontally", "byted-flip-horizontally"],
+  "rtl": false
+}

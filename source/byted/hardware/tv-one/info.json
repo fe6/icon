@@ -1,0 +1,10 @@
+{
+  "id": "byted-tv-one",
+  "title": "byted-tv-one",
+  "name": "tv-one",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["tv-one", "byted-tv-one"],
+  "rtl": false
+}

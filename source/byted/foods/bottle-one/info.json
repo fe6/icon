@@ -1,0 +1,10 @@
+{
+  "id": "byted-bottle-one",
+  "title": "byted-bottle-one",
+  "name": "bottle-one",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["bottle-one", "byted-bottle-one"],
+  "rtl": false
+}

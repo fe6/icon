@@ -1,0 +1,10 @@
+{
+  "id": "antd-check",
+  "title": "对勾",
+  "name": "check",
+  "category": "suggestion",
+  "categoryCN": "建议",
+  "author": "李梦龙",
+  "tag": ["对勾"],
+  "rtl": false
+}

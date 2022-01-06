@@ -1,0 +1,10 @@
+{
+  "id": "byted-payment-method",
+  "title": "byted-payment-method",
+  "name": "payment-method",
+  "category": "money",
+  "categoryCN": "钱财",
+  "author": "李梦龙",
+  "tag": ["payment-method", "byted-payment-method"],
+  "rtl": false
+}

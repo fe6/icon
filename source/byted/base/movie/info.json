@@ -1,0 +1,10 @@
+{
+  "id": "byted-movie",
+  "title": "byted-movie",
+  "name": "movie",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["movie", "byted-movie"],
+  "rtl": false
+}

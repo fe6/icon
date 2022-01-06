@@ -1,0 +1,10 @@
+{
+  "id": "byted-refrigerator",
+  "title": "byted-refrigerator",
+  "name": "refrigerator",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["refrigerator", "byted-refrigerator"],
+  "rtl": false
+}

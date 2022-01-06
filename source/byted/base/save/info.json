@@ -1,0 +1,10 @@
+{
+  "id": "byted-save",
+  "title": "byted-save",
+  "name": "save",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["save", "byted-save"],
+  "rtl": false
+}

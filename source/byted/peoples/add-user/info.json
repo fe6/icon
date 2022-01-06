@@ -1,0 +1,10 @@
+{
+  "id": "byted-add-user",
+  "title": "byted-add-user",
+  "name": "add-user",
+  "category": "peoples",
+  "categoryCN": "人群",
+  "author": "李梦龙",
+  "tag": ["add-user", "byted-add-user"],
+  "rtl": false
+}

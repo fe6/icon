@@ -1,0 +1,10 @@
+{
+  "id": "antd-file-pdf",
+  "title": "file-pdf",
+  "name": "file-pdf",
+  "category": "base",
+  "categoryCN": "通用",
+  "author": "李梦龙",
+  "tag": ["file-pdf"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-bank",
+  "title": "byted-bank",
+  "name": "bank",
+  "category": "money",
+  "categoryCN": "钱财",
+  "author": "李梦龙",
+  "tag": ["bank", "byted-bank"],
+  "rtl": false
+}

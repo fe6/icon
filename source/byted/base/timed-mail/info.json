@@ -1,0 +1,10 @@
+{
+  "id": "byted-timed-mail",
+  "title": "byted-timed-mail",
+  "name": "timed-mail",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["timed-mail", "byted-timed-mail"],
+  "rtl": false
+}

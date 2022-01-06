@@ -1,0 +1,10 @@
+{
+  "id": "byted-fullwidth",
+  "title": "byted-fullwidth",
+  "name": "fullwidth",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["fullwidth", "byted-fullwidth"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-delete-themes",
+  "title": "byted-delete-themes",
+  "name": "delete-themes",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["delete-themes", "byted-delete-themes"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "antd-zoom-out",
+  "title": "缩小",
+  "name": "zoom-out",
+  "category": "editor",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["缩小"],
+  "rtl": false
+}

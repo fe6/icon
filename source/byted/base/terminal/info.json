@@ -1,0 +1,10 @@
+{
+  "id": "byted-terminal",
+  "title": "byted-terminal",
+  "name": "terminal",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["terminal", "byted-terminal"],
+  "rtl": false
+}

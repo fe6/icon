@@ -1,0 +1,10 @@
+{
+  "id": "byted-text-message",
+  "title": "byted-text-message",
+  "name": "text-message",
+  "category": "office",
+  "categoryCN": "办公",
+  "author": "李梦龙",
+  "tag": ["text-message", "byted-text-message"],
+  "rtl": false
+}

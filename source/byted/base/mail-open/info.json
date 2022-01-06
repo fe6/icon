@@ -1,0 +1,10 @@
+{
+  "id": "byted-mail-open",
+  "title": "byted-mail-open",
+  "name": "mail-open",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["mail-open", "byted-mail-open"],
+  "rtl": false
+}

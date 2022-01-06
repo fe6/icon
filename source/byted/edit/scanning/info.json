@@ -1,0 +1,10 @@
+{
+  "id": "byted-scanning",
+  "title": "byted-scanning",
+  "name": "scanning",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["scanning", "byted-scanning"],
+  "rtl": false
+}

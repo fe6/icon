@@ -1,0 +1,10 @@
+{
+  "id": "byted-sun",
+  "title": "byted-sun",
+  "name": "sun",
+  "category": "weather",
+  "categoryCN": "天气",
+  "author": "李梦龙",
+  "tag": ["sun", "byted-sun"],
+  "rtl": false
+}

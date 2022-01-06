@@ -1,0 +1,10 @@
+{
+  "id": "byted-merge",
+  "title": "byted-merge",
+  "name": "merge",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["merge", "byted-merge"],
+  "rtl": false
+}

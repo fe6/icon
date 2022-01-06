@@ -1,0 +1,10 @@
+{
+  "id": "byted-radio",
+  "title": "byted-radio",
+  "name": "radio",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["radio", "byted-radio"],
+  "rtl": false
+}

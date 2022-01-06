@@ -1,0 +1,10 @@
+{
+  "id": "byted-shopping-cart-add",
+  "title": "byted-shopping-cart-add",
+  "name": "shopping-cart-add",
+  "category": "money",
+  "categoryCN": "钱财",
+  "author": "李梦龙",
+  "tag": ["shopping-cart-add", "byted-shopping-cart-add"],
+  "rtl": false
+}

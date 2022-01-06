@@ -1,0 +1,10 @@
+{
+  "id": "byted-switch-one",
+  "title": "byted-switch-one",
+  "name": "switch-one",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["switch-one", "byted-switch-one"],
+  "rtl": false
+}

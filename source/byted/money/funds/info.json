@@ -1,0 +1,10 @@
+{
+  "id": "byted-funds",
+  "title": "byted-funds",
+  "name": "funds",
+  "category": "money",
+  "categoryCN": "钱财",
+  "author": "李梦龙",
+  "tag": ["funds", "byted-funds"],
+  "rtl": false
+}

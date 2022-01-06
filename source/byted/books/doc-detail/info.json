@@ -1,0 +1,10 @@
+{
+  "id": "byted-doc-detail",
+  "title": "byted-doc-detail",
+  "name": "doc-detail",
+  "category": "books",
+  "categoryCN": "书籍",
+  "author": "李梦龙",
+  "tag": ["doc-detail", "byted-doc-detail"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "antd-arrows-alt",
+  "title": "箭头全屏",
+  "name": "arrows-alt",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["全屏", "箭头"],
+  "rtl": false
+}

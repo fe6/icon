@@ -1,0 +1,10 @@
+{
+  "id": "byted-volume-up",
+  "title": "byted-volume-up",
+  "name": "volume-up",
+  "category": "music",
+  "categoryCN": "声音",
+  "author": "李梦龙",
+  "tag": ["volume-up", "byted-volume-up"],
+  "rtl": false
+}

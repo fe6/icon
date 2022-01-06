@@ -1,0 +1,10 @@
+{
+  "id": "antd-pic-center",
+  "title": "居中图片",
+  "name": "pic-center",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["居中图片"],
+  "rtl": false
+}

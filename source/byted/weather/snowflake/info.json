@@ -1,0 +1,10 @@
+{
+  "id": "byted-snowflake",
+  "title": "byted-snowflake",
+  "name": "snowflake",
+  "category": "weather",
+  "categoryCN": "天气",
+  "author": "李梦龙",
+  "tag": ["snowflake", "byted-snowflake"],
+  "rtl": false
+}

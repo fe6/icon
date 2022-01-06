@@ -1,0 +1,10 @@
+{
+  "id": "byted-folder-success-one",
+  "title": "byted-folder-success-one",
+  "name": "folder-success-one",
+  "category": "books",
+  "categoryCN": "书籍",
+  "author": "李梦龙",
+  "tag": ["folder-success-one", "byted-folder-success-one"],
+  "rtl": false
+}

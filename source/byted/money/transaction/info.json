@@ -1,0 +1,10 @@
+{
+  "id": "byted-transaction",
+  "title": "byted-transaction",
+  "name": "transaction",
+  "category": "money",
+  "categoryCN": "钱财",
+  "author": "李梦龙",
+  "tag": ["transaction", "byted-transaction"],
+  "rtl": false
+}

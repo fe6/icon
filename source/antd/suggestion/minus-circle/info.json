@@ -1,0 +1,10 @@
+{
+  "id": "antd-minus-circle",
+  "title": "圆角减号",
+  "name": "minus-circle",
+  "category": "suggestion",
+  "categoryCN": "建议",
+  "author": "李梦龙",
+  "tag": ["圆角减号"],
+  "rtl": false
+}

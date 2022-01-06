@@ -1,0 +1,10 @@
+{
+  "id": "byted-transport",
+  "title": "byted-transport",
+  "name": "transport",
+  "category": "travel",
+  "categoryCN": "旅行",
+  "author": "李梦龙",
+  "tag": ["transport", "byted-transport"],
+  "rtl": false
+}

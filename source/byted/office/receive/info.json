@@ -1,0 +1,10 @@
+{
+  "id": "byted-receive",
+  "title": "byted-receive",
+  "name": "receive",
+  "category": "office",
+  "categoryCN": "办公",
+  "author": "李梦龙",
+  "tag": ["receive", "byted-receive"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-application-two",
+  "title": "byted-application-two",
+  "name": "application-two",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["application-two", "byted-application-two"],
+  "rtl": false
+}

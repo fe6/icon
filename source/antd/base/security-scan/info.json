@@ -1,0 +1,10 @@
+{
+  "id": "antd-security-scan",
+  "title": "security-scan",
+  "name": "security-scan",
+  "category": "base",
+  "categoryCN": "通用",
+  "author": "李梦龙",
+  "tag": ["security-scan"],
+  "rtl": false
+}

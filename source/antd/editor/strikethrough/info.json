@@ -1,0 +1,10 @@
+{
+  "id": "antd-strikethrough",
+  "title": "中划线",
+  "name": "strikethrough",
+  "category": "editor",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["中划线"],
+  "rtl": false
+}

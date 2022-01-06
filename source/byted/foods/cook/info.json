@@ -1,0 +1,10 @@
+{
+  "id": "byted-cook",
+  "title": "byted-cook",
+  "name": "cook",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["cook", "byted-cook"],
+  "rtl": false
+}

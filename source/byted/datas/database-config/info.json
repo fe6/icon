@@ -1,0 +1,10 @@
+{
+  "id": "byted-database-config",
+  "title": "byted-database-config",
+  "name": "database-config",
+  "category": "datas",
+  "categoryCN": "数据库",
+  "author": "李梦龙",
+  "tag": ["database-config", "byted-database-config"],
+  "rtl": false
+}

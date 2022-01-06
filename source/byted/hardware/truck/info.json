@@ -1,0 +1,10 @@
+{
+  "id": "byted-truck",
+  "title": "byted-truck",
+  "name": "truck",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["truck", "byted-truck"],
+  "rtl": false
+}

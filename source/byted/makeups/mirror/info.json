@@ -1,0 +1,10 @@
+{
+  "id": "byted-mirror",
+  "title": "byted-mirror",
+  "name": "mirror",
+  "category": "makeups",
+  "categoryCN": "美妆",
+  "author": "李梦龙",
+  "tag": ["mirror", "byted-mirror"],
+  "rtl": false
+}

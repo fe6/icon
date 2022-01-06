@@ -1,0 +1,10 @@
+{
+  "id": "byted-shaver",
+  "title": "byted-shaver",
+  "name": "shaver",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["shaver", "byted-shaver"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-telescope",
+  "title": "byted-telescope",
+  "name": "telescope",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["telescope", "byted-telescope"],
+  "rtl": false
+}

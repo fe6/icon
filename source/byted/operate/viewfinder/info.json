@@ -1,0 +1,10 @@
+{
+  "id": "byted-viewfinder",
+  "title": "byted-viewfinder",
+  "name": "viewfinder",
+  "category": "operate",
+  "categoryCN": "操作",
+  "author": "李梦龙",
+  "tag": ["viewfinder", "byted-viewfinder"],
+  "rtl": false
+}

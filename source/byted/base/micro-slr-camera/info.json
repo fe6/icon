@@ -1,0 +1,10 @@
+{
+  "id": "byted-micro-slr-camera",
+  "title": "byted-micro-slr-camera",
+  "name": "micro-slr-camera",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["micro-slr-camera", "byted-micro-slr-camera"],
+  "rtl": false
+}

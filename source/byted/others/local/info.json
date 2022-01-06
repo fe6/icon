@@ -1,0 +1,10 @@
+{
+  "id": "byted-local",
+  "title": "byted-local",
+  "name": "local",
+  "category": "others",
+  "categoryCN": "其它",
+  "author": "李梦龙",
+  "tag": ["local", "byted-local"],
+  "rtl": false
+}

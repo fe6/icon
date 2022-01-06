@@ -1,0 +1,10 @@
+{
+  "id": "byted-wallet-one",
+  "title": "byted-wallet-one",
+  "name": "wallet-one",
+  "category": "money",
+  "categoryCN": "钱财",
+  "author": "李梦龙",
+  "tag": ["wallet-one", "byted-wallet-one"],
+  "rtl": false
+}

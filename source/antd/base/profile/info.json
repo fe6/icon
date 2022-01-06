@@ -1,0 +1,10 @@
+{
+  "id": "antd-profile",
+  "title": "profile",
+  "name": "profile",
+  "category": "base",
+  "categoryCN": "通用",
+  "author": "李梦龙",
+  "tag": ["profile"],
+  "rtl": false
+}

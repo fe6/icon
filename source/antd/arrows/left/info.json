@@ -1,0 +1,10 @@
+{
+  "id": "antd-left",
+  "title": "左",
+  "name": "left",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["左", "方向"],
+  "rtl": false
+}

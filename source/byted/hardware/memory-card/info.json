@@ -1,0 +1,10 @@
+{
+  "id": "byted-memory-card",
+  "title": "byted-memory-card",
+  "name": "memory-card",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["memory-card", "byted-memory-card"],
+  "rtl": false
+}

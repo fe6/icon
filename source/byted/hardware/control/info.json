@@ -1,0 +1,10 @@
+{
+  "id": "byted-control",
+  "title": "byted-control",
+  "name": "control",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["control", "byted-control"],
+  "rtl": false
+}

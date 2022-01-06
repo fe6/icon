@@ -1,0 +1,10 @@
+{
+  "id": "byted-color-filter",
+  "title": "byted-color-filter",
+  "name": "color-filter",
+  "category": "operate",
+  "categoryCN": "操作",
+  "author": "李梦龙",
+  "tag": ["color-filter", "byted-color-filter"],
+  "rtl": false
+}

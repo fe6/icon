@@ -1,0 +1,10 @@
+{
+  "id": "byted-lamp",
+  "title": "byted-lamp",
+  "name": "lamp",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["lamp", "byted-lamp"],
+  "rtl": false
+}

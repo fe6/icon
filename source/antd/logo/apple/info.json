@@ -1,0 +1,10 @@
+{
+  "id": "antd-apple",
+  "title": "苹果",
+  "name": "apple",
+  "category": "logo",
+  "categoryCN": "品牌",
+  "author": "李梦龙",
+  "tag": ["苹果"],
+  "rtl": false
+}

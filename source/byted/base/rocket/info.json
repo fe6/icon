@@ -1,0 +1,10 @@
+{
+  "id": "byted-rocket",
+  "title": "byted-rocket",
+  "name": "rocket",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["rocket", "byted-rocket"],
+  "rtl": false
+}

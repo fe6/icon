@@ -1,0 +1,10 @@
+{
+  "id": "byted-airplay",
+  "title": "byted-airplay",
+  "name": "airplay",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["airplay", "byted-airplay"],
+  "rtl": false
+}

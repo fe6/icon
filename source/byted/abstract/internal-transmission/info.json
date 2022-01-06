@@ -1,0 +1,10 @@
+{
+  "id": "byted-internal-transmission",
+  "title": "byted-internal-transmission",
+  "name": "internal-transmission",
+  "category": "abstract",
+  "categoryCN": "抽象",
+  "author": "李梦龙",
+  "tag": ["internal-transmission", "byted-internal-transmission"],
+  "rtl": false
+}

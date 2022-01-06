@@ -1,0 +1,10 @@
+{
+  "id": "byted-message-privacy",
+  "title": "byted-message-privacy",
+  "name": "message-privacy",
+  "category": "communicate",
+  "categoryCN": "交流",
+  "author": "李梦龙",
+  "tag": ["message-privacy", "byted-message-privacy"],
+  "rtl": false
+}

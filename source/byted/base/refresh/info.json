@@ -1,0 +1,10 @@
+{
+  "id": "byted-refresh",
+  "title": "byted-refresh",
+  "name": "refresh",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["refresh", "byted-refresh"],
+  "rtl": false
+}

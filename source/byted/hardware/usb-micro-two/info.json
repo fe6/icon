@@ -1,0 +1,10 @@
+{
+  "id": "byted-usb-micro-two",
+  "title": "byted-usb-micro-two",
+  "name": "usb-micro-two",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["usb-micro-two", "byted-usb-micro-two"],
+  "rtl": false
+}

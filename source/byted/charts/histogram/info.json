@@ -1,0 +1,10 @@
+{
+  "id": "byted-histogram",
+  "title": "byted-histogram",
+  "name": "histogram",
+  "category": "charts",
+  "categoryCN": "图表",
+  "author": "李梦龙",
+  "tag": ["histogram", "byted-histogram"],
+  "rtl": false
+}

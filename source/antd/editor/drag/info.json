@@ -1,0 +1,10 @@
+{
+  "id": "antd-drag",
+  "title": "拖拽",
+  "name": "drag",
+  "category": "editor",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["拖拽"],
+  "rtl": false
+}

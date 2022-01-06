@@ -1,0 +1,10 @@
+{
+  "id": "byted-popcorn",
+  "title": "byted-popcorn",
+  "name": "popcorn",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["popcorn", "byted-popcorn"],
+  "rtl": false
+}

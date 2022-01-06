@@ -1,0 +1,10 @@
+{
+  "id": "byted-moon",
+  "title": "byted-moon",
+  "name": "moon",
+  "category": "weather",
+  "categoryCN": "天气",
+  "author": "李梦龙",
+  "tag": ["moon", "byted-moon"],
+  "rtl": false
+}

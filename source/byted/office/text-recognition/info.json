@@ -1,0 +1,10 @@
+{
+  "id": "byted-text-recognition",
+  "title": "byted-text-recognition",
+  "name": "text-recognition",
+  "category": "office",
+  "categoryCN": "办公",
+  "author": "李梦龙",
+  "tag": ["text-recognition", "byted-text-recognition"],
+  "rtl": false
+}

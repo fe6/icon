@@ -1,0 +1,10 @@
+{
+  "id": "byted-text-italic",
+  "title": "byted-text-italic",
+  "name": "text-italic",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["text-italic", "byted-text-italic"],
+  "rtl": false
+}

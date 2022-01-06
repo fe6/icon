@@ -1,0 +1,10 @@
+{
+  "id": "byted-natural-mode",
+  "title": "byted-natural-mode",
+  "name": "natural-mode",
+  "category": "operate",
+  "categoryCN": "操作",
+  "author": "李梦龙",
+  "tag": ["natural-mode", "byted-natural-mode"],
+  "rtl": false
+}

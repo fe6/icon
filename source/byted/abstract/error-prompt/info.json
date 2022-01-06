@@ -1,0 +1,10 @@
+{
+  "id": "byted-error-prompt",
+  "title": "byted-error-prompt",
+  "name": "error-prompt",
+  "category": "abstract",
+  "categoryCN": "抽象",
+  "author": "李梦龙",
+  "tag": ["error-prompt", "byted-error-prompt"],
+  "rtl": false
+}

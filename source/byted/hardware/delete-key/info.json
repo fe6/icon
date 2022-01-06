@@ -1,0 +1,10 @@
+{
+  "id": "byted-delete-key",
+  "title": "byted-delete-key",
+  "name": "delete-key",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["delete-key", "byted-delete-key"],
+  "rtl": false
+}

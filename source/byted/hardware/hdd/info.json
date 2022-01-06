@@ -1,0 +1,10 @@
+{
+  "id": "byted-hdd",
+  "title": "byted-hdd",
+  "name": "hdd",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["hdd", "byted-hdd"],
+  "rtl": false
+}

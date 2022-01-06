@@ -1,0 +1,10 @@
+{
+  "id": "byted-cup",
+  "title": "byted-cup",
+  "name": "cup",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["cup", "byted-cup"],
+  "rtl": false
+}

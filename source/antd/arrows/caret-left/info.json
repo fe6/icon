@@ -1,0 +1,10 @@
+{
+  "id": "antd-caret-left",
+  "title": "三角左",
+  "name": "caret-left",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["左", "三角"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-map-distance",
+  "title": "byted-map-distance",
+  "name": "map-distance",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["map-distance", "byted-map-distance"],
+  "rtl": false
+}

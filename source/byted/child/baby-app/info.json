@@ -1,0 +1,10 @@
+{
+  "id": "byted-baby-app",
+  "title": "byted-baby-app",
+  "name": "baby-app",
+  "category": "child",
+  "categoryCN": "儿童",
+  "author": "李梦龙",
+  "tag": ["baby-app", "byted-baby-app"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "antd-info",
+  "title": "提示",
+  "name": "info",
+  "category": "suggestion",
+  "categoryCN": "建议",
+  "author": "李梦龙",
+  "tag": ["提示"],
+  "rtl": false
+}

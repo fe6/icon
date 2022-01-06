@@ -1,0 +1,10 @@
+{
+  "id": "byted-recycle-bin",
+  "title": "byted-recycle-bin",
+  "name": "recycle-bin",
+  "category": "operate",
+  "categoryCN": "操作",
+  "author": "李梦龙",
+  "tag": ["recycle-bin", "byted-recycle-bin"],
+  "rtl": false
+}

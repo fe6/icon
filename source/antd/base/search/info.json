@@ -1,0 +1,10 @@
+{
+  "id": "antd-search",
+  "title": "search",
+  "name": "search",
+  "category": "base",
+  "categoryCN": "通用",
+  "author": "李梦龙",
+  "tag": ["search"],
+  "rtl": false
+}

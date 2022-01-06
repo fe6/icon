@@ -1,0 +1,10 @@
+{
+  "id": "byted-creation-date-sort",
+  "title": "byted-creation-date-sort",
+  "name": "creation-date-sort",
+  "category": "charts",
+  "categoryCN": "图表",
+  "author": "李梦龙",
+  "tag": ["creation-date-sort", "byted-creation-date-sort"],
+  "rtl": false
+}

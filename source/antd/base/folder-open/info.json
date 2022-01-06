@@ -1,0 +1,10 @@
+{
+  "id": "antd-folder-open",
+  "title": "folder-open",
+  "name": "folder-open",
+  "category": "base",
+  "categoryCN": "通用",
+  "author": "李梦龙",
+  "tag": ["folder-open"],
+  "rtl": false
+}

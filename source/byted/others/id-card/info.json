@@ -1,0 +1,10 @@
+{
+  "id": "byted-id-card",
+  "title": "byted-id-card",
+  "name": "id-card",
+  "category": "others",
+  "categoryCN": "其它",
+  "author": "李梦龙",
+  "tag": ["id-card", "byted-id-card"],
+  "rtl": false
+}

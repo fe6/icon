@@ -1,0 +1,10 @@
+{
+  "id": "byted-game-ps",
+  "title": "byted-game-ps",
+  "name": "game-ps",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["game-ps", "byted-game-ps"],
+  "rtl": false
+}

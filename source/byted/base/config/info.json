@@ -1,0 +1,10 @@
+{
+  "id": "byted-config",
+  "title": "byted-config",
+  "name": "config",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["config", "byted-config"],
+  "rtl": false
+}

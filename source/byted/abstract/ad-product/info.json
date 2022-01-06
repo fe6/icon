@@ -1,0 +1,10 @@
+{
+  "id": "byted-ad-product",
+  "title": "byted-ad-product",
+  "name": "ad-product",
+  "category": "abstract",
+  "categoryCN": "抽象",
+  "author": "李梦龙",
+  "tag": ["ad-product", "byted-ad-product"],
+  "rtl": false
+}

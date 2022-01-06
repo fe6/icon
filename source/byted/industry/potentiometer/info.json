@@ -1,0 +1,10 @@
+{
+  "id": "byted-potentiometer",
+  "title": "byted-potentiometer",
+  "name": "potentiometer",
+  "category": "industry",
+  "categoryCN": "工业",
+  "author": "李梦龙",
+  "tag": ["potentiometer", "byted-potentiometer"],
+  "rtl": false
+}

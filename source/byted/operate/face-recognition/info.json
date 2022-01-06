@@ -1,0 +1,10 @@
+{
+  "id": "byted-face-recognition",
+  "title": "byted-face-recognition",
+  "name": "face-recognition",
+  "category": "operate",
+  "categoryCN": "操作",
+  "author": "李梦龙",
+  "tag": ["face-recognition", "byted-face-recognition"],
+  "rtl": false
+}

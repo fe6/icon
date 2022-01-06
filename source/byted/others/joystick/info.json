@@ -1,0 +1,10 @@
+{
+  "id": "byted-joystick",
+  "title": "byted-joystick",
+  "name": "joystick",
+  "category": "others",
+  "categoryCN": "其它",
+  "author": "李梦龙",
+  "tag": ["joystick", "byted-joystick"],
+  "rtl": false
+}

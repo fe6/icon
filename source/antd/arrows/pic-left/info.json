@@ -1,0 +1,10 @@
+{
+  "id": "antd-pic-left",
+  "title": "居左图片",
+  "name": "pic-left",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["居左图片"],
+  "rtl": false
+}

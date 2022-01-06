@@ -1,0 +1,10 @@
+{
+  "id": "antd-font-size",
+  "title": "字体大小",
+  "name": "font-size",
+  "category": "editor",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["字体大小"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-notebook",
+  "title": "byted-notebook",
+  "name": "notebook",
+  "category": "books",
+  "categoryCN": "书籍",
+  "author": "李梦龙",
+  "tag": ["notebook", "byted-notebook"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-disk",
+  "title": "byted-disk",
+  "name": "disk",
+  "category": "others",
+  "categoryCN": "其它",
+  "author": "李梦龙",
+  "tag": ["disk", "byted-disk"],
+  "rtl": false
+}

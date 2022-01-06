@@ -1,0 +1,10 @@
+{
+  "id": "byted-format-brush",
+  "title": "byted-format-brush",
+  "name": "format-brush",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["format-brush", "byted-format-brush"],
+  "rtl": false
+}

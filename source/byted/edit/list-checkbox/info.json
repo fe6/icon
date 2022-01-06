@@ -1,0 +1,10 @@
+{
+  "id": "byted-list-checkbox",
+  "title": "byted-list-checkbox",
+  "name": "list-checkbox",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["list-checkbox", "byted-list-checkbox"],
+  "rtl": false
+}

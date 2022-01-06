@@ -1,0 +1,10 @@
+{
+  "id": "byted-egg",
+  "title": "byted-egg",
+  "name": "egg",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["egg", "byted-egg"],
+  "rtl": false
+}

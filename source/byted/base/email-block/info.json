@@ -1,0 +1,10 @@
+{
+  "id": "byted-email-block",
+  "title": "byted-email-block",
+  "name": "email-block",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["email-block", "byted-email-block"],
+  "rtl": false
+}

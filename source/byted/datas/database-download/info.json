@@ -1,0 +1,10 @@
+{
+  "id": "byted-database-download",
+  "title": "byted-database-download",
+  "name": "database-download",
+  "category": "datas",
+  "categoryCN": "数据库",
+  "author": "李梦龙",
+  "tag": ["database-download", "byted-database-download"],
+  "rtl": false
+}

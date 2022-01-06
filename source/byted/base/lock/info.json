@@ -1,0 +1,10 @@
+{
+  "id": "byted-lock",
+  "title": "byted-lock",
+  "name": "lock",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["lock", "byted-lock"],
+  "rtl": false
+}

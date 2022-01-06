@@ -1,0 +1,10 @@
+{
+  "id": "byted-wind-turbine",
+  "title": "byted-wind-turbine",
+  "name": "wind-turbine",
+  "category": "industry",
+  "categoryCN": "工业",
+  "author": "李梦龙",
+  "tag": ["wind-turbine", "byted-wind-turbine"],
+  "rtl": false
+}

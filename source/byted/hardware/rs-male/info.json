@@ -1,0 +1,10 @@
+{
+  "id": "byted-rs-male",
+  "title": "byted-rs-male",
+  "name": "rs-male",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["rs-male", "byted-rs-male"],
+  "rtl": false
+}

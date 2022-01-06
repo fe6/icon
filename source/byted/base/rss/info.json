@@ -1,0 +1,10 @@
+{
+  "id": "byted-rss",
+  "title": "byted-rss",
+  "name": "rss",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["rss", "byted-rss"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-reload",
+  "title": "byted-reload",
+  "name": "reload",
+  "category": "hands",
+  "categoryCN": "手势",
+  "author": "李梦龙",
+  "tag": ["reload", "byted-reload"],
+  "rtl": false
+}

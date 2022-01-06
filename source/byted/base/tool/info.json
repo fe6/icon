@@ -1,0 +1,10 @@
+{
+  "id": "byted-tool",
+  "title": "byted-tool",
+  "name": "tool",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["tool", "byted-tool"],
+  "rtl": false
+}

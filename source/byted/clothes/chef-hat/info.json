@@ -1,0 +1,10 @@
+{
+  "id": "byted-chef-hat",
+  "title": "byted-chef-hat",
+  "name": "chef-hat",
+  "category": "clothes",
+  "categoryCN": "服饰",
+  "author": "李梦龙",
+  "tag": ["chef-hat", "byted-chef-hat"],
+  "rtl": false
+}

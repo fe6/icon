@@ -1,0 +1,10 @@
+{
+  "id": "byted-petrol",
+  "title": "byted-petrol",
+  "name": "petrol",
+  "category": "industry",
+  "categoryCN": "工业",
+  "author": "李梦龙",
+  "tag": ["petrol", "byted-petrol"],
+  "rtl": false
+}

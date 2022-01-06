@@ -1,0 +1,10 @@
+{
+  "id": "byted-bar-code",
+  "title": "byted-bar-code",
+  "name": "bar-code",
+  "category": "others",
+  "categoryCN": "其它",
+  "author": "李梦龙",
+  "tag": ["bar-code", "byted-bar-code"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-textarea",
+  "title": "byted-textarea",
+  "name": "textarea",
+  "category": "operate",
+  "categoryCN": "操作",
+  "author": "李梦龙",
+  "tag": ["textarea", "byted-textarea"],
+  "rtl": false
+}

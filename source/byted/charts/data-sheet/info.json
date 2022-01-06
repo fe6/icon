@@ -1,0 +1,10 @@
+{
+  "id": "byted-data-sheet",
+  "title": "byted-data-sheet",
+  "name": "data-sheet",
+  "category": "charts",
+  "categoryCN": "图表",
+  "author": "李梦龙",
+  "tag": ["data-sheet", "byted-data-sheet"],
+  "rtl": false
+}

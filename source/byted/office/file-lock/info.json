@@ -1,0 +1,10 @@
+{
+  "id": "byted-file-lock",
+  "title": "byted-file-lock",
+  "name": "file-lock",
+  "category": "office",
+  "categoryCN": "办公",
+  "author": "李梦龙",
+  "tag": ["file-lock", "byted-file-lock"],
+  "rtl": false
+}

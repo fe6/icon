@@ -1,0 +1,10 @@
+{
+  "id": "byted-color-card",
+  "title": "byted-color-card",
+  "name": "color-card",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["color-card", "byted-color-card"],
+  "rtl": false
+}

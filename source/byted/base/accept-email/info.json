@@ -1,0 +1,10 @@
+{
+  "id": "byted-accept-email",
+  "title": "byted-accept-email",
+  "name": "accept-email",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["accept-email", "byted-accept-email"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "antd-inbox",
+  "title": "inbox",
+  "name": "inbox",
+  "category": "base",
+  "categoryCN": "通用",
+  "author": "李梦龙",
+  "tag": ["inbox"],
+  "rtl": false
+}

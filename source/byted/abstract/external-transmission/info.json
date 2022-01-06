@@ -1,0 +1,10 @@
+{
+  "id": "byted-external-transmission",
+  "title": "byted-external-transmission",
+  "name": "external-transmission",
+  "category": "abstract",
+  "categoryCN": "抽象",
+  "author": "李梦龙",
+  "tag": ["external-transmission", "byted-external-transmission"],
+  "rtl": false
+}

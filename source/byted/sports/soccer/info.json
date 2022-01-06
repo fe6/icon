@@ -1,0 +1,10 @@
+{
+  "id": "byted-soccer",
+  "title": "byted-soccer",
+  "name": "soccer",
+  "category": "sports",
+  "categoryCN": "运动",
+  "author": "李梦龙",
+  "tag": ["soccer", "byted-soccer"],
+  "rtl": false
+}

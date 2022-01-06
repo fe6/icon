@@ -1,0 +1,10 @@
+{
+  "id": "byted-trumpet",
+  "title": "byted-trumpet",
+  "name": "trumpet",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["trumpet", "byted-trumpet"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "antd-column-width",
+  "title": "水平宽度",
+  "name": "column-width",
+  "category": "editor",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["水平宽度"],
+  "rtl": false
+}

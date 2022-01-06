@@ -1,0 +1,10 @@
+{
+  "id": "byted-update-rotation",
+  "title": "byted-update-rotation",
+  "name": "update-rotation",
+  "category": "abstract",
+  "categoryCN": "抽象",
+  "author": "李梦龙",
+  "tag": ["update-rotation", "byted-update-rotation"],
+  "rtl": false
+}

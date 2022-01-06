@@ -1,0 +1,10 @@
+{
+  "id": "byted-chess",
+  "title": "byted-chess",
+  "name": "chess",
+  "category": "sports",
+  "categoryCN": "运动",
+  "author": "李梦龙",
+  "tag": ["chess", "byted-chess"],
+  "rtl": false
+}

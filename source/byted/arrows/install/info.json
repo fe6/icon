@@ -1,0 +1,10 @@
+{
+  "id": "byted-install",
+  "title": "byted-install",
+  "name": "install",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["install", "byted-install"],
+  "rtl": false
+}

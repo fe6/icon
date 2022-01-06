@@ -1,0 +1,10 @@
+{
+  "id": "byted-battery-full",
+  "title": "byted-battery-full",
+  "name": "battery-full",
+  "category": "others",
+  "categoryCN": "其它",
+  "author": "李梦龙",
+  "tag": ["battery-full", "byted-battery-full"],
+  "rtl": false
+}

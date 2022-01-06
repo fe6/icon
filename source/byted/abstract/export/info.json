@@ -1,0 +1,10 @@
+{
+  "id": "byted-export",
+  "title": "byted-export",
+  "name": "export",
+  "category": "abstract",
+  "categoryCN": "抽象",
+  "author": "李梦龙",
+  "tag": ["export", "byted-export"],
+  "rtl": false
+}

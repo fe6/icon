@@ -1,0 +1,10 @@
+{
+  "id": "antd-radius-setting",
+  "title": "圆角设置",
+  "name": "radius-setting",
+  "category": "editor",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["圆角设置"],
+  "rtl": false
+}

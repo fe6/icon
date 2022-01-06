@@ -1,0 +1,10 @@
+{
+  "id": "byted-multicast",
+  "title": "byted-multicast",
+  "name": "multicast",
+  "category": "charts",
+  "categoryCN": "图表",
+  "author": "李梦龙",
+  "tag": ["multicast", "byted-multicast"],
+  "rtl": false
+}

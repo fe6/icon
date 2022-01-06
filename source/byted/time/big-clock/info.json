@@ -1,0 +1,10 @@
+{
+  "id": "byted-big-clock",
+  "title": "byted-big-clock",
+  "name": "big-clock",
+  "category": "time",
+  "categoryCN": "时间",
+  "author": "李梦龙",
+  "tag": ["big-clock", "byted-big-clock"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-add-one",
+  "title": "byted-add-one",
+  "name": "add-one",
+  "category": "character",
+  "categoryCN": "符号",
+  "author": "李梦龙",
+  "tag": ["add-one", "byted-add-one"],
+  "rtl": false
+}

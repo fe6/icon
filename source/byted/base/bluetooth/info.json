@@ -1,0 +1,10 @@
+{
+  "id": "byted-bluetooth",
+  "title": "byted-bluetooth",
+  "name": "bluetooth",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["bluetooth", "byted-bluetooth"],
+  "rtl": false
+}

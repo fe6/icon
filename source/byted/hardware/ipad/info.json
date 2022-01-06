@@ -1,0 +1,10 @@
+{
+  "id": "byted-ipad",
+  "title": "byted-ipad",
+  "name": "ipad",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["ipad", "byted-ipad"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-message",
+  "title": "byted-message",
+  "name": "message",
+  "category": "communicate",
+  "categoryCN": "交流",
+  "author": "李梦龙",
+  "tag": ["message", "byted-message"],
+  "rtl": false
+}

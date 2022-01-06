@@ -1,0 +1,10 @@
+{
+  "id": "antd-question",
+  "title": "问号",
+  "name": "question",
+  "category": "suggestion",
+  "categoryCN": "建议",
+  "author": "李梦龙",
+  "tag": ["问号"],
+  "rtl": false
+}

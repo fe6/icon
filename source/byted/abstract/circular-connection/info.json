@@ -1,0 +1,10 @@
+{
+  "id": "byted-circular-connection",
+  "title": "byted-circular-connection",
+  "name": "circular-connection",
+  "category": "abstract",
+  "categoryCN": "抽象",
+  "author": "李梦龙",
+  "tag": ["circular-connection", "byted-circular-connection"],
+  "rtl": false
+}

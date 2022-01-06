@@ -1,0 +1,10 @@
+{
+  "id": "byted-analysis",
+  "title": "byted-analysis",
+  "name": "analysis",
+  "category": "charts",
+  "categoryCN": "图表",
+  "author": "李梦龙",
+  "tag": ["analysis", "byted-analysis"],
+  "rtl": false
+}

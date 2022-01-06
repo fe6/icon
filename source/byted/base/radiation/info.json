@@ -1,0 +1,10 @@
+{
+  "id": "byted-radiation",
+  "title": "byted-radiation",
+  "name": "radiation",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["radiation", "byted-radiation"],
+  "rtl": false
+}

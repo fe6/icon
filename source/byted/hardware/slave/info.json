@@ -1,0 +1,10 @@
+{
+  "id": "byted-slave",
+  "title": "byted-slave",
+  "name": "slave",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["slave", "byted-slave"],
+  "rtl": false
+}

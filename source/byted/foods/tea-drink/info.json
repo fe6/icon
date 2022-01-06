@@ -1,0 +1,10 @@
+{
+  "id": "byted-tea-drink",
+  "title": "byted-tea-drink",
+  "name": "tea-drink",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["tea-drink", "byted-tea-drink"],
+  "rtl": false
+}

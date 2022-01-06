@@ -1,0 +1,10 @@
+{
+  "id": "byted-hamburger-one",
+  "title": "byted-hamburger-one",
+  "name": "hamburger-one",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["hamburger-one", "byted-hamburger-one"],
+  "rtl": false
+}

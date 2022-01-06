@@ -1,0 +1,10 @@
+{
+  "id": "antd-font-colors",
+  "title": "字体颜色",
+  "name": "font-colors",
+  "category": "editor",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["字体颜色"],
+  "rtl": false
+}

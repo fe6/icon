@@ -1,0 +1,10 @@
+{
+  "id": "byted-dark-mode",
+  "title": "byted-dark-mode",
+  "name": "dark-mode",
+  "category": "operate",
+  "categoryCN": "操作",
+  "author": "李梦龙",
+  "tag": ["dark-mode", "byted-dark-mode"],
+  "rtl": false
+}

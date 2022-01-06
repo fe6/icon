@@ -1,0 +1,10 @@
+{
+  "id": "byted-dollar",
+  "title": "byted-dollar",
+  "name": "dollar",
+  "category": "money",
+  "categoryCN": "钱财",
+  "author": "李梦龙",
+  "tag": ["dollar", "byted-dollar"],
+  "rtl": false
+}

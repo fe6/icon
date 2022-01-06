@@ -1,0 +1,10 @@
+{
+  "id": "byted-local-pin",
+  "title": "byted-local-pin",
+  "name": "local-pin",
+  "category": "others",
+  "categoryCN": "其它",
+  "author": "李梦龙",
+  "tag": ["local-pin", "byted-local-pin"],
+  "rtl": false
+}

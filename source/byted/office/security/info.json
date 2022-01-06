@@ -1,0 +1,10 @@
+{
+  "id": "byted-security",
+  "title": "byted-security",
+  "name": "security",
+  "category": "office",
+  "categoryCN": "办公",
+  "author": "李梦龙",
+  "tag": ["security", "byted-security"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-block",
+  "title": "byted-block",
+  "name": "block",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["block", "byted-block"],
+  "rtl": false
+}

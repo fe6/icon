@@ -1,0 +1,10 @@
+{
+  "id": "byted-speed",
+  "title": "byted-speed",
+  "name": "speed",
+  "category": "time",
+  "categoryCN": "时间",
+  "author": "李梦龙",
+  "tag": ["speed", "byted-speed"],
+  "rtl": false
+}

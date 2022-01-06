@@ -1,0 +1,10 @@
+{
+  "id": "antd-underline",
+  "title": "下划线",
+  "name": "underline",
+  "category": "editor",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["下划线"],
+  "rtl": false
+}

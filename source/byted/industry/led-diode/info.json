@@ -1,0 +1,10 @@
+{
+  "id": "byted-led-diode",
+  "title": "byted-led-diode",
+  "name": "led-diode",
+  "category": "industry",
+  "categoryCN": "工业",
+  "author": "李梦龙",
+  "tag": ["led-diode", "byted-led-diode"],
+  "rtl": false
+}

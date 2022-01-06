@@ -1,0 +1,10 @@
+{
+  "id": "antd-border-inner",
+  "title": "边框内",
+  "name": "border-inner",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["内", "边框"],
+  "rtl": false
+}

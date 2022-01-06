@@ -1,0 +1,10 @@
+{
+  "id": "byted-acoustic",
+  "title": "byted-acoustic",
+  "name": "acoustic",
+  "category": "music",
+  "categoryCN": "声音",
+  "author": "李梦龙",
+  "tag": ["acoustic", "byted-acoustic"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "antd-close",
+  "title": "关闭",
+  "name": "close",
+  "category": "suggestion",
+  "categoryCN": "建议",
+  "author": "李梦龙",
+  "tag": ["关闭"],
+  "rtl": false
+}

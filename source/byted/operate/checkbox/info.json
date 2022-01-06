@@ -1,0 +1,10 @@
+{
+  "id": "byted-checkbox",
+  "title": "byted-checkbox",
+  "name": "checkbox",
+  "category": "operate",
+  "categoryCN": "操作",
+  "author": "李梦龙",
+  "tag": ["checkbox", "byted-checkbox"],
+  "rtl": false
+}

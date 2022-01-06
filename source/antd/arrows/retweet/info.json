@@ -1,0 +1,10 @@
+{
+  "id": "antd-retweet",
+  "title": "转向",
+  "name": "retweet",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["转向"],
+  "rtl": false
+}

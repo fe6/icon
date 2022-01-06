@@ -1,0 +1,10 @@
+{
+  "id": "byted-usb-memory-stick",
+  "title": "byted-usb-memory-stick",
+  "name": "usb-memory-stick",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["usb-memory-stick", "byted-usb-memory-stick"],
+  "rtl": false
+}

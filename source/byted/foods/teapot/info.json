@@ -1,0 +1,10 @@
+{
+  "id": "byted-teapot",
+  "title": "byted-teapot",
+  "name": "teapot",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["teapot", "byted-teapot"],
+  "rtl": false
+}

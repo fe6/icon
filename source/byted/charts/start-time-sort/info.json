@@ -1,0 +1,10 @@
+{
+  "id": "byted-start-time-sort",
+  "title": "byted-start-time-sort",
+  "name": "start-time-sort",
+  "category": "charts",
+  "categoryCN": "图表",
+  "author": "李梦龙",
+  "tag": ["start-time-sort", "byted-start-time-sort"],
+  "rtl": false
+}

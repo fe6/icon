@@ -1,0 +1,10 @@
+{
+  "id": "byted-medication-time",
+  "title": "byted-medication-time",
+  "name": "medication-time",
+  "category": "money",
+  "categoryCN": "钱财",
+  "author": "李梦龙",
+  "tag": ["medication-time", "byted-medication-time"],
+  "rtl": false
+}

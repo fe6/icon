@@ -1,0 +1,10 @@
+{
+  "id": "byted-kettle",
+  "title": "byted-kettle",
+  "name": "kettle",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["kettle", "byted-kettle"],
+  "rtl": false
+}

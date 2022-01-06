@@ -1,0 +1,10 @@
+{
+  "id": "byted-database-forbid",
+  "title": "byted-database-forbid",
+  "name": "database-forbid",
+  "category": "datas",
+  "categoryCN": "数据库",
+  "author": "李梦龙",
+  "tag": ["database-forbid", "byted-database-forbid"],
+  "rtl": false
+}

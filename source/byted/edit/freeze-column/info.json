@@ -1,0 +1,10 @@
+{
+  "id": "byted-freeze-column",
+  "title": "byted-freeze-column",
+  "name": "freeze-column",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["freeze-column", "byted-freeze-column"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-text-rotation-left",
+  "title": "byted-text-rotation-left",
+  "name": "text-rotation-left",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["text-rotation-left", "byted-text-rotation-left"],
+  "rtl": false
+}

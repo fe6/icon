@@ -1,0 +1,10 @@
+{
+  "id": "byted-phonograph",
+  "title": "byted-phonograph",
+  "name": "phonograph",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["phonograph", "byted-phonograph"],
+  "rtl": false
+}

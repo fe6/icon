@@ -1,0 +1,10 @@
+{
+  "id": "antd-fullscreen-exit",
+  "title": "退出全屏",
+  "name": "fullscreen-exit",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["退出全屏"],
+  "rtl": false
+}

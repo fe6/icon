@@ -1,0 +1,10 @@
+{
+  "id": "byted-video-file",
+  "title": "byted-video-file",
+  "name": "video-file",
+  "category": "office",
+  "categoryCN": "办公",
+  "author": "李梦龙",
+  "tag": ["video-file", "byted-video-file"],
+  "rtl": false
+}

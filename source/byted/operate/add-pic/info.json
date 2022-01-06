@@ -1,0 +1,10 @@
+{
+  "id": "byted-add-pic",
+  "title": "byted-add-pic",
+  "name": "add-pic",
+  "category": "operate",
+  "categoryCN": "操作",
+  "author": "李梦龙",
+  "tag": ["add-pic", "byted-add-pic"],
+  "rtl": false
+}

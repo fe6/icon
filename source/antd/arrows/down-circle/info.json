@@ -1,0 +1,10 @@
+{
+  "id": "antd-down-circle",
+  "title": "方向圆角下",
+  "name": "down-circle",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["下", "方向圆角"],
+  "rtl": false
+}

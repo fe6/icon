@@ -1,0 +1,10 @@
+{
+  "id": "byted-medical-files",
+  "title": "byted-medical-files",
+  "name": "medical-files",
+  "category": "health",
+  "categoryCN": "健康",
+  "author": "李梦龙",
+  "tag": ["medical-files", "byted-medical-files"],
+  "rtl": false
+}

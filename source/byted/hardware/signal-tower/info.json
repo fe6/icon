@@ -1,0 +1,10 @@
+{
+  "id": "byted-signal-tower",
+  "title": "byted-signal-tower",
+  "name": "signal-tower",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["signal-tower", "byted-signal-tower"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-play",
+  "title": "byted-play",
+  "name": "play",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["play", "byted-play"],
+  "rtl": false
+}

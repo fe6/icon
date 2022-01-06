@@ -1,0 +1,10 @@
+{
+  "id": "byted-target-one",
+  "title": "byted-target-one",
+  "name": "target-one",
+  "category": "sports",
+  "categoryCN": "运动",
+  "author": "李梦龙",
+  "tag": ["target-one", "byted-target-one"],
+  "rtl": false
+}

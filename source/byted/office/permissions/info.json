@@ -1,0 +1,10 @@
+{
+  "id": "byted-permissions",
+  "title": "byted-permissions",
+  "name": "permissions",
+  "category": "office",
+  "categoryCN": "办公",
+  "author": "李梦龙",
+  "tag": ["permissions", "byted-permissions"],
+  "rtl": false
+}

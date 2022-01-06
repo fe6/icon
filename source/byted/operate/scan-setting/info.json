@@ -1,0 +1,10 @@
+{
+  "id": "byted-scan-setting",
+  "title": "byted-scan-setting",
+  "name": "scan-setting",
+  "category": "operate",
+  "categoryCN": "操作",
+  "author": "李梦龙",
+  "tag": ["scan-setting", "byted-scan-setting"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-subway",
+  "title": "byted-subway",
+  "name": "subway",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["subway", "byted-subway"],
+  "rtl": false
+}

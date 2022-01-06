@@ -1,0 +1,10 @@
+{
+  "id": "byted-edit-name",
+  "title": "byted-edit-name",
+  "name": "edit-name",
+  "category": "peoples",
+  "categoryCN": "人群",
+  "author": "李梦龙",
+  "tag": ["edit-name", "byted-edit-name"],
+  "rtl": false
+}

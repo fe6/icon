@@ -1,0 +1,10 @@
+{
+  "id": "byted-setting-three",
+  "title": "byted-setting-three",
+  "name": "setting-three",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["setting-three", "byted-setting-three"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-orange",
+  "title": "byted-orange",
+  "name": "orange",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["orange", "byted-orange"],
+  "rtl": false
+}

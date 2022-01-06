@@ -1,0 +1,10 @@
+{
+  "id": "byted-insert-table",
+  "title": "byted-insert-table",
+  "name": "insert-table",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["insert-table", "byted-insert-table"],
+  "rtl": false
+}

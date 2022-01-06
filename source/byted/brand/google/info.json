@@ -1,0 +1,10 @@
+{
+  "id": "byted-google",
+  "title": "byted-google",
+  "name": "google",
+  "category": "brand",
+  "categoryCN": "品牌",
+  "author": "李梦龙",
+  "tag": ["google", "byted-google"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-screen-rotation",
+  "title": "byted-screen-rotation",
+  "name": "screen-rotation",
+  "category": "operate",
+  "categoryCN": "操作",
+  "author": "李梦龙",
+  "tag": ["screen-rotation", "byted-screen-rotation"],
+  "rtl": false
+}

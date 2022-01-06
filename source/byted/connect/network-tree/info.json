@@ -1,0 +1,10 @@
+{
+  "id": "byted-network-tree",
+  "title": "byted-network-tree",
+  "name": "network-tree",
+  "category": "connect",
+  "categoryCN": "连接",
+  "author": "李梦龙",
+  "tag": ["network-tree", "byted-network-tree"],
+  "rtl": false
+}

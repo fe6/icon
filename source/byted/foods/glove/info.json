@@ -1,0 +1,10 @@
+{
+  "id": "byted-glove",
+  "title": "byted-glove",
+  "name": "glove",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["glove", "byted-glove"],
+  "rtl": false
+}

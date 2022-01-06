@@ -1,0 +1,10 @@
+{
+  "id": "byted-top-bar",
+  "title": "byted-top-bar",
+  "name": "top-bar",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["top-bar", "byted-top-bar"],
+  "rtl": false
+}

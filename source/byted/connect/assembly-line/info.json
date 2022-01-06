@@ -1,0 +1,10 @@
+{
+  "id": "byted-assembly-line",
+  "title": "byted-assembly-line",
+  "name": "assembly-line",
+  "category": "connect",
+  "categoryCN": "连接",
+  "author": "李梦龙",
+  "tag": ["assembly-line", "byted-assembly-line"],
+  "rtl": false
+}

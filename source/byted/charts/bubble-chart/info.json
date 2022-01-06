@@ -1,0 +1,10 @@
+{
+  "id": "byted-bubble-chart",
+  "title": "byted-bubble-chart",
+  "name": "bubble-chart",
+  "category": "charts",
+  "categoryCN": "图表",
+  "author": "李梦龙",
+  "tag": ["bubble-chart", "byted-bubble-chart"],
+  "rtl": false
+}

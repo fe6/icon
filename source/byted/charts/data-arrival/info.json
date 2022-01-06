@@ -1,0 +1,10 @@
+{
+  "id": "byted-data-arrival",
+  "title": "byted-data-arrival",
+  "name": "data-arrival",
+  "category": "charts",
+  "categoryCN": "图表",
+  "author": "李梦龙",
+  "tag": ["data-arrival", "byted-data-arrival"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "antd-sort-descending",
+  "title": "递减排序",
+  "name": "sort-descending",
+  "category": "editor",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["递减排序"],
+  "rtl": false
+}

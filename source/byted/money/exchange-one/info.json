@@ -1,0 +1,10 @@
+{
+  "id": "byted-exchange-one",
+  "title": "byted-exchange-one",
+  "name": "exchange-one",
+  "category": "money",
+  "categoryCN": "钱财",
+  "author": "李梦龙",
+  "tag": ["exchange-one", "byted-exchange-one"],
+  "rtl": false
+}

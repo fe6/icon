@@ -1,0 +1,10 @@
+{
+  "id": "byted-croissant",
+  "title": "byted-croissant",
+  "name": "croissant",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["croissant", "byted-croissant"],
+  "rtl": false
+}

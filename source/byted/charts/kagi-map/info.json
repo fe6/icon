@@ -1,0 +1,10 @@
+{
+  "id": "byted-kagi-map",
+  "title": "byted-kagi-map",
+  "name": "kagi-map",
+  "category": "charts",
+  "categoryCN": "图表",
+  "author": "李梦龙",
+  "tag": ["kagi-map", "byted-kagi-map"],
+  "rtl": false
+}

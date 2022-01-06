@@ -1,0 +1,10 @@
+{
+  "id": "antd-forward",
+  "title": "前进",
+  "name": "forward",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["前进"],
+  "rtl": false
+}

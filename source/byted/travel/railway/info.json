@@ -1,0 +1,10 @@
+{
+  "id": "byted-railway",
+  "title": "byted-railway",
+  "name": "railway",
+  "category": "travel",
+  "categoryCN": "旅行",
+  "author": "李梦龙",
+  "tag": ["railway", "byted-railway"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-fog",
+  "title": "byted-fog",
+  "name": "fog",
+  "category": "weather",
+  "categoryCN": "天气",
+  "author": "李梦龙",
+  "tag": ["fog", "byted-fog"],
+  "rtl": false
+}

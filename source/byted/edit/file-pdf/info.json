@@ -1,0 +1,10 @@
+{
+  "id": "byted-file-pdf",
+  "title": "byted-file-pdf",
+  "name": "file-pdf",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["file-pdf", "byted-file-pdf"],
+  "rtl": false
+}

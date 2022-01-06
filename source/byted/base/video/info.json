@@ -1,0 +1,10 @@
+{
+  "id": "byted-video",
+  "title": "byted-video",
+  "name": "video",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["video", "byted-video"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-movie-board",
+  "title": "byted-movie-board",
+  "name": "movie-board",
+  "category": "others",
+  "categoryCN": "其它",
+  "author": "李梦龙",
+  "tag": ["movie-board", "byted-movie-board"],
+  "rtl": false
+}

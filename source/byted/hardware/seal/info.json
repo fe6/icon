@@ -1,0 +1,10 @@
+{
+  "id": "byted-seal",
+  "title": "byted-seal",
+  "name": "seal",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["seal", "byted-seal"],
+  "rtl": false
+}

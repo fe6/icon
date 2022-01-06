@@ -1,0 +1,10 @@
+{
+  "id": "antd-wallet",
+  "title": "wallet",
+  "name": "wallet",
+  "category": "base",
+  "categoryCN": "通用",
+  "author": "李梦龙",
+  "tag": ["wallet"],
+  "rtl": false
+}

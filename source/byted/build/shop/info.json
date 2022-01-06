@@ -1,0 +1,10 @@
+{
+  "id": "byted-shop",
+  "title": "byted-shop",
+  "name": "shop",
+  "category": "build",
+  "categoryCN": "建筑",
+  "author": "李梦龙",
+  "tag": ["shop", "byted-shop"],
+  "rtl": false
+}

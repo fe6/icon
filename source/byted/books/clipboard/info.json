@@ -1,0 +1,10 @@
+{
+  "id": "byted-clipboard",
+  "title": "byted-clipboard",
+  "name": "clipboard",
+  "category": "books",
+  "categoryCN": "书籍",
+  "author": "李梦龙",
+  "tag": ["clipboard", "byted-clipboard"],
+  "rtl": false
+}

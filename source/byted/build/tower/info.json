@@ -1,0 +1,10 @@
+{
+  "id": "byted-tower",
+  "title": "byted-tower",
+  "name": "tower",
+  "category": "build",
+  "categoryCN": "建筑",
+  "author": "李梦龙",
+  "tag": ["tower", "byted-tower"],
+  "rtl": false
+}

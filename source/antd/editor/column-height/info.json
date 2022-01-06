@@ -1,0 +1,10 @@
+{
+  "id": "antd-column-height",
+  "title": "垂直高度",
+  "name": "column-height",
+  "category": "editor",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["垂直高度"],
+  "rtl": false
+}

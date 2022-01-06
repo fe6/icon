@@ -1,0 +1,10 @@
+{
+  "id": "byted-sound-one",
+  "title": "byted-sound-one",
+  "name": "sound-one",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["sound-one", "byted-sound-one"],
+  "rtl": false
+}

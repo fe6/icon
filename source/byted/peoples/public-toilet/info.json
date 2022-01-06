@@ -1,0 +1,10 @@
+{
+  "id": "byted-public-toilet",
+  "title": "byted-public-toilet",
+  "name": "public-toilet",
+  "category": "peoples",
+  "categoryCN": "人群",
+  "author": "李梦龙",
+  "tag": ["public-toilet", "byted-public-toilet"],
+  "rtl": false
+}

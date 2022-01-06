@@ -1,0 +1,10 @@
+{
+  "id": "byted-sandstorm",
+  "title": "byted-sandstorm",
+  "name": "sandstorm",
+  "category": "weather",
+  "categoryCN": "天气",
+  "author": "李梦龙",
+  "tag": ["sandstorm", "byted-sandstorm"],
+  "rtl": false
+}

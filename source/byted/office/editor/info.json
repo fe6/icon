@@ -1,0 +1,10 @@
+{
+  "id": "byted-editor",
+  "title": "byted-editor",
+  "name": "editor",
+  "category": "office",
+  "categoryCN": "办公",
+  "author": "李梦龙",
+  "tag": ["editor", "byted-editor"],
+  "rtl": false
+}

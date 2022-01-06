@@ -1,0 +1,10 @@
+{
+  "id": "byted-router",
+  "title": "byted-router",
+  "name": "router",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["router", "byted-router"],
+  "rtl": false
+}

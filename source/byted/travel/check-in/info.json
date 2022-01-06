@@ -1,0 +1,10 @@
+{
+  "id": "byted-check-in",
+  "title": "byted-check-in",
+  "name": "check-in",
+  "category": "travel",
+  "categoryCN": "旅行",
+  "author": "李梦龙",
+  "tag": ["check-in", "byted-check-in"],
+  "rtl": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "byted-message-sent",
+  "title": "byted-message-sent",
+  "name": "message-sent",
+  "category": "communicate",
+  "categoryCN": "交流",
+  "author": "李梦龙",
+  "tag": ["message-sent", "byted-message-sent"],
+  "rtl": false
+}

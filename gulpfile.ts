@@ -10,6 +10,7 @@ import ts from 'gulp-typescript';
 import merge from 'merge2';
 import less from 'gulp-less';
 import minifyCss from 'gulp-clean-css';
+import rename from 'gulp-rename';
 import del from 'del';
 
 type TBuildType = 'vue' | 'img' | 'cube-vue' | 'compiler';
@@ -194,3 +195,18 @@ gulp.task(
 );
 
 gulp.task('cleanCode', gulp.series([cleanCode]));
+
+// new-icons 中的 icon 转换成 byted 的 icon
+gulp.task(`moveFile`, () => {
+  const cwd = resolve('./', 'source/byted');
+  return gulp
+    .src('new-icons/**/*', { cwd: root })
+    .pipe(
+      rename((ppath) => {
+        if (ppath.dirname !== '.') {
+          ppath.basename = `${ppath.basename}/${ppath.basename}`;
+        }
+      }),
+    )
+    .pipe(gulp.dest(cwd));
+});

@@ -1,0 +1,10 @@
+{
+  "id": "byted-phone-call",
+  "title": "byted-phone-call",
+  "name": "phone-call",
+  "category": "base",
+  "categoryCN": "基础",
+  "author": "李梦龙",
+  "tag": ["phone-call", "byted-phone-call"],
+  "rtl": false
+}

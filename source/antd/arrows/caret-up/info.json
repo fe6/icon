@@ -1,0 +1,10 @@
+{
+  "id": "antd-caret-up",
+  "title": "三角上",
+  "name": "caret-up",
+  "category": "arrows",
+  "categoryCN": "方向",
+  "author": "李梦龙",
+  "tag": ["上", "三角"],
+  "rtl": false
+}

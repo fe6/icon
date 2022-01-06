@@ -1,0 +1,10 @@
+{
+  "id": "byted-banana",
+  "title": "byted-banana",
+  "name": "banana",
+  "category": "foods",
+  "categoryCN": "餐饮",
+  "author": "李梦龙",
+  "tag": ["banana", "byted-banana"],
+  "rtl": false
+}

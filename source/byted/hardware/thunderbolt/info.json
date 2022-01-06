@@ -1,0 +1,10 @@
+{
+  "id": "byted-thunderbolt",
+  "title": "byted-thunderbolt",
+  "name": "thunderbolt",
+  "category": "hardware",
+  "categoryCN": "硬件",
+  "author": "李梦龙",
+  "tag": ["thunderbolt", "byted-thunderbolt"],
+  "rtl": false
+}

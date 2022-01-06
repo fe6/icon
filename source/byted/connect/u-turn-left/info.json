@@ -1,0 +1,10 @@
+{
+  "id": "byted-u-turn-left",
+  "title": "byted-u-turn-left",
+  "name": "u-turn-left",
+  "category": "connect",
+  "categoryCN": "连接",
+  "author": "李梦龙",
+  "tag": ["u-turn-left", "byted-u-turn-left"],
+  "rtl": false
+}

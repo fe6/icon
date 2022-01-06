@@ -1,0 +1,10 @@
+{
+  "id": "byted-volume-mute",
+  "title": "byted-volume-mute",
+  "name": "volume-mute",
+  "category": "music",
+  "categoryCN": "声音",
+  "author": "李梦龙",
+  "tag": ["volume-mute", "byted-volume-mute"],
+  "rtl": false
+}

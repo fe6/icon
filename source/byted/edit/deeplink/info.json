@@ -1,0 +1,10 @@
+{
+  "id": "byted-deeplink",
+  "title": "byted-deeplink",
+  "name": "deeplink",
+  "category": "edit",
+  "categoryCN": "编辑",
+  "author": "李梦龙",
+  "tag": ["deeplink", "byted-deeplink"],
+  "rtl": false
+}
