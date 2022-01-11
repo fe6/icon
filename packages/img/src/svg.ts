@@ -567,6 +567,7 @@ export { getIconBytedRightSmallDownSvgHtml } from './icons/byted-right-small-dow
 export { getIconBytedRightSmallUpSvgHtml } from './icons/byted-right-small-up';
 export { getIconBytedRightTwoSvgHtml } from './icons/byted-right-two';
 export { getIconBytedRotateSvgHtml } from './icons/byted-rotate';
+export { getIconBytedRotateRightSvgHtml } from './icons/byted-rotate-right';
 export { getIconBytedRotationHorizontalSvgHtml } from './icons/byted-rotation-horizontal';
 export { getIconBytedRotationVerticalSvgHtml } from './icons/byted-rotation-vertical';
 export { getIconBytedSendOneSvgHtml } from './icons/byted-send-one';

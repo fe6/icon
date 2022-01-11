@@ -567,6 +567,7 @@ export { default as IconBytedRightSmallDown } from './icons/byted-right-small-do
 export { default as IconBytedRightSmallUp } from './icons/byted-right-small-up';
 export { default as IconBytedRightTwo } from './icons/byted-right-two';
 export { default as IconBytedRotate } from './icons/byted-rotate';
+export { default as IconBytedRotateRight } from './icons/byted-rotate-right';
 export { default as IconBytedRotationHorizontal } from './icons/byted-rotation-horizontal';
 export { default as IconBytedRotationVertical } from './icons/byted-rotation-vertical';
 export { default as IconBytedSendOne } from './icons/byted-send-one';
