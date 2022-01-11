@@ -129,7 +129,9 @@
   import { diySvg } from './diy';
   import './custom-config';
 
-  const iconConfig = iconJson.slice();
+  const iconConfig = iconJson
+    .filter(({ type }) => type.indexOf('Antd') > -1)
+    .slice();
 
   const myColors = ['#f00', '#f0f', '#00f', '#0f0'];
 
