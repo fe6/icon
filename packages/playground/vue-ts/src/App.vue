@@ -26,7 +26,7 @@
         :type="icon.type"
         :theme="themeNow"
         :colors="colorDiy"
-      />
+      />-{{ icon.type }}
     </span>
   </div>
   <h1>定制款 - 显示不出来可能得注释 img 和 svg 的循环，因为图标太多了太慢了</h1>
