@@ -495,7 +495,7 @@ export const IconWrapper = (
 
   return options;
 }; // end IconWrapper
-// 图标Wrapper
+// start IconWrapperCustomer
 export const IconWrapperCustomer = (
   name: string,
   rtl: boolean,
