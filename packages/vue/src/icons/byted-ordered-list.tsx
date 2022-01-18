@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedOrderedList = IconWrapper(
   'byted-ordered-list',
   false,
   (props: ISvgIconProps) => (
@@ -80,3 +80,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedOrderedList;

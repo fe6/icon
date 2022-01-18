@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedDistributeVertically = IconWrapper(
   'byted-distribute-vertically',
   false,
   (props: ISvgIconProps) => (
@@ -47,3 +47,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedDistributeVertically;

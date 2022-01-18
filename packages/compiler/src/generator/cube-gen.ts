@@ -38,7 +38,7 @@ export class CubeGenerator extends RuntimeGenerator {
     this.writeLine(`import cubeStyle from './cube-style';`);
 
     const iPropsName = this.getInterfaceName('props');
-    const wrapperName = this.getTypeName('wrapper');
+    const wrapperName = this.getTypeName('wrapperCustomer');
     const iCubeItemDataName = this.getInterfaceName('cubeItemData');
     this.writeLine(`import {`);
     this.indent(1);

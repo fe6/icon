@@ -29,7 +29,9 @@ export class VueRuntimeGenerator extends RuntimeGenerator {
       );
     }
 
-    this.writeLine("import { inject, provide } from '@vue/runtime-dom'");
+    this.writeLine(
+      "import { inject, provide, defineComponent } from '@vue/runtime-dom'",
+    );
 
     this.writeLine();
   }
@@ -78,7 +80,11 @@ export class VueRuntimeGenerator extends RuntimeGenerator {
     const optionType = this.getTypeName('options');
     this.writeLine();
 
-    this.writeLine(`const options${this.useType ? `: ${optionType}` : ''} = {`);
+    this.writeLine(
+      `const options${
+        this.useType ? `: DefineComponent<${optionType}>` : ''
+      } = ${this.useType ? 'defineComponent(' : ''}{`,
+    );
     this.indent(1); // 处理name
 
     this.writeLine(`name: '${prefix}-' + name,`); // 处理inject
@@ -180,7 +186,7 @@ export class VueRuntimeGenerator extends RuntimeGenerator {
     this.indent(-1);
     this.writeLine('} // setup end');
     this.indent(-1);
-    this.writeLine('};');
+    this.writeLine(`}${this.useType ? ')' : ''};`);
     this.writeLine();
     this.writeLine('return options;');
   }

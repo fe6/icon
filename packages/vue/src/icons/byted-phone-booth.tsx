@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedPhoneBooth = IconWrapper(
   'byted-phone-booth',
   false,
   (props: ISvgIconProps) => (
@@ -74,3 +74,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedPhoneBooth;

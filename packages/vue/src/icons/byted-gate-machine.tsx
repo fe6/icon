@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedGateMachine = IconWrapper(
   'byted-gate-machine',
   false,
   (props: ISvgIconProps) => (
@@ -104,3 +104,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedGateMachine;

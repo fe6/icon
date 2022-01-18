@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedFourArrows = IconWrapper(
   'byted-four-arrows',
   false,
   (props: ISvgIconProps) => (
@@ -71,3 +71,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedFourArrows;

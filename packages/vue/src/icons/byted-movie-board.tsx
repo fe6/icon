@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedMovieBoard = IconWrapper(
   'byted-movie-board',
   false,
   (props: ISvgIconProps) => (
@@ -70,3 +70,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedMovieBoard;

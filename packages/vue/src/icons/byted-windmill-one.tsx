@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedWindmillOne = IconWrapper(
   'byted-windmill-one',
   false,
   (props: ISvgIconProps) => (
@@ -76,3 +76,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedWindmillOne;

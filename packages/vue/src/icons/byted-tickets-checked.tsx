@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedTicketsChecked = IconWrapper(
   'byted-tickets-checked',
   false,
   (props: ISvgIconProps) => (
@@ -30,3 +30,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedTicketsChecked;

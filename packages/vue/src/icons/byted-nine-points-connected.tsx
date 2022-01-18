@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedNinePointsConnected = IconWrapper(
   'byted-nine-points-connected',
   false,
   (props: ISvgIconProps) => (
@@ -110,3 +110,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedNinePointsConnected;

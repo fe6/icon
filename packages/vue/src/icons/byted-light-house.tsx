@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedLightHouse = IconWrapper(
   'byted-light-house',
   false,
   (props: ISvgIconProps) => (
@@ -113,3 +113,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedLightHouse;

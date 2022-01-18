@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedBabyMobile = IconWrapper(
   'byted-baby-mobile',
   false,
   (props: ISvgIconProps) => (
@@ -61,3 +61,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedBabyMobile;

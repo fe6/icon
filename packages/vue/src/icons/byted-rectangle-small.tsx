@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedRectangleSmall = IconWrapper(
   'byted-rectangle-small',
   false,
   (props: ISvgIconProps) => (
@@ -15,3 +15,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedRectangleSmall;

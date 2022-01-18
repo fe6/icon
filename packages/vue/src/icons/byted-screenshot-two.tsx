@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedScreenshotTwo = IconWrapper(
   'byted-screenshot-two',
   false,
   (props: ISvgIconProps) => (
@@ -51,3 +51,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedScreenshotTwo;

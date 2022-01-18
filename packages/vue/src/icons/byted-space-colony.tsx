@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedSpaceColony = IconWrapper(
   'byted-space-colony',
   false,
   (props: ISvgIconProps) => (
@@ -57,3 +57,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedSpaceColony;

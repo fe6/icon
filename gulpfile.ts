@@ -26,6 +26,7 @@ const TS_CONFIG_DEF = {
   esModuleInterop: true,
   removeComments: true,
   declaration: true, // 生成 .d.ts 文件
+  declarationDir: './',
 };
 
 const babelTs = {

@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedUnionSelection = IconWrapper(
   'byted-union-selection',
   false,
   (props: ISvgIconProps) => (
@@ -73,3 +73,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedUnionSelection;

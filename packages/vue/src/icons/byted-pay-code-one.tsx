@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedPayCodeOne = IconWrapper(
   'byted-pay-code-one',
   false,
   (props: ISvgIconProps) => (
@@ -89,3 +89,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedPayCodeOne;

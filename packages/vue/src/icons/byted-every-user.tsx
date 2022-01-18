@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedEveryUser = IconWrapper(
   'byted-every-user',
   false,
   (props: ISvgIconProps) => (
@@ -61,3 +61,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedEveryUser;

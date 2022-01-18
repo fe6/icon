@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedLatticePattern = IconWrapper(
   'byted-lattice-pattern',
   false,
   (props: ISvgIconProps) => (
@@ -185,3 +185,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedLatticePattern;

@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const AntdFastBackward = IconWrapper(
   'antd-fast-backward',
   false,
   (props: ISvgIconProps) => (
@@ -15,3 +15,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default AntdFastBackward;

@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedPivotTable = IconWrapper(
   'byted-pivot-table',
   false,
   (props: ISvgIconProps) => (
@@ -75,3 +75,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedPivotTable;

@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedRightAngle = IconWrapper(
   'byted-right-angle',
   false,
   (props: ISvgIconProps) => (
@@ -19,3 +19,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedRightAngle;

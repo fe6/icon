@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedDatabaseLock = IconWrapper(
   'byted-database-lock',
   false,
   (props: ISvgIconProps) => (
@@ -63,3 +63,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedDatabaseLock;

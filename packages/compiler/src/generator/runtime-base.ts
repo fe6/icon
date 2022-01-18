@@ -33,6 +33,7 @@ export interface IRunOptions {
   processPlatformTypes: () => void;
   processPlatformCode: () => void;
   processPlatformWrapper: () => void;
+  processPlatformWrapperBase?: (isDiy?: boolean) => void;
 }
 
 export interface IRuntimeGeneratorOptions
@@ -140,6 +141,9 @@ export class RuntimeGenerator extends Generator {
     }
 
     this.processWrapper(runOptions);
+    if (this.type === 'cube-vue') {
+      this.processWrapperCube(runOptions);
+    }
 
     return this.getResult();
   }
@@ -1339,7 +1343,11 @@ export class RuntimeGenerator extends Generator {
     this.writeLine(
       `)${
         this.useType
-          ? `: ${this.getTypeName(this.type === 'img' ? 'Return' : 'options')}`
+          ? `: ${
+              this.type === 'img'
+                ? this.getTypeName('Return')
+                : `DefineComponent<${this.getTypeName('options')}>`
+            }`
           : ''
       } => {`,
     );
@@ -1347,6 +1355,57 @@ export class RuntimeGenerator extends Generator {
     this.indent(1); // 生成平台Wrapper代码
 
     runOptions.processPlatformWrapper();
+
+    this.indent(-1);
+    this.writeLine(`}; // end ${wrapperFunc}`);
+  }
+
+  processWrapperCube(runOptions: IRunOptions) {
+    const wrapperFunc = this.getTypeName('wrapperCustomer');
+
+    this.writeLine(`// start ${wrapperFunc}`);
+    this.write(`export const ${wrapperFunc} = (`);
+
+    if (this.wrapperNeedName) {
+      if (this.useType) {
+        this.write('name: string, ');
+      } else {
+        this.write('name, ');
+      }
+    }
+
+    if (this.wrapperNeedRTL) {
+      if (this.useType) {
+        this.write('rtl: boolean, ');
+      } else {
+        this.write('rtl, ');
+      }
+    }
+
+    if (this.useType) {
+      this.write(`render: ${this.getTypeName('Render')}`);
+    } else {
+      this.write('render');
+    }
+
+    if (this.style) {
+      this.write(', ');
+      this.write(
+        `cssRender${
+          this.useType ? `?: ${this.getInterfaceName('props', true)}` : ''
+        }`,
+      );
+    }
+
+    this.writeLine(
+      `)${this.useType ? `: ${this.getTypeName('options')}` : ''} => {`,
+    );
+
+    this.indent(1); // 生成平台Wrapper代码
+
+    if (runOptions.processPlatformWrapperBase) {
+      runOptions.processPlatformWrapperBase(true);
+    }
 
     this.indent(-1);
     this.writeLine(`}; // end ${wrapperFunc}`);

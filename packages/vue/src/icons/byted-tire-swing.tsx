@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedTireSwing = IconWrapper(
   'byted-tire-swing',
   false,
   (props: ISvgIconProps) => (
@@ -88,3 +88,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedTireSwing;

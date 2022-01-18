@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper('antd-qq', false, (props: ISvgIconProps) => (
+export const AntdQq = IconWrapper('antd-qq', false, (props: ISvgIconProps) => (
   <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
     <path
       fill={props.colors[0]}
@@ -10,3 +10,4 @@ export default IconWrapper('antd-qq', false, (props: ISvgIconProps) => (
     />
   </svg>
 ));
+export default AntdQq;

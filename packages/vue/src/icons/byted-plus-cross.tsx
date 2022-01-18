@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedPlusCross = IconWrapper(
   'byted-plus-cross',
   false,
   (props: ISvgIconProps) => (
@@ -17,3 +17,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedPlusCross;

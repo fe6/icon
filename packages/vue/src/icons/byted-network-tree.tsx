@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedNetworkTree = IconWrapper(
   'byted-network-tree',
   false,
   (props: ISvgIconProps) => (
@@ -75,3 +75,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedNetworkTree;

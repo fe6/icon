@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedDiamondOne = IconWrapper(
   'byted-diamond-one',
   false,
   (props: ISvgIconProps) => (
@@ -15,3 +15,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedDiamondOne;

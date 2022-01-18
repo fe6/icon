@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedBabyTaste = IconWrapper(
   'byted-baby-taste',
   false,
   (props: ISvgIconProps) => (
@@ -73,3 +73,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedBabyTaste;

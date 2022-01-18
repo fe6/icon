@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedGraphicStitchingThree = IconWrapper(
   'byted-graphic-stitching-three',
   false,
   (props: ISvgIconProps) => (
@@ -80,3 +80,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedGraphicStitchingThree;

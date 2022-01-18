@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedViewGridList = IconWrapper(
   'byted-view-grid-list',
   false,
   (props: ISvgIconProps) => (
@@ -69,3 +69,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedViewGridList;

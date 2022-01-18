@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedCryingBaby = IconWrapper(
   'byted-crying-baby',
   false,
   (props: ISvgIconProps) => (
@@ -80,3 +80,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedCryingBaby;

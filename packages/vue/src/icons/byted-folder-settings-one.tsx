@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedFolderSettingsOne = IconWrapper(
   'byted-folder-settings-one',
   false,
   (props: ISvgIconProps) => (
@@ -81,3 +81,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedFolderSettingsOne;

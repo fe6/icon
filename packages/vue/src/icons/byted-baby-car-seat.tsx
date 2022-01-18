@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedBabyCarSeat = IconWrapper(
   'byted-baby-car-seat',
   false,
   (props: ISvgIconProps) => (
@@ -23,3 +23,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedBabyCarSeat;

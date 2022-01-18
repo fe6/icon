@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedJinritoutiao = IconWrapper(
   'byted-jinritoutiao',
   false,
   (props: ISvgIconProps) => (
@@ -70,3 +70,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedJinritoutiao;

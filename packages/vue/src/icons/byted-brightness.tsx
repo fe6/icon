@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedBrightness = IconWrapper(
   'byted-brightness',
   false,
   (props: ISvgIconProps) => (
@@ -71,3 +71,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedBrightness;

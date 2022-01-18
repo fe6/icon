@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedPerfumerBottle = IconWrapper(
   'byted-perfumer-bottle',
   false,
   (props: ISvgIconProps) => (
@@ -72,3 +72,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedPerfumerBottle;

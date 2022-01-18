@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedRadishOne = IconWrapper(
   'byted-radish-one',
   false,
   (props: ISvgIconProps) => (
@@ -67,3 +67,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedRadishOne;
