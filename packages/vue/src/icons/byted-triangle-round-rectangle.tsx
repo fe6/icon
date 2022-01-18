@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedTriangleRoundRectangle = IconWrapper(
   'byted-triangle-round-rectangle',
   false,
   (props: ISvgIconProps) => (
@@ -39,3 +39,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedTriangleRoundRectangle;

@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedBoxingOne = IconWrapper(
   'byted-boxing-one',
   false,
   (props: ISvgIconProps) => (
@@ -34,3 +34,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedBoxingOne;

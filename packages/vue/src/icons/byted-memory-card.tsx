@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedMemoryCard = IconWrapper(
   'byted-memory-card',
   false,
   (props: ISvgIconProps) => (
@@ -53,3 +53,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedMemoryCard;

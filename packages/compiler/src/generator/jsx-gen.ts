@@ -80,6 +80,12 @@ export class JSXGenerator extends IconGenerator {
       });
     }
 
+    // if (useDefault) {
+    //   if (useType) {
+    //     this.writeLine("import type { IconOptions } from '../runtime';");
+    //   }
+    // } // 处理const Name = IConWrapper(xxx)/IConWrapper(xxx)
+
     this.write('import');
     this.space();
     this.write('{ ');
@@ -105,19 +111,12 @@ export class JSXGenerator extends IconGenerator {
     this.write('export');
     this.space();
 
-    if (useDefault) {
-      this.write('default');
-      this.space();
-    } // 处理const Name = IConWrapper(xxx)/IConWrapper(xxx)
-
-    if (!useDefault) {
-      this.write('const');
-      this.space();
-      this.write(pascalCase(info.name));
-      this.space();
-      this.write('=');
-      this.space();
-    }
+    this.write('const');
+    this.space();
+    this.write(pascalCase(info.name));
+    this.space();
+    this.write('=');
+    this.space();
 
     this.write(wrapperName);
     this.writeLine('(');
@@ -180,6 +179,12 @@ export class JSXGenerator extends IconGenerator {
 
     this.indent(-1);
     this.writeLine(');');
+
+    if (useDefault) {
+      this.write(`export default ${pascalCase(info.name)}`);
+      this.writeLine();
+    } // 处理const Name = IConWrapper(xxx)/IConWrapper(xxx)
+
     return this.getResult();
   }
 

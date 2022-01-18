@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedDatabaseSuccess = IconWrapper(
   'byted-database-success',
   false,
   (props: ISvgIconProps) => (
@@ -54,3 +54,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedDatabaseSuccess;

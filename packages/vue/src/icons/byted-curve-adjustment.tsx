@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedCurveAdjustment = IconWrapper(
   'byted-curve-adjustment',
   false,
   (props: ISvgIconProps) => (
@@ -27,3 +27,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedCurveAdjustment;

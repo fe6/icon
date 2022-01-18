@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedPlaybackProgress = IconWrapper(
   'byted-playback-progress',
   false,
   (props: ISvgIconProps) => (
@@ -50,3 +50,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedPlaybackProgress;

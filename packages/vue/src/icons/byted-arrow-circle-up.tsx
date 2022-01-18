@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedArrowCircleUp = IconWrapper(
   'byted-arrow-circle-up',
   false,
   (props: ISvgIconProps) => (
@@ -31,3 +31,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedArrowCircleUp;

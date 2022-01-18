@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedIncreaseTheScale = IconWrapper(
   'byted-increase-the-scale',
   false,
   (props: ISvgIconProps) => (
@@ -40,3 +40,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedIncreaseTheScale;

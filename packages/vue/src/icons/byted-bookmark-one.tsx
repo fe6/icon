@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedBookmarkOne = IconWrapper(
   'byted-bookmark-one',
   false,
   (props: ISvgIconProps) => (
@@ -24,3 +24,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedBookmarkOne;

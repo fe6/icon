@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedRollerskates = IconWrapper(
   'byted-rollerskates',
   false,
   (props: ISvgIconProps) => (
@@ -83,3 +83,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedRollerskates;

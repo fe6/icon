@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedStereoPerspective = IconWrapper(
   'byted-stereo-perspective',
   false,
   (props: ISvgIconProps) => (
@@ -59,3 +59,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedStereoPerspective;

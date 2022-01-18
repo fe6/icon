@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedClothesShortSleeve = IconWrapper(
   'byted-clothes-short-sleeve',
   false,
   (props: ISvgIconProps) => (
@@ -38,3 +38,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedClothesShortSleeve;

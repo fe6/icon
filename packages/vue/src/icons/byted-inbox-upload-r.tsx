@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedInboxUploadR = IconWrapper(
   'byted-inbox-upload-r',
   false,
   (props: ISvgIconProps) => (
@@ -56,3 +56,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedInboxUploadR;

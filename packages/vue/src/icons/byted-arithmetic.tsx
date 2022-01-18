@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedArithmetic = IconWrapper(
   'byted-arithmetic',
   false,
   (props: ISvgIconProps) => (
@@ -45,3 +45,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedArithmetic;

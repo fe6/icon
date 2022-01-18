@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedCompassOne = IconWrapper(
   'byted-compass-one',
   false,
   (props: ISvgIconProps) => (
@@ -86,3 +86,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedCompassOne;

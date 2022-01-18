@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const AntdAppstoreAdd = IconWrapper(
   'antd-appstore-add',
   false,
   (props: ISvgIconProps) => (
@@ -14,3 +14,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default AntdAppstoreAdd;

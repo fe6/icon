@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedStopwatchStart = IconWrapper(
   'byted-stopwatch-start',
   false,
   (props: ISvgIconProps) => (
@@ -49,3 +49,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedStopwatchStart;

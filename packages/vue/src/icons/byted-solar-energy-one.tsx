@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedSolarEnergyOne = IconWrapper(
   'byted-solar-energy-one',
   false,
   (props: ISvgIconProps) => (
@@ -102,3 +102,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedSolarEnergyOne;

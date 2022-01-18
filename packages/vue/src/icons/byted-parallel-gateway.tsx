@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedParallelGateway = IconWrapper(
   'byted-parallel-gateway',
   false,
   (props: ISvgIconProps) => (
@@ -29,3 +29,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedParallelGateway;

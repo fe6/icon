@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedSwimmingRing = IconWrapper(
   'byted-swimming-ring',
   false,
   (props: ISvgIconProps) => (
@@ -90,3 +90,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedSwimmingRing;

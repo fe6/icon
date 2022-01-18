@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedVolumeMute = IconWrapper(
   'byted-volume-mute',
   false,
   (props: ISvgIconProps) => (
@@ -31,3 +31,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedVolumeMute;

@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper('byted-h', false, (props: ISvgIconProps) => (
+export const BytedH = IconWrapper('byted-h', false, (props: ISvgIconProps) => (
   <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
     <path
       d="M12 5V43"
@@ -27,3 +27,4 @@ export default IconWrapper('byted-h', false, (props: ISvgIconProps) => (
     />
   </svg>
 ));
+export default BytedH;

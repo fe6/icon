@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedChildWithPacifier = IconWrapper(
   'byted-child-with-pacifier',
   false,
   (props: ISvgIconProps) => (
@@ -72,3 +72,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedChildWithPacifier;

@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const AntdExclamation = IconWrapper(
   'antd-exclamation',
   false,
   (props: ISvgIconProps) => (
@@ -14,3 +14,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default AntdExclamation;

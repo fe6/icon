@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedMonitorOne = IconWrapper(
   'byted-monitor-one',
   false,
   (props: ISvgIconProps) => (
@@ -47,3 +47,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedMonitorOne;

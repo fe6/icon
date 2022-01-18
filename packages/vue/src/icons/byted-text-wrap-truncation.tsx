@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedTextWrapTruncation = IconWrapper(
   'byted-text-wrap-truncation',
   false,
   (props: ISvgIconProps) => (
@@ -28,3 +28,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedTextWrapTruncation;

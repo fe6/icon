@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedChartScatter = IconWrapper(
   'byted-chart-scatter',
   false,
   (props: ISvgIconProps) => (
@@ -41,3 +41,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedChartScatter;

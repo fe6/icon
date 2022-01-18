@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedPublicToilet = IconWrapper(
   'byted-public-toilet',
   false,
   (props: ISvgIconProps) => (
@@ -46,3 +46,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedPublicToilet;

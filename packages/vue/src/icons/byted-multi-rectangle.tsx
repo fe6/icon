@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedMultiRectangle = IconWrapper(
   'byted-multi-rectangle',
   false,
   (props: ISvgIconProps) => (
@@ -32,3 +32,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedMultiRectangle;

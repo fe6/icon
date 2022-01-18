@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedRemindDisable = IconWrapper(
   'byted-remind-disable',
   false,
   (props: ISvgIconProps) => (
@@ -43,3 +43,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedRemindDisable;

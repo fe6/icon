@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedParagraphUnfold = IconWrapper(
   'byted-paragraph-unfold',
   false,
   (props: ISvgIconProps) => (
@@ -52,3 +52,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedParagraphUnfold;

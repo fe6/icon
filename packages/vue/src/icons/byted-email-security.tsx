@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedEmailSecurity = IconWrapper(
   'byted-email-security',
   false,
   (props: ISvgIconProps) => (
@@ -32,3 +32,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedEmailSecurity;

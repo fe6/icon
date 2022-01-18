@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedHexagonStrip = IconWrapper(
   'byted-hexagon-strip',
   false,
   (props: ISvgIconProps) => (
@@ -18,3 +18,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedHexagonStrip;

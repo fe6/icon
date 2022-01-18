@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedGreatWall = IconWrapper(
   'byted-great-wall',
   false,
   (props: ISvgIconProps) => (
@@ -66,3 +66,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedGreatWall;

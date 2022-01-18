@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedGrinningFaceWithOpenMouth = IconWrapper(
   'byted-grinning-face-with-open-mouth',
   false,
   (props: ISvgIconProps) => (
@@ -38,3 +38,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedGrinningFaceWithOpenMouth;

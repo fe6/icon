@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedShovelOne = IconWrapper(
   'byted-shovel-one',
   false,
   (props: ISvgIconProps) => (
@@ -36,3 +36,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedShovelOne;

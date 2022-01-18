@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedWaterfallsH = IconWrapper(
   'byted-waterfalls-h',
   false,
   (props: ISvgIconProps) => (
@@ -28,3 +28,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedWaterfallsH;

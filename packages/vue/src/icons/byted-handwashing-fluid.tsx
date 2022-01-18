@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedHandwashingFluid = IconWrapper(
   'byted-handwashing-fluid',
   false,
   (props: ISvgIconProps) => (
@@ -44,3 +44,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedHandwashingFluid;

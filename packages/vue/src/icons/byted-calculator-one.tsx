@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedCalculatorOne = IconWrapper(
   'byted-calculator-one',
   false,
   (props: ISvgIconProps) => (
@@ -41,3 +41,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedCalculatorOne;

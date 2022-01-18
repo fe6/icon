@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedShoppingCartDel = IconWrapper(
   'byted-shopping-cart-del',
   false,
   (props: ISvgIconProps) => (
@@ -43,3 +43,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedShoppingCartDel;

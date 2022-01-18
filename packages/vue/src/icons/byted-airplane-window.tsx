@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedAirplaneWindow = IconWrapper(
   'byted-airplane-window',
   false,
   (props: ISvgIconProps) => (
@@ -60,3 +60,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedAirplaneWindow;

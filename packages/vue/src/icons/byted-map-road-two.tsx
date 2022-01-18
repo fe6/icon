@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedMapRoadTwo = IconWrapper(
   'byted-map-road-two',
   false,
   (props: ISvgIconProps) => (
@@ -58,3 +58,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedMapRoadTwo;

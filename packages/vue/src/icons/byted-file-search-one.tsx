@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedFileSearchOne = IconWrapper(
   'byted-file-search-one',
   false,
   (props: ISvgIconProps) => (
@@ -39,3 +39,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedFileSearchOne;

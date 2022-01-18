@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedAdjacentItem = IconWrapper(
   'byted-adjacent-item',
   false,
   (props: ISvgIconProps) => (
@@ -42,3 +42,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedAdjacentItem;

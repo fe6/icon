@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedBridgeOne = IconWrapper(
   'byted-bridge-one',
   false,
   (props: ISvgIconProps) => (
@@ -18,3 +18,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedBridgeOne;

@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedLightRain = IconWrapper(
   'byted-light-rain',
   false,
   (props: ISvgIconProps) => (
@@ -59,3 +59,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedLightRain;

@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedInnerShadowTopRight = IconWrapper(
   'byted-inner-shadow-top-right',
   false,
   (props: ISvgIconProps) => (
@@ -25,3 +25,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedInnerShadowTopRight;

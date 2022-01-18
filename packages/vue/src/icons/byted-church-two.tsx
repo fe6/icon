@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedChurchTwo = IconWrapper(
   'byted-church-two',
   false,
   (props: ISvgIconProps) => (
@@ -44,3 +44,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedChurchTwo;

@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedRotatingAdd = IconWrapper(
   'byted-rotating-add',
   false,
   (props: ISvgIconProps) => (
@@ -80,3 +80,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedRotatingAdd;

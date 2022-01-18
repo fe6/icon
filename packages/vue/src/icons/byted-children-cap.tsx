@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedChildrenCap = IconWrapper(
   'byted-children-cap',
   false,
   (props: ISvgIconProps) => (
@@ -29,3 +29,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedChildrenCap;

@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedBoosterCarSeat = IconWrapper(
   'byted-booster-car-seat',
   false,
   (props: ISvgIconProps) => (
@@ -53,3 +53,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedBoosterCarSeat;

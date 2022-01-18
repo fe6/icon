@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedReduceTwo = IconWrapper(
   'byted-reduce-two',
   false,
   (props: ISvgIconProps) => (
@@ -36,3 +36,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedReduceTwo;

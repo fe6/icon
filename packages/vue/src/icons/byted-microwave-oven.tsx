@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedMicrowaveOven = IconWrapper(
   'byted-microwave-oven',
   false,
   (props: ISvgIconProps) => (
@@ -59,3 +59,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedMicrowaveOven;

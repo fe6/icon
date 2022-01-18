@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const AntdCaretRight = IconWrapper(
   'antd-caret-right',
   false,
   (props: ISvgIconProps) => (
@@ -14,3 +14,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default AntdCaretRight;

@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedHandleRound = IconWrapper(
   'byted-handle-round',
   false,
   (props: ISvgIconProps) => (
@@ -29,3 +29,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedHandleRound;

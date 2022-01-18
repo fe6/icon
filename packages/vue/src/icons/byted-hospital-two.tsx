@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedHospitalTwo = IconWrapper(
   'byted-hospital-two',
   false,
   (props: ISvgIconProps) => (
@@ -79,3 +79,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedHospitalTwo;

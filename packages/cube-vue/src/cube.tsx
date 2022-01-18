@@ -10,7 +10,7 @@ import cubeStyle from './cube-style';
 import {
   IIconProps,
   IIconCubeItemData,
-  IconWrapper,
+  IconWrapperCustomer,
   getSvgItem,
   getSvgProp,
 } from './runtime';
@@ -79,7 +79,7 @@ export const cubeGetContent = (props: IIconProps): string => {
 const name = 'cube';
 // 声明 cube 组件
 export const CubeVueOptions = defineCustomElement({
-  ...IconWrapper(name, false, (props: IIconProps): string => {
+  ...IconWrapperCustomer(name, false, (props: IIconProps): string => {
     return cubeGetContent(props);
   }),
   styles: [cubeStyle],

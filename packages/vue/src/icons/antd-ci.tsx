@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper('antd-ci', false, (props: ISvgIconProps) => (
+export const AntdCi = IconWrapper('antd-ci', false, (props: ISvgIconProps) => (
   <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
     <path
       d="M24,0 C10.7464286,0 0,10.7464286 0,24 C0,37.2535714 10.7464286,48 24,48 C37.2535714,48 48,37.2535714 48,24 C48,10.7464286 37.2535714,0 24,0 Z M24,43.9285714 C12.9964286,43.9285714 4.07142857,35.0035714 4.07142857,24 C4.07142857,12.9964286 12.9964286,4.07142857 24,4.07142857 C35.0035714,4.07142857 43.9285714,12.9964286 43.9285714,24 C43.9285714,35.0035714 35.0035714,43.9285714 24,43.9285714 Z"
@@ -18,3 +18,4 @@ export default IconWrapper('antd-ci', false, (props: ISvgIconProps) => (
     />
   </svg>
 ));
+export default AntdCi;

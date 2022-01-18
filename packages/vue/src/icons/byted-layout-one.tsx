@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedLayoutOne = IconWrapper(
   'byted-layout-one',
   false,
   (props: ISvgIconProps) => (
@@ -56,3 +56,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedLayoutOne;

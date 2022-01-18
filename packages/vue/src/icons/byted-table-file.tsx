@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedTableFile = IconWrapper(
   'byted-table-file',
   false,
   (props: ISvgIconProps) => (
@@ -65,3 +65,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedTableFile;

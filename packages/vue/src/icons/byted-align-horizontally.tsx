@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedAlignHorizontally = IconWrapper(
   'byted-align-horizontally',
   false,
   (props: ISvgIconProps) => (
@@ -27,3 +27,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedAlignHorizontally;

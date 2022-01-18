@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedDistributeVerticalSpacing = IconWrapper(
   'byted-distribute-vertical-spacing',
   false,
   (props: ISvgIconProps) => (
@@ -33,3 +33,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedDistributeVerticalSpacing;

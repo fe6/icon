@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedNetworkDrive = IconWrapper(
   'byted-network-drive',
   false,
   (props: ISvgIconProps) => (
@@ -42,3 +42,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedNetworkDrive;

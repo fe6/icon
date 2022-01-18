@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedCheckerboard = IconWrapper(
   'byted-checkerboard',
   false,
   (props: ISvgIconProps) => (
@@ -104,3 +104,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedCheckerboard;

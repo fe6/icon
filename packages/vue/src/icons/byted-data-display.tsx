@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedDataDisplay = IconWrapper(
   'byted-data-display',
   false,
   (props: ISvgIconProps) => (
@@ -68,3 +68,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedDataDisplay;

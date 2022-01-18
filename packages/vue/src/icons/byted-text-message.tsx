@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedTextMessage = IconWrapper(
   'byted-text-message',
   false,
   (props: ISvgIconProps) => (
@@ -48,3 +48,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedTextMessage;

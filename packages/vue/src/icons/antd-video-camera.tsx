@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const AntdVideoCamera = IconWrapper(
   'antd-video-camera',
   false,
   (props: ISvgIconProps) => (
@@ -22,3 +22,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default AntdVideoCamera;

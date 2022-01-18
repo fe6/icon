@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedDoubleBed = IconWrapper(
   'byted-double-bed',
   false,
   (props: ISvgIconProps) => (
@@ -54,3 +54,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedDoubleBed;

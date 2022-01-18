@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedUmbrellaOne = IconWrapper(
   'byted-umbrella-one',
   false,
   (props: ISvgIconProps) => (
@@ -33,3 +33,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedUmbrellaOne;

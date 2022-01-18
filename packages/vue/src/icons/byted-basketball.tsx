@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedBasketball = IconWrapper(
   'byted-basketball',
   false,
   (props: ISvgIconProps) => (
@@ -28,3 +28,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedBasketball;

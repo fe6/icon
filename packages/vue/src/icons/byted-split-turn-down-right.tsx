@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedSplitTurnDownRight = IconWrapper(
   'byted-split-turn-down-right',
   false,
   (props: ISvgIconProps) => (
@@ -47,3 +47,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedSplitTurnDownRight;

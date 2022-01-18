@@ -5,7 +5,7 @@
  */
 
 import type { ComponentOptions, DefineComponent } from '@vue/runtime-dom';
-import { inject, provide } from '@vue/runtime-dom';
+import { inject, provide, defineComponent } from '@vue/runtime-dom';
 
 // 描边连接类型
 export type StrokeLinejoin = 'miter' | 'round' | 'bevel';
@@ -287,8 +287,8 @@ export const IconWrapper = (
   name: string,
   rtl: boolean,
   render: IconRender,
-): IconOptions => {
-  const options: IconOptions = {
+): DefineComponent<IconOptions> => {
+  const options: DefineComponent<IconOptions> = defineComponent({
     name: `icon-${name}`,
     props: [
       'size',
@@ -340,7 +340,7 @@ export const IconWrapper = (
         return <span class={cls.join(' ')}>{render(svgProps)}</span>;
       }; // setup return end
     }, // setup end
-  };
+  });
 
   return options;
 }; // end IconWrapper

@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedSteeringWheel = IconWrapper(
   'byted-steering-wheel',
   false,
   (props: ISvgIconProps) => (
@@ -55,3 +55,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedSteeringWheel;

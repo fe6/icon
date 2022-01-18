@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedShieldAdd = IconWrapper(
   'byted-shield-add',
   false,
   (props: ISvgIconProps) => (
@@ -42,3 +42,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedShieldAdd;

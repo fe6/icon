@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedIntersectSelection = IconWrapper(
   'byted-intersect-selection',
   false,
   (props: ISvgIconProps) => (
@@ -46,3 +46,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedIntersectSelection;

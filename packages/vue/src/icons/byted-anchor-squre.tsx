@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedAnchorSqure = IconWrapper(
   'byted-anchor-squre',
   false,
   (props: ISvgIconProps) => (
@@ -74,3 +74,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedAnchorSqure;

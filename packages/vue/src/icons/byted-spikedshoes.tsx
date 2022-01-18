@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedSpikedshoes = IconWrapper(
   'byted-spikedshoes',
   false,
   (props: ISvgIconProps) => (
@@ -91,3 +91,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedSpikedshoes;

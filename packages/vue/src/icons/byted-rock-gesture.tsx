@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedRockGesture = IconWrapper(
   'byted-rock-gesture',
   false,
   (props: ISvgIconProps) => (
@@ -37,3 +37,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedRockGesture;

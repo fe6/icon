@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedListCheckbox = IconWrapper(
   'byted-list-checkbox',
   false,
   (props: ISvgIconProps) => (
@@ -79,3 +79,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedListCheckbox;

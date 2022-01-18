@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedFerrisWheel = IconWrapper(
   'byted-ferris-wheel',
   false,
   (props: ISvgIconProps) => (
@@ -115,3 +115,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedFerrisWheel;

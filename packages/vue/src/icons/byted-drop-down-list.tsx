@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedDropDownList = IconWrapper(
   'byted-drop-down-list',
   false,
   (props: ISvgIconProps) => (
@@ -29,3 +29,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedDropDownList;

@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedCollectionFiles = IconWrapper(
   'byted-collection-files',
   false,
   (props: ISvgIconProps) => (
@@ -26,3 +26,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedCollectionFiles;

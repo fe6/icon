@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedCirclesSeven = IconWrapper(
   'byted-circles-seven',
   false,
   (props: ISvgIconProps) => (
@@ -80,3 +80,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedCirclesSeven;

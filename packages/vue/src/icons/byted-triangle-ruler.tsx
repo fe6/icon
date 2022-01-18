@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedTriangleRuler = IconWrapper(
   'byted-triangle-ruler',
   false,
   (props: ISvgIconProps) => (
@@ -133,3 +133,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedTriangleRuler;

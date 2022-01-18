@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedSixCircularConnection = IconWrapper(
   'byted-six-circular-connection',
   false,
   (props: ISvgIconProps) => (
@@ -108,3 +108,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedSixCircularConnection;

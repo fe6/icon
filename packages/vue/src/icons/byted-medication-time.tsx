@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedMedicationTime = IconWrapper(
   'byted-medication-time',
   false,
   (props: ISvgIconProps) => (
@@ -78,3 +78,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedMedicationTime;

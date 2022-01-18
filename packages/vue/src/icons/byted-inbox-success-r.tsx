@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedInboxSuccessR = IconWrapper(
   'byted-inbox-success-r',
   false,
   (props: ISvgIconProps) => (
@@ -49,3 +49,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedInboxSuccessR;

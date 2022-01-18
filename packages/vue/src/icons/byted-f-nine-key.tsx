@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedFNineKey = IconWrapper(
   'byted-f-nine-key',
   false,
   (props: ISvgIconProps) => (
@@ -48,3 +48,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedFNineKey;

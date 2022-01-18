@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedHairBrush = IconWrapper(
   'byted-hair-brush',
   false,
   (props: ISvgIconProps) => (
@@ -85,3 +85,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedHairBrush;

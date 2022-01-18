@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedExpandLeftAndRight = IconWrapper(
   'byted-expand-left-and-right',
   false,
   (props: ISvgIconProps) => (
@@ -17,3 +17,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedExpandLeftAndRight;

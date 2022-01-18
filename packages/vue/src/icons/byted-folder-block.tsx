@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedFolderBlock = IconWrapper(
   'byted-folder-block',
   false,
   (props: ISvgIconProps) => (
@@ -32,3 +32,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedFolderBlock;

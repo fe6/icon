@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedVerticallyCentered = IconWrapper(
   'byted-vertically-centered',
   false,
   (props: ISvgIconProps) => (
@@ -33,3 +33,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedVerticallyCentered;

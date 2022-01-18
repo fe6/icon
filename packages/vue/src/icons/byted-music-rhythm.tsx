@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedMusicRhythm = IconWrapper(
   'byted-music-rhythm',
   false,
   (props: ISvgIconProps) => (
@@ -143,3 +143,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedMusicRhythm;

@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedNuclearPlant = IconWrapper(
   'byted-nuclear-plant',
   false,
   (props: ISvgIconProps) => (
@@ -57,3 +57,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedNuclearPlant;

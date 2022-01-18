@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedEditMovie = IconWrapper(
   'byted-edit-movie',
   false,
   (props: ISvgIconProps) => (
@@ -108,3 +108,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedEditMovie;

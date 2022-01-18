@@ -5,7 +5,7 @@
  */
 
 import type { ComponentOptions, DefineComponent } from '@vue/runtime-dom';
-import { inject, provide } from '@vue/runtime-dom';
+import { inject, provide, defineComponent } from '@vue/runtime-dom';
 
 // 描边连接类型
 export type StrokeLinejoin = 'miter' | 'round' | 'bevel';
@@ -430,6 +430,76 @@ export const IconWrapper = (
   name: string,
   rtl: boolean,
   render: IconRender,
+): DefineComponent<IconOptions> => {
+  const options: DefineComponent<IconOptions> = defineComponent({
+    name: `icon-${name}`,
+    props: [
+      'size',
+      'strokeWidth',
+      'strokeLinecap',
+      'strokeLinejoin',
+      'theme',
+      'colors',
+      'spin',
+      'id',
+    ],
+    setup: (props) => {
+      const ICON_CONFIGS = inject(IconContext, DEFAULT_ICON_CONFIGS);
+
+      return () => {
+        const {
+          size,
+          strokeWidth,
+          strokeLinecap,
+          strokeLinejoin,
+          theme,
+          colors,
+          spin,
+        } = props;
+
+        const propsId = String(props.id ? props.id : name);
+        const svgProps = IconConverter(
+          propsId,
+          {
+            size,
+            strokeWidth,
+            strokeLinecap,
+            strokeLinejoin,
+            theme,
+            colors,
+            spin,
+            id: propsId,
+          },
+          ICON_CONFIGS,
+        );
+        const cls: string[] = [`${ICON_CONFIGS.prefix}-icon`];
+
+        cls.push(`${ICON_CONFIGS.prefix}-icon-${name}`);
+
+        if (rtl && ICON_CONFIGS.rtl) {
+          cls.push(`${ICON_CONFIGS.prefix}-icon-rtl`);
+        }
+
+        if (spin && String(spin) === 'true') {
+          cls.push(`${ICON_CONFIGS.prefix}-icon-spin`);
+        }
+
+        return name === 'cube' ? (
+          <span class={cls.join(' ')} v-html={render(svgProps)}></span>
+        ) : (
+          <span class={cls.join(' ')}>{render(svgProps)}</span>
+        );
+      }; // setup return end
+    }, // setup end
+  });
+
+  return options;
+}; // end IconWrapper
+// 图标Wrapper
+export const IconWrapperCustomer = (
+  name: string,
+  rtl: boolean,
+  render: IconRender,
 ): IconOptions => {
   const options: IconOptions = {
     name: `icon-${name}`,
@@ -494,4 +564,4 @@ export const IconWrapper = (
   };
 
   return options;
-}; // end IconWrapper
+}; // end IconWrapperCustomer

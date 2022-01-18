@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedFiveStarBadge = IconWrapper(
   'byted-five-star-badge',
   false,
   (props: ISvgIconProps) => (
@@ -26,3 +26,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedFiveStarBadge;

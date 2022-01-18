@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedCalendarThree = IconWrapper(
   'byted-calendar-three',
   false,
   (props: ISvgIconProps) => (
@@ -85,3 +85,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedCalendarThree;

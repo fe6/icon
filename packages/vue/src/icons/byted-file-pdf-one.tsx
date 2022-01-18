@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedFilePdfOne = IconWrapper(
   'byted-file-pdf-one',
   false,
   (props: ISvgIconProps) => (
@@ -87,3 +87,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedFilePdfOne;

@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedPaintedScreen = IconWrapper(
   'byted-painted-screen',
   false,
   (props: ISvgIconProps) => (
@@ -36,3 +36,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedPaintedScreen;

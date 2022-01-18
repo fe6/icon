@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedTextureTwo = IconWrapper(
   'byted-texture-two',
   false,
   (props: ISvgIconProps) => (
@@ -78,3 +78,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedTextureTwo;

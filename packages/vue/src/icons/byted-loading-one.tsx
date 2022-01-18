@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedLoadingOne = IconWrapper(
   'byted-loading-one',
   false,
   (props: ISvgIconProps) => (
@@ -94,3 +94,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedLoadingOne;

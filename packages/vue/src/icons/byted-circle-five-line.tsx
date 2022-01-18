@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedCircleFiveLine = IconWrapper(
   'byted-circle-five-line',
   false,
   (props: ISvgIconProps) => (
@@ -97,3 +97,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedCircleFiveLine;

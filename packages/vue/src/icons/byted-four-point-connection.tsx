@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedFourPointConnection = IconWrapper(
   'byted-four-point-connection',
   false,
   (props: ISvgIconProps) => (
@@ -112,3 +112,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedFourPointConnection;

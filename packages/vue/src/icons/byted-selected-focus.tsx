@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedSelectedFocus = IconWrapper(
   'byted-selected-focus',
   false,
   (props: ISvgIconProps) => (
@@ -70,3 +70,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedSelectedFocus;

@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedNotebookAndPen = IconWrapper(
   'byted-notebook-and-pen',
   false,
   (props: ISvgIconProps) => (
@@ -68,3 +68,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedNotebookAndPen;

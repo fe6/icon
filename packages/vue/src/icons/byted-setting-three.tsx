@@ -2,7 +2,7 @@
 
 import { ISvgIconProps, IconWrapper } from '../runtime';
 
-export default IconWrapper(
+export const BytedSettingThree = IconWrapper(
   'byted-setting-three',
   false,
   (props: ISvgIconProps) => (
@@ -76,3 +76,4 @@ export default IconWrapper(
     </svg>
   ),
 );
+export default BytedSettingThree;
