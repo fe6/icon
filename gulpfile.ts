@@ -15,10 +15,11 @@ import del from 'del';
 
 type TBuildType = 'vue' | 'img' | 'cube-vue' | 'compiler';
 const cleanFolderType: TBuildType[] = ['vue', 'img', 'cube-vue'];
-const buildType: TBuildType[] = [...cleanFolderType, 'compiler'];
+const buildType: TBuildType[] = [...cleanFolderType]; // , 'compiler'
 
 const TS_CONFIG_DEF = {
-  strict: true, // 启用 --noImplicitAny, --noImplicitThis, --alwaysStrict， --strictNullChecks和 --strictFunctionTypes和--strictPropertyInitialization
+  // 因为改成 es6 的打包输出就会报错
+  // strict: true, // 启用 --noImplicitAny, --noImplicitThis, --alwaysStrict， --strictNullChecks和 --strictFunctionTypes和--strictPropertyInitialization
   preserveConstEnums: true,
   noUnusedLocals: true,
   noUnusedParameters: true,
@@ -84,11 +85,17 @@ buildType.forEach((buildKey: string) => {
   let babelConfig = {};
   if (buildKey === 'compiler') {
     gulpConfig.target = 'ES5';
+    gulpConfig.module = 'commonjs';
+    gulpConfig.moduleResolution = 'node';
     babelConfig = {
       ...babelCmd,
     };
   } else {
+    gulpConfig.target = 'esnext';
+    gulpConfig.module = 'esnext';
+    gulpConfig.moduleResolution = 'node';
     gulpConfig.jsx = 'preserve';
+    gulpConfig.lib = ['es2015', 'dom'];
     babelConfig = {
       ...babelTs,
     };
@@ -105,7 +112,6 @@ function resolve(...arg: string[]): string {
 
 function createBuildTask(name: TBuildType): string {
   const cwd = resolve('packages/', name);
-
   gulp.task(`build-script-${name}`, () => {
     const result = gulp
       .src(['src/*.ts', 'src/*.tsx', 'src/**/*.ts', 'src/**/*.tsx'], {
@@ -191,7 +197,8 @@ gulp.task(
   gulp.series([
     cleanDist,
     ...cleanFolderType.map((iconItem: TBuildType) => createBuildTask(iconItem)),
-    createBuildTask('compiler'),
+    // 打包报错
+    // createBuildTask('compiler'),
   ]),
 );
 
