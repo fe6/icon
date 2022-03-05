@@ -138,7 +138,7 @@ export class CubeVueRuntimeGenerator extends RuntimeGenerator {
     this.writeLine(
       `const ${this.prefix.toUpperCase()}_CONFIGS = inject(${this.getTypeName(
         'context',
-      )}, DEFAULT_${this.prefix.toUpperCase()}_CONFIGS);`,
+      )}, DEFAULT_${this.prefix.toUpperCase()}_CONFIGS) || DEFAULT_ICON_CONFIGS;`,
     );
     this.writeLine();
     this.writeLine('return () => {');
@@ -263,7 +263,7 @@ export class CubeVueRuntimeGenerator extends RuntimeGenerator {
     // this.writeLine(
     //   `const ${this.prefix.toUpperCase()}_CONFIGS = inject(${this.getTypeName(
     //     'context',
-    //   )}, DEFAULT_${this.prefix.toUpperCase()}_CONFIGS);`,
+    //   )}, DEFAULT_${this.prefix.toUpperCase()}_CONFIGS) || DEFAULT_ICON_CONFIGS;`,
     // );
     // this.writeLine();
     // this.writeLine('return () => {');

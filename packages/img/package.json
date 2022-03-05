@@ -44,7 +44,7 @@
   "sideEffects": [
     "styles/**"
   ],
-  "packageManager": "pnpm",
+  "packageManager": "pnpm@6.32.0",
   "peerDependencies": {
     "@vue/runtime-dom": "3.x",
     "vue": "3.x"
