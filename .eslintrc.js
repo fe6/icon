@@ -14,5 +14,6 @@ module.exports = {
     'space-before-function-paren': 'off',
     'multiline-ternary': 'off',
     'brace-style': ['error', '1tbs'],
+    'vue/require-prop-types': 'off',
   },
 };
