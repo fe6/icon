@@ -301,7 +301,8 @@ export const IconWrapper = (
     ],
     setup: (props) => {
       const id = guid();
-      const ICON_CONFIGS = inject(IconContext, DEFAULT_ICON_CONFIGS);
+      const ICON_CONFIGS =
+        inject(IconContext, DEFAULT_ICON_CONFIGS) || DEFAULT_ICON_CONFIGS;
 
       return () => {
         const {
