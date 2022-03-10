@@ -123,11 +123,6 @@ function createBuildTask(name: TBuildType): string {
       result.js
         .pipe(babel(BABEL_CONFIG_MAP[name] as any))
         .pipe(gulp.dest(`${cwd}/es`))
-        .pipe(
-          babel({
-            plugins: ['@babel/plugin-transform-modules-commonjs'],
-          }),
-        )
         .pipe(gulp.dest(`${cwd}/lib`)),
       result.dts.pipe(gulp.dest(`${cwd}/es`)).pipe(gulp.dest(`${cwd}/lib`)),
     ]);

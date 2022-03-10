@@ -27,6 +27,12 @@ export const beforeRelease = async () => {
     log('打包 CODE');
     await pnpmRun('build:code');
     log('');
+    log('编译 lib 使其支持 CDN 使用');
+    await pnpmRun('gen:rollup');
+    log('');
+    log('语法检测');
+    await pnpmRun('lint:fix');
+    log('');
     log('开始发布');
     log('');
   } catch (err) {
@@ -35,5 +41,10 @@ export const beforeRelease = async () => {
 };
 
 (async () => {
-  await beforeRelease();
+  try {
+    await beforeRelease();
+  } catch (e) {
+    console.error(e);
+    process.exit(1);
+  }
 })();

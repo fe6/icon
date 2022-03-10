@@ -1,6 +1,8 @@
 dist/
 es/
 lib/
+iife/
+changelog.md
 styles/
 node_modules
 node_modules/

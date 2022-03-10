@@ -1,7 +1,7 @@
 {
   "name": "@fe6/icon-cube-vue",
   "version": "1.1.4",
-  "description": "高质量图标集合",
+  "description": "Water Icon 的支持自定义图标",
   "keywords": [
     "cube",
     "cube icon",
@@ -26,13 +26,18 @@
     "directory": "packages/cube-vue"
   },
   "author": "iq9891 <649076408@qq.com>",
+  "files": [
+    "es",
+    "lib",
+    "iife"
+  ],
   "main": "lib/index.js",
   "module": "es/index.js",
   "unpkg": "lib/index.js",
   "jsdelivr": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
-    "release": "ts-node ../../scripts/release.ts cube-vue",
+    "release": "esno ../../scripts/release.ts cube-vue",
     "changelog": "conventional-changelog -p angular -i changelog.md -s --commit-path . --lerna-package cube-vue"
   },
   "homepage": "https://github.com/fe6/icon#readme",
@@ -46,8 +51,7 @@
     "styles/**"
   ],
   "packageManager": "pnpm@6.32.0",
-  "peerDependencies": {
-    "@vue/runtime-dom": "3.x",
-    "vue": "3.x"
+  "dependencies": {
+    "vue": "^3.2.31"
   }
 }

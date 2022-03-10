@@ -4,7 +4,7 @@
  * @author 由 fe6 自动生成
  */
 
-import { defineCustomElement } from '@vue/runtime-dom';
+import { defineCustomElement } from 'vue';
 
 import cubeStyle from './cube-style';
 import {

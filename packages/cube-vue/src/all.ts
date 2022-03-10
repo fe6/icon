@@ -4,8 +4,8 @@
  * @author 由 fe6 自动生成
  */
 
-import type { App, DefineComponent, ComponentOptions } from '@vue/runtime-dom';
-import { createVNode } from '@vue/runtime-dom';
+import type { App, DefineComponent, ComponentOptions } from 'vue';
+import { createVNode } from 'vue';
 import * as mapIcon from './map';
 import { IIconProps } from './runtime';
 

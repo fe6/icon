@@ -26,13 +26,11 @@ export class CubeVueRuntimeGenerator extends RuntimeGenerator {
   private processPlatformImports() {
     if (this.useType) {
       this.writeLine(
-        "import type { ComponentOptions, DefineComponent } from '@vue/runtime-dom'",
+        "import type { ComponentOptions, DefineComponent } from 'vue'",
       );
     }
 
-    this.writeLine(
-      "import { inject, provide, defineComponent } from '@vue/runtime-dom'",
-    );
+    this.writeLine("import { inject, provide, defineComponent } from 'vue'");
 
     this.writeLine();
   }

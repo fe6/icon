@@ -2,4 +2,8 @@
 .eslintrc.js
 *.hbs
 *.yml
+dist/
+es/
+lib/
+iife/
 changelog.md

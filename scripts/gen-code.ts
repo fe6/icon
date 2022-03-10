@@ -3,7 +3,6 @@
 import fs from 'fs';
 import p from 'path';
 import mkdirp from 'mkdirp';
-import execa from 'execa';
 
 import { iconCompiler, log } from '../packages/compiler/src';
 import { COMPILER_TYPE } from './config';
@@ -35,7 +34,7 @@ import { BUILD_CODE_CONFIG } from './code-conf';
       svg: string;
     }
 
-    icons.forEach((item: IIconItem) =>
+    (icons as any).forEach((item: IIconItem) =>
       compiler.appendIcon({
         name: item.name,
         description: item.title,
@@ -52,12 +51,5 @@ import { BUILD_CODE_CONFIG } from './code-conf';
       mkdirp.sync(p.dirname(fp));
       fs.writeFileSync(fp, content, 'utf8');
     });
-  });
-
-  log('');
-  log('语法检测开始');
-  log('');
-  await execa('pnpm', ['lint:fix'], {
-    stdio: 'inherit',
   });
 })();
