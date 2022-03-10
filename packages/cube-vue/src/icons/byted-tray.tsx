@@ -48,7 +48,7 @@ export default IconWrapper('byted-tray', false, (props: ISvgIconProps) => (
       />
     </g>
     <defs>
-      <clipPath id={`${props.id}cube-vue0`}>
+      <clipPath id={props.id + 'cube-vue0'}>
         <rect width="48" height="48" fill={props.colors[2]} />
       </clipPath>
     </defs>

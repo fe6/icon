@@ -1,5 +1,5 @@
 /** @format */
 
 module.exports = {
-  ...require('@fe6/norm/src/prettier'),
+  ...require('@fe6/norm-prettier'),
 };

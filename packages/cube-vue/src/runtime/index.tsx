@@ -432,7 +432,7 @@ export const IconWrapper = (
   render: IconRender,
 ): DefineComponent<IconOptions> => {
   const options: DefineComponent<IconOptions> = defineComponent({
-    name: `icon-${name}`,
+    name: 'icon-' + name,
     props: [
       'size',
       'strokeWidth',
@@ -503,7 +503,7 @@ export const IconWrapperCustomer = (
   render: IconRender,
 ): IconOptions => {
   const options: IconOptions = {
-    name: `icon-${name}`,
+    name: 'icon-' + name,
     props: [
       'size',
       'strokeWidth',

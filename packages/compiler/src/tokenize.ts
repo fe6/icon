@@ -48,7 +48,6 @@ const expr = {
       whitespace
     }*([*^$|!~]?=)${
       // 匹配属性值
-      // eslint-disable-next-line no-useless-escape
       whitespace
     }*(?:'((?:\\\\.|[^\\\\'])*)'|"((?:\\\\.|[^\\\\"])*)\"|(${identifier}))|)${
       // 吸收多余的空白
@@ -101,7 +100,6 @@ const unescapeCSS = (str: string): string => {
       return String.fromCharCode(high + 0x10000);
     }
 
-    // eslint-disable-next-line unicorn/number-literal-case
     return String.fromCharCode((high >> 10) | 0xd800, (high & 0x3ff) | 0xdc00);
   });
 };
@@ -192,7 +190,6 @@ const process = {
       selectorType: SvgStyleSelectorType.NOT,
       type: SvgShapeAttr.CONST,
       expression: 'not',
-      // eslint-disable-next-line no-use-before-define
       children: tokenize(match[2])[0],
     };
   },

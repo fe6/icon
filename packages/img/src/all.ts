@@ -21,8 +21,8 @@ const reEnColors: string[] = ['black', '#2f88ff', 'white', '#43ccf8'];
 // rgb 和 #fff 转换成 #ffffff
 
 const colorHex = (color: string) => {
-  const that = color;
-  // 十六进制颜色值的正则表达式
+  let that = color;
+  //十六进制颜色值的正则表达式
   const reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
   // 如果是rgb颜色表示
   if (/^(rgb|RGB)/.test(that)) {
@@ -31,7 +31,7 @@ const colorHex = (color: string) => {
     for (let i = 0; i < aColor.length; i++) {
       let hex = Number(aColor[i]).toString(16);
       if (hex.length < 2) {
-        hex = `0${hex}`;
+        hex = '0' + hex;
       }
       strHex += hex;
     }
@@ -119,7 +119,7 @@ export const iconKeg = (props: IIconAllProps) => {
 
   if (props && props.svg) {
     return IconWrapper('icon-keg', true, (props: IIconProps) => {
-      const curSvg = String(props.svg);
+      let curSvg = String(props.svg);
       return allGetContent(curSvg, props);
     })(props);
   }

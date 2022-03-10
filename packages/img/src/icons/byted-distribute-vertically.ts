@@ -13,7 +13,9 @@ export const getIconBytedDistributeVerticallySvgHtml = (props: IIconProps) =>
     props.size
   }" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="48" height="48" fill="white" fill-opacity="0.01"/>
-  <mask id="${`${props.id}img0`}" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48" style="mask-type: alpha">
+  <mask id="${
+    props.id + 'img0'
+  }" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48" style="mask-type: alpha">
     <rect width="48" height="48" fill="${props.colors?.[2]}"/>
   </mask>;
   <g mask="${`url(#${props.id}img0)`}">

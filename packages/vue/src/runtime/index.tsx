@@ -158,9 +158,10 @@ export const DEFAULT_ICON_CONFIGS: IIconConfig = {
 };
 
 const guid = (): string => {
-  return `icon-${(((1 + Math.random()) * 0x100000000) | 0)
-    .toString(16)
-    .substring(1)}`;
+  return (
+    'icon-' +
+    (((1 + Math.random()) * 0x100000000) | 0).toString(16).substring(1)
+  );
 };
 
 // 属性转换函数
@@ -289,7 +290,7 @@ export const IconWrapper = (
   render: IconRender,
 ): DefineComponent<IconOptions> => {
   const options: DefineComponent<IconOptions> = defineComponent({
-    name: `icon-${name}`,
+    name: 'icon-' + name,
     props: [
       'size',
       'strokeWidth',

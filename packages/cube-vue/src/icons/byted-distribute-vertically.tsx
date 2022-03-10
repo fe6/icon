@@ -8,7 +8,7 @@ export default IconWrapper(
   (props: ISvgIconProps) => (
     <svg width={props.size} height={props.size} viewBox="0 0 48 48" fill="none">
       <mask
-        id={`${props.id}cube-vue0`}
+        id={props.id + 'cube-vue0'}
         maskUnits="userSpaceOnUse"
         x="0"
         y="0"
