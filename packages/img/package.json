@@ -25,11 +25,6 @@
     "directory": "packages/img"
   },
   "author": "iq9891 <649076408@qq.com>",
-  "files": [
-    "es",
-    "lib",
-    "iife"
-  ],
   "main": "lib/index.js",
   "module": "es/index.js",
   "unpkg": "lib/index.js",
