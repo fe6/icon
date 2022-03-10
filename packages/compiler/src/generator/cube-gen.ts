@@ -33,7 +33,7 @@ export class CubeGenerator extends RuntimeGenerator {
     // 写头部的注释
     this.processHeaderComment();
 
-    this.writeLine(`import { defineCustomElement } from '@vue/runtime-dom';`);
+    this.writeLine(`import { defineCustomElement } from 'vue';`);
     this.writeLine();
     this.writeLine(`import cubeStyle from './cube-style';`);
 

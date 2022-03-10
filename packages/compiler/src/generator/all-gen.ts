@@ -256,11 +256,11 @@ export class AllGenerator extends RuntimeGenerator {
 
     if (this.useType) {
       this.writeLine(
-        `import type { App, DefineComponent, ComponentOptions } from '@vue/runtime-dom';`,
+        `import type { App, DefineComponent, ComponentOptions } from 'vue';`,
       );
     }
 
-    this.writeLine(`import { createVNode } from '@vue/runtime-dom';`);
+    this.writeLine(`import { createVNode } from 'vue';`);
     this.writeLine(`import * as ${iconMap} from './map';`);
     if (this.useType) {
       this.writeLine(`import { ${iconProps} } from './runtime';`);

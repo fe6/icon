@@ -4,8 +4,8 @@
  * @author 由 fe6 自动生成
  */
 
-import type { ComponentOptions, DefineComponent } from '@vue/runtime-dom';
-import { inject, provide, defineComponent } from '@vue/runtime-dom';
+import type { ComponentOptions, DefineComponent } from 'vue';
+import { inject, provide, defineComponent } from 'vue';
 
 // 描边连接类型
 export type StrokeLinejoin = 'miter' | 'round' | 'bevel';

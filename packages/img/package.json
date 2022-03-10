@@ -25,13 +25,18 @@
     "directory": "packages/img"
   },
   "author": "iq9891 <649076408@qq.com>",
+  "files": [
+    "es",
+    "lib",
+    "iife"
+  ],
   "main": "lib/index.js",
   "module": "es/index.js",
   "unpkg": "lib/index.js",
   "jsdelivr": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
-    "release": "ts-node ../../scripts/release.ts img",
+    "release": "esno ../../scripts/release.ts img",
     "changelog": "conventional-changelog -p angular -i changelog.md -s --commit-path . --lerna-package img"
   },
   "homepage": "https://github.com/fe6/icon#readme",
@@ -45,8 +50,7 @@
     "styles/**"
   ],
   "packageManager": "pnpm@6.32.0",
-  "peerDependencies": {
-    "@vue/runtime-dom": "3.x",
-    "vue": "3.x"
+  "dependencies": {
+    "vue": "^3.2.31"
   }
 }
