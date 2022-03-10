@@ -38,7 +38,7 @@ export const BytedHairClip = IconWrapper(
         />
       </g>
       <defs>
-        <clipPath id={`${props.id}vue0`}>
+        <clipPath id={props.id + 'vue0'}>
           <rect width="48" height="48" fill={props.colors[2]} />
         </clipPath>
       </defs>

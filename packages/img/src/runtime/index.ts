@@ -165,9 +165,10 @@ export const DEFAULT_ICON_CONFIGS: IIconConfig = {
 };
 
 const guid = (): string => {
-  return `icon-${(((1 + Math.random()) * 0x100000000) | 0)
-    .toString(16)
-    .substring(1)}`;
+  return (
+    'icon-' +
+    (((1 + Math.random()) * 0x100000000) | 0).toString(16).substring(1)
+  );
 };
 
 // 属性转换函数
@@ -342,7 +343,7 @@ export const base64encode = (str: string, isUrl?: boolean): string => {
 
 // 把 unicode 码转换成 utf8 编码
 export const unicodeToUtf8 = (str: string): string => {
-  let out = '';
+  let out: string = '';
   let idx: number;
   let code: number;
   const len: number = str.length;

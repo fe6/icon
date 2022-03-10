@@ -70,7 +70,7 @@ export const iconKegInstall = (Vue: App, prefix?: string): void => {
   Object.values(mapIcon).forEach((icon) => {
     if (icon.name) {
       Vue.component(
-        prefix ? `${prefix}-${icon.name.slice(5)}` : icon.name,
+        prefix ? prefix + '-' + icon.name.slice(5) : icon.name,
         icon,
       );
     }

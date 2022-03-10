@@ -31,7 +31,7 @@ export default IconWrapper('byted-peas', false, (props: ISvgIconProps) => (
       <circle cx="26.2432" cy="34.4078" r="2.5" fill={props.colors[0]} />
     </g>
     <defs>
-      <clipPath id={`${props.id}cube-vue0`}>
+      <clipPath id={props.id + 'cube-vue0'}>
         <rect width="48" height="48" fill={props.colors[2]} />
       </clipPath>
     </defs>

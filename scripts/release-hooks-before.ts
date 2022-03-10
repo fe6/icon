@@ -31,7 +31,7 @@ export const beforeRelease = async () => {
     await pnpmRun('gen:rollup');
     log('');
     log('语法检测');
-    await pnpmRun('lint:fix');
+    await pnpmRun('lint');
     log('');
     log('开始发布');
     log('');
