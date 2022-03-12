@@ -1,207 +1,111 @@
 /** @format */
 
 export interface ILessConfig {
-  type: 'writeLine' | 'indent';
+  type: 'writeLine' | 'write' | 'indent';
   text: string | number;
 }
 
 export default (cssClassName: string): ILessConfig[] => {
   return [
     {
-      type: 'writeLine',
-      text: `.${cssClassName} {`,
+      type: 'write',
+      text: `.${cssClassName}{`,
     },
     {
-      type: 'indent',
-      text: 1,
+      type: 'write',
+      text: 'display:inline-block;',
     },
     {
-      type: 'writeLine',
-      text: 'display: inline-block;',
+      type: 'write',
+      text: 'color:inherit;',
     },
     {
-      type: 'writeLine',
-      text: 'color: inherit;',
+      type: 'write',
+      text: 'font-style:normal;',
     },
     {
-      type: 'writeLine',
-      text: 'font-style: normal;',
+      type: 'write',
+      text: 'line-height:0;',
     },
     {
-      type: 'writeLine',
-      text: 'line-height: 0;',
+      type: 'write',
+      text: 'text-align:center;',
     },
     {
-      type: 'writeLine',
-      text: 'text-align: center;',
+      type: 'write',
+      text: 'text-transform:none;',
     },
     {
-      type: 'writeLine',
-      text: 'text-transform: none;',
+      type: 'write',
+      text: 'vertical-align:-0.125em;',
     },
     {
-      type: 'writeLine',
-      text: 'vertical-align: -0.125em;',
+      type: 'write',
+      text: 'text-rendering:optimizeLegibility;',
     },
     {
-      type: 'writeLine',
-      text: 'text-rendering: optimizeLegibility;',
+      type: 'write',
+      text: '-webkit-font-smoothing:antialiased;',
     },
     {
-      type: 'writeLine',
-      text: '-webkit-font-smoothing: antialiased;',
+      type: 'write',
+      text: '-moz-osx-font-smoothing:grayscale;}',
     },
     {
-      type: 'writeLine',
-      text: '-moz-osx-font-smoothing: grayscale;',
+      type: 'write',
+      text: `.${cssClassName}-spin svg,.${cssClassName}-spin img,.${cssClassName}-spin-img {`,
     },
     {
-      type: 'indent',
-      text: -1,
+      type: 'write',
+      text: `animation:${cssClassName}-spin 1s infinite linear;`,
     },
     {
-      type: 'writeLine',
+      type: 'write',
       text: '}',
     },
     {
-      type: 'writeLine',
-      text: '',
+      type: 'write',
+      text: `.${cssClassName}-rtl{`,
     },
     {
-      type: 'writeLine',
-      text: `.${cssClassName}-spin svg, .${cssClassName}-spin img, .${cssClassName}-spin-img {`,
+      type: 'write',
+      text: 'transform:scaleX(-1);}',
     },
     {
-      type: 'indent',
-      text: 1,
+      type: 'write',
+      text: `@keyframes ${cssClassName}-spin{`,
     },
     {
-      type: 'writeLine',
-      text: `animation: ${cssClassName}-spin 1s infinite linear;`,
+      type: 'write',
+      text: '100%{',
     },
     {
-      type: 'indent',
-      text: -1,
+      type: 'write',
+      text: '-webkit-transform:rotate(360deg);',
     },
     {
-      type: 'writeLine',
-      text: '}',
+      type: 'write',
+      text: 'transform:rotate(360deg)}}',
     },
     {
-      type: 'writeLine',
-      text: '',
+      type: 'write',
+      text: `@-webkit-keyframes ${cssClassName}-spin{`,
     },
     {
-      type: 'writeLine',
-      text: `.${cssClassName}-rtl {`,
+      type: 'write',
+      text: '100%{',
     },
     {
-      type: 'indent',
-      text: 1,
+      type: 'write',
+      text: '-webkit-transform:rotate(360deg);',
     },
     {
-      type: 'writeLine',
-      text: 'transform: scaleX(-1);',
+      type: 'write',
+      text: 'transform:rotate(360deg)',
     },
     {
-      type: 'indent',
-      text: -1,
-    },
-    {
-      type: 'writeLine',
-      text: '}',
-    },
-    {
-      type: 'writeLine',
-      text: '',
-    },
-    {
-      type: 'writeLine',
-      text: `@keyframes ${cssClassName}-spin {`,
-    },
-    {
-      type: 'indent',
-      text: 1,
-    },
-    {
-      type: 'writeLine',
-      text: '100% {',
-    },
-    {
-      type: 'indent',
-      text: 1,
-    },
-    {
-      type: 'writeLine',
-      text: '-webkit-transform: rotate(360deg);',
-    },
-    {
-      type: 'writeLine',
-      text: 'transform: rotate(360deg)',
-    },
-    {
-      type: 'indent',
-      text: -1,
-    },
-    {
-      type: 'writeLine',
-      text: '}',
-    },
-    {
-      type: 'indent',
-      text: -1,
-    },
-    {
-      type: 'writeLine',
-      text: '}',
-    },
-    {
-      type: 'writeLine',
-      text: '',
-    },
-    {
-      type: 'writeLine',
-      text: `@-webkit-keyframes ${cssClassName}-spin {`,
-    },
-    {
-      type: 'indent',
-      text: 1,
-    },
-    {
-      type: 'writeLine',
-      text: '100% {',
-    },
-    {
-      type: 'indent',
-      text: 1,
-    },
-    {
-      type: 'writeLine',
-      text: '-webkit-transform: rotate(360deg);',
-    },
-    {
-      type: 'writeLine',
-      text: 'transform: rotate(360deg)',
-    },
-    {
-      type: 'indent',
-      text: -1,
-    },
-    {
-      type: 'writeLine',
-      text: '}',
-    },
-    {
-      type: 'indent',
-      text: -1,
-    },
-    {
-      type: 'writeLine',
-      text: '}',
-    },
-    {
-      type: 'writeLine',
-      text: '',
+      type: 'write',
+      text: '}}',
     },
   ];
 };

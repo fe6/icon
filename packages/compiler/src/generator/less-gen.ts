@@ -41,7 +41,7 @@ export class LessGenerator extends Generator {
     const cssClassName = `${cssPrefix}-${prefix}`;
 
     if (this.$opts.type === 'cube-vue') {
-      this.writeLine('export default `');
+      this.write('export default `');
     }
 
     lessConfig(cssClassName).forEach(({ type, text }: ILessConfig) => {
@@ -49,7 +49,7 @@ export class LessGenerator extends Generator {
     });
 
     if (this.$opts.type === 'cube-vue') {
-      this.writeLine('`;');
+      this.write('`;');
     }
 
     return this.getResult();
