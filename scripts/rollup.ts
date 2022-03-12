@@ -16,6 +16,15 @@ const external = ['vue'];
 
 const pwd = process.cwd();
 
+const globalMap = {
+  index: 'water-icon',
+  map: 'water-icon-map',
+  svg: 'water-icon-svg',
+  all: 'water-icon-all',
+  cube: 'water-icon-cube',
+  'cube-style': 'water-icon-cube-style',
+};
+
 const esbuildMinifer = (options: ESBuildOptions) => {
   const { renderChunk } = esbuild(options);
 
@@ -30,7 +39,9 @@ const rollupOutput = (pkgLib: string, fileName: string, dirPath: string) => {
   const theOutput: any = {
     file: `${pkgLib}${dirPath}/${fileName}.js`,
     format: 'iife',
-    name: firstCapitalize(camelize(`${prefix}-${fileName}`)),
+    name: firstCapitalize(
+      camelize(`${prefix}-${dirPath ? fileName : globalMap[fileName]}`),
+    ),
     sourcemap: false,
     globals: {
       vue: 'Vue',
